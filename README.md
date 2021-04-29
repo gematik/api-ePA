@@ -27,11 +27,9 @@ Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
 
 ## Weiterführende Seiten
 
-**Leitfaden für Primärsystemhersteller**  
-[- Primärsystem](docs/Implementierungshinweise_PS_ePA1.md)
+[Leitfaden für Primärsystemhersteller](docs/Implementierungshinweise_PS_ePA1.md)
 
-**Berechtigungskonzept für ePA 2.0**  
-[- Berechtigung](docs/Ueberblick_Berechtigungskonzept_ePA2.md)
+[Berechtigungskonzept für ePA 2.0](docs/berechtigungskonzept.adoc)
 
 ## Lizenzbedingungen
 Copyright (c) 2021 gematik GmbH

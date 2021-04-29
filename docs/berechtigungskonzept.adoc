@@ -1,27 +1,38 @@
-# ePA-Berechtigungskonzept
+:imagesdir: ../images
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+ifdef::env-github[]
+:imagesdir: https://github.com/gematik/epa-resources/master/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc: macro
+:toclevels: 3
+:toc-title: Inhaltsverzeichnis
+image:gematik_logo.jpg[width=35%] 
 
-- [Einleitung](#einleitung)
-  - [Berechtigungsmatrix](#berechtigungsmatrix)
-  - [Policy Documents](#policy-documents)
-    - [Kategoriebasierte Autorisierung](#kategoriebasierte-autorisierung)
-    - [Dokumentenspezifische Autorisierung](#dokumentenspezifische-autorisierung)
-- [Kurzeinführung strukturierte Dokumente, Sammlungen und Ordner](#kurzeinführung-strukturierte-dokumente-sammlungen-und-ordner)
-  - [Strukturierte Dokumente](#strukturierte-dokumente)
-  - [Sammlungen](#sammlungen)
-  - [Ordner](#ordner)
+= ePA-Berechtigungskonzept
 
-## Einleitung
+toc::[]
+
+== Einleitung
 
 In ePA 2.0 wird die Durchsetzung von Berechtigungen in der Dokumentenverwaltung über zwei Bausteine umgesetzt, die in Kombination wirken:
 
 1. Berechtigungsmatrix - Sie legt statisch fest, welcher Art ein Nutzer (Versicherter, Psychotherapie, Gesundheitsdienst, ...) maximal welche Operationen auf welchen Daten ausführen darf. Hierfür ergibt sich kein generelles Zugriffsrecht - dazu muss ein gesondertes Policy Document (kurz Policy) durch den Versicherten oder Vertreter registriert werden.
 2. Policies - Sie legen fest, ob und wie lange jeder Nutzer jeweils auf die ePA eines Versicherten berechtigt ist und inwiefern die maximalen Rechte aus der Berechtigungsmatrix eingeschränkt werden.
 
-### Berechtigungsmatrix
+== Berechtigungsmatrix
 
 Die Berechtigungsmatrix (oder auch Zugriffsunterbindungsregel-Matrix) basiert auf den Vorgaben, die der Gesetzgeber insbesondere in § 341 und § 352 SGB V zur Umsetzung der ePA gemacht hat. Aus diesem Grund stellt die Matrix die maximalen Rechte dar, die auch der Versicherte nicht überschreiten darf, indem er Leistungserbringern bspw. weitergehende Rechte über Policies (s.u.) einzuräumen versucht. Die Berechtigungsmatrix listet in ihren Spalten die verschiedenen Nutzer auf, die auf die Dokumentenverwaltung zugreifen. Einerseits den Versicherten und dessen Vertreter ("Ver"), Kostenträger ("KTR"), sowie die unterschiedlichen Arten von Leistungserbringerinstitutionen (LEIs) wie Pflege, Hebammen oder Ärzte.
 
-<img src="images/zugriffsunterbindungsregeln.png" width="500">
+image:zugriffsunterbindungsregeln.png[width=40%] 
 
 Die Zeilen der Matrix beziehen sich auf Berechtigungskategorien, auf die unterschiedlichen Nutzern qua Gesetz unterschiedliche Rechte eingeräumt werden. Der Versicherte kann berechtigte Nutzer über Policies dabei weiter einschränken. Die Zuordnung in Kategorien erlaubt es dem Versicherten später, einem Dritten gezielt Zugriff auf bestimmte fachliche Dokumentenkategorien gewähren zu können bzw. zu untersagen. Grundsätzlich lassen sich zwei Gruppen von Kategorien hier unterscheiden: 
 1. Kategorien mit den Nummern 1a1-1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestellte Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
@@ -36,7 +47,7 @@ Die einzelnen in den Zellen der Matrix vorhandenen Buchstaben entsprechen den Op
 
 Das heißt, dass die Berechtigungsmatrix ausschließlich Vorgaben für diese Operationen macht und keinerlei Einfluss auf alle weitere Operationen vornimmt. Der Zugriff auf Aktenkonto-Operationen - wie etwa das Abrufen von Zugriffsprotokollen - ist direkt über die jeweilige Schnittstelle geschützt und obliegt nur dem ePA-FdV und damit dem Versicherten oder seinen berechtigten Vertreter.
 
-### Policy Documents
+== Policy Documents
 
 Jeder einzelne Nutzer muss durch Hinterlegung eines Policy Document (kurz Policy) berechtigt werden. Für alle Zugriffsberechtigten muss der Versicherte oder sein Vertreter ein solches Policy Document im Aktensystem registrieren. Das geschieht entweder am ePA-FdV oder beim Leistungserbringer im Rahmen einer Ad-hoc-Berechtigung am Kartenterminal.
 
@@ -48,7 +59,7 @@ _Beispiel_: Einem Psychotherapeuten (Spalte "Psych" in der Matrix) wird in der f
 
 Die Granularität einer Policy lässt sich über eine kategoriebasierte und dokumentenspezifische Autorisierung näher beschreiben.
 
-#### Kategoriebasierte Autorisierung
+=== Kategoriebasierte Autorisierung
 
 Die kategoriebasierte Autorisierung schränkt den Zugang Dritter über berufsgruppenspezifische Vorgaben gemäß der oben vorgestellten Berechtigungsmatrix ein. Jede Einstellung eines Dokuments wird vom Aktensystem bzw. von der Komponente ePA-Dokumentenverwaltung mit einer automatischen Zuordnung zu einem statischen Ordner, welcher die Dokumentenkategorie repräsentiert, erweitert. Diese statischen Ordner sind initial bei jedem Aktenkonto eines Versicherten existent. Die serverseitige Zuordnung in diese Ordner erfolgt anhand der XDS-Metadaten in Kombination mit der Nutzergruppe des Einstellers, welche aus der Authentication Assertion erkennbar ist (die Nutzergruppe ist dem Signaturzertifikat zu entnehmen).
 
@@ -60,17 +71,17 @@ Die beiden anderen Stufen "vertraulich" oder "normal" müssen mit einer Dokumen
 
 Einer Leistungserbringerinstitution, welcher lediglich ein ausschließlicher Zugriff auf Dokumente mit der Vertraulichkeitsstufe "normal" vergeben wurde, wird unter dem Begriff "einfaches Zugriffsrecht" subsumiert. Hingegen bedeutet die Autorisierung auf Dokumente mit den Vertraulichkeitsstufen "normal" und "vertraulich" ein "erweitertes Zugriffsrecht".  
 
-#### Dokumentenspezifische Autorisierung
+=== Dokumentenspezifische Autorisierung
 
 Die dokumentenspezifische Autorisierung bietet dem Versicherten oder seinen Vertreter mit ePA-FdV die Möglichkeit, Dokumente auf einer Whitelist ("gewährender Zugriff") oder Blacklist ("verbietender Zugriff") zu setzen. Ein Dokument (genauer gesagt die DocumentEntry.entryUUID auf Policy-Ebene) darf auf diesen Listen nicht gleichzeitig stehen. Auch sind diese Dokumente aufgrund der Zuordnungsregeln beim Einstellen indirekt immer einer Kategorie zugeordnet. Es ist hier aber möglich, feingranularer, d.h. auf Dokumentenebene Zugriffe für Leistungserbringerinstitutionen auszusprechen. Aufgrund der zuvor angesprochen Sonderbehandlung von Mutterpass und Kinderuntersuchungsheft, ist es darüber hinaus möglich, einen bestimmten Pass von potentiell mehreren Pässen auf eine Blacklist zu setzen, um einen Zugriff, der pauschal über die Dokumentenkategorie "mothersrecord" bzw. "childsrecord" gewährt wurde, zu untersagen. Auf einer Whitelist sind hingegen lediglich Dokumente und keine Ordner aufgelistet. Ordner sind hiervon ausgeschlossen da hierfür konzeptionell die Dokumentenkategorie zu verwenden ist.
 
-### Kurzeinführung strukturierte Dokumente, Sammlungen und Ordner
+== Kurzvorstellung strukturierte Dokumente und Sammlungen
 
-#### Strukturierte Dokumente
+=== Strukturierte Dokumente
 
 Für einige Dokumententypen gelten feste Formatvorgaben und Metadatenbelegungen. Diese Dokumente werden "strukturierte Dokumente" genannt, da der innere Aufbau in der Regel stark strukturiert und semantisch beschrieben ist.
 
-#### Sammlungen
+=== Sammlungen
 
 Einige Dokumente dürfen nicht isoliert für sich betrachtet werden, sondern ergeben nur in Kombination mit anderen Dokumenten Sinn. Deshalb werden in ePA 2.0 sogenannte _Sammlungstypen_ eingeführt:
 - Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist das Kinderuntersuchungsheft oder ein Mutterpass. 
@@ -79,6 +90,6 @@ Einige Dokumente dürfen nicht isoliert für sich betrachtet werden, sondern erg
 
 Ein einzelnes Vorkommen einer Sammlung (ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief, ...) wird auch als *Sammlungsinstanz* bezeichnet.
 
-#### Ordner 
+=== Ordner 
 
 Ordner werden in ePA 2.0 für die Berechtigungssteuerung verwendet. Alle zu registrierenden Dokumente werden durch die Dokumentenverwaltung anhand der Metadaten und der Identität des einstellenden Nutzers entsprechend der [Berechtigungsmatrix](#berechtigungsmatrix) zugeordnet. Diese Ordner sind statisch und liegen beim Erstmaligen Verwenden einer ePA bereits vor. Zwei Ausnahmen gibt es: Kinderuntersuchungshefte als auch Mutterpässe können mehrfach angelegt werden und eine serverseitige Zuordnung eines Eintrags (d.h. Dokument) ist nicht zweifelsfrei möglich. Für diese Fälle werden Ordner durch ePA-Clients selbst angelegt. Ein weiteres Ordner-Management ist in der aktuellen Ausbaustufe nicht möglich.
