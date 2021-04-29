@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+**** XACML policy for an HCP authorization ****
+
+Comply with the following rules in order to instantiate a valid policy:
+- Replace the contents of the elements and attributes with valid content as described by the cardinality, type rules and content description found in the comment in chosen elements.
+- Element/Attribute names are case-sensitive.
+- Elements must always appear in the order documented.
+- When an element is allowed to repeat, the elements are ordered.
+
+-->
+
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.3"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+
+	<Description/><!-- 1..1 string The name and professional OID of the healthcare professional institution with the following pattern: <name>:<professionOID>. The name MUST be displayed at the insurant frontend. The certificate extension 'professionOID' might be taken from the signer certificate C.HCI.OSIG (cf. [gemSpec_PKI#Anhang A]) -->
+
+	<Target>
+		
+		<Subjects><!-- 1..1 subject healthcare professional institution represented via Telematik-D -->
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.188" xmlns="urn:hl7-org:v3#II"/><!-- attribute 'extension': The Telematik-ID of the HCP. -->
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:organization-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>			
+			</Subject>
+		</Subjects>
+
+		<Resources><!-- 1..1 record identifier represented via KVNR -->
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The KVNR of the healthcare record owner. -->
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+				
+		<Environments><!-- 1..1 end of validity -->
+			<Environment>
+				<EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:date-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date"><!-- 1..1 date The validity end date of the authorization in ISO 8601:2004 format UTC (i.e. YYYY-MM-DD). --></AttributeValue>
+					<EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-date" DataType="http://www.w3.org/2001/XMLSchema#date" MustBePresent="true"/>
+				</EnvironmentMatch>
+			</Environment>
+		</Environments>
+		
+	</Target>
+
+	<!-- An default deny policy that prevents access to documents with a confidentiality code 'very restricted'. -->	
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>:conf-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Deny"><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:lei:<telematik-id>:conf-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+			<Target>
+				<Resources>
+					<Resource>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="V" codeSystem="2.16.840.1.113883.5.25" displayName="very restricted"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>										
+					</Resource>
+				</Resources>
+			</Target>
+		</Rule>
+		<!-- not applicable -->
+	</Policy>
+
+	<!-- An ad-hoc authorization requires both one or more selected document categories and an access scope expressed via a confidentiality code. This is optional for the insurant frontend in case of an existing whitelist or blacklist policy. -->	
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- 1..1 The policy for an intermediate access level expressed via document categories (i.e. folder codes). This policy is optional (0..1) for the insurant frontend. --><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>:lei-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Permit"><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:lei:<telematik-id>:lei-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+			<Target>
+				<Resources>
+					<Resource><!--  1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend access to more document categories. Note that document category MUST match ProfessionOID extracted from SMC-B / Authentication Assertion (cf. A_19303). If two confidentiality codes should be set for one document category, another additional Resource + ResourceMatch (OR expression) with the same document category and the additional confidentiality code MUST be defined separately. -->
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal"><!-- 1..1 -->
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" codeSystem="1"/><!-- attribute 'code': A code from the code system '1.2.276.0.76.5.511': 'practitioner', 'hospital', 'laboratory', 'physiotherapy', 'psychotherapy', 'dermatology', 'gynaecology_urology', 'dentistry_oms', 'other_medical', 'other_non_medical' or a code from the code system '1.2.276.0.76.5.512': 'emp', 'nfd', 'eab', 'dentalrecord', 'childsrecord', 'mothersrecord', 'vaccination', 'patientdoc', 'ega', 'receipt', 'diga', 'care', 'prescription', 'eau', 'other' --><!-- attribute 'codeSystem': Either the code system OID '1.2.276.0.76.5.511' or '1.2.276.0.76.5.512' MUST be set. --></AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal"><!-- 1..1 A further restriction is expressed via a confidentiality code. -->
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" codeSystem="2.16.840.1.113883.5.25"/><!-- attribute 'code': The code 'N' or 'R' MUST be set. The code 'R' MUST be used for an additional permission for documents with a confidentiality code 'R' (restricted). --><!-- attribute 'displayName': The display name 'normal' or 'restricted' MUST be set. The display name 'restricted' MUST be used for additional permission for documents with a confidentiality code 'R' (restricted). -->
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+				</Resources>
+			</Target>
+		</Rule>
+		<!-- not applicable -->
+	</Policy>
+		
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- 0..1 The optional blacklist items policy. --><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>:blacklist'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Deny"><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:lei:<telematik-id>:blacklist'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+			<Target>
+				<Resources>
+					<Resource><!-- 1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the blacklist with an additional document or folder. -->
+						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely mothersrecord or childsrecord). It should be noted that a falsely defined uniqueId in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+				</Resources>
+			</Target>
+		</Rule>		
+		<!-- not applicable -->
+	</Policy>
+
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- 0..1 The optional whitelist items policy. --><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>:whitelist'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Permit"><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:lei:<telematik-id>:whitelist'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+			<Target>
+				<Resources>
+					<Resource><!-- 0..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the whitelist with an additional document. -->
+						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID. --></AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+						</ResourceMatch>						
+					</Resource>										
+				</Resources>
+			</Target>
+		</Rule>
+		<!-- not applicable -->
+	</Policy>		
+	
+</PolicySet>

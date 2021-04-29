@@ -6,7 +6,32 @@
 
 Dieses Repository stellt begleitende Dokumentationen zur aktuellen Spezifikation der Elektronischen Patientenakte sowie Implementierungsartefakte zur Verfügung.
 
-[Leitfaden für Primärsystemhersteller](docs/Implementierungshinweise_PS_ePA1.md)
+## Ordnerstruktur
+
+Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
+
+    epa
+    ├─ docs
+    ├─ images
+    ├─ samples
+    ├─ src
+    │   ├──── openapi
+    │   │    ├── device_management.yaml
+    │   ├──── policies    
+    │   │    ├── hcp-policy-definition.xml
+    │   │    ├── insurance-policy-definition.xml
+    │   │    └── representative-policy-definition.xml
+    │   └──── schema
+    ├── README.md
+    └── ReleaseNotes.md
+
+## Weiterführende Seiten
+
+**Leitfaden für Primärsystemhersteller**  
+[- Primärsystem](docs/Implementierungshinweise_PS_ePA1.md)
+
+**Berechtigungskonzept für ePA 2.0**  
+[- Berechtigung](docs/Ueberblick_Berechtigungskonzept_ePA2.md)
 
 ## Lizenzbedingungen
 Copyright (c) 2021 gematik GmbH
