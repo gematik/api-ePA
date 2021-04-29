@@ -5,7 +5,7 @@
 :tip-caption: Tip
 :warning-caption: Warnung
 ifdef::env-github[]
-:imagesdir: https://github.com/gematik/epa-resources/master/images
+:imagesdir: https://github.com/gematik/epa-resources/raw/master/images
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:
@@ -32,7 +32,7 @@ In ePA 2.0 wird die Durchsetzung von Berechtigungen in der Dokumentenverwaltung 
 
 Die Berechtigungsmatrix (oder auch Zugriffsunterbindungsregel-Matrix) basiert auf den Vorgaben, die der Gesetzgeber insbesondere in § 341 und § 352 SGB V zur Umsetzung der ePA gemacht hat. Aus diesem Grund stellt die Matrix die maximalen Rechte dar, die auch der Versicherte nicht überschreiten darf, indem er Leistungserbringern bspw. weitergehende Rechte über Policies (s.u.) einzuräumen versucht. Die Berechtigungsmatrix listet in ihren Spalten die verschiedenen Nutzer auf, die auf die Dokumentenverwaltung zugreifen. Einerseits den Versicherten und dessen Vertreter ("Ver"), Kostenträger ("KTR"), sowie die unterschiedlichen Arten von Leistungserbringerinstitutionen (LEIs) wie Pflege, Hebammen oder Ärzte.
 
-image:zugriffsunterbindungsregeln.png[width=40%] 
+image:zugriffsunterbindungsregeln.png[width=45%] 
 
 Die Zeilen der Matrix beziehen sich auf Berechtigungskategorien, auf die unterschiedlichen Nutzern qua Gesetz unterschiedliche Rechte eingeräumt werden. Der Versicherte kann berechtigte Nutzer über Policies dabei weiter einschränken. Die Zuordnung in Kategorien erlaubt es dem Versicherten später, einem Dritten gezielt Zugriff auf bestimmte fachliche Dokumentenkategorien gewähren zu können bzw. zu untersagen. Grundsätzlich lassen sich zwei Gruppen von Kategorien hier unterscheiden: 
 1. Kategorien mit den Nummern 1a1-1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestellte Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
