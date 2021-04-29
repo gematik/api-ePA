@@ -1,0 +1,11 @@
+# ePA 1 - Implementierungshinweise für Primärsysteme 
+- [Berechtigungsdauer 18 Monate](#Berechtigungsdauer 18 Monate)
+- [Wie liest das PS die Telematik-ID aus der SMC-B?](#Wie liest das PS die Telematik-ID aus der SMC-B?)
+
+## Berechtigungsdauer 18 Monate
+In ePA 1 gilt als die maximale Berechtigungsdauer 18 Monate. Wie ist diese Anforderung in ePA 1 umgesetzt? (Hintergrund: In ePA 2 gibt es im Gegensatz dazu auch eine unbegrenzte Berechtigungsdauer.) Das ePA 1 Aktensystem prüft die vom PS eingestellte Berechtigung darauf, ob der letzte Berechtigungstag maximal heute + 540 Tage (18x30 Tage) entspricht. Das PS sollte also nicht versuchen, die Berechtigung auf einen längeren Wert als heute + 540 Tage einzustellen, da der Berechtigungs-Request ansonsten abgelehnt wird.  
+
+## Wie liest das PS die Telematik-ID aus der SMC-B?
+Die Telematik-ID der LE-Institution muss in vielen Requests angegeben werden. Nach dem Auslesen aus der SMC-B sollte das PS die Telematik-ID in der Selbstauskunft speichern. Die Telematik-ID ist von den Kartenherausgebern der SM-B festgelegt und immer im Attribut “registrationNumber” im Admission-Element der Extension der SMC-B-Zertifikate (C.HCI.AUT, C.HCI.ENC,C.HCI.OSIG) eingetragen. Wenn nicht explizit vom Antragsteller eine neue Telematik-ID angefordert wird, wird bei Ausgabe von Folge- und Ersatzkarten die bisherige Telematik-ID wieder verwendet. Eine generelle Vorgehensweise können wir hierfür nicht geben, da die Personalisierung der SMC-B sektoral unterschiedlich ist (siehe gemSpec_PKI, Anhang A).
+Zum Auslesen der Zertifikate kann die Operation ReadCardCertificate gemäß [gemSpec_Kon#4.1.9.5.2] verwendet werden
+Die Telematik-ID ist in allen Zertifikaten in der Admissionstruktur als “registrationNumber” im ASN.1-Format gespeichert. Je nach gewählter Programmiersprache und verwendeter PKI-Bibliothek ist das Lesen dieser Information durch die PKI-API direkt möglich oder es muss eine eigene Funktion dafür erstellt werden. In der Bouncy Castle Lib werden hierfür Funktionen bereitgestellt. Nähere Informationen für Java finden sie unter https://bouncycastle.org/docs/docs1.5on/org/bouncycastle/asn1/isismtt/x509/package-summary.html und für c# unter https://bouncycastle.org/csharp/index.html und https://github.com/bcgit/bc-csharp

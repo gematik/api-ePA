@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+Date: Fri, 18 Dec 2020 08:08:04 GMT
+Content-Type: multipart/related; type="application/xop+xml"; boundary="uuid:dadc03c9-f631-4368-95cf-706cb9655f02"; start="<root.message@cxf.apache.org>"; start-info="application/soap+xml";charset=UTF-8
+Content-Length: 2153
+Connection: keep-alive
+
+
+--uuid:dadc03c9-f631-4368-95cf-706cb9655f02
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml"
+Content-Transfer-Encoding: binary
+Content-ID: <root.message@cxf.apache.org>
+
+<?xml version='1.0' encoding='UTF-8'?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"><soap:Header><Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:RetrieveDocumentSetResponse</Action><MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:326a4f14-29c5-4676-ba8b-8d958cfc8fdf</MessageID><To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To><RelatesTo xmlns="http://www.w3.org/2005/08/addressing">27cda590-b7f4-4bad-8223-0551d56c3238</RelatesTo></soap:Header><soap:Body><ns6:RetrieveDocumentSetResponse xmlns:ns18="urn:ihe:iti:rmd:2017" xmlns:ns17="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns16="urn:hl7-org:v3" xmlns:ns15="http://www.w3.org/2000/09/xmldsig#" xmlns:ns14="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns13="http://ws.gematik.de/tel/error/v2.0" xmlns:ns12="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns11="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:ihe:iti:xds-b:2007" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0"><ns8:RegistryResponse status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Failure"><ns8:RegistryErrorList highestSeverity="urn:oasis:names:tc:ebxml-regrep:ErrorSeverityType:Error"><ns8:RegistryError codeContext="Syntaxfehler" errorCode="4000" severity="urn:oasis:names:tc:ebxml-regrep:ErrorSeverityType:Error" location="Konnektor"/></ns8:RegistryErrorList></ns8:RegistryResponse></ns6:RetrieveDocumentSetResponse></soap:Body></soap:Envelope>
+--uuid:dadc03c9-f631-4368-95cf-706cb9655f02--
