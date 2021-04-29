@@ -1,10 +1,24 @@
-# elektronische Patientenakte - Ressourcen
-<img src="images/Gematik_Logo_Blue.png" alt="gematik_logo" width="35%"/>
+# Elektronische Patientenakte (ePA)
 
-Begleitende Dokumentation und Artefakte für die Implementierung der Elektronischen Patientenakte:
-- Policy-Spezifaktion
-- Beispielnachrichten ePA 1.0
-- YAML-Dateien
-- Implementierungshinweise
-- Konzeptdokumente
+<img src="images/gematik_logo.jpg" alt="gematik_logo" width="35%"/>
 
+## Allgemeines
+
+Dieses Repository stellt begleitende Dokumentationen zur aktuellen Spezifikation der Elektronischen Patientenakte sowie Implementierungsartefakte zur Verfügung.
+
+[Leitfaden für Primärsystemhersteller](docs/Implementierungshinweise_PS_ePA1.md)
+
+## Lizenzbedingungen
+Copyright (c) 2021 gematik GmbH
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. 
