@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UtF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SOAP-ENV:Header/>
+  <SOAP-ENV:Body>
+    <GetCardTerminals xmlns="http://ws.gematik.de/conn/EventService/v7.2" mandant-wide="false">
+      <Context xmlns="http://ws.gematik.de/conn/ConnectorContext/v2.0">
+        <MandantId xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0">Mandant1</MandantId>
+        <ClientSystemId xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0">ClientID1</ClientSystemId>
+        <WorkplaceId xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0">CATS</WorkplaceId>
+        <UserId xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0"/>
+      </Context>
+    </GetCardTerminals>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

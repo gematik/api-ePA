@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ConnectorServices xmlns="http://ws.gematik.de/int/version/ProductInformation/v1.1" xmlns:ns2="http://ws.gematik.de/conn/ServiceDirectory/v3.1" xmlns:ns3="http://ws.gematik.de/conn/ServiceInformation/v2.0">
+    <ProductInformation>
+        <InformationDate>2020-12-10T15:55:11.238+02:00</InformationDate>
+        <ProductTypeInformation>
+            <ProductType>Konnektor</ProductType>
+            <ProductTypeVersion>4.8.1</ProductTypeVersion>
+        </ProductTypeInformation>
+        <ProductIdentification>
+            <ProductVendorID>RISEG</ProductVendorID>
+            <ProductCode>RKONN</ProductCode>
+            <ProductVersion>
+                <Local>
+                    <HWVersion>1.0.0</HWVersion>
+                    <FWVersion>3.0.7</FWVersion>
+                </Local>
+            </ProductVersion>
+        </ProductIdentification>
+        <ProductMiscellaneous>
+                <ProductVendorName>Research Industrial Systems Engineering (RISE) GmbH</ProductVendorName>
+                <ProductName>RISE Konnektor</ProductName>
+        </ProductMiscellaneous>
+    </ProductInformation>
+    <ns2:TLSMandatory>false</ns2:TLSMandatory>
+    <ns2:ClientAutMandatory>false</ns2:ClientAutMandatory>
+    <ns3:ServiceInformation>
+        <ns3:Service Name="CardService">
+            <ns3:Abstract>Der Konnektor verwaltet eine Liste aller Karten (CM_CARD_LIST), die in die vom Konnektor verwalteten Kartenterminals gesteckt sind (CTM_CT_LIST). Alle Ereignisse und Operationen, die sich auf Karten beziehen, werden durch diesen Basisdienst gekapselt.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CardService/WSDL/v8.1" Version="8.1.2">
+                    <ns3:Abstract>Der Konnektor verwaltet eine Liste aller Karten (CM_CARD_LIST), die in die vom Konnektor verwalteten Kartenterminals gesteckt sind (CTM_CT_LIST). Alle Ereignisse und Operationen, die sich auf Karten beziehen, werden durch diesen Basisdienst gekapselt.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/cardservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/cardservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CardService/WSDL/v8.1" Version="8.1.1">
+                    <ns3:Abstract>Der Konnektor verwaltet eine Liste aller Karten (CM_CARD_LIST), die in die vom Konnektor verwalteten Kartenterminals gesteckt sind (CTM_CT_LIST). Alle Ereignisse und Operationen, die sich auf Karten beziehen, werden durch diesen Basisdienst gekapselt.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/cardservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/cardservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CardService/WSDL/v8.1" Version="8.1.0">
+                    <ns3:Abstract>Der Konnektor verwaltet eine Liste aller Karten (CM_CARD_LIST), die in die vom Konnektor verwalteten Kartenterminals gesteckt sind (CTM_CT_LIST). Alle Ereignisse und Operationen, die sich auf Karten beziehen, werden durch diesen Basisdienst gekapselt.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/cardservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/cardservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="CertificateService">
+            <ns3:Abstract>Der Zertifikatsdienst bietet eine Schnittstelle zur Überprüfung der Gültigkeit von Zertifikaten an. Dies geschieht auf Grundlage des durch den Vertrauensanker TSL-CA-SignerZertifikat und eine aktuelle, gültige TSL aufgespannten Vertrauensraums sowie unter Berücksichtigung von aktuellen Statusinformationen (OCSP, CRL). Die Zertifikatsprüfung wird sowohl für nonQES- als auch für QES-Zertifikate unterstützt.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CertificateService/WSDL/v6.0" Version="6.0.0">
+                    <ns3:Abstract>Der Zertifikatsdienst bietet eine Schnittstelle zur Überprüfung der Gültigkeit von Zertifikaten an. Dies geschieht auf Grundlage des durch den Vertrauensanker TSL-CA-SignerZertifikat und eine aktuelle, gültige TSL aufgespannten Vertrauensraums sowie unter Berücksichtigung von aktuellen Statusinformationen (OCSP, CRL). Die Zertifikatsprüfung wird sowohl für nonQES- als auch für QES-Zertifikate unterstützt.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/certificateservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/certificateservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CertificateService/WSDL/v6.0" Version="6.0.1">
+                    <ns3:Abstract>Der Zertifikatsdienst bietet eine Schnittstelle zur Überprüfung der Gültigkeit von Zertifikaten an. Dies geschieht auf Grundlage des durch den Vertrauensanker TSL-CA-SignerZertifikat und eine aktuelle, gültige TSL aufgespannten Vertrauensraums sowie unter Berücksichtigung von aktuellen Statusinformationen (OCSP, CRL). Die Zertifikatsprüfung wird sowohl für nonQES- als auch für QES-Zertifikate unterstützt.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/certificateservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/certificateservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="EventService">
+            <ns3:Abstract>Der Systeminformationsdienst stellt Basisdiensten, Fachmodulen und Clientsystemen sowohl aktiv (Push-Mechanismus) wie passiv (Pull-Mechanismus) Informationen zur Verfügung. Dabei erhebt er selbst keine Daten, sondern dient nur als zentraler Mechanismus, der von anderen Basisdiensten und Fachmodulen zur Verteilung und Bereitstellung derer Informationen verwendet werden kann.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/EventService/WSDL/v7.2" Version="7.2.0">
+                    <ns3:Abstract>Der Systeminformationsdienst stellt Basisdiensten, Fachmodulen und Clientsystemen sowohl aktiv (Push-Mechanismus) wie passiv (Pull-Mechanismus) Informationen zur Verfügung. Dabei erhebt er selbst keine Daten, sondern dient nur als zentraler Mechanismus, der von anderen Basisdiensten und Fachmodulen zur Verteilung und Bereitstellung derer Informationen verwendet werden kann.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/eventservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/eventservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="EncryptionService">
+            <ns3:Abstract>Der Verschlüsselungsdienst bietet Schnittstellen zum hybriden und symmetrischen Ver- und Entschlüsseln von Dokumenten an.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/EncryptionService/WSDL/v6.1" Version="6.1.0">
+                    <ns3:Abstract>Der Verschlüsselungsdienst bietet Schnittstellen zum hybriden und symmetrischen Ver- und Entschlüsseln von Dokumenten an.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/encryptionservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/encryptionservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/EncryptionService/WSDL/v6.1" Version="6.1.1">
+                    <ns3:Abstract>Der Verschlüsselungsdienst bietet Schnittstellen zum hybriden und symmetrischen Ver- und Entschlüsseln von Dokumenten an.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/encryptionservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/encryptionservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="CardTerminalService">
+            <ns3:Abstract>Die Aufgabe des Kartenterminaldienstes ist das Management aller vom Konnektor adressierbaren Kartenterminals. Dies umfasst alle administrativen Prozesse. Ferner kapselt der Kartenterminaldienst die Zugriffe auf Kartenterminals durch Basisdienste und Fachmodule.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/CardTerminalService/WSDL/v1.1" Version="1.1.0">
+                    <ns3:Abstract>Die Aufgabe des Kartenterminaldienstes ist das Management aller vom Konnektor adressierbaren Kartenterminals. Dies umfasst alle administrativen Prozesse. Ferner kapselt der Kartenterminaldienst die Zugriffe auf Kartenterminals durch Basisdienste und Fachmodule.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/cardterminalservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/cardterminalservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="KVKService">
+		<ns3:Abstract>Versichertendaten von KVK lesen</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/vsds/KvkService/v4.0" Version="4.0.0">
+                    <ns3:Abstract>Versichertendaten von KVK lesen</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/kvkservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/kvkservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="AuthSignatureService">
+            <ns3:Abstract>Der Authentifizierungsdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/AuthSignatureService/WSDL/v7.4" Version="7.4.0">
+                    <ns3:Abstract>Der Authentifizierungsdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/authsignatureservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/authsignatureservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/AuthSignatureService/WSDL/v7.4" Version="7.4.1">
+                    <ns3:Abstract>Der Authentifizierungsdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/authsignatureservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/authsignatureservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="SignatureService">
+            <ns3:Abstract>Der Signaturdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Dokumenten und Prüfen von Dokumentensignaturen und zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/SignatureService/WSDL/v7.4" Version="7.4.0">
+                    <ns3:Abstract>Der Signaturdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Dokumenten und Prüfen von Dokumentensignaturen und zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/signatureservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/signatureservice"/>
+                </ns3:Version>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/SignatureService/WSDL/v7.4" Version="7.4.2">
+                    <ns3:Abstract>Der Signaturdienst bietet Clientsystemen und Fachmodulen eine Schnittstelle zum Signieren von Dokumenten und Prüfen von Dokumentensignaturen und zum Signieren von Binärstrings zum Zweck der externen Authentisierung.</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/webservices/signatureservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/webservices/signatureservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="VSDService">
+            <ns3:Abstract>VSD von eGK lesen</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/vsds/VSDService/v5.2" Version="5.2.0">
+                    <ns3:Abstract>VSD von eGK lesen</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/vsdservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/vsdservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="AMTSService">
+            <ns3:Abstract>elektronischer Medikationsplan/AMTS-Datenmanagement</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/amts/AMTSService/v1.0" Version="1.0.1">
+                    <ns3:Abstract>elektronischer Medikationsplan/AMTS-Datenmanagement</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/amtsservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/amtsservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="NFDService">
+            <ns3:Abstract>NFD auf eGK verwalten</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/nfds/NFDService/WSDL/v1.0" Version="1.0.1">
+                    <ns3:Abstract>Initiale Version</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/nfdservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/nfdservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="DPEService">
+            <ns3:Abstract>DPE auf eGK verwalten</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/nfds/DPEService/WSDL/v1.0" Version="1.0.0">
+                    <ns3:Abstract>Initiale Version</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/dpeservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/dpeservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="PHRService">
+            <ns3:Abstract>IHE-Schnittstelle zur Dokumentenverwaltung</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/phrs/PHRService/WSDL/v1.3" Version="1.3.0">
+                    <ns3:Abstract>Initiale Version</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/phrservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/phrservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+        <ns3:Service Name="PHRManagementService">
+            <ns3:Abstract>Schnittstelle zur Administration und Rechtevergabe der Akte</ns3:Abstract>
+            <ns3:Versions>
+                <ns3:Version TargetNamespace="http://ws.gematik.de/conn/phrs/PHRManagementService/WSDL/v1.3" Version="1.3.0">
+                    <ns3:Abstract>Initiale Version</ns3:Abstract>
+                    
+                    <ns3:Endpoint Location="http://10.11.218.161:80/fm/phrmanagementservice"/>
+                    
+                    <ns3:EndpointTLS Location="https://10.11.218.161:443/fm/phrmanagementservice"/>
+                </ns3:Version>
+            </ns3:Versions>
+        </ns3:Service>
+    </ns3:ServiceInformation>
+</ns2:ConnectorServices>

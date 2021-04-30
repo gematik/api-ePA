@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" PolicySetId="urn:gematik:policy:2.0:G995030566:rep:D425456193" Version="2.0.3">
+	<Description>Erika Mustermann</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="D425456193" xmlns="urn:hl7-org:v3#II"/>
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:subject-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="G995030566" xmlns="urn:hl7-org:v3"/>
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+	</Target>
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides" PolicyId="urn:gematik:policy:2.0:G995030566:rep:D425456193:rep-permission">
+		<Target/>
+		<Rule Effect="Permit" RuleId="urn:gematik:rule:2.0:G995030566:rep:D425456193:rep-permission"/>
+	</Policy>
+</PolicySet>

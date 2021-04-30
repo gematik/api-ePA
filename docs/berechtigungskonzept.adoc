@@ -35,15 +35,17 @@ Die Berechtigungsmatrix (oder auch Zugriffsunterbindungsregel-Matrix) basiert au
 image:zugriffsunterbindungsregeln.png[width=45%] 
 
 Die Zeilen der Matrix beziehen sich auf Berechtigungskategorien, auf die unterschiedlichen Nutzern qua Gesetz unterschiedliche Rechte eingeräumt werden. Der Versicherte kann berechtigte Nutzer über Policies dabei weiter einschränken. Die Zuordnung in Kategorien erlaubt es dem Versicherten später, einem Dritten gezielt Zugriff auf bestimmte fachliche Dokumentenkategorien gewähren zu können bzw. zu untersagen. Grundsätzlich lassen sich zwei Gruppen von Kategorien hier unterscheiden: 
-1. Kategorien mit den Nummern 1a1-1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestellte Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
-2. Kategorien mit den Nummern 1b-13: Jedes von einem Nutzer eingestellte Dokument wird ebenfalls in genau eine dieser Kategorien einsortiert. Es handelt sich hierbei um Kategorien, die sich in erster Linie darüber auszeichnen, dass bestimmte fachliche Inhalte, z. B. Arztbriefe oder Kinderuntersuchungshefte darüber abgebildet werden. 
+
+. Kategorien mit den Nummern 1a1-1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestellte Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
+. Kategorien mit den Nummern 1b-13: Jedes von einem Nutzer eingestellte Dokument wird ebenfalls in genau eine dieser Kategorien einsortiert. Es handelt sich hierbei um Kategorien, die sich in erster Linie darüber auszeichnen, dass bestimmte fachliche Inhalte, z. B. Arztbriefe oder Kinderuntersuchungshefte darüber abgebildet werden. 
 
 Die einzelnen in den Zellen der Matrix vorhandenen Buchstaben entsprechen den Operationen, die der jeweiligen Nutzergruppe für die jeweiligen Kategorien zustehen:
-- C: Create (Dokumente einstellen)
-- R: Dokumente suchen/herunterladen
-- U: Dokumente aktualisieren (d.h. ersetzen via XDS Document Replacement)
-- D: Dokumente köschen
-- M: Metadaten von Dokumenten aktualisieren (aktuell: nur Änderung des documentEntry.confidentialityCode)
+
+* C: Create (Dokumente einstellen)
+* R: Dokumente suchen/herunterladen
+* U: Dokumente aktualisieren (d.h. ersetzen via XDS Document Replacement)
+* D: Dokumente köschen
+* M: Metadaten von Dokumenten aktualisieren (aktuell: nur Änderung des documentEntry.confidentialityCode)
 
 Das heißt, dass die Berechtigungsmatrix ausschließlich Vorgaben für diese Operationen macht und keinerlei Einfluss auf alle weitere Operationen vornimmt. Der Zugriff auf Aktenkonto-Operationen - wie etwa das Abrufen von Zugriffsprotokollen - ist direkt über die jeweilige Schnittstelle geschützt und obliegt nur dem ePA-FdV und damit dem Versicherten oder seinen berechtigten Vertreter.
 
@@ -84,12 +86,13 @@ Für einige Dokumententypen gelten feste Formatvorgaben und Metadatenbelegungen.
 === Sammlungen
 
 Einige Dokumente dürfen nicht isoliert für sich betrachtet werden, sondern ergeben nur in Kombination mit anderen Dokumenten Sinn. Deshalb werden in ePA 2.0 sogenannte _Sammlungstypen_ eingeführt:
-- Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist das Kinderuntersuchungsheft oder ein Mutterpass. 
-- Sammlungen des Typs "uniform" enthalten potentiell mehrere Dokumente, die jedoch im Gegensatz zu Sammlungen des Typs "mixed" immer aus Dokumenten desselben Typs bestehen. Ein Beispiel ist das Zahnbonusheft oder der Impfpass.
-- Sammlungen des Typs "atomic" sind strukturierte Dokumente, die für sich stehen können und nicht zusammen mit anderen Dokumenten interpretiert und verwaltet werden. Es handelt sich sozusagen um den "Default"-Typ, für den keine besonderen Anforderungen (über die allgemeinen Vorgaben für strukturierte Dokumente hinaus) gelten.
+
+* Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist das Kinderuntersuchungsheft oder ein Mutterpass. 
+* Sammlungen des Typs "uniform" enthalten potentiell mehrere Dokumente, die jedoch im Gegensatz zu Sammlungen des Typs "mixed" immer aus Dokumenten desselben Typs bestehen. Ein Beispiel ist das Zahnbonusheft oder der Impfpass.
+* Sammlungen des Typs "atomic" sind strukturierte Dokumente, die für sich stehen können und nicht zusammen mit anderen Dokumenten interpretiert und verwaltet werden. Es handelt sich sozusagen um den "Default"-Typ, für den keine besonderen Anforderungen (über die allgemeinen Vorgaben für strukturierte Dokumente hinaus) gelten.
 
 Ein einzelnes Vorkommen einer Sammlung (ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief, ...) wird auch als *Sammlungsinstanz* bezeichnet.
 
 === Ordner 
 
-Ordner werden in ePA 2.0 für die Berechtigungssteuerung verwendet. Alle zu registrierenden Dokumente werden durch die Dokumentenverwaltung anhand der Metadaten und der Identität des einstellenden Nutzers entsprechend der [Berechtigungsmatrix](#berechtigungsmatrix) zugeordnet. Diese Ordner sind statisch und liegen beim Erstmaligen Verwenden einer ePA bereits vor. Zwei Ausnahmen gibt es: Kinderuntersuchungshefte als auch Mutterpässe können mehrfach angelegt werden und eine serverseitige Zuordnung eines Eintrags (d.h. Dokument) ist nicht zweifelsfrei möglich. Für diese Fälle werden Ordner durch ePA-Clients selbst angelegt. Ein weiteres Ordner-Management ist in der aktuellen Ausbaustufe nicht möglich.
+Ordner werden in ePA 2.0 für die Berechtigungssteuerung verwendet. Alle zu registrierenden Dokumente werden durch die Dokumentenverwaltung anhand der Metadaten und der Identität des einstellenden Nutzers entsprechend der Berechtigungsmatrix zugeordnet. Diese Ordner sind statisch und liegen beim Erstmaligen Verwenden einer ePA bereits vor. Zwei Ausnahmen gibt es: Kinderuntersuchungshefte als auch Mutterpässe können mehrfach angelegt werden und eine serverseitige Zuordnung eines Eintrags (d.h. Dokument) ist nicht zweifelsfrei möglich. Für diese Fälle werden Ordner durch ePA-Clients selbst angelegt. Ein weiteres Ordner-Management ist in der aktuellen Ausbaustufe nicht möglich.

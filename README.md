@@ -14,24 +14,25 @@ Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
     ├─ docs
     ├─ images
     ├─ samples
+    │   ├──── ePA 1 Beispielnachrichten PS - Konnektor   
+    │   │    ├── Requests
+    │   │    └── Responses
+    │   └──── policies
     ├─ src
     │   ├──── openapi
-    │   │    ├── device_management.yaml
     │   ├──── policies    
-    │   │    ├── hcp-policy-definition.xml
-    │   │    ├── insurance-policy-definition.xml
-    │   │    └── representative-policy-definition.xml
     │   └──── schema
     ├── README.md
     └── ReleaseNotes.md
 
 ## Weiterführende Seiten
 
-[Leitfaden für Primärsystemhersteller](docs/Implementierungshinweise_PS_ePA1.md)
+[Leitfaden für Primärsystemhersteller](docs/epa-1-implementierungshinweise-ps.adoc)
 
 [Berechtigungskonzept für ePA 2.0](docs/berechtigungskonzept.adoc)
 
 ## Lizenzbedingungen
+
 Copyright (c) 2021 gematik GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
