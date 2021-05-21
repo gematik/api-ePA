@@ -19,6 +19,7 @@ Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
     │   │    └── Responses
     │   └──── policies
     ├─ src
+    │   ├──── mio
     │   ├──── openapi
     │   ├──── policies    
     │   └──── schema

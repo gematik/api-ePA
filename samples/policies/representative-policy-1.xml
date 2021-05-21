@@ -6,7 +6,7 @@
 			<Subject>
 				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
 					<AttributeValue DataType="urn:hl7-org:v3#II">
-						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="D425456193" xmlns="urn:hl7-org:v3#II"/>
+						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="D425456193" xmlns="urn:hl7-org:v3"/>
 					</AttributeValue>
 					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:subject-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
 				</SubjectMatch>

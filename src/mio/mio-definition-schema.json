@@ -1,0 +1,182 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$ref": "#/definitions/mio_definition",
+	"definitions": {
+		"cardinality_definition": {
+			"description": "Constraints on the amount of the XDS folder | document in order to support that MIO in the electronic health record system.",
+			"type": "object",
+			"properties": {
+				"min": {
+					"type": "string"
+				},
+				"max": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
+		"folder_definition": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"value": {
+					"anyOf": [
+						{
+							"title": "value",
+							"type": "object",
+							"properties": {
+								"code": {
+									"type": "string"
+								},
+								"codeSystem": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"code",
+								"codeSystem"
+							],
+							"additionalProperties": false
+						},
+						{
+							"title": "value",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					]
+				}
+			},
+			"required": [
+				"name",
+				"value"
+			],
+			"additionalProperties": false
+		},
+		"document_definition": {
+			"type": "object",
+			"properties": {
+				"version": {
+					"description": "The version of the document format.",
+					"type": "string"
+				},
+				"name": {
+					"description": "The name of the MIO element.",
+					"type": "string"
+				},
+				"description": {
+					"description": "The description of the MIO element.",
+					"type": "string"
+				},
+				"canonicalUrl": {
+					"description": "A canonical URL of the structure definiton of the MIO element.",
+					"type": "string"
+				},
+				"metadata": {
+					"title": "metadata",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/folder_definition"
+					}
+				},
+				"documentCardinality": {
+					"$ref": "#/definitions/cardinality_definition"
+				}
+			},
+			"required": [
+				"version",
+				"name",
+				"description",
+				"canonicalUrl",
+				"metadata",
+				"documentCardinality"
+			],
+			"additionalProperties": false
+		},
+		"mio_definition": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "The technical name of the MIO.",
+					"type": "string"
+				},
+				"description": {
+					"description": "The overall description of the MIO.",
+					"type": "string"
+				},
+				"guidelineDefinition": {
+					"title": "guidelineDefinition",
+					"description": "A link to the FHIR implementation guidelines including its version.",
+					"type": "object",
+					"properties": {
+						"url": {
+							"type": "string",
+							"format": "uri"
+						},
+						"version": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"url",
+						"version"
+					],
+					"additionalProperties": false
+				},
+				"folderCardinality": {
+					"$ref": "#/definitions/cardinality_definition"
+				},
+				"validFromRelease": {
+					"type": "string"
+				},
+				"releaseDate": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"status": {
+					"description": "Whether this MIO definition is valid (i.e. approved) or invalid (i.e. deprecated).",
+					"type": "string"
+				},
+				"type": {
+					"description": "The type of the MIO - either 'mixed', 'uniform' or 'atomic'.",
+					"type": "string"
+				},
+				"metadata": {
+					"$ref": "#/definitions/folder_definition"
+				},
+				"documentCategory": {
+					"description": "The access rights (CRUD) are expressed via a document category.",
+					"type": "string"
+				},
+				"elementsOfMio": {
+					"title": "elementsOfMio",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/document_definition"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"description",
+				"guidelineDefinition",
+				"folderCardinality",
+				"validFromRelease",
+				"releaseDate",
+				"status",
+				"type",
+				"metadata",
+				"documentCategory",
+				"elementsOfMio"
+			],
+			"additionalProperties": false
+		}
+	}
+}

@@ -21,7 +21,7 @@ Comply with the following rules in order to instantiate a valid policy:
 			<Subject>
 				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
 					<AttributeValue DataType="urn:hl7-org:v3#II">
-						<InstanceIdentifier root="1.2.276.0.76.4.8" xmlns="urn:hl7-org:v3#II"/><!-- attribute 'extension': The KVNR of the representative. -->
+						<InstanceIdentifier root="1.2.276.0.76.4.8" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The KVNR of the representative. -->
 					</AttributeValue>
 					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:subject-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
 				</SubjectMatch>

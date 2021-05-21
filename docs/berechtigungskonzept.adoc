@@ -61,7 +61,7 @@ _Beispiel_: Einem Psychotherapeuten (Spalte "Psych" in der Matrix) wird in der f
 
 Die Granularität einer Policy lässt sich über eine kategoriebasierte und dokumentenspezifische Autorisierung näher beschreiben.
 
-=== Kategoriebasierte Autorisierung
+=== Kategorienbasierte Autorisierung
 
 Die kategoriebasierte Autorisierung schränkt den Zugang Dritter über berufsgruppenspezifische Vorgaben gemäß der oben vorgestellten Berechtigungsmatrix ein. Jede Einstellung eines Dokuments wird vom Aktensystem bzw. von der Komponente ePA-Dokumentenverwaltung mit einer automatischen Zuordnung zu einem statischen Ordner, welcher die Dokumentenkategorie repräsentiert, erweitert. Diese statischen Ordner sind initial bei jedem Aktenkonto eines Versicherten existent. Die serverseitige Zuordnung in diese Ordner erfolgt anhand der XDS-Metadaten in Kombination mit der Nutzergruppe des Einstellers, welche aus der Authentication Assertion erkennbar ist (die Nutzergruppe ist dem Signaturzertifikat zu entnehmen).
 
@@ -87,12 +87,8 @@ Für einige Dokumententypen gelten feste Formatvorgaben und Metadatenbelegungen.
 
 Einige Dokumente dürfen nicht isoliert für sich betrachtet werden, sondern ergeben nur in Kombination mit anderen Dokumenten Sinn. Deshalb werden in ePA 2.0 sogenannte _Sammlungstypen_ eingeführt:
 
-* Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist das Kinderuntersuchungsheft oder ein Mutterpass. 
+* Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist ein Mutterpass. 
 * Sammlungen des Typs "uniform" enthalten potentiell mehrere Dokumente, die jedoch im Gegensatz zu Sammlungen des Typs "mixed" immer aus Dokumenten desselben Typs bestehen. Ein Beispiel ist das Zahnbonusheft oder der Impfpass.
 * Sammlungen des Typs "atomic" sind strukturierte Dokumente, die für sich stehen können und nicht zusammen mit anderen Dokumenten interpretiert und verwaltet werden. Es handelt sich sozusagen um den "Default"-Typ, für den keine besonderen Anforderungen (über die allgemeinen Vorgaben für strukturierte Dokumente hinaus) gelten.
 
-Ein einzelnes Vorkommen einer Sammlung (ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief, ...) wird auch als *Sammlungsinstanz* bezeichnet.
-
-=== Ordner 
-
-Ordner werden in ePA 2.0 für die Berechtigungssteuerung verwendet. Alle zu registrierenden Dokumente werden durch die Dokumentenverwaltung anhand der Metadaten und der Identität des einstellenden Nutzers entsprechend der Berechtigungsmatrix zugeordnet. Diese Ordner sind statisch und liegen beim Erstmaligen Verwenden einer ePA bereits vor. Zwei Ausnahmen gibt es: Kinderuntersuchungshefte als auch Mutterpässe können mehrfach angelegt werden und eine serverseitige Zuordnung eines Eintrags (d.h. Dokument) ist nicht zweifelsfrei möglich. Für diese Fälle werden Ordner durch ePA-Clients selbst angelegt. Ein weiteres Ordner-Management ist in der aktuellen Ausbaustufe nicht möglich.
+Ein einzelnes Vorkommen einer Sammlung (z.B. ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief etc.) wird auch als _Sammlungsinstanz_ bezeichnet. Sammlungen als auch _Sammlungsinstanzen_ (Blacklist) können explizit berechtigt werden.

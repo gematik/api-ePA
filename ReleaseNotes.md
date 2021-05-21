@@ -1,3 +1,10 @@
+# Release 2.0.3-2
+- new MIO definitions
+ - moved testdriver to api-ePA
+ - namespace corrections for policies
+ - editorial changes
+
+
 # Release 2.0.3-1
 Changes - minor changes in HCP policy definition and sample HCP policies (i.e. HL7 namespace fixed)
 

@@ -1,0 +1,145 @@
+{
+	"name": "Child Medical Records",
+	"description": "Child medical records defined as a medical information object (MIO) by KBV. It may include participation card and parental notes.",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/UH1X0/U-Heft",
+		"version": "1.0.0"
+	},
+	"folderCardinality": {
+		"min": "0",
+		"max": "n"
+	},
+	"validFromRelease": "2.0.3",
+	"releaseDate": "2021-05-05",
+	"status": "approved",
+	"type": "mixed",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "childsrecord",
+			"codeSystem": "1.2.276.0.76.5.512"
+		}
+	},
+	"documentCategory": "childsrecord",
+	"elementsOfMio": [
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_CMR_Bundle",
+			"description": "This document is a child medical record.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_CMR_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8"
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "BERI",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9"
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftUntersuchungen:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pkcs7-mime"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_PC_Bundle",
+			"description": "This document is a participation card.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PC_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8"
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "BESC",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9"
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftTeilnahmekarte:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pkcs7-mime"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			}
+		},
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_PN_Bundle",
+			"description": "This document holds parental notes.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PN_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8"
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "PATD",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9"
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftNotizen:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			}
+		}
+	]
+}
