@@ -1,3 +1,10 @@
+# Release 2.0.3-3
+- API: fixed syntax bugs, added missing parameters to paths, renamed path parameters (device_management.yaml)
+ - API: corrections in comments and version history (device_management.yaml)
+ - SAMPLES: C_10750 - permit access to very restricted documents added on a whitelist
+ - MIO: correction of document cardinality (mr-mio-definition.json)
+
+
 # Release 2.0.3-2
 - new MIO definitions
  - moved testdriver to api-ePA

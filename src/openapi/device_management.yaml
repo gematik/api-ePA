@@ -1,4 +1,4 @@
-openapi: 2.0.2
+openapi: 3.0.1
 info:
   title: "ePA Authorization Service - Device Management"
   description: |
@@ -6,12 +6,16 @@ info:
   contact:
     name: "gematik"
     email: "epa@gematik.de"
-  version: "0.0.1"
+  version: "1.0.0"
+  # 1.0.0 - fixed bugs of version 0.0.1, 
+  #       - renamed parameters for search/update/delete, 
+  #       - some editorial modifications
+  # 0.0.1 - initial version
 tags:
   - name: "Devices"
     description: "Everything about a Device in the ePA Authorization Service."
-  paths:
-  /devices/{hcid}/{kvnr}:
+paths:
+  /devices/{hcid}/{kvnr}/{deviceId}:
     get:
       tags:
       - "Devices"
@@ -36,12 +40,12 @@ tags:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
-      - name: "deviceid"
+      - name: "deviceId"
         in: path
-        description: "The Device used by the user"
+        description: "The requesting clients device Id (user's device Id)"
         required: true
         schema:
-          $ref: '#/components/schemas/DeviceIdType
+          $ref: '#/components/schemas/DeviceIdType'
       responses:
         200:
           description: "OK"
@@ -57,11 +61,11 @@ tags:
           $ref: "#/components/responses/Error404RecordNotFound"
         500:
           $ref: "#/components/responses/Error500InternalError"
-  /devices/{hcid}/{kvnr}/{deviceId}:
+  /devices/{hcid}/{kvnr}/{deviceId}/{affectedId}:
     get:
       tags:
       - "Devices"
-      summary: "Find device by ID"
+      summary: "Find a device"
       description: |
         Returns information of a single device.
       operationId: "getDeviceById"
@@ -84,15 +88,15 @@ tags:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
-      - name: "deviceid"
+      - name: "deviceId"
         in: path
-        description: "The Device used by the user"
+        description: "The requesting clients device Id (user's device Id)"
         required: true
         schema:
-          $ref: '#/components/schemas/DeviceIdType
-      - name: "searchedId"
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "affectedId"
         in: "path"
-        description: "The ID of the device to be returned."
+        description: "The Id of the device to be searched for."
         required: true
         schema:
           $ref: '#/components/schemas/DeviceIdType'
@@ -137,15 +141,15 @@ tags:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
-      - name: "deviceid"
+      - name: "deviceId"
         in: path
-        description: "The Device used by the user"
+        description: "The requesting clients device Id (user's device Id)"
         required: true
         schema:
-          $ref: '#/components/schemas/DeviceIdType
-      - name: "updatedId"
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "affectedId"
         in: "path"
-        description: "The ID of the device to be updated."
+        description: "The Id of the device to be updated."
         required: true
         schema:
           $ref: '#/components/schemas/DeviceIdType'
@@ -192,15 +196,15 @@ tags:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
-      - name: "deviceid"
+      - name: "deviceId"
         in: path
-        description: "The Device used by the user"
+        description: "The requesting clients device Id (user's device Id)"
         required: true
         schema:
-          $ref: '#/components/schemas/DeviceIdType
-      - name: "deletedId"
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "affectedId"
         in: "path"
-        description: "The ID of the device to be deleted."
+        description: "The Id of the device to be deleted."
         required: true
         schema:
           $ref: '#/components/schemas/DeviceIdType'
