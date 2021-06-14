@@ -6,7 +6,8 @@ info:
   contact:
     name: "gematik"
     email: "epa@gematik.de"
-  version: "1.0.0"
+  version: "1.0.1"
+  # 1.0.1 - fixed typo in AuthenticationAssertion 
   # 1.0.0 - fixed bugs of version 0.0.1, 
   #       - renamed parameters for search/update/delete, 
   #       - some editorial modifications
@@ -22,7 +23,7 @@ paths:
       summary: "Get a list of all devices."
       operationId: "getDevices"
       parameters:
-      - name: "AuthentcationAssertion"
+      - name: "AuthenticationAssertion"
         in: header
         description: "The Authentication Assertion from the Authentication Service"
         required: true
@@ -70,7 +71,7 @@ paths:
         Returns information of a single device.
       operationId: "getDeviceById"
       parameters:
-      - name: "AuthentcationAssertion"
+      - name: "AuthenticationAssertion"
         in: header
         description: "The Authentication Assertion from the Authentication Service"
         required: true
@@ -123,7 +124,7 @@ paths:
         To unlock a device, set the `state` to `ACTIVATED`.
       operationId: "updateDevice"
       parameters:
-      - name: "AuthentcationAssertion"
+      - name: "AuthenticationAssertion"
         in: header
         description: "The Authentication Assertion from the Authentication Service"
         required: true
@@ -178,7 +179,7 @@ paths:
         The device will be deleted
       operationId: "deleteDevice"
       parameters:
-      - name: "AuthentcationAssertion"
+      - name: "AuthenticationAssertion"
         in: header
         description: "The Authentication Assertion from the Authentication Service"
         required: true

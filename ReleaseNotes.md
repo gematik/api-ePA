@@ -1,3 +1,9 @@
+# Release 2.0.3-4
+- MIO: Mio Versions updated
+ - PS: update implementation guide for PS
+ - API: bugfix type AuthenticationAssertion (device_management.yaml)
+
+
 # Release 2.0.3-3
 - API: fixed syntax bugs, added missing parameters to paths, renamed path parameters (device_management.yaml)
  - API: corrections in comments and version history (device_management.yaml)

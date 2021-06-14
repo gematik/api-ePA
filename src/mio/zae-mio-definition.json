@@ -3,8 +3,8 @@
 	"description": "Dental records defined as a medical information object (MIO) by KBV.",
 	"guidelineDefinition":
 	{	
-		"url": "https://mio.kbv.de/display/ZB1x0",
-		"version": "1.0.0"
+		"url": "https://mio.kbv.de/display/ZB1X1X0",
+		"version": "1.1.0"
 	},
 	"folderCardinality":
 		{
@@ -27,7 +27,7 @@
 	"documentCategory": "dentalrecord",
 	"elementsOfMio": [
 		{
-			"version": "1.0.0",
+			"version": "1.1.0",
     		"name": "KBV_PR_MIO_ZAEB_Bundle",
 			"description": "This document is a dental record.",
 			"canonicalUrl":"https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ZAEB_Bundle",
