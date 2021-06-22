@@ -1,3 +1,10 @@
+# Release 2.0.4-pre1
+- replaced "mothersrecord" with "childsrecord" in collection "mixed"
+ - added reference implementation "Aktensystem Wechsel"
+ - C_10778: modified access rights for midwife refering DVPMG\ - C_10773 - created metadata definitions for structured documents (renamed folder mio to implementation_guides)
+ - updated structure for supporting generic documents (not solely mios)
+
+
 # Release 2.0.3-4
 - MIO: Mio Versions updated
  - PS: update implementation guide for PS

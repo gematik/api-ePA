@@ -1,0 +1,90 @@
+{
+	"name": "Maternity Records",
+	"description": "Maternity Records defined as a medical information object (MIO) by KBV.",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/MP1X0",
+		"version": "1.0.0"
+	},
+	"folderCardinality": {
+		"min": "0",
+		"max": "n",
+		"unique": false
+	},
+	"validFromRelease": "2.0.3",
+	"releaseDate": "2021-05-05",
+	"status": "approved",
+	"type": "uniform",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "mothersrecord",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "Schwangerschaft und Geburt",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "Daten gemäß der nach § 92 Absatz 1 Satz 2 Nummer 4 in Verbindung mit den §§ 24c bis 24f beschlossenen Richtlinie des Gemeinsamen Bundesausschusses über die ärztliche Betreuung während der Schwangerschaft und nach der Entbindung (elektronischer Mutterpass) sowie Daten, die sich aus der Versorgung der Versicherten mit Hebammenhilfe ergeben."
+				}
+			]
+		}
+	},
+	"documentCategory": "mothersrecord",
+	"elements": [
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_MR_Bundle",
+			"description": "This document is of FHIR resource type KBV_PR_MIO_MR_Bundle.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_MR_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Medizinischer Ausweis",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ausweise, Pässe und ähnliche kurze Datensätze, die wichtige medizinische Informationen zusammenfassen. Beispiele: Allergiepass, Allergieausweis, Impfpass, Impfausweis, Impfbuch, Notfalldatensatz"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "GEBU",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Schwangerschafts- und Geburtsdokumentation",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Dokumente mit allen Informationen über die Phase vor, während und nach dem Geburtsverlauf, inklusive Funktionsdiagnostik (z.B. CTG) und Bildgebende Diagnostik und ähnliche Befunde die sich auf das Kind beziehen. Weiterhin beinhalten das Konzept Belege zur Neugeborenversorgung, wenn sie der Akte der Mutter zugeordnet sind. Verordnungen und Medikamentationsdokumentation hingegen werden über die jeweiligen Konzepte (VERO und MEDI) abgebildet. Beispiele: Geburtenbericht, Geburtenprotokoll, Geburtenverlaufskurve, Neugeborenenscreening, Partogramm, Wiegekarte, Neugeborenendokumentationsbogen, Säuglingskurve, Stillprotokoll"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:Mutterpass:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "Mutterpass (gematik)"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pkcs7-mime"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n",
+				"unique": false
+			}
+		}
+	]
+}

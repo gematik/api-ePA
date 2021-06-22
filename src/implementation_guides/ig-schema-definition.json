@@ -1,9 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"$ref": "#/definitions/mio_definition",
+	"$ref": "#/definitions/StructureDefinition",
 	"definitions": {
-		"cardinality_definition": {
-			"description": "Constraints on the amount of the XDS folder | document in order to support that MIO in the electronic health record system.",
+		"CardinalityDefinition": {
+			"description": "Constraints on the amount of the XDS folder or document in order to support that structured document in the electronic health record system.",
 			"type": "object",
 			"properties": {
 				"min": {
@@ -11,6 +11,10 @@
 				},
 				"max": {
 					"type": "string"
+				},
+				"unique": {
+					"description": "The value 'true' means that solely one document/folder with the availablility status 'approved' is allowed to be registered with the given metadata combination. False means that multiple instances may be submitted.",
+					"type": "boolean"
 				}
 			},
 			"required": [
@@ -19,7 +23,7 @@
 			],
 			"additionalProperties": false
 		},
-		"folder_definition": {
+		"FolderDefinition": {
 			"type": "object",
 			"properties": {
 				"name": {
@@ -36,11 +40,18 @@
 								},
 								"codeSystem": {
 									"type": "string"
-								}
+								},
+								"displayName": {
+									"type": "string"
+								},
+								"desc": {
+								  "$ref": "#/definitions/DescriptionDefinition"
+								}							
 							},
 							"required": [
 								"code",
-								"codeSystem"
+								"codeSystem",
+								"displayName"
 							],
 							"additionalProperties": false
 						},
@@ -59,8 +70,28 @@
 				"value"
 			],
 			"additionalProperties": false
-		},
-		"document_definition": {
+		},		
+		"DescriptionDefinition": {
+		  "type": "array",
+		  "title": "desc",
+		  "items": {
+			"type": "object",
+			"required": [
+			  "language",
+			  "#text"
+			],
+			"additionalProperties": false,
+			"properties": {
+			  "language": {
+				"type": "string"
+			  },
+			  "#text": {
+				"type": "string"
+			  }
+			}
+		  }
+		},					
+		"DocumentDefinition": {
 			"type": "object",
 			"properties": {
 				"version": {
@@ -68,52 +99,49 @@
 					"type": "string"
 				},
 				"name": {
-					"description": "The name of the MIO element.",
+					"description": "The name of the specific document.",
 					"type": "string"
 				},
 				"description": {
-					"description": "The description of the MIO element.",
+					"description": "The description of the specific document.",
 					"type": "string"
 				},
 				"canonicalUrl": {
-					"description": "A canonical URL of the structure definiton of the MIO element.",
+					"description": "A canonical URL of the structure definiton of the specific document.",
 					"type": "string"
 				},
 				"metadata": {
 					"title": "metadata",
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/folder_definition"
+						"$ref": "#/definitions/FolderDefinition"
 					}
 				},
 				"documentCardinality": {
-					"$ref": "#/definitions/cardinality_definition"
+					"$ref": "#/definitions/CardinalityDefinition"
 				}
 			},
 			"required": [
-				"version",
 				"name",
 				"description",
-				"canonicalUrl",
 				"metadata",
 				"documentCardinality"
 			],
 			"additionalProperties": false
 		},
-		"mio_definition": {
+		"StructureDefinition": {
 			"type": "object",
 			"properties": {
 				"name": {
-					"description": "The technical name of the MIO.",
+					"description": "The technical name of the structured document.",
 					"type": "string"
 				},
 				"description": {
-					"description": "The overall description of the MIO.",
+					"description": "The overall description of the structured document.",
 					"type": "string"
 				},
 				"guidelineDefinition": {
-					"title": "guidelineDefinition",
-					"description": "A link to the FHIR implementation guidelines including its version.",
+					"description": "A link to the (FHIR) implementation guideline including its version.",
 					"type": "object",
 					"properties": {
 						"url": {
@@ -125,13 +153,12 @@
 						}
 					},
 					"required": [
-						"url",
-						"version"
+						"url"
 					],
 					"additionalProperties": false
 				},
 				"folderCardinality": {
-					"$ref": "#/definitions/cardinality_definition"
+					"$ref": "#/definitions/CardinalityDefinition"
 				},
 				"validFromRelease": {
 					"type": "string"
@@ -141,25 +168,24 @@
 					"format": "date-time"
 				},
 				"status": {
-					"description": "Whether this MIO definition is valid (i.e. approved) or invalid (i.e. deprecated).",
+					"description": "Whether this structured document definition is valid (i.e. approved) or invalid (i.e. deprecated).",
 					"type": "string"
 				},
 				"type": {
-					"description": "The type of the MIO - either 'mixed', 'uniform' or 'atomic'.",
+					"description": "The collection type of the structured document - either 'mixed', 'uniform' or 'atomic'.",
 					"type": "string"
 				},
 				"metadata": {
-					"$ref": "#/definitions/folder_definition"
+					"$ref": "#/definitions/FolderDefinition"
 				},
 				"documentCategory": {
 					"description": "The access rights (CRUD) are expressed via a document category.",
 					"type": "string"
 				},
-				"elementsOfMio": {
-					"title": "elementsOfMio",
+				"elements": {
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/document_definition"
+						"$ref": "#/definitions/DocumentDefinition"
 					}
 				}
 			},
@@ -174,7 +200,7 @@
 				"type",
 				"metadata",
 				"documentCategory",
-				"elementsOfMio"
+				"elements"
 			],
 			"additionalProperties": false
 		}
