@@ -1,3 +1,8 @@
+# Release 2.0.4-pre2
+- correction DeviceNameType minLength (device_management.yaml)
+ - corrections in delta-export-time description (readme in as-wechsel)
+
+
 # Release 2.0.4-pre1
 - replaced "mothersrecord" with "childsrecord" in collection "mixed"
  - added reference implementation "Aktensystem Wechsel"

@@ -95,16 +95,13 @@ Für die Entschlüsselung der ZIP-Datei sind folgende Schritte durchzuführen:
 
 2. Der Verarbeitungskontext prüft die Signatur signature mittels des
    mitgelieferten Zertifikats C.VAU-SIG des alten Anbieters. Falls die Prüfung
-   fehlschlägt, wird eine Fehlermeldung `„CERTIFICATE_INVALID“` an das ePA-FdV
+   fehlschlägt, wird eine Fehlermeldung `„INTERNAL_ERROR“` an das ePA-FdV
    gemeldet. Ansonsten wird mit Schritt 3. fortgefahren.
 
 3. Der Verarbeitungskontext prüft, dass KVNR mit der KVNR des angemeldeten
-   Versicherten übereinstimmt und die `export_zeit` nicht mehr als x abweicht.
-
-   xxx was zu x schreiben
-
+   Versicherten übereinstimmt und die `export_zeit` nicht mehr als 30 Tage abweicht.
    Falls die Prüfung fehlschlägt, wird eine Fehlermeldung `„INTERNAL_ERROR“` an
-   das ePA-FdV gemeldet. Ansonsten wird mit Schritt 3. fortgefahren.
+   das ePA-FdV gemeldet. Ansonsten wird mit Schritt 4. fortgefahren.
 
 4. Der Verarbeitungskontext entschlüsselt `ciphertext_1` mit dem Kontextschlüssel
    KS und erhält die unverschlüsselte ZIP-Datei für den Import.

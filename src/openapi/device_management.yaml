@@ -267,7 +267,7 @@ components:
     DeviceNameType:
       type: "string"
       description: "The Name of a Device"
-      minLength: 0
+      minLength: 1
       maxLength: 64
     AuthenticationAssertionType:
       type: "string"
