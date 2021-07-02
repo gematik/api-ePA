@@ -176,7 +176,8 @@ paths:
       - "Devices"
       summary: "Delete a device"
       description: |
-        The device will be deleted
+        The device will be deleted.
+        The active device can't be deleted (Condition: affectedId != deviceId).
       operationId: "deleteDevice"
       parameters:
       - name: "AuthenticationAssertion"

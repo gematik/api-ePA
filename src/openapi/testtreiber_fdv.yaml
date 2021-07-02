@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.0.0
+  version: 2.0.4
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -11,18 +11,14 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0'
 servers:
-  - url: 'https://frontend.titus.ti-dienste.de/'
+  - url: 'https://frontend.titus.ti-dienste.de'
 paths:
   /login:
     post:
       tags:
         - user
       summary: Login Aktensession
-      description: 'Diese Operation führt ein explizites Login für ein Aktenkonto mit dem RecordIdenfier für insurantId aus.
-        Für die Verwendung einer eGK können die zu verwendende PIN sowie die CAN (für NFC) übergeben werden.
-        Für die Verwendung einer alvi-Identität kann der zu verwendende Authentisierungstoken übergeben werden.
-        Falls die insurantID übergeben wird, dann referenziert die insurantID die AUT-identität des Nutzers, welche über eine eGK oder einen Signaturdienst (Konfigurationsparameter UseEGK) verfügbar ist.
-        Falls keine insurantID übergeben wird, dann wird eine PKCS12-Datei übergeben. Das C.CH.AUT Zertifikat und der private Schlüssel aus der PKCS12-Datei werden im Testtreiber genutzt (bspw. Signatur bei der Authentisierung und der Schlüsselerzeugung mit SGD).'
+      description: 'Diese Operation führt ein explizites Login für ein Aktenkonto mit dem RecordIdenfier für insurantId aus. Für die Verwendung einer eGK können die zu verwendende PIN sowie die CAN (für NFC) übergeben werden. Für die Verwendung einer alvi-Identität kann der zu verwendende Authentisierungstoken übergeben werden. Falls die insurantID übergeben wird, dann referenziert die insurantID die AUT-identität des Nutzers, welche über eine eGK oder einen Signaturdienst (Konfigurationsparameter UseEGK) verfügbar ist. Falls keine insurantID übergeben wird, dann wird eine PKCS12-Datei übergeben. Das C.CH.AUT Zertifikat und der private Schlüssel aus der PKCS12-Datei werden im Testtreiber genutzt (bspw. Signatur bei der Authentisierung und der Schlüsselerzeugung mit SGD).'
       operationId: login_1
       requestBody:
         content:
@@ -41,7 +37,7 @@ paths:
       tags:
         - user
       summary: Logout Aktensession
-      description: 'Diese Operation führt ein Logout für eine mit insurantId identifizierte Aktensession aus.'
+      description: Diese Operation führt ein Logout für eine mit insurantId identifizierte Aktensession aus.
       operationId: logout_1
       requestBody:
         content:
@@ -60,7 +56,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: Dokumente in ein Aktenkonto laden
-      description: 'Diese Operation führt den Anwendungsfall "Dokumente einstellen" in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt den Anwendungsfall "Dokumente einstellen" in einer mit insurantId identifizierten Aktensession aus.
       operationId: storeDocuments_1
       requestBody:
         content:
@@ -79,11 +75,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: 'Dokumente, Ordner, Submission Sets und/oder Verknüpfungen in einem Aktenkonto finden'
-      description: 'Diese Operation führt den Anwendungsfall "Dokumente / Ordner suchen" in einer mit insurantId identifizierten Aktensession aus.
-        Die Parameter returnType (Werte sind „LeafClass“ oder „ObjectRef“), startIndex und maxResults werden zum Gruppieren der Ergebnisse für das Blättern verwendet.
-        Die für die Suchoperation zu verwendende Stored Query wird durch den Parameter vorgegeben. Falls dieser nicht angegeben ist, muss eine geeignete Stored Query gewählt werden.
-        Wenn die Suchparameter ein SubmissionSet adressieren, dann soll der Response die Metadaten der im SubmissionSet enthaltenen Dokumente (unter Beachtung ggf. zusätzlich angegebenener Suchkriterien zu Dokumenten) beinhalten.
-        Die Response enthält Metadaten zu Dokumenten aber nicht die Dokumente selbst.'
+      description: 'Diese Operation führt den Anwendungsfall "Dokumente / Ordner suchen" in einer mit insurantId identifizierten Aktensession aus. Die Parameter returnType (Werte sind „LeafClass“ oder „ObjectRef“), startIndex und maxResults werden zum Gruppieren der Ergebnisse für das Blättern verwendet. Die für die Suchoperation zu verwendende Stored Query wird durch den Parameter vorgegeben. Falls dieser nicht angegeben ist, muss eine geeignete Stored Query gewählt werden. Wenn die Suchparameter ein SubmissionSet adressieren, dann soll der Response die Metadaten der im SubmissionSet enthaltenen Dokumente (unter Beachtung ggf. zusätzlich angegebenener Suchkriterien zu Dokumenten) beinhalten. Die Response enthält Metadaten zu Dokumenten aber nicht die Dokumente selbst.'
       operationId: findObjects_1
       requestBody:
         content:
@@ -102,8 +94,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: Dokumente aus Aktenkonto herunterladen
-      description: 'Diese Operation führt den Anwendungsfall "Dokumente herunterladen" in einer mit insurantId identifizierten Aktensession aus.
-        Lädt die Dokumente mit den im Request angegebenen Ids aus dem Aktenkonto. Die Ids werden mittels findDocuments ermittelt.'
+      description: Diese Operation führt den Anwendungsfall "Dokumente herunterladen" in einer mit insurantId identifizierten Aktensession aus. Lädt die Dokumente mit den im Request angegebenen Ids aus dem Aktenkonto. Die Ids werden mittels findDocuments ermittelt.
       operationId: retrieveDocuments_1
       requestBody:
         content:
@@ -122,8 +113,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: 'Dokumente, Ordner aus dem Aktenkonto löschen'
-      description: 'Diese Operation führt den Anwendungsfall "Dokumente löschen" in einer mit insurantId identifizierten Aktensession aus.
-        löscht die Dokumente, Ordner oder  mit dem im Request angegebenen Ids aus dem Aktenkonto. Die Ids werden mittels findDocuments ermittelt.'
+      description: 'Diese Operation führt den Anwendungsfall "Dokumente löschen" in einer mit insurantId identifizierten Aktensession aus. löscht die Dokumente, Ordner oder  mit dem im Request angegebenen Ids aus dem Aktenkonto. Die Ids werden mittels findDocuments ermittelt.'
       operationId: deleteObjects_1
       requestBody:
         content:
@@ -142,7 +132,7 @@ paths:
       tags:
         - directory
       summary: Suche nach Leistungserbringerinstitutionen im Verzeichnisdienst
-      description: 'Diese Operation führt eine Suchanfrage für Leistungserbringerinstitutionen im Verzeichnisdienst der TI in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt eine Suchanfrage für Leistungserbringerinstitutionen im Verzeichnisdienst der TI in einer mit insurantId identifizierten Aktensession aus.
       operationId: findHcpos_1
       requestBody:
         content:
@@ -161,7 +151,7 @@ paths:
       tags:
         - directory
       summary: Suche nach Kostenträgern im Verzeichnisdienst
-      description: 'Diese Operation führt eine Suchanfrage für Kostenträger im Verzeichnisdienst der TI in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt eine Suchanfrage für Kostenträger im Verzeichnisdienst der TI in einer mit insurantId identifizierten Aktensession aus.
       operationId: findInsurances_1
       requestBody:
         content:
@@ -180,7 +170,7 @@ paths:
       tags:
         - permissions
       summary: Alle Berechtigungen lesen
-      description: 'Diese Operation führt den Anwendungsfall "Vergebene Berechtigungen auflisten" in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt den Anwendungsfall "Vergebene Berechtigungen auflisten" in einer mit insurantId identifizierten Aktensession aus.
       operationId: getPermissions_1
       requestBody:
         content:
@@ -199,8 +189,7 @@ paths:
       tags:
         - permissions
       summary: Anzeige der auf ein Dokument berechtigten LEI
-      description: 'Diese Operation führt den Anwendungsfall "Vergebene Berechtigungen eines Dokuments auflisten" in einer mit insurantId identifizierten Aktensession aus.
-        Der Nutzer erhält Informationen darüber, welche Leistungserbringerinstitutionen auf das Dokument Zugriff haben.'
+      description: 'Diese Operation führt den Anwendungsfall "Vergebene Berechtigungen eines Dokuments auflisten" in einer mit insurantId identifizierten Aktensession aus. Der Nutzer erhält Informationen darüber, welche Leistungserbringerinstitutionen auf das Dokument Zugriff haben.'
       operationId: getDocAuthorized_1
       requestBody:
         content:
@@ -214,13 +203,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PermissionsResponseDTO'
-  /permissionHcpo:
+  /permissionHcpo/add:
     post:
       tags:
         - permissions
       summary: Berechtigung für LEI erteilen
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für LEI vergeben" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: addPermissionHcpo_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für LEI vergeben" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionHcpo_add
       requestBody:
         content:
           application/json:
@@ -233,12 +222,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-    put:
+    parameters: []
+  /permissionHcpo/update:
+    post:
       tags:
         - permissions
       summary: Berechtigung für eine LEI ändern
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für LEI ändern" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: changePermissionHcpo_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für LEI ändern" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionHcpo_update
       requestBody:
         content:
           application/json:
@@ -251,17 +242,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-    delete:
+    parameters: []
+  /permissionHcpo/remove:
+    post:
       tags:
         - permissions
       summary: Berechtigung für eine LEI löschen
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für LEI löschen" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: deletePermissionHcpo_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für LEI löschen" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionHcpo_remove
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DeletePermissionDTO'
+              $ref: '#/components/schemas/PermissionHcpoDTO'
       responses:
         default:
           description: default response
@@ -269,13 +262,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-  /permissionRepresentative:
+    parameters: []
+  /permissionRepresentative/add:
     post:
       tags:
         - permissions
       summary: Berechtigung für einen Vertreter erteilen
-      description: 'Diese Operation führt den Anwendungsfall "Vertretung einrichten" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: addPermissionRepresentative_1
+      description: Diese Operation führt den Anwendungsfall "Vertretung einrichten" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionRepresentative_add
       requestBody:
         content:
           application/json:
@@ -288,12 +282,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-    delete:
+  /permissionRepresentative/remove:
+    post:
       tags:
         - permissions
       summary: Berechtigung für einen Vertreter löschen
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für Vertreter löschen" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: deletePermissionRepresentative_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für Vertreter löschen" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionRepresentative_remove
       requestBody:
         content:
           application/json:
@@ -306,13 +301,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-  /permissionInsurance:
+  /permissionInsurance/add:
     post:
       tags:
         - permissions
       summary: Berechtigung für einen Kostenträger erteilen
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für Kostenträger vergeben" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: addPermissionInsurance_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für Kostenträger vergeben" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionInsurance_add
       requestBody:
         content:
           application/json:
@@ -325,12 +320,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
-    delete:
+  /permissionInsurance/remove:
+    post:
       tags:
         - permissions
       summary: Berechtigung für einen Kostenträger löschen
-      description: 'Diese Operation führt den Anwendungsfall "Berechtigung für Kostenträger löschen" in einer mit insurantId identifizierten Aktensession aus.'
-      operationId: deletePermissionInsurance_1
+      description: Diese Operation führt den Anwendungsfall "Berechtigung für Kostenträger löschen" in einer mit insurantId identifizierten Aktensession aus.
+      operationId: permissionInsurance_remove
       requestBody:
         content:
           application/json:
@@ -348,8 +344,7 @@ paths:
       tags:
         - administration
       summary: Benachrichtigungsadresse für Geräteautorisierung aktualisieren
-      description: 'Diese Operation führt den Anwendungsfall "Benachrichtigungsadresse für Geräteautorisierung aktualisieren" in einer mit insurantId identifizierte Aktensession aus.
-        Hinterlegt eine Benachrichtigungsadresse für das Aktenkonto.'
+      description: Diese Operation führt den Anwendungsfall "Benachrichtigungsadresse für Geräteautorisierung aktualisieren" in einer mit insurantId identifizierte Aktensession aus. Hinterlegt eine Benachrichtigungsadresse für das Aktenkonto.
       operationId: putNotificationInformation_1
       requestBody:
         content:
@@ -368,7 +363,7 @@ paths:
       tags:
         - administration
       summary: Hinterlegte Benachrichtigungsadressen abfragen
-      description: 'Diese Operation führt den Anwendungsfall "Benachrichtigungsadresse für Geräteautorisierung abfragen" in einer mit insurantId identifizierte Aktensession aus.'
+      description: Diese Operation führt den Anwendungsfall "Benachrichtigungsadresse für Geräteautorisierung abfragen" in einer mit insurantId identifizierte Aktensession aus.
       operationId: getNotificationInformation_1
       requestBody:
         content:
@@ -387,7 +382,7 @@ paths:
       tags:
         - administration
       summary: Anbieter wechseln
-      description: 'Diese Operation führt den Anwendungsfall "Anbieter wechseln" in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt den Anwendungsfall "Anbieter wechseln" in einer mit insurantId identifizierten Aktensession aus.
       operationId: changeProvider_1
       requestBody:
         content:
@@ -406,9 +401,7 @@ paths:
       tags:
         - protocol
       summary: Zugriffsprotokolle lesen
-      description: 'Diese Operation führt den Anwendungsfall "Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus.
-        Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben.
-        Liefert alle Einträge aus dem §291a und Verwaltungsprotokoll für das Aktenkonto.'
+      description: Diese Operation führt den Anwendungsfall "Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus. Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben. Liefert alle Einträge aus dem §291a und Verwaltungsprotokoll für das Aktenkonto.
       operationId: getProtocol_1
       requestBody:
         content:
@@ -427,8 +420,7 @@ paths:
       tags:
         - protocol
       summary: Zugriffsprotokolle mit PAdES-Signatur lesen
-      description: 'Diese Operation führt den Anwendungsfall "signiertes Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus. Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben.
-        Liefert alle Einträge aus getSignedAuditEvents gemäß A_21204 (ePA-Aktensystem) für das Aktenkonto.'
+      description: Diese Operation führt den Anwendungsfall "signiertes Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus. Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben. Liefert alle Einträge aus getSignedAuditEvents gemäß A_21204 (ePA-Aktensystem) für das Aktenkonto.
       operationId: getSignedProtocol_1
       requestBody:
         content:
@@ -447,9 +439,7 @@ paths:
       tags:
         - configuration
       summary: Gesamte Konfiguration lesen
-      description: 'Die Operation liefert eine Liste aller Konfigurationsparameter des FdV mit den eingestellten Werten.
-        Liefert alle Konfigurationseinträge, die dem Filter entsprechen. Als Filter ist configurationEntryId möglich.
-        Wird kein Filter angegeben, dann werden alle Einträge aus der Konfiguration zurückgegeben.'
+      description: 'Die Operation liefert eine Liste aller Konfigurationsparameter des FdV mit den eingestellten Werten. Liefert alle Konfigurationseinträge, die dem Filter entsprechen. Als Filter ist configurationEntryId möglich. Wird kein Filter angegeben, dann werden alle Einträge aus der Konfiguration zurückgegeben.'
       operationId: getConfigurationEntries_1
       parameters:
         - name: uid
@@ -474,8 +464,7 @@ paths:
       tags:
         - configuration
       summary: Konfigurationseintrag ändern
-      description: 'Diese Operation setzt ein oder mehrere Werte für eine Liste von Konfigurationsparametern gemäß TAB_FdV_104 sowie für herstellerspezifische Konfigurationsparameter.
-        Die Liste der herstellerspezifischen Konfigurationsparameter sind in der Betriebsdokumentation zu beschreiben.'
+      description: Diese Operation setzt ein oder mehrere Werte für eine Liste von Konfigurationsparametern gemäß TAB_FdV_104 sowie für herstellerspezifische Konfigurationsparameter. Die Liste der herstellerspezifischen Konfigurationsparameter sind in der Betriebsdokumentation zu beschreiben.
       operationId: updateConfigurationEntries_1
       requestBody:
         content:
@@ -492,7 +481,7 @@ paths:
   /productinformation:
     post:
       summary: Gibt die Informationen zur Produktinformation zurück
-      description: 'Die Operation liefert eine Liste mit den Werten der Produktinformation.'
+      description: Die Operation liefert eine Liste mit den Werten der Produktinformation.
       operationId: getProductInformation_1
       responses:
         default:
@@ -518,8 +507,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: 'Aktualisierung der Informationen zu einem Dokument, Ordner des Nutzers oder einer Verknüpfung'
-      description: 'Diese Operation führt den Anwendungsfall "Änderung der Vertraulichkeit eines Dokumentes" in einer mit insurantId identifizierten Aktensession aus.
-        Der Nutzer kann Informationen zu einem bereits hinterlegten Dokument, Ordner oder Verknüpfung aktualisieren.'
+      description: Diese Operation führt den Anwendungsfall "Änderung der Vertraulichkeit eines Dokumentes" in einer mit insurantId identifizierten Aktensession aus. Der Nutzer kann die ConfidentialityCode eines Dokumentes ändern.
       operationId: updateMetadata_1
       requestBody:
         content:
@@ -536,8 +524,7 @@ paths:
   /updateKeys:
     post:
       summary: Umschlüsselung durchführen
-      description: 'Diese Operation führt den Anwendungsfall "Umschlüsselung" in einer mit insurantId identifizierten Aktensession aus.
-        Es werden neue Aktenschlüssel, Kontextschlüssel bzw. Dokumentenschlüssel für den Versicherten, die Berechtigten und die Dokumentenverwaltung erzeugt.'
+      description: 'Diese Operation führt den Anwendungsfall "Umschlüsselung" in einer mit insurantId identifizierten Aktensession aus. Es werden neue Aktenschlüssel, Kontextschlüssel bzw. Dokumentenschlüssel für den Versicherten, die Berechtigten und die Dokumentenverwaltung erzeugt.'
       operationId: updateKeys_1
       requestBody:
         content:
@@ -556,7 +543,7 @@ paths:
       tags:
         - 'documents, folders, submissionsets, associations'
       summary: Ersetzen eines Dokuments
-      description: 'Diese Operation führt den Anwendungsfall "Ersetzen eines Dokumentes" in einer mit insurantId identifizierten Aktensession aus.'
+      description: Diese Operation führt den Anwendungsfall "Ersetzen eines Dokumentes" in einer mit insurantId identifizierten Aktensession aus.
       operationId: replaceDocument_1
       requestBody:
         content:
@@ -627,24 +614,22 @@ components:
       properties:
         account:
           $ref: '#/components/schemas/Login'
-        documentIds:
+        documentUniqueIds:
           type: array
+          description: Liste von UniqueIDs von DocumentEntries
           items:
             type: string
       required:
         - account
-        - documentIds
+        - documentUniqueIds
+      x-examples: {}
     ObjectDTO:
       type: object
+      title: ObjectDTO
       properties:
-        id:
+        entryUUID:
           type: string
-        type:
-          enum:
-            - document
-            - submissionSet
-            - folder
-            - association
+          description: EntryUUID eines Dokumentes
     ObjectRequestDTO:
       type: object
       properties:
@@ -674,7 +659,7 @@ components:
         identifier:
           type: string
           description: 'authorPerson, für Leistungserbringer Lebenslange Identifikationsnummer eines Arztes, für Versicherte Versicherten-ID (unveränderliche Teil der KVNR)'
-          example: 165746304
+          example: '165746304'
         familyName:
           type: string
           description: 'authorPerson, Nachname'
@@ -746,8 +731,8 @@ components:
           $ref: '#/components/schemas/DocumentMetadata'
         document:
           $ref: '#/components/schemas/Document'
-        folder:
-          $ref: '#/components/schemas/FolderMetadata'
+        folder_reference:
+          $ref: '#/components/schemas/FolderReference'
       required:
         - metadata
         - document
@@ -769,26 +754,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Author'
-        categories:
+        availabilityStatus:
+          type: string
+          description: Status eines Dokumentes
+        confidentialityCode:
           type: array
           items:
             type: string
+            description: 'Vertraulichkeitskennzeichnung des Dokuments; N, R oder V des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.confidentialityCode'
         classCode:
           type: string
           description: 'Grobe Klassifizierung des Dokuments, einem Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.classCode'
         comments:
           type: string
           description: Ergänzende Hinweise in Freitext
-        confidentialityCode:
-          type: array
-          items:
-            type: string
-            description: 'Vertraulichkeitskennzeichnung des Dokuments; N, R oder V des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.confidentialityCode'
         creationTime:
           type: string
           format: date-time
           description: 'Erstellungszeitpunkt des Dokuments; date-time notation as defined by RFC 3339, section 5.6'
           example: '2017-07-21T17:32:28Z'
+        entryUUID:
+          type: string
+          description: EntryUUID eines Dokumentes
         eventCodeList:
           type: array
           description: 'Ereignisse, die zur Erstellung des Dokuments geführt haben.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.eventCodeList oder aus der Tabelle in A_17540'
@@ -856,9 +843,45 @@ components:
         uri:
           type: string
           description: Dateiname
+    FolderReference:
+      type: object
+      description: Metadaten um einem bestehenden Ordner zu referenzieren
+      title: FolderReference
+      properties:
+        entryUUID:
+          type: string
+          description: Eindeutige Kennung des Ordner
+      required:
+        - entryUUID
+      x-examples:
+        Beispiel Folder:
+          value:
+            entryUUID: Folder-1234567890
     FolderMetadata:
       type: object
-      description: Metadaten zu einem Ornder gemäß A_14760-01
+      description: Metadaten zu einem Ordner gemäß A_14760-01
+      x-examples:
+        childsrecord Folder Beispiel:
+          value:
+            comments: Ein Dokument als childsrecord Beispiel
+            codeList:
+              - ('childsrecord^^1.2.276.0.76.5.512')
+            lastUpdateTime: '2017-07-21T17:32:28Z'
+            title: Erika Mustermann
+            uniqueId: f9802a8d5a8d4cb0b1b38610305e12f4
+            entryUUID: Folder-ea72d10d90
+            status: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved'
+        patientdoc Folder Beispiel:
+          value:
+            comments: Patient Document Folder
+            codeList:
+              - ('childsrecord^^1.2.276.0.76.5.512')
+            lastUpdateTime: '2021-01-01T17:32:28Z'
+            title: vom Versicherten eingestellte Dokumente
+            uniqueId: f9802a8d5a8d4cb0b1b38610305e12f4
+            entryUUID: Folder-fa72d10d91
+            status: Approved
+      title: ''
       properties:
         comments:
           type: string
@@ -878,25 +901,36 @@ components:
           description: Titel des Ornder
         uniqueId:
           type: string
-          description: Eindeutige Kennung des Ordner
+          description: Eindeutige Kennung des Ordner (von Client erzeugt)
+        entryUUID:
+          type: string
+          description: Eindeutige Kennung des Ordner in der Registry (von Aktensystem gesetzt)
+          example: Folder-1
+        availabilityStatus:
+          type: string
+          example: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
+          description: Status der Ordner
       required:
         - codeList
         - lastUpdateTime
+        - title
         - uniqueId
+        - entryUUID
+        - availabilityStatus
     QueryMetadata:
       type: object
       description: 'Metadaten Parameter für die Suche nach Dokumenten, Ordner, Submission Sets und Verknüpfungen'
       properties:
         XDSSubmissionSetEntryUUID:
           type: array
+          description: Liste von EntryUUIDs von SubmissionSets
           items:
             type: string
-            description: EntryUUID des Submission Set
         XDSSubmissionSetUniqueId:
           type: array
+          description: Liste von uniqueIDs von SubmissionSets
           items:
             type: string
-            description: UniqueId des Submission Set
         XDSSubmissionSetSubmissionTimeFrom:
           type: string
           format: date-time
@@ -909,14 +943,14 @@ components:
           example: '2017-07-21T17:32:28Z'
         XDSDocumentEntryEntryUUID:
           type: array
+          description: Liste von EntryUUIDs von Dokumenten
           items:
             type: string
-            description: EntryUUID des Dokucumentes
         XDSDocumentEntryUniqueId:
           type: array
+          description: Liste von uniqueIds von Dokumenten
           items:
             type: string
-            description: UniqueId des Dokumentes
         XDSDocumentEntryClassCode:
           type: array
           items:
@@ -991,37 +1025,39 @@ components:
           type: array
           items:
             type: string
-            description: Titel des Dokumentes; nur anwendbar mit FindDocumentsByTitle
         XDSDocumentEntryAuthorInstitution:
           type: array
           items:
             type: string
             description: 'Institution, die dem Autor zugeordnet ist; nur anwendbar mit FindDocumentsByTitle'
-        XDSFolderTitle:
-          type: array
-          items:
-            type: string
-            description: Titel eines Ordners; nur anwendbar mit FindFolders
+        XDSDocumentEntryStatus:
+          type: string
+          description: Status des Dokumentes
         XDSFolderUniqueId:
-          type: array
-          items:
-            type: string
-            description: UniqueId des Ordner
+          description: Folder Unique Id
+          type: string
+        XDSFolderStatus:
+          type: string
+          description: Status der Ordner; nur anwendbar mit FindFolders
         XDSFolderCodeList:
           type: array
+          description: 'Liste von Codes (z.B. ''childrecord'', ''patientdoc'')'
           items:
             type: string
             description: Code eines Ordners; nur anwendbar mit FindFolders
         XDSFolderLastUpdateTimeFrom:
           type: string
           format: date-time
-          description: 'Beginn Zeitraum für Suche; date-time notation as defined by RFC 3339, section 5.6'
+          description: 'Beginn Zeitraum für Suche; date-time notation as defined by RFC 3339, section 5.6; nur anwendbar mit FindFolders'
           example: '2017-07-21T17:32:28Z'
         XDSFolderLastUpdateTimeTo:
           type: string
           format: date-time
-          description: 'Ende Zeitraum für Suche; date-time notation as defined by RFC 3339, section 5.6'
+          description: 'Ende Zeitraum für Suche; date-time notation as defined by RFC 3339, section 5.6; nur anwendbar mit FindFolders'
           example: '2017-07-21T17:32:28Z'
+        XDSFolderEntryUUID:
+          type: string
+          description: Folder UUID
     ObjectsMetadata:
       type: object
       properties:
@@ -1080,22 +1116,19 @@ components:
             - GetDocuments
             - GetSubmissionSets
             - GetSubmissionSetAndContents
-            - GetFoldersAndContents
             - GetFoldersForDocument
+            - GetFolderAndContents
           description: 'optional; falls angegeben, ist die entsprechende Stored Query anzuwenden; falls nicht angegeben, ist eine entsprechend der Suchparameter geeignete Stored Query anzuwenden'
         returnType:
           type: string
           enum:
             - LeafClass
             - ObjectRef
+          default: LeafClass
         startIndex:
           type: integer
         maxResults:
           type: integer
-        category:
-          type: array
-          items:
-            type: string
       required:
         - account
     FindObjectsResponseDTO:
@@ -1127,7 +1160,7 @@ components:
         postalCode:
           type: string
           description: Postleitzahl
-          example: 10117
+          example: '10117'
         localityName:
           type: string
           description: Ort
@@ -1243,7 +1276,7 @@ components:
       properties:
         account:
           $ref: '#/components/schemas/Login'
-        documentId:
+        documentEntryUUID:
           type: string
       required:
         - account
@@ -1532,27 +1565,29 @@ components:
       properties:
         account:
           $ref: '#/components/schemas/Login'
-        documentId:
-          type: string
-        metaDataSet:
+        documentMetadata:
           $ref: '#/components/schemas/DocumentMetadata'
+        newConfidentialityCode:
+          type: string
+          description: Neue ConfidentialityCode eines Dokumentes oder Folder. Ersetzt die alten Codes.
       required:
         - account
+        - newConfidentialityCode
     ReplaceDocumentRequestDTO:
       type: object
       properties:
         account:
           $ref: '#/components/schemas/Login'
-        documentId:
+        documentEntryUUID:
           type: string
+          description: EntryUUID eines Dokumentes
         documentSet:
           type: array
           items:
             $ref: '#/components/schemas/DocumentWithMetadata'
       required:
         - account
-        - documentId
-        - documentSets
+        - documentEntryUUID
     UpdateKeysResponseDTO:
       type: object
       properties:

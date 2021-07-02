@@ -1,3 +1,10 @@
+# Release 2.0.4-pre3
+- update and bugfix(testtreiber_fdv.yaml)
+ - clarifications Dokumentenspezifische Autorisierung (C_10773, berechtigungskonzept.adoc)
+ - update reference implementation "Aktensystem Wechsel", now with Docker (as_wechsel)
+ - additional comment for deleteDevice (device_management.yaml)
+
+
 # Release 2.0.4-pre2
 - correction DeviceNameType minLength (device_management.yaml)
  - corrections in delta-export-time description (readme in as-wechsel)
