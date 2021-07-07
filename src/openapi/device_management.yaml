@@ -7,9 +7,6 @@ info:
     name: "gematik"
     email: "epa@gematik.de"
   version: "1.0.1"
-  # 1.0.2 - deviceID parameter moved to header
-  #       - new error reponse 412 (DeviceUnknown) added
-  #       - unused error responses deleted
   # 1.0.1 - fixed typo in AuthenticationAssertion 
   # 1.0.0 - fixed bugs of version 0.0.1, 
   #       - renamed parameters for search/update/delete, 
@@ -19,7 +16,7 @@ tags:
   - name: "Devices"
     description: "Everything about a Device in the ePA Authorization Service."
 paths:
-  /devices/{hcid}/{kvnr}:
+  /devices/{hcid}/{kvnr}/{deviceId}:
     get:
       tags:
       - "Devices"
@@ -32,12 +29,6 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/AuthenticationAssertionType'
-      - name: "deviceId"
-        in: header
-        description: "The requesting clients device Id (user's device Id)"
-        required: true
-        schema:
-          $ref: '#/components/schemas/DeviceIdType'
       - name: "hcid"
         in: path
         description: "The HCID to identify the tenant"
@@ -50,6 +41,12 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
+      - name: "deviceId"
+        in: path
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
       responses:
         200:
           description: "OK"
@@ -63,11 +60,9 @@ paths:
           $ref: "#/components/responses/Error403NotAllowed"
         404:
           $ref: "#/components/responses/Error404RecordNotFound"
-        412:
-          $ref: "#/components/responses/Error412DeviceUnknown"
         500:
           $ref: "#/components/responses/Error500InternalError"
-  /devices/{hcid}/{kvnr}/{affectedId}:
+  /devices/{hcid}/{kvnr}/{deviceId}/{affectedId}:
     get:
       tags:
       - "Devices"
@@ -82,12 +77,6 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/AuthenticationAssertionType'
-      - name: "deviceId"
-        in: header
-        description: "The requesting clients device Id (user's device Id)"
-        required: true
-        schema:
-          $ref: '#/components/schemas/DeviceIdType'
       - name: "hcid"
         in: path
         description: "The HCID to identify the tenant"
@@ -100,6 +89,12 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
+      - name: "deviceId"
+        in: path
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
       - name: "affectedId"
         in: "path"
         description: "The Id of the device to be searched for."
@@ -117,8 +112,6 @@ paths:
           $ref: "#/components/responses/Error403NotAllowed"
         404:
           $ref: "#/components/responses/Error404DeviceNotFound"
-        412:
-          $ref: "#/components/responses/Error412DeviceUnknown"
         500:
           $ref: "#/components/responses/Error500InternalError"
     put:
@@ -137,12 +130,6 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/AuthenticationAssertionType'
-      - name: "deviceId"
-        in: header
-        description: "The requesting clients device Id (user's device Id)"
-        required: true
-        schema:
-          $ref: '#/components/schemas/DeviceIdType'
       - name: "hcid"
         in: path
         description: "The HCID to identify the tenant"
@@ -155,6 +142,12 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
+      - name: "deviceId"
+        in: path
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
       - name: "affectedId"
         in: "path"
         description: "The Id of the device to be updated."
@@ -176,8 +169,6 @@ paths:
           $ref: "#/components/responses/Error403NotAllowed"
         404:
           $ref: "#/components/responses/Error404DeviceNotFound"
-        412:
-          $ref: "#/components/responses/Error412DeviceUnknown"
         500:
           $ref: "#/components/responses/Error500InternalError"
     delete:
@@ -195,12 +186,6 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/AuthenticationAssertionType'
-      - name: "deviceId"
-        in: header
-        description: "The requesting clients device Id (user's device Id)"
-        required: true
-        schema:
-          $ref: '#/components/schemas/DeviceIdType'
       - name: "hcid"
         in: path
         description: "The HCID to identify the tenant"
@@ -213,6 +198,12 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/KVNRType'
+      - name: "deviceId"
+        in: path
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
       - name: "affectedId"
         in: "path"
         description: "The Id of the device to be deleted."
@@ -226,8 +217,6 @@ paths:
           $ref: "#/components/responses/Error403NotAllowed"
         404:
           $ref: "#/components/responses/Error404DeviceNotFound"
-        412:
-          $ref: "#/components/responses/Error412DeviceUnknown"
         500:
           $ref: "#/components/responses/Error500InternalError"
   
@@ -318,9 +307,12 @@ components:
     Error404DeviceNotFound:
       description: |
         Device not found
-    Error412DeviceUnknown:
+    Error404NotificationchannelNotFound:
       description: |
-        Device unknown
+        Notificationchannel not found
+    Error404ActivationtokenNotFound:
+      description: |
+        Activation token not found
     Error500InternalError:
       description: |
         Internal Error
