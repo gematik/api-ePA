@@ -1,3 +1,12 @@
+# Release 2.0.4
+changes since 2.0.4-pre3 - fixed erroneous DTO for Remove permissionHcpo (testtreiber_fdv.yaml)
+ - moved deviceID parameter to header, added new error reponse 412 (DeviceUnknown), removed not used error responses(device_management.yaml)
+ - added pagination for protocol, removed in findObjects (testtreiber_fdv.yaml)
+ - update comments (hcp-policy-definition.xml)
+ - update categjory "psychotherapy" (C_10787, hcp-poliy-2.xml)
+ - several fixes (testtreiber_fdv.yaml)
+
+
 # Release 2.0.4-pre3
 - update and bugfix(testtreiber_fdv.yaml)
  - clarifications Dokumentenspezifische Autorisierung (C_10773, berechtigungskonzept.adoc)

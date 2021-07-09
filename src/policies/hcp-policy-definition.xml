@@ -65,7 +65,7 @@ Comply with the following rules in order to instantiate a valid policy:
 						</ResourceMatch>
 						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal"><!-- 1..1 A further restriction is expressed via a confidentiality code. -->
 							<AttributeValue DataType="urn:hl7-org:v3#CV">
-								<CodedValue xmlns="urn:hl7-org:v3" codeSystem="2.16.840.1.113883.5.25"/><!-- attribute 'code': The code 'N' or 'R' MUST be set. The code 'R' MUST be used for an additional permission for documents with a confidentiality code 'R' (restricted). --><!-- attribute 'displayName': The display name 'normal' or 'restricted' MUST be set. The display name 'restricted' MUST be used for additional permission for documents with a confidentiality code 'R' (restricted). -->
+								<CodedValue xmlns="urn:hl7-org:v3" codeSystem="2.16.840.1.113883.5.25"/><!-- attribute 'code': The code 'N' or 'R' MUST be set. The code 'R' MUST be used for an additional permission for documents with a confidentiality code 'R' (restricted). That is, both confidentiality codes with 'N' or 'R' MUST be set if documents assigned to the category should be authorized with the confidentiality level 'restricted'. --><!-- attribute 'displayName': The display name 'normal' or 'restricted' MUST be set. The display name 'restricted' MUST be used for additional permission for documents with a confidentiality code 'R' (restricted). -->
 							</AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
 						</ResourceMatch>
@@ -83,7 +83,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the blacklist with an additional document or folder. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely mothersrecord or childsrecord). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>
 					</Resource>
@@ -100,7 +100,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 0..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the whitelist with an additional document. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID. --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>						
 					</Resource>										

@@ -166,20 +166,15 @@ paths:
               schema:
                 $ref: '#/components/schemas/FindDirectoryResponseDTO'
   /permissions:
-    post:
+    get:
       tags:
         - permissions
       summary: Alle Berechtigungen lesen
       description: Diese Operation führt den Anwendungsfall "Vergebene Berechtigungen auflisten" in einer mit insurantId identifizierten Aktensession aus.
       operationId: getPermissions_1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/RequestDTO'
       responses:
-        default:
-          description: default response
+        '200':
+          description: Ok
           content:
             application/json:
               schema:
@@ -254,7 +249,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/PermissionHcpoDTO'
+              $ref: '#/components/schemas/DeletePermissionDTO'
       responses:
         default:
           description: default response
@@ -420,7 +415,7 @@ paths:
       tags:
         - protocol
       summary: Zugriffsprotokolle mit PAdES-Signatur lesen
-      description: Diese Operation führt den Anwendungsfall "signiertes Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus. Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben. Liefert alle Einträge aus getSignedAuditEvents gemäß A_21204 (ePA-Aktensystem) für das Aktenkonto.
+      description: Diese Operation führt den Anwendungsfall "signiertes Zugriffsprotokoll einsehen" in einer mit insurantId identifizierten Aktensession aus. Die vom Aktensystem gelieferten Protokolleinträge werden aufgearbeitet und zurückgegeben. Liefert alle Einträge aus getSignedAuditEvents für das Aktenkonto.
       operationId: getSignedProtocol_1
       requestBody:
         content:
@@ -464,7 +459,7 @@ paths:
       tags:
         - configuration
       summary: Konfigurationseintrag ändern
-      description: Diese Operation setzt ein oder mehrere Werte für eine Liste von Konfigurationsparametern gemäß TAB_FdV_104 sowie für herstellerspezifische Konfigurationsparameter. Die Liste der herstellerspezifischen Konfigurationsparameter sind in der Betriebsdokumentation zu beschreiben.
+      description: Diese Operation setzt ein oder mehrere Werte für eine Liste von Konfigurationsparametern sowie für herstellerspezifische Konfigurationsparameter. Die Liste der herstellerspezifischen Konfigurationsparameter sind in der Betriebsdokumentation zu beschreiben.
       operationId: updateConfigurationEntries_1
       requestBody:
         content:
@@ -607,6 +602,16 @@ components:
       properties:
         account:
           $ref: '#/components/schemas/Login'
+        pageSize:
+          type: integer
+          minimum: 1
+        pageNumber:
+          type: integer
+          minimum: 1
+        lastDay:
+          type: string
+          format: date
+          example: '2021-07-01'
       required:
         - account
     DocumentsRequestDTO:
@@ -654,7 +659,7 @@ components:
           description: Institutionskennzeichen der Leistungserbringerinstitution oder Betriebsnummer des Kostenträgers
     Author:
       type: object
-      description: Inhalte für Metadaten für author gemäß A_14760; entspricht für ein DocumentEntry dem Autor; entspricht für ein Submission Set der einstellenden Person oder einstellendem System
+      description: Inhalte für Metadaten für author; entspricht für ein DocumentEntry dem Autor; entspricht für ein Submission Set der einstellenden Person oder einstellendem System
       properties:
         identifier:
           type: string
@@ -691,7 +696,7 @@ components:
           type: array
           items:
             type: string
-            description: 'Fachliche Spezialisierung des Autors; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.authorSpecialty oder aus der Tabelle in der Anforderung A_15744'
+            description: 'Fachliche Spezialisierung des Autors; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.authorSpecialty oder aus der Tabelle in der Anforderung A_15744-XX'
         authorTelecommunication:
           type: array
           items:
@@ -699,7 +704,7 @@ components:
             description: Telekommunikationsdaten des Autors
     SubmissionSetMetadata:
       type: object
-      description: Inhalte für Metadaten für ein SubmissionSet gemäß A_14760;
+      description: Inhalte für Metadaten für ein SubmissionSet
       properties:
         author:
           $ref: '#/components/schemas/Author'
@@ -748,7 +753,7 @@ components:
         - document
     DocumentMetadata:
       type: object
-      description: Metadaten zu einem Dokument gemäß A_14760-01
+      description: Metadaten zu einem Dokument
       properties:
         author:
           type: array
@@ -778,12 +783,12 @@ components:
           description: EntryUUID eines Dokumentes
         eventCodeList:
           type: array
-          description: 'Ereignisse, die zur Erstellung des Dokuments geführt haben.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.eventCodeList oder aus der Tabelle in A_17540'
+          description: 'Ereignisse, die zur Erstellung des Dokuments geführt haben; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.eventCodeList oder aus der Tabelle in A_17540-XX'
           items:
             type: string
         formatCode:
           type: string
-          description: 'Global eindeutiger Code für das Dokumentenformat; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.formatCode oder aus der Tabelle in A_14761'
+          description: 'Global eindeutiger Code für das Dokumentenformat; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.formatCode oder aus der Tabelle in A_14761-XX'
         hash:
           type: string
         healthcareFacilityTypeCode:
@@ -791,7 +796,7 @@ components:
           description: 'Art der Einrichtung, in der das dokumentierte Ereignis stattgefunden hat.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.healthcareFacilityTypeCode'
         languageCode:
           type: string
-          description: 'Sprache, in der das Dokument abgefasst ist.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.languageCode'
+          description: 'Sprache, in der das Dokument abgefasst ist; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.languageCode'
         legalAuthenticator:
           type: string
           description: Rechtlich Verantwortlicher für das Dokument
@@ -812,7 +817,7 @@ components:
           description: MIME-Type des Dokuments
         practiceSettingCode:
           type: string
-          description: 'Art der Fachrichtung der erstellenden Einrichtung, in der das dokumentiere Ereignis stattgefunden hat.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.practiceSettingCode oder aus der Tabelle in A_16944'
+          description: 'Art der Fachrichtung der erstellenden Einrichtung, in der das dokumentiere Ereignis stattgefunden hat.; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.practiceSettingCode oder aus der Tabelle in A_16944-XX'
         referenceIdList:
           type: array
           description: 'Liste von IDs, mit denen das Dokument assoziiert wird'
@@ -859,7 +864,7 @@ components:
             entryUUID: Folder-1234567890
     FolderMetadata:
       type: object
-      description: Metadaten zu einem Ordner gemäß A_14760-01
+      description: Metadaten zu einem Ordner
       x-examples:
         childsrecord Folder Beispiel:
           value:
@@ -1015,7 +1020,7 @@ components:
           type: array
           items:
             type: string
-            description: 'Global eindeutiger Code für das Dokumentenformat; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.formatCode oder aus der Tabelle in A_14761'
+            description: 'Global eindeutiger Code für das Dokumentenformat; ein Code des in [IHE-ITI-VS] definierten Value Sets für DocumentEntry.formatCode oder aus der Tabelle in A_14761-XX'
         XDSDocumentEntryTypeCode:
           type: array
           items:
@@ -1125,10 +1130,6 @@ components:
             - LeafClass
             - ObjectRef
           default: LeafClass
-        startIndex:
-          type: integer
-        maxResults:
-          type: integer
       required:
         - account
     FindObjectsResponseDTO:
@@ -1144,6 +1145,7 @@ components:
             $ref: '#/components/schemas/ObjectsMetadata'
       required:
         - success
+      title: ''
     DirectoryEntry:
       type: object
       properties:
@@ -1227,36 +1229,55 @@ components:
       type: object
       description: 'Enthält alle Informationen, was genau berechtigt wurde, d.h. alle Details zur vergebenen grob-, mittel- und feingranularen Berechtigung.'
       properties:
-        permissionAccessLevel:
-          type: string
-          description: 'Option zur Vergabe von grobgranularem Zugriff Einer von drei Werten ist erlaubt - ''keine'', ''normal'' oder ''erweitert''. ''erweitert'' beinhaltet dabei implizit den Zugriff auf Dokumente in Vertraulichkeitsstufe ''normal''.'
-        permissionAccessCategories:
+        permissionAccessCategory:
           type: array
+          description: Liste von Kategorien mit Access Level Zuordnung
           items:
-            type: string
-            description: Option zur Vergabe von mittelgranularem Zugriff. Werte müssen jeweils 'technischem Identifier' für Kategorie aus Tabelle in gemSpec_DM_ePA#A_19388 enthalten (Beispiel 'dermatology').
+            $ref: '#/components/schemas/PermissionAccessCategory'
         permissionAccessWhitelist:
           type: array
+          description: Liste von EntryUUIDs von Objekten in Whitelist
           items:
             type: string
             description: Option zur Vergabe von feingranularem Zugriff. Werte müssen jeweils uniqueIds der freizuschaltenden Dokumente beinhalten.
         permissionAccessBlacklist:
           type: array
+          description: Liste von EntryUUIDs von Objekten in Blacklist
           items:
             type: string
             description: Option zur Vergabe von feingranularem Zugriff. Werte müssen jeweils uniqueIds der zu sperrenden Dokumente beinhalten.
-        validFrom:
-          type: string
-          format: date
-          description: 'Zugriff gültig seit; full-date notation as defined by RFC 3339, section 5.6'
-          example: '2017-07-21'
         validThrough:
           type: string
           format: date
-          description: 'Zugriff gültig bis einschließlich; full-date notation as defined by RFC 3339, section 5.6'
+          description: 'Zugriff gültig bis einschließlich; full-date notation as defined by RFC 3339, section 5.6. Wenn keine Datum definiert wird, wird die Policy zeitlich umbegrenzt.'
           example: '2017-07-21'
-      required:
-        - validThrough
+      x-examples:
+        Access Level für eine Kategorie auf "N" und "R" setzen:
+          value:
+            permissionAccessCategory:
+              - level: N
+                category: practitioner
+              - level: R
+                category: practitioner
+              - level: N
+                category: patientdoc
+              - level: R
+                category: patientdoc
+            permissionAccessWhitelist:
+              - 'urn:uuid:7861449a-9676-4fa5-90dd-8836d33401b2'
+            permissionAccessBlacklist: []
+            validThrough: '2022-07-31'
+        Access Level für eine Kategorie auf "R" setzen:
+          value:
+            permissionAccessCategory:
+              - level: R
+                category: practitioner
+              - level: R
+                category: patientdoc
+            permissionAccessWhitelist:
+              - 'urn:uuid:7861449a-9676-4fa5-90dd-8836d33401b2'
+            permissionAccessBlacklist: []
+            validThrough: '2022-07-31'
     PermissionEntry:
       type: object
       properties:
@@ -1303,7 +1324,7 @@ components:
           description: Telematik-ID der Leistungserbringerinstitution (LEI)
         hcpoName:
           type: string
-          description: Name der LEI
+          description: Name der LEI (Common Name aus dem VZD)
         permissionLeiProperties:
           $ref: '#/components/schemas/PermissionProp'
       required:
@@ -1328,6 +1349,8 @@ components:
       required:
         - account
         - representativeInsurantId
+        - representativeName
+        - representativeNotificationInfo
     PermissionInsuranceDTO:
       type: object
       properties:
@@ -1345,15 +1368,16 @@ components:
         - insuranceName
     DeletePermissionDTO:
       type: object
+      title: ''
       properties:
         account:
           $ref: '#/components/schemas/Login'
-        TelematikOrInsurantId:
+        telematikOrInsurantId:
           type: string
           description: Versicherten-ID für Vertreter oder Telematik-ID für LEI bzw. KTR
       required:
         - account
-        - TelematikOrInsurantId
+        - telematikOrInsurantId
     NotificationInformationRequestDTO:
       type: object
       properties:
@@ -1424,11 +1448,11 @@ components:
         - fqdnNewProvider
     ProtocolEntry:
       type: object
-      description: Protokolleintrag gemäß A_14471
+      description: Protokolleintrag
       properties:
         eventId:
           type: string
-          description: Aufgerufene Operation gemäß A_14505
+          description: Aufgerufene Operation
         eventDisplayName:
           type: string
           description: Anzeigename der aufgerufenen Operation
@@ -1516,7 +1540,7 @@ components:
             - UseEGK
             - SignatureServiceURL
             - DefaultConfidentialityCode
-          description: 'Schlüsselwerte für die in A_15292 definierten Parameter, die durch den Nutzer für die Konfiguration des FdV eingegeben werden.; OwnerInsurantId - Versicherten-ID des Aktenkontoinhabers, Teil der Akten-ID; OwnerFqdnProvider - FQDN Anbieter ePA-Aktensystem des Aktenkontoinhabers; OwnerDeviceName - Gerätename des GdV; In der Testtreiber-Konfiguration können 2 Vertretungen eingerichtet werden.; Representation1Name - Name des zu Vertretenden; Representation1InsurantId - Versicherten-ID des zu Vertretenden, Teil der Akten-ID; Representation1FqdnProvider - FQDN Anbieter ePA-Aktensystem des zu Vertretenden; Notifcation - Benachrichtigungen aktivieren; NotificationPeriod - Benachrichtigungszeitraum; ShowPermissionOnAddDocuments - Dokumente einstellen Berechtigte anzeigen; UseEGK (boolean) - gibt an, ob für die Authentisierung die eGK oder die alternative kryptographische Versichertenidentität genutzt wird.'
+          description: 'Schlüsselwerte für die in A_15292-XX definierten Parameter, die durch den Nutzer für die Konfiguration des FdV eingegeben werden.; OwnerInsurantId - Versicherten-ID des Aktenkontoinhabers, Teil der Akten-ID; OwnerFqdnProvider - FQDN Anbieter ePA-Aktensystem des Aktenkontoinhabers; OwnerDeviceName - Gerätename des GdV; In der Testtreiber-Konfiguration können 2 Vertretungen eingerichtet werden.; Representation1Name - Name des zu Vertretenden; Representation1InsurantId - Versicherten-ID des zu Vertretenden, Teil der Akten-ID; Representation1FqdnProvider - FQDN Anbieter ePA-Aktensystem des zu Vertretenden; Notifcation - Benachrichtigungen aktivieren; NotificationPeriod - Benachrichtigungszeitraum; ShowPermissionOnAddDocuments - Dokumente einstellen Berechtigte anzeigen; UseEGK (boolean) - gibt an, ob für die Authentisierung die eGK oder die alternative kryptographische Versichertenidentität genutzt wird.'
         configurationEntryValue:
           type: string
           description: 'Wert für den Konfigurationsparameter. für die Parameter Notification, ShowPermissionOnAddDocuments und UseEGK sind nur die Werte "ja" und "nein" zulässig.'
@@ -1529,7 +1553,7 @@ components:
         $ref: '#/components/schemas/ConfigurationEntry'
     ResponseProductInformationDTO:
       type: object
-      description: Produktinformation gemäß A_17235
+      description: Produktinformation
       properties:
         producerId:
           type: string
@@ -1580,14 +1604,13 @@ components:
           $ref: '#/components/schemas/Login'
         documentEntryUUID:
           type: string
-          description: EntryUUID eines Dokumentes
-        documentSet:
-          type: array
-          items:
-            $ref: '#/components/schemas/DocumentWithMetadata'
+          description: EntryUUID eines zu ersetzenden Dokumentes
+        documentWithMetadata:
+          $ref: '#/components/schemas/DocumentWithMetadata'
       required:
         - account
         - documentEntryUUID
+        - documentWithMetadata
     UpdateKeysResponseDTO:
       type: object
       properties:
@@ -1602,3 +1625,31 @@ components:
           example: '2017-07-21T17:32:28Z'
       required:
         - success
+    PermissionAccessCategory:
+      title: PermissionAccessCategory
+      type: object
+      x-examples:
+        '''Normal'' access für practitioner Folder':
+          value:
+            level: N
+            category: practitioner
+        '''Restricted'' access für practitioner Folder':
+          value:
+            level: R
+            category: practitioner
+      properties:
+        level:
+          type: string
+          description: Vertraulikeitscode (N oder R)
+          enum:
+            - N
+            - R
+            - V
+          example: N
+          default: N
+        category:
+          type: string
+          description: 'Folder Code (z.B. practitioner, patientdoc)'
+      required:
+        - level
+        - category
