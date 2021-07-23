@@ -1,3 +1,9 @@
+# Release 2.0.4-1
+changes since 2.0.4
+ - correction in formatCode. Is now "Arbeitsunfaehigkeitsbescheinigung" (ig-eau.json)
+ - correction in version. Is now 1.0.2 (device_management)
+
+
 # Release 2.0.4
 changes since 2.0.4-pre3 - fixed erroneous DTO for Remove permissionHcpo (testtreiber_fdv.yaml)
  - moved deviceID parameter to header, added new error reponse 412 (DeviceUnknown), removed not used error responses(device_management.yaml)
