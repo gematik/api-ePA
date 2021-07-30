@@ -1,3 +1,6 @@
+# Release 2.0.4-2
+changes since 2.0.4-1\n - update berechtigungskonzept.adoc (add some informations to collections)\n - update ig-prescription (delete folder description link to vaccination documentation) \n
+
 # Release 2.0.4-1
 changes since 2.0.4
  - correction in formatCode. Is now "Arbeitsunfaehigkeitsbescheinigung" (ig-eau.json)
