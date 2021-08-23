@@ -103,6 +103,7 @@ Einzelne Dokumententypen sind unique (NFD, DPE, eMP), d.h. es kann jeweils nur e
 Ordner stehen für die fixe Anzahl von Kategorien, die vom SGB V motiviert sind und von dort aus auch die Zugriffsrechte-Regeln mittels der Matrix (A_19303 - Komponente ePA-Dokumentenverwaltung – Zugriffsunterbindungsregeln) erhalten. Zu unterscheiden sind statische und dynamische Ordner. Statische Ordner sind der Normalfall. Dynamische Ordner sind aktuell für die Kategorien childsrecord (Kinderuntersuchungsheft) und mothersrecord (Schwangerschaft und Geburt) vorgesehen. Dynamische Ordner haben die Besonderheit, dass ihre Multiplizität > 1 sein kann aufgrund mehrerer Schwangerschaften oder mehrerer Kinder. 
 In Ordnern können neben den MIOs noch weitere Dokumente liegen. Dies sind beispielsweise sonstige Dokumente, die sich aus der Versorgung der Versicherten mit Hebammenhilfe ergeben, welche ebenfalls der Dokumentenkategorie mothersrecord zugeordnet sind. 
 IHE erlaubt es nicht, Unterordner zu bilden. Eine Freigabe auf die Kategorie mothersrecord inkludiert entsprechend eine Freigabe auf vorhandene sonstige Geburtsdokumente. Wenn dies nicht gewünscht ist, wenn bspw. ausschließlich der Mutterpass freigeben werden soll, nicht aber die sonstigen Geburtsdokumente, ist ein geeignetes Blacklisting/Whitelisting durchzuführen.
+Das Blacklisting eines Ordners verhindert grundsätzlich die Freigabe eines im Ordner enthaltenen Dokumentes, selbst wenn es auf einer Whitelist aufgeführt wird.
 
 === Dynamische Ordner
 
@@ -125,11 +126,11 @@ Leistungserbringer stellen Dokumente des Versicherten mit einer Vertraulichkeits
 === Lesen/Laden, Suchen
 
 Lesen/Laden und Suchen von Dokumenten, Metadaten und Ordnern wird wie oben beschrieben von Policies gesteuert. Das Leserecht auf Ordner wird über die Kategorien vergeben. Außerdem können über White- und Blacklisting von Dokumenten und dynamischen Ordnern Rechte unabhängig von der in der Policy vergebenen Vertraulichkeitsstufe der Kategorie vergeben/untersagt werden.
-Wird ein dynamischer Ordner der Kategorie mothersrecord auf eine White- oder Blacklist gestzt werden damit auch die Zugriffe auf die in diesem Ordner enthaltenen Hembammendokumente erlaubt/untersagt. Hebammendokumente können aber auch separat auf eine White- oder Blacklist gesetzt werden, Folgend hierzu zwei Beispiele:
+Wird ein dynamischer Ordner der Kategorie mothersrecord auf eine White- oder Blacklist gesetzt, werden damit auch die Zugriffe auf die in diesem Ordner enthaltenen Hebammendokumente erlaubt/untersagt. Hebammendokumente können aber auch separat auf eine White- oder Blacklist gesetzt werden, Folgend hierzu zwei Beispiele:
 
-* Die Kategorie mothersrecord ist freigegeben. Einzelnene Hebammendokumente werden auf die Blacklist gesetzt:
+* Die Kategorie "Schwangerschaft und Geburt" (mothersrecord) ist freigegeben. Einzelnene Hebammendokumente werden auf die Blacklist gesetzt:
 Alle in der Kategorie mothersrecord enthaltenen Mutterpässe sind sichtbar (Lesen/Laden und Suchen möglich). Die auf die Blacklist gesetzten Hebammendokumente, die sich wie die Mutterpässe in den dynamischen Ordnern befinden sind nicht sichtbar.
-* Die Kategorie mothersrecord ist freigegeben. Ein Mutterpass (ein dynamischer Ordner der Kategorie mothersrecord) wird auf die Blacklist gesetzt und einzelnene Hebammendokumente dieses Ordners werden auf die Whitelist gesetzt: Nur die Hebammendokumente dieses Ordners, die auf die Whitelist gesetzt wurden sind sichtbar.
+* Die Kategorie "Schwangerschaft und Geburt" ist nicht freigegeben. Für drei Schwangerschaften existieren drei dynamische Ordner. Die Ordner der ersten zwei Schwangerschaften sind über die Whitelist freigegeben. Zur dritten Schwangerschaft sollen Hebammendokumente freigegeben werden. Diese werden auf die Whitelist gesetzt. Im Resultat sind neben den Dokumenten der ersten beiden Schwangerschaften nur die Hebammendokumente der dritten Schwangerschaft sichtbar, nicht aber dessen Mutterpass. 
  
 === Ändern confidentialityCode
 
