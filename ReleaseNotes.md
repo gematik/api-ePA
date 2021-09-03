@@ -5,7 +5,7 @@
 changes since 2.0.4-2 
 - Integrated SOAP-Interface PHR from api-telematik to api-epa 
 - Moved reference implementation as-wechsel to separate repository ref-ePA_HealthRecordMigration 
-- Corrections and clarifications (berechtigungskonzept.adoc)\n
+- Corrections and clarifications (berechtigungskonzept.adoc)
 
 # Release 2.0.4-2
 changes since 2.0.4-1
