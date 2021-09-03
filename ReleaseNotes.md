@@ -1,3 +1,6 @@
+# Release 2.0.4-3X
+2.0.4-3X is an update to 2.0.4-3 without any change, except for the removal of 'as-wechsel'
+
 # Release 2.0.4-3
 changes since 2.0.4-2\n - Integrated SOAP-Interface PHR from api-telematik to api-epa\n - Moved reference implementation as-wechsel to separate repository ref-ePA_HealthRecordMigration\n - Corrections and clarifications (berechtigungskonzept.adoc)\n
 
