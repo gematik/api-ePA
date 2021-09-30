@@ -48,20 +48,6 @@
 					}
 				},
 				{
-					"name": "documentEntry.typeCode",
-					"value": {
-						"code": "BESC",
-						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
-						"displayName": "Ärztliche Bescheinigungen",
-						"desc": [
-							{
-								"language": "de-DE",
-								"#text": "Bestätigung eines Arztes über einen bestimmten, patientenbezogenen Sachverhalt. Beispiele: Arbeitsunfähigkeitsbescheinigung, Beurlaubung, Todesbescheinigung, Ärztliche Bescheinigung, Notfall-/ Vertretungsschein"
-							}
-						]
-					}
-				},
-				{
 					"name": "documentEntry.formatCode",
 					"value": {
 						"code": "urn:gematik:ig:Notfalldatensatz:r3.1",

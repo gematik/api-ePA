@@ -5,11 +5,14 @@
 <!-- ===================================================================== -->
 <!-- 
 		Version History
+			version: V1.5.4
+			===========
+			*** bugfix parametertype in FinishKeyChange
+
 			version: V1.5.3
 			===========
 			*** removed GetRecordProviderList and RecordProviderListType
 
-		Version History
 			version: V1.5.2
 			===========
 			*** fixed wrong type of OkDate to dateTime in finishKeyChangeResponse
@@ -325,7 +328,7 @@
 		<complexType>
 			<sequence>
 				<element name="RecordIdentifier" type="phr:RecordIdentifierType"/>
-				<element name="Success" type="phrs:AuthorizationKeyType" minOccurs="0" maxOccurs="unbounded"/>
+				<element name="Success" type="boolean"/>
 			</sequence>
 		</complexType>
 	</element>

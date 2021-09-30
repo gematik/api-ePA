@@ -5,6 +5,10 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
+			version: V1.2
+			===========
+			*** Fehlerkorrektur Version soapAction in GetSignedAuditEvents
+
 			version: V1.1 (R4.0.2)
 			===========
 			*** neue Operation Element GetSignedAuditEvents
@@ -17,7 +21,7 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gerror="http://ws.gematik.de/tel/error/v2.0" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:tns="http://ws.gematik.de/fd/phr/I_Account_Management/v1.0" name="AccountManagementService" targetNamespace="http://ws.gematik.de/fd/phr/I_Account_Management/v1.0">
 	<wsdl:documentation>
 		Copyright (c) 2019, gematik - Gesellschaft für Telematikanwendungen der Gesundheitskarte mbH. Alle Rechte vorbehalten.
-		version=1.0.1 
+		version=1.2 
 	</wsdl:documentation>
 	<wsdl:types>
 		<xs:schema>
@@ -114,7 +118,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="GetSignedAuditEvents">
-			<soap12:operation soapAction="http://ws.gematik.de/fd/phr/I_Account_Management_Insurant/v1.1/GetSignedAuditEvents" soapActionRequired="false"/>
+			<soap12:operation soapAction="http://ws.gematik.de/fd/phr/I_Account_Management_Insurant/v1.0/GetSignedAuditEvents" soapActionRequired="false"/>
 			<wsdl:input>
 				<soap12:body use="literal"/>
 			</wsdl:input>

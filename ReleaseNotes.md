@@ -1,3 +1,6 @@
+# Release 2.0.5
+- Bugfix SoapAction GetSignedAuditEvents (AccountManagementService.wsdl)\n - Bugfix parametertype in finishKeyChange (AuthorizationService.xsd)\n - Removed typeCode (C_10831) (ig-nfd.json)\n
+
 # Release 2.0.4-3X
 2.0.4-3X is an update to 2.0.4-3 without any change, except for the removal of 'as-wechsel'
 
