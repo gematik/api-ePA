@@ -25,7 +25,7 @@ toc::[]
 
 In ePA 2.0 wird die Durchsetzung von Berechtigungen in der Dokumentenverwaltung über zwei Bausteine umgesetzt, die in Kombination wirken:
 
-1. Berechtigungsmatrix - Sie legt statisch fest, welcher Art ein Nutzer (Versicherter, Psychotherapie, Gesundheitsdienst, ...) maximal welche Operationen auf welchen Daten ausführen darf. Daraus ergibt sich kein generelles Zugriffsrecht - dazu muss ein gesondertes Policy Document (kurz Policy) durch den Versicherten oder Vertreter registriert werden.
+1. Berechtigungsmatrix - Sie legt statisch fest, welcher Art ein Nutzer (Versicherter, Psychotherapie, Gesundheitsdienst etc.) maximal welche Operationen auf welchen Daten ausführen darf. Daraus ergibt sich kein generelles Zugriffsrecht - dazu muss ein gesondertes Policy Document (kurz Policy) durch den Versicherten oder Vertreter registriert werden.
 2. Policies - Sie legen fest, ob und wie lange jeder Nutzer jeweils auf die ePA eines Versicherten berechtigt ist und inwiefern die maximalen Rechte aus der Berechtigungsmatrix eingeschränkt werden.
 
 == Berechtigungsmatrix
@@ -36,8 +36,8 @@ image:zugriffsunterbindungsregeln.png[width=90%]
 
 Die Zeilen der Matrix beziehen sich auf Berechtigungskategorien, auf die unterschiedlichen Nutzern qua Gesetz unterschiedliche Rechte eingeräumt werden. Der Versicherte kann berechtigte Nutzer über Policies dabei weiter einschränken. Die Zuordnung in Kategorien erlaubt es dem Versicherten später, einem Dritten gezielt Zugriff auf bestimmte fachliche Dokumentenkategorien gewähren zu können bzw. zu untersagen. Grundsätzlich lassen sich zwei Gruppen von Kategorien hier unterscheiden: 
 
-. Kategorien mit den Nummern 1a1-1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestellte Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
-. Kategorien mit den Nummern 1b-13: Jedes von einem Nutzer eingestellte Dokument wird ebenfalls in genau eine dieser Kategorien einsortiert. Es handelt sich hierbei um Kategorien, die sich in erster Linie darüber auszeichnen, dass bestimmte fachliche Inhalte, z. B. Arztbriefe oder Kinderuntersuchungshefte darüber abgebildet werden. 
+* Dokumentenkategorien mit den Nummern 1a1 - 1a10 (auch "1a*" genannt): Jedes von einem Leistungserbringer (LE) eingestelltes Dokument (d.h. Dokumente mit Diagnosen und Befunden) wird in genau eine dieser Kategorien einsortiert.
+* Dokumentenkategorien mit den Nummern 1b - 13: Jedes von einem Nutzer eingestelltes Dokument wird ebenfalls in genau eine dieser Kategorien einsortiert. Es handelt sich hierbei um Kategorien, die sich in erster Linie darüber auszeichnen, dass bestimmte fachliche Inhalte, z. B. Arztbriefe oder Kinderuntersuchungshefte darüber abgebildet werden. 
 
 Die einzelnen in den Zellen der Matrix vorhandenen Buchstaben entsprechen den Operationen, die der jeweiligen Nutzergruppe für die jeweiligen Kategorien zustehen:
 
@@ -48,6 +48,10 @@ Die einzelnen in den Zellen der Matrix vorhandenen Buchstaben entsprechen den Op
 * M: Metadaten von Dokumenten aktualisieren (aktuell: nur Änderung des documentEntry.confidentialityCode)
 
 Das heißt, dass die Berechtigungsmatrix ausschließlich Vorgaben für diese Operationen macht und keinerlei Einfluss auf alle weitere Operationen vornimmt. Der Zugriff auf Aktenkonto-Operationen - wie etwa das Abrufen von Zugriffsprotokollen - ist direkt über die jeweilige Schnittstelle geschützt und obliegt nur dem ePA-FdV und damit dem Versicherten oder seinen berechtigten Vertreter.
+
+=== Sonderfall Elternnotiz
+
+Dokumente oder medizinsiche Informationsobjekte (MIOs) gehören im Allgemeinen nur einer einzigen Dokumentenkategorie an, mit Ausnahme des Sonderfalles "Elternnotiz" als Teil des Kinderuntersuchungsheftes. Die Elternnotiz ist ein im Regelfall durch den Versicherten gepflegtes Teildokument des Kinderuntersuchungsheftes und liegt sowohl im Ordner der Kategorie patientdoc als auch in einem Ordner der Kategorie childsrecord, in welchem auch alle weiteren Teildokumente des Kinderuntersuchungsheftes abgelegt werden.
 
 == Policy Documents
 
@@ -78,9 +82,7 @@ Eine Leistungserbringerinstitution, welcher lediglich ein ausschließlicher Zugr
 Die dokumentenspezifische Autorisierung bietet dem Versicherten oder seinem Vertreter mit ePA-FdV die Möglichkeit, Dokumente auf einer Whitelist ("gewährender Zugriff") oder Blacklist ("verbietender Zugriff") zu setzen. Ein Dokument (genauer gesagt die DocumentEntry.entryUUID auf Policy-Ebene) darf auf diesen beiden Listen nicht gleichzeitig stehen (A_21650). Auch sind diese Dokumente aufgrund der Zuordnungsregeln beim Einstellen indirekt immer einer Kategorie zugeordnet. Es ist hier aber möglich, feingranularer, d.h. auf Dokumentenebene Zugriffe für Leistungserbringerinstitutionen auszusprechen. Aufgrund der zuvor angesprochen Sonderbehandlung von Mutterpass und Kinderuntersuchungsheft, ist es darüber hinaus möglich, einen bestimmten Pass von potentiell mehreren Pässen auf eine Blacklist zu setzen, um einen Zugriff, der pauschal über die Dokumentenkategorie "mothersrecord" bzw. "childsrecord" gewährt wurde, zu untersagen. 
 Neben Dokumenten dürfen dynamische Ordner auf einer Black- oder Whitelist aufgelistet sein.  
 
-== Berechtigungen für unterschiedliche Dokumententypen
-
-=== Sammlungen
+== Sammlungen
 
 Einige Dokumente sind durch eine Strukturdefinition mit anderen Dokumenten verbunden.
 
@@ -90,62 +92,58 @@ Einige Dokumente sind durch eine Strukturdefinition mit anderen Dokumenten verbu
 
 Ein einzelnes Vorkommen einer Sammlung (z.B. ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief etc.) wird auch als _Sammlungsinstanz_ bezeichnet. Sammlungen als auch _Sammlungsinstanzen_ können explizit berechtigt werden.
 
-=== Berechtigung auf Sammlungen
+=== Berechtigung einer Sammlung
 
-Aus ärztlicher Sicht ist die Vollständigkeit von Informationen wünschenswert. Daher werden Sammlungen, etwa ein Impfpass, komplett freigegeben oder verborgen. 
-
-=== Unique Dokumente
-
-Einzelne Dokumententypen sind unique (NFD, DPE, eMP), d.h. es kann jeweils nur ein einzelnes Dokument das aktuell gültige Dokument sein. Das Aktensystem bildet bei der Aktualisierung von unique Dokumenten eine Versionskette, so dass das zuletzt eingestellte Dokument den Status "approved" erhält, und zuvor existierende Dokumente in die Versionskette mit dem Status "deprecated" eingeordnet werden.  
+Aus ärztlicher Sicht ist die Vollständigkeit von Informationen wünschenswert. Daher werden Sammlungen, etwa ein Impfpass, komplett freigegeben oder verborgen.
 
 == Ordner
 
-Ordner stehen für die fixe Anzahl von Kategorien, die vom SGB V motiviert sind und von dort aus auch die Zugriffsrechte-Regeln mittels der Matrix (A_19303 - Komponente ePA-Dokumentenverwaltung – Zugriffsunterbindungsregeln) erhalten. Zu unterscheiden sind statische und dynamische Ordner. Statische Ordner sind der Normalfall. Dynamische Ordner sind aktuell für die Kategorien childsrecord (Kinderuntersuchungsheft) und mothersrecord (Schwangerschaft und Geburt) vorgesehen. Dynamische Ordner haben die Besonderheit, dass ihre Multiplizität > 1 sein kann aufgrund mehrerer Schwangerschaften oder mehrerer Kinder. 
+ePA2-Ordner stehen für die fixe Anzahl von Dokumentenkategorien, die durch das SGB V motiviert sind die Zugriffsrechte der o.g. Berechtigungsmatrix beschreiben. Zu unterscheiden sind statische und dynamische Ordner. Statische Ordner sind der Normalfall. Dynamische Ordner sind aktuell für die Kategorien childsrecord (Kinderuntersuchungsheft) und mothersrecord (Schwangerschaft und Geburt) vorgesehen. Dynamische Ordner haben die Besonderheit, dass ihre Multiplizität > 1 aufgrund mehrerer Schwangerschaften oder mehrerer Kinder sein kann.
+
 In Ordnern können neben den MIOs noch weitere Dokumente liegen. Dies sind beispielsweise sonstige Dokumente, die sich aus der Versorgung der Versicherten mit Hebammenhilfe ergeben, welche ebenfalls der Dokumentenkategorie mothersrecord zugeordnet sind. 
-IHE erlaubt es nicht, Unterordner zu bilden. Eine Freigabe auf die Kategorie mothersrecord inkludiert entsprechend eine Freigabe auf vorhandene sonstige Geburtsdokumente. Wenn dies nicht gewünscht ist, wenn bspw. ausschließlich der Mutterpass freigeben werden soll, nicht aber die sonstigen Geburtsdokumente, ist ein geeignetes Blacklisting/Whitelisting durchzuführen.
-Das Blacklisting eines Ordners verhindert grundsätzlich die Freigabe eines im Ordner enthaltenen Dokumentes, selbst wenn es auf einer Whitelist aufgeführt wird.
+
+IHE XDS betrachtet keine Unterordner. Eine Freigabe auf die Dokumentenkategorie mothersrecord inkludiert entsprechend eine Freigabe auf vorhandene sonstige Geburtsdokumente. Wenn dies nicht gewünscht ist, wenn bspw. ausschließlich der Mutterpass freigeben werden soll, nicht aber die sonstigen Geburtsdokumente, ist ein geeignetes Blacklisting/Whitelisting durchzuführen. Das Blacklisting eines Ordners verhindert grundsätzlich die Freigabe eines im Ordner enthaltenen Dokumentes, selbst wenn es auf einer Whitelist aufgeführt wird.
 
 === Dynamische Ordner
 
-Die Multiplizität der dynamischen Ordner wird vom Leistungserbringer fachlich gepflegt. Daher legen sie Ordner an, löschen sie und pflegen die Merkmale der Ordner, also Namen der Kinder oder Kennzeichen der Schwangerschaft wie den Entbindungstermin. Der Primärsystem-Client ordnet mittels Assoziationen Dokumente in die jeweiligen Ordner ein. Dynamische Ordner dürfen auf der Whitelist oder der Blacklist eines Policy Document aufgeführt sein (A_21647).
+Die Multiplizität der dynamischen Ordner wird vom Leistungserbringer fachlich vorgegeben. Daher legen Leistungserbringer Ordner an, löschen sie und pflegen die Merkmale der Ordner, also Namen der Kinder oder Kennzeichen der Schwangerschaft wie den Entbindungstermin. Der Primärsystem-Client ordnet mittels Assoziationen Dokumente in die jeweiligen Ordner ein. Dynamische Ordner dürfen auf der Whitelist oder der Blacklist eines Policy Document aufgeführt sein (A_21647).
 
 === Statische Ordner
 
 Statische Ordner werden vom Aktensystem (AS) angelegt und gepflegt. Dokumente werden den statischen Ordnern aufgrund der Belegung von Metadaten vom AS zugeordnet (A_19388 - Nutzungsvorgaben für die Verwendung von Dokumentenkategorien). FD-DE-Assoziationen zu statischen Ordnern werden vom AS ignoriert. 
 
-=== Sonderfall Elternnotiz
+== Wirkung der Berechtigung auf Anwendungsfälle
 
-Dokumente oder MIOs gehören im Allgemeinen nur einer einzigen Kategorie an, mit Ausnahme des Sonderfalles "Elternnotiz" als Teil des Kinderuntersuchungsheftes (Sammlungstyp mixed). Die Elternnotiz ist ein im Regelfall durch den Versicherten gepflegtes Teildokument des U-Heftes und liegt sowohl im Ordner der Kategorie patientdoc als auch in einem Ordner der Kategorie childsrecord, in welchem auch alle weiteren Teildokumente des U-Heftes abgelegt werden.
-
-== Wirkung der Berechtigung auf UseCases
 === Einstellen
 
-Die Akteure stellen Dokumente nur in die Ihnen durch die Berechtigungsmatrix zugeordneten Ordner ein. Schreibrechte liegen für Versicherte und Vertreter immer vor, für Leistungserbringer und Kostenträger nur im Falle einer für sie vorliegenden Policy. Das Ausmaß der Schreibrechte für LE und KTR wird durch die Berechtigungsmatrix (A_19303) geregelt, nicht aber durch die Policy. 
-Leistungserbringer stellen Dokumente des Versicherten mit einer Vertraulichkeitsstufe (confidentialityCode) ein, die mit dem Versicherten abgesprochen wurde.   
+Die Akteure stellen Dokumente nur in die Ihnen durch die Berechtigungsmatrix zugeordneten Ordner ein. Schreibrechte liegen für Versicherte und Vertreter immer vor, für Leistungserbringer und Kostenträger nur im Falle einer für sie vorliegenden Policy. Das Ausmaß der Schreibrechte für Leistungserbringerinstitutionen oder Kostenträger wird durch die Berechtigungsmatrix (A_19303) geregelt, nicht aber durch die Policy. Leistungserbringer stellen Dokumente des Versicherten mit einer Vertraulichkeitsstufe (Confidentiality Code) ein, die mit dem Versicherten abgesprochen wurde. Strukturierte Dokumente, auf die Versicherte kein Schreibrecht haben, dürfen Versicherte auch nicht mit den Metadaten-Vorgaben für Leistungserbringer über ihr ePA-FdV registrieren. Ein solcher Registrierungs-Request wird vom ePA-Aktensystem mit dem Fehler *Access_Denied* abgewiesen. Unstrukturierte Dokumente, vom Versicherten registrierte Dokumente werden vom ePA-Aktensystem in den Ordner patientdoc abgelegt.
+
+Anhand der Identität des Einstellenden wird überprüft, ob überhaupt eine Policy für ihn vorliegt und nur im positen Fall die Verarbeitung fortgesetzt. Auswertungsregeln, die sich aus A_14761 ableiten haben immer den Vorrang gegenüber anderen Auswertungsregeln (vgl. Berechtigungsmatrix in A_19388). Mit Vorrang muss die Zuordnung zu Kategorien (und Ordnern) aufgrund der in A_14761 aufgeführten technischen Vorgaben in den https://github.com/gematik/api-ePA/tree/master/src/implementation_guides[Implementation Guides] der API-ePA erfolgen. 
+
+* Dabei wird bei strukturierten Datentypen festgestellt, welcher Kategorie ein strukturiertes Dokument angehört. Daraufhin kann geprüft werden, ob ein Schreibrecht für diese Kategorie vorliegt. Falls die Zugriffsunterbindungsregeln dem nicht widersprechen wird geprüft, ob die Regeln zum Einstellen in den Ordnern erfüllt sind. 
+* Bei unstrukturierten Daten gibt es keine implementation_guides, die greifen können. Stattdessen werden anhand A_19388 die Dokumente den Ordnern zugeordnet und geprüft, ob ein Schreibrecht gemäß Zugriffsunterbindungsregel auf die Kategorien vorliegt, die zum Ordner gehören. 
 
 === Lesen/Laden, Suchen
 
-Lesen/Laden und Suchen von Dokumenten, Metadaten und Ordnern wird wie oben beschrieben von Policies gesteuert. Das Leserecht auf Ordner wird über die Kategorien vergeben. Außerdem können über White- und Blacklisting von Dokumenten und dynamischen Ordnern Rechte unabhängig von der in der Policy vergebenen Vertraulichkeitsstufe der Kategorie vergeben/untersagt werden.
-Wird ein dynamischer Ordner der Kategorie mothersrecord auf eine White- oder Blacklist gesetzt, werden damit auch die Zugriffe auf die in diesem Ordner enthaltenen Hebammendokumente erlaubt/untersagt. Hebammendokumente können aber auch separat auf eine White- oder Blacklist gesetzt werden, Folgend hierzu zwei Beispiele:
+Das Lesen/Laden und Suchen von Dokumenten, Metadaten und Ordnern wird wie oben beschrieben durch Policies gesteuert. Das Leserecht auf Ordner wird über die Kategorien vergeben. Bei einer Suche wird die Rückgabemenge anhand der über eine Policy berechtigten Dokumentenkategorien oder freigegebene/untersagte Dokkumente gebildet. Außerdem können über White- und Blacklisting von Dokumenten und dynamischen Ordnern Zugriffsrechte unabhängig von der in der Policy vergebenen Vertraulichkeitsstufe der Kategorie vergeben/untersagt werden.
 
-* Die Kategorie "Schwangerschaft und Geburt" (mothersrecord) ist freigegeben. Einzelnene Hebammendokumente werden auf die Blacklist gesetzt:
-Alle in der Kategorie mothersrecord enthaltenen Mutterpässe sind sichtbar (Lesen/Laden und Suchen möglich). Die auf die Blacklist gesetzten Hebammendokumente, die sich wie die Mutterpässe in den dynamischen Ordnern befinden sind nicht sichtbar.
-* Die Kategorie "Schwangerschaft und Geburt" ist nicht freigegeben. Für drei Schwangerschaften existieren drei dynamische Ordner. Die Ordner der ersten zwei Schwangerschaften sind über die Whitelist freigegeben. Zur dritten Schwangerschaft sollen Hebammendokumente freigegeben werden. Diese werden auf die Whitelist gesetzt. Im Resultat sind neben den Dokumenten der ersten beiden Schwangerschaften nur die Hebammendokumente der dritten Schwangerschaft sichtbar, nicht aber dessen Mutterpass. 
+Wird ein dynamischer Ordner der Kategorie mothersrecord auf eine White- oder Blacklist gesetzt, werden damit auch die Zugriffe auf die in diesem Ordner enthaltenen Hebammendokumente erlaubt bzw. untersagt. Hebammendokumente können aber auch separat auf eine White- oder Blacklist gesetzt werden, Folgend hierzu zwei Beispiele:
+
+* Die Kategorie "Schwangerschaft und Geburt" (mothersrecord) ist freigegeben. Einzelnene Hebammendokumente werden auf die Blacklist gesetzt: Alle in der Kategorie mothersrecord enthaltenen Mutterpässe sind sichtbar (Lesen/Laden und Suchen möglich). Die auf die Blacklist gesetzten Hebammendokumente, die sich wie die Mutterpässe in den dynamischen Ordnern befinden sind nicht sichtbar.
+* Die Kategorie "Schwangerschaft und Geburt" (mothersrecord) ist nicht freigegeben. Für drei Schwangerschaften existieren drei dynamische Ordner. Die Ordner der ersten zwei Schwangerschaften sind über eine Whitelist freigegeben. Zur dritten Schwangerschaft sollen Hebammendokumente freigegeben werden. Diese werden auf die Whitelist gesetzt. Im Resultat sind neben den Dokumenten der ersten beiden Schwangerschaften nur die Hebammendokumente der dritten Schwangerschaft sichtbar, nicht aber dessen Mutterpass.
+
  
-=== Ändern confidentialityCode
+=== Ändern der Vertraulichkeitsstufe
 
-Das Metadata-Update wird ausschließlich vom Client dafür verwendet, den confidentialityCode von Dokumenten zu verändern. Wird ein Dokument als "streng vertraulich" eingestuft, kann es nur noch über eine Whitelist freigegeben werden. Von kategorienbasierten Freigaben kann ein streng vertrauliches Dokument nicht erfasst werden, denn diese Freigaben können nur auf Dokumente der Stufe "normal" und "vertraulich" erteilt werden.
-Alle Dokumente einer Sammlung müssen immer den gleichen confidentialityCode haben. Dies wird durch das Aktensystem sichergestellt. Wird ein Dokument einer Sammlung aktualisiert oder ein Dokument hinzugefügt, so wird der hierbei gesetzte confidentialityCode für alle Dokumente der Sammlung übernommen.
-Hebammendokumente die sich neben dem Mutterpass in einem dynamischen Ordner der Kategorie childsrecord befinden, können abweichend vom confidentialityCode der Sammlung Mutterpass einen anderen confidentialityCode haben.
+Das Metadata-Update wird ausschließlich vom Client dafür verwendet, die Vertraulichkeitsstufe eines Dokuments zu verändern. Wird ein Dokument als "streng vertraulich" eingestuft, kann es nur noch über eine Whitelist freigegeben werden. Von kategorienbasierten Freigaben kann ein streng vertrauliches Dokument nicht erfasst werden, denn diese Freigaben können nur auf Dokumente der Stufen "normal" und "vertraulich" erteilt werden. Alle Dokumente einer Sammlung haben immer die gleiche Vertraulichkeitsstufe. Dies wird durch das Aktensystem sichergestellt. Wird ein Dokument einer Sammlung aktualisiert oder ein Dokument hinzugefügt, so wird die hierbei gesetzte Vertraulichkeitsstufe für alle Dokumente der Sammlung übernommen. Hebammendokumente die sich neben dem Mutterpass in einem dynamischen Ordner der Kategorie mothersrecord befinden, können abweichend von der Vertraulichkeitsstufe der Sammlung Mutterpass einer differenzieten Vertraulichkeitsstufe zugeordnet sein.
 
 === Löschen
 
-Versicherte haben ein generelles Löschrecht für ihre Daten. Leistungserbringer dürfen Löschungen nur in Absprache mit dem Versicherten durchführen. Unbeabsichtigtes Löschen ist zu vermeiden, solange es keine Papierkorb-Funktion gibt und das Wiederherstellen von Dokumenten aus den Primärdokumentationen der Primärsystem-Hersteller nicht immer möglich ist. Die Löschrechte der Leistungserbringer sind auch deswegen weitreichend, um auch Versicherten ohne eigenes FdV die Möglichkeit zu geben, ihr Löschrecht wahrzunehmen, nämlich in Absprache mit einem Leistungserbringers ihres Vertrauens.
-Das Löschen von Ordnern ist nur für dynamische Ordner möglich. 
+Versicherte haben ein generelles Löschrecht für ihre Daten. Leistungserbringer dürfen Löschungen nur in Absprache mit dem Versicherten durchführen. Ein unbeabsichtigtes Löschen ist zu vermeiden, da es keine Papierkorb-Funktion gibt und das Wiederherstellen von Dokumenten aus den Primärdokumentationen der Primärsystem-Hersteller nicht immer möglich ist. Die Löschrechte der Leistungserbringer sind auch deswegen weitreichend, um auch Versicherten ohne eigenes ePA-FdV die Möglichkeit zu geben, ihr Löschrecht wahrzunehmen, nämlich in Absprache mit einem Leistungserbringers ihres Vertrauens. Das Löschen von Ordnern ist nur für dynamische Ordner möglich. 
 
-Um Sammlungen löschen zu können, erstellen berechtigte Clients Löschrequests, die eine Reihe von Constraints zu beachten haben: 
+Um Sammlungen löschen zu können, erstellen berechtigte Clients Lösch-Requests, die eine Reihe von Bedingungen zu beachten haben: 
 
-* Durch das FdV können Sammlungen immer nur komplett gelöscht werden. Eine Ausnahme bildet die Elternotiz der Sammlung Kinderuntersuchungsheft, die auch durch den Versicherten gelöscht werden kann. Das Löschen der Elternnotiz erfolgt in diesen Fall durch removeMetadata dieses Dokuments. Trotz A_20581-01 ist das Löschen in diesem Sonderfall erlaubt, da es sich um ein Dokument des Versicherten im Ordner patientdoc handelt. 
+* Durch das ePA-FdV können Sammlungen immer nur komplett gelöscht werden. Eine Ausnahme bildet die Elternotiz der Sammlung Kinderuntersuchungsheft, die auch durch den Versicherten gelöscht werden kann. Trotz der Anforderung A_20581-01 ist das Löschen in diesem Sonderfall erlaubt, da es sich um ein Dokument des Versicherten im Ordner patientdoc handelt. 
 * Leistungserbringer können über ihre Primärsysteme auch einzelne Einträge/Dokumente einer Sammlung löschen.
 * Sammlungen in statischen Ordnern können nur durch das Löschen aller Einträge (Dokumente) der Sammlung gelöscht werden. Das Löschen von statischen Ordnern ist nicht möglich.
 * Sammlungen in dynamischen Ordnern (Mutterpass, Kinderuntersuchungsheft) können ausschließlich durch das Löschen des dynamischen Ordners (mothersrecord, childsrecord) gelöscht werden. Dabei muss das Aktensystem im Falle der Elternnotiz automatisch sowohl die Assoziation zum Ordner childsrecord als auch zum Ordner patientdoc löschen. 
@@ -154,3 +152,27 @@ Um Sammlungen löschen zu können, erstellen berechtigte Clients Löschrequests,
 * Dokumente im Status "deprecated" sind nicht seperat löschbar. Die Historie eines Dokumentes wird zusammen mit dem "approved" Dokument gelöscht.
 
 
+== ePA1-Primärsysteme als Clients von ePA2-Aktensystemen
+
+Kurz vor dem 01.01.2022 werden die ePA-Aktensysteme abwärtskompatibel auf ePA 2.0 umgestellt. ePA1-PS-Clients können prizipiell mit den umgestellten Aktensystemen arbeiten - die ePA2-Neuerungen in der Behandlung von XDS-Metadaten werden an dieser Stelle nicht thematisiert. ePA1-Policies werden am Aktensystem in ePA2-Policies beim Aktenzugriff transformiert. Wie wirkt sich die Umstellung auf ePA1-PS-Clients aus, solange sie die Umstellung auf ePA 2.0 nicht umsetzen?
+
+=== Einstellen von Dokumenten und Ad-hoc-Berechtigung
+
+* Falls eine gültige Berechtigung vorliegt, können ePA1-LE-Dokumente weiterhin eingestellt werden. Das Einstellen von Dokumenten in statische Ordner, insbesondere Impfpass und Zahnbonusheft ist ebenfalls möglich, nicht jedoch das Registrieren von Einträgen in ein Kinderuntersuchungsheft oder Mutterpass, weil die Kennungen der dynamischen Ordner nicht abgefragt und im nachhinein angegeben werden können.  
+* Das Registrieren von Einträgen in einen Impfpass oder Zahnbonusheft erfordert ein am ePA-FdV erteiltes Leserecht, weil die ggf. schon vorliegenden DocumentEntry.entryUUID verwendet werden muss.  
+* Registrierte Dokumente haben immer die Vertraulichkeitsstufe normal.
+* In der Ad-hoc-Berechtigung können keine Vertraulichkeitsstufen aus einer ePA1-PS-Umgebung gesetzt werden.
+
+=== Lesen und Löschen von Dokumenten
+ 
+* Das Lesen und Löschen kann vom ePA1-PS-Client nur realisiert werden, falls es damit umgehen kann, dass der Client, je nach verwendeter IHE-Operation, auch ePA2-Metadatenobjekte wie Assoziationen und Ordner erhält (die es in ePA 1.0 noch nicht gab).    
+* Falls der Versicherte Lese- und Löschrechte für eine ePA1-LEI erteilt hat, kann die berechtigte Leistungserbringerinstitution diese Dokumente lesen und löschen.
+* Ein durch ein ePA1-Client gesetztes ePA1-Lese- und Löschrecht für LE-Dokumente wird transformiert in ein Lese- und Löschrecht auf die Kategorien 1a*, 1b (emp), 1c (nfd), 1d (eab) und 13 (other), d.h. ePA1-PS-Clients können nur auf Dokumente dieser Kategorien zugreifen. (Pat => patientdoc, KTR ==> receipt). Eine Ad-hoc-Berechtigung LEI wird auf die genannte Weise transformiert.
+
+* Vertrauliche Dokumente können nicht gelesen und nicht gelöscht werden.
+
+=== Unique-Dokumente
+
+Einzelne Dokumententypen sind einmalig/unique. Dazu zählen insbesondere medizinische Informationsobjekte (MIOs), aber auch der Notfalldatensatz (NFD), der Datensatz Persönlicher Erklärungen (DPE) oder der elektronische Medikationsplan (eMP). Einmalig bedeutet, dass jeweils nur ein einzelnes Dokument das aktuell gültige Dokument ist. Das Aktensystem bildet bei der Aktualisierung dieser Dokumente eine Versionskette, so dass das zuletzt eingestellte Dokument den Status "approved" erhält und zuvor existierende Dokumente in die Versionskette mit dem Status "deprecated" eingeordnet werden.  
+
+Wenn ePA1-Clients NFD-, DPE- oder eMP-Datensätze einstellen, kann für die Uniqueness dieser Dokumente nicht garantiert werden. Durch die Einstellaktivität von ePA1-PS können wie in ePA1 mehrere Dokumente nebeneinander in den entsprechenden Ordnern liegen. 

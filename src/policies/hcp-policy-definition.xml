@@ -83,7 +83,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the blacklist with an additional document or folder. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>
 					</Resource>
@@ -100,7 +100,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 0..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the whitelist with an additional document. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>						
 					</Resource>										

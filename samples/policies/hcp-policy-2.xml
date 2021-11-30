@@ -397,7 +397,7 @@
 				<Resources>
 					<Resource>
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">de9d3ce7-9532-4951-a42e-3de4db125412</AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">urn:uuid:de9d3ce7-9532-4951-a42e-3de4db125412</AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>
 					</Resource>

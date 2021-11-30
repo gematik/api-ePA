@@ -1,3 +1,16 @@
+# Release 2.0.5-1
+- changes from C_10932 (hcp-policy-definition.xml and hcp-policy-2.xml) 
+
+
+- new folder "vocabulary" for code systems and value sets. 
+
+
+- initial provision of code systems and value sets (draft) used with epa. 
+
+
+- major update "berechtigungskonzept". Detailed clarifications on ePA1 to ePA2 migration issues 
+
+
 # Release 2.0.5
 - Bugfix SoapAction GetSignedAuditEvents (AccountManagementService.wsdl) 
 - Bugfix parametertype in finishKeyChange (AuthorizationService.xsd) 

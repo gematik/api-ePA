@@ -23,24 +23,27 @@ Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
     │   ├──── implementation_guides
     │   ├──── openapi
     │   ├──── policies    
-    │   └──── schema
-    │        ├── tel
-    │        ├── ext
-    │        │   ├── ebRS
-    │        │   ├── HL7V3
-    │        │   └── IHE
-    │        └── fd
-    │            └── phr
+    │   ├──── schema
+    │   │    ├── tel
+    │   │    ├── ext
+    │   │    │   ├── ebRS
+    │   │    │   ├── HL7V3
+    │   │    │   └── IHE
+    │   │    └── fd
+    │   │        └── phr
+    │   └──── vocabulary (draft)
+    │        ├── code_systems
+    │        └── value_sets 
     ├── README.md
     └── ReleaseNotes.md
 
 ### Hinweis zum Umzug der Schnittstelle des Aktensystems
-   > Die Schnittstellen des Aktensystems wurde aus dem Repository https://github.com/gematik/api-telematik.git  hierher verlagert und wird dort nicht weiter gepflegt.
+   > Die Schnittstellen des Aktensystems wurde aus dem Repository https://github.com/gematik/api-telematik.git hierher verlagert und wird dort nicht weiter gepflegt.
 
-   > Der Pfad src/schema/fd/phr enthält vollständig die Artefakte der SOAP-Schnittstelle des Aktensystems (wsdl- und Schemadateien) und notwendige Schemas aus Standards (src/schema/ext, bzw. src/schema/tel).
+   > Der Pfad src/schema/fd/phr enthält vollständig die Artefakte der SOAP-Schnittstelle des Aktensystems (WSDL- und Schemadateien) sowie notwendige Schemas aus Standards (src/schema/ext, bzw. src/schema/tel).
 
 ### Hinweis zum Umzug der Implementierung "Schutz des Export-Pakets bei AS-Anbieterwechsel"
-   > Die Referenzimplementierung (bisher hier unter gematik/api-epa/as-wechsel veröffentlicht) ist in ein eigenes Repository https://github.com/gematik/ref-ePA-HealthRecordMigration.git umgezogen.
+   > Die Referenzimplementierung (bisher hier unter gematik/api-epa/as-wechsel veröffentlicht) ist in das eigene Repository https://github.com/gematik/ref-ePA-HealthRecordMigration.git umgezogen.
 
 
 ## Weiterführende Seiten

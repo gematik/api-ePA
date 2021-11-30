@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="specialty-oth-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <url value="https://gematik.de/fhir/ValueSet/specialty-oth-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.467"/>
+    </identifier>
+    <version value="2.0.6"/>
+    <date value="2021-04-22"/>
+    <name value="value-set-of-specialty-oth-codes"/>
+    <title value="Value Set of Specialty OTH Codes"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description
+            value="Value Set für Berechtigungskategorien auf Basis sonstiger (nicht an den Fachgebieten der Kategorien 1a* orientierten) Kategorien in der deutschen elektronischen Patientenakte (ePA)"/>
+    <compose>
+        <include>
+            <system value="urn:oid:1.2.276.0.76.5.512"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Daten des elektronischen Medikationsplans nach § 334 Absatz 1 Satz 2 Nummer 4"/>
+                </extension>
+                <code value="emp"/>
+                <display value="Elektronischer  Medikationsplan"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Daten der elektronischen Notfalldaten nach § 334 Absatz 1 Satz 2 Nummer 5"/>
+                </extension>
+                <code value="nfd"/>
+                <display value="Notfalldaten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten in elektronischen Briefen zwischen den an der Versorgung der Versicherten teilnehmenden Ärzten und Einrichtungen (elektronische Arztbriefe)"/>
+                </extension>
+                <code value="eab"/>
+                <display value="eArztbrief"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zum Nachweis der regelmäßigen Inanspruchnahme zahnärztlicher Vorsorgeuntersuchungen gemäß § 55 Absatz 1 in Verbindung mit § 92 Absatz 1 Satz 2 Nummer 2  (elektronisches Zahn-Bonusheft)"/>
+                </extension>
+                <code value="dentalrecord"/>
+                <display value="Zahnbonusheft"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten gemäß der nach § 92 Absatz 1 Satz 2 Nummer 3 und Absatz 4 in Verbindung mit § 26 beschlossenen Richtlinie des Gemeinsamen Bundesausschusses zur Früherkennung von Krankheiten bei Kindern (elektronisches Untersuchungsheft für Kinder)"/>
+                </extension>
+                <code value="childsrecord"/>
+                <display value="Kinderuntersuchungsheft"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten gemäß der nach § 92 Absatz 1 Satz 2 Nummer 4 in Verbindung mit den §§ 24c bis 24f beschlossenen Richtlinie des Gemeinsamen Bundesausschusses über die ärztliche Betreuung während der Schwangerschaft und nach der Entbindung (elektronischer Mutterpass) sowie Daten, die sich aus der Versorgung der Versicherten mit Hebammenhilfe ergeben."/>
+                </extension>
+                <code value="mothersrecord"/>
+                <display value="Schwangerschaft und Geburt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten der Impfdokumentation nach § 22 des Infektionsschutzgesetzes (elektronische Impfdokumentation)"/>
+                </extension>
+                <code value="vaccination"/>
+                <display value="Impfpass"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="esundheitsdaten, die durch den Versicherten zur Verfügung gestellt werden"/>
+                </extension>
+                <code value="patientdoc"/>
+                <display value="vom Versicherten eingestellte Dokumente"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Dokumente, die gemäß Paragraph §41 Absatz 2 Satz 7 PDSG, bzw.  Paragraph 68 Sozialgesetzbuch (SGB) V) importiert worden sind"/>
+                </extension>
+                <code value="ega"/>
+                <display value="Elektronische Gesundheitsakte (eGA)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Bei Kostenträgern gespeicherte Daten über die in Anspruch genommenen Leistungen des Versicherten"/>
+                </extension>
+                <code value="receipt"/>
+                <display value="Quittungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zur pflegerischen Versorgung des Versicherten nach den §§ 24g, 37, 37b, 37c, 39a und 39c und der Haus- oder Heimpflege nach § 44 des Siebten Buches und nach dem Elften Buch"/>
+                </extension>
+                <code value="care"/>
+                <display value="Pflegedokumente"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Daten elektronischer Verordnungen nach § 360 Absatz 1"/>
+                </extension>
+                <code value="prescription"/>
+                <display value="Verordnungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="nach § 73 Absatz 2 Satz 1 Nummer 9 ausgestellte Bescheinigung über eine Arbeitsunfähigkeit"/>
+                </extension>
+                <code value="eau"/>
+                <display value="Elektronische Arbeitsunfähigkeits-bescheinigungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten"/>
+                </extension>
+                <code value="other"/>
+                <display value="in andere Kategorien nicht einzuordnende Dokumente"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
