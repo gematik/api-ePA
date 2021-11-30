@@ -1,0 +1,34 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:RegistryStoredQuery</Action>
+		<MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:f366a00f-4fb8-46e1-952d-85af06a8be54</MessageID>
+		<To xmlns="http://www.w3.org/2005/08/addressing">http://10.11.219.162:80/ws/PHRService</To>
+		<ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+			<Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+		</ReplyTo>
+		<ns5:ContextHeader xmlns:ns17="urn:ihe:iti:rmd:2017" xmlns:ns16="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns15="urn:hl7-org:v3" xmlns:ns14="http://ws.gematik.de/tel/error/v2.0" xmlns:ns13="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns12="http://www.w3.org/2000/09/xmldsig#" xmlns:ns11="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns10="urn:ihe:iti:xds-b:2007" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v2.0" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+			<ns3:Context>
+				<ns2:MandantId>MANDANT_ARZTPRAXIS</ns2:MandantId>
+				<ns2:ClientSystemId>Clientsystem_ePA</ns2:ClientSystemId>
+				<ns2:WorkplaceId>Workplace_ePA</ns2:WorkplaceId>
+				<ns2:UserId>User1</ns2:UserId>
+			</ns3:Context>
+			<ns5:RecordIdentifier>
+				<ns4:InsurantId root="1.2.276.0.76.4.8" extension="X110435031"/>
+				<ns4:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns4:HomeCommunityId>
+			</ns5:RecordIdentifier>
+		</ns5:ContextHeader>
+	</soap:Header>
+	<soap:Body>
+		<ns7:AdhocQueryRequest xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRService/v2.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns9="urn:ihe:iti:xds-b:2007" xmlns:ns10="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns11="http://www.w3.org/2000/09/xmldsig#" xmlns:ns12="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns13="http://ws.gematik.de/tel/error/v2.0" xmlns:ns14="urn:hl7-org:v3" xmlns:ns15="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns16="urn:ihe:iti:rmd:2017" federated="false" startIndex="0" maxResults="-1">
+			<ns7:ResponseOption returnType="LeafClass" returnComposedObjects="true"/>
+			<ns5:AdhocQuery id="urn:uuid:b909a503-523d-4517-8acf-8e5834dfc4c7" home="urn:oid:1.2.276.0.76.3.1.315.3.2.1.1">
+				<ns5:Slot name="$XDSFolderEntryUUID">
+					<ns5:ValueList>
+						<ns5:Value>'urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b'</ns5:Value>
+					</ns5:ValueList>
+				</ns5:Slot>				
+			</ns5:AdhocQuery>
+		</ns7:AdhocQueryRequest>
+	</soap:Body>
+</soap:Envelope>

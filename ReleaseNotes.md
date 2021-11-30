@@ -1,3 +1,10 @@
+# Release 2.0.5-2
+- new folder "ePA 2 Beispielnachrichten PS - Konnektor" 
+
+
+- sample messages ePA 2 
+
+
 # Release 2.0.5-1
 - changes from C_10932 (hcp-policy-definition.xml and hcp-policy-2.xml) 
 
