@@ -18,6 +18,7 @@ Im Folgenden ist die Organisation der Ordnerstruktur dargestellt.
     │   ├──── ePA 1 Beispielnachrichten PS - Konnektor   
     │   │    ├── Requests
     │   │    └── Responses
+    │   ├──── ePA 2 Beispielnachrichten PS - Konnektor   
     │   └──── policies
     ├─ src
     │   ├──── implementation_guides

@@ -167,7 +167,7 @@ Kurz vor dem 01.01.2022 werden die ePA-Aktensysteme abwärtskompatibel auf ePA 2
  
 * Das Lesen und Löschen kann vom ePA1-PS-Client nur realisiert werden, falls es damit umgehen kann, dass der Client, je nach verwendeter IHE-Operation, auch ePA2-Metadatenobjekte wie Assoziationen und Ordner erhält (die es in ePA 1.0 noch nicht gab).    
 * Falls der Versicherte Lese- und Löschrechte für eine ePA1-LEI erteilt hat, kann die berechtigte Leistungserbringerinstitution diese Dokumente lesen und löschen.
-* Ein durch ein ePA1-Client gesetztes ePA1-Lese- und Löschrecht für LE-Dokumente wird transformiert in ein Lese- und Löschrecht auf die Kategorien 1a*, 1b (emp), 1c (nfd), 1d (eab) und 13 (other), d.h. ePA1-PS-Clients können nur auf Dokumente dieser Kategorien zugreifen. (Pat => patientdoc, KTR ==> receipt). Eine Ad-hoc-Berechtigung LEI wird auf die genannte Weise transformiert.
+* Ein durch ein ePA1-Client gesetztes ePA1-Lese- und Löschrecht für LE-Dokumente wird transformiert in ein Lese- und Löschrecht auf die Kategorien 1a*, 1b (emp), 1c (nfd), 1d (eab) und 13 (other, falls der Berechtigte keine Apotheke ist), d.h. ePA1-PS-Clients können nur auf Dokumente dieser Kategorien zugreifen. (Pat => patientdoc, KTR ==> receipt). Eine Ad-hoc-Berechtigung LEI wird auf die genannte Weise transformiert.
 
 * Vertrauliche Dokumente können nicht gelesen und nicht gelöscht werden.
 

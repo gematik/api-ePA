@@ -5,6 +5,10 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
+			version: V1.7
+			===========
+			*** Operation GetAuthorizationState eingefügt
+
 			version: V1.6
 			===========
 			*** Operation GetRecordProviderList entfernt
@@ -113,6 +117,12 @@
 	<message name="GetAuthorizationListResponseMessage">
 		<part name="parameter" element="phrs:GetAuthorizationListResponse"/>
 	</message>
+	<message name="GetAuthorizationStateRequestMessage">
+		<part name="parameter" element="phrs:GetAuthorizationState"/>
+	</message>
+	<message name="GetAuthorizationStateResponseMessage">
+		<part name="parameter" element="phrs:GetAuthorizationStateResponse"/>
+	</message>
 	<message name="startKeyChangeRequestMessage">
 		<part name="parameter" element="phrs:startKeyChange"/>
 	</message>
@@ -163,6 +173,11 @@
 			<input message="phrs:GetAuthorizationListRequestMessage"/>
 			<output message="phrs:GetAuthorizationListResponseMessage"/>
 			<fault name="FaultMessage" message="phrs:FaultMessage"/>
+		</operation>
+		<operation name="GetAuthorizationState">
+			<input message="phrs:GetAuthorizationStateRequestMessage"/>
+			<output message="phrs:GetAuthorizationStateResponseMessage"/>
+			<fault name="FaultName" message="phrs:FaultMessage"/>
 		</operation>
 	</portType>
 	<portType name="I_Authorization_Management_InsurantPortType">
@@ -277,6 +292,18 @@
 				<soap12:body use="literal"/>
 			</output>
 			<fault name="FaultMessage">
+				<soap12:fault name="FaultMessage" use="literal"/>
+			</fault>
+		</operation>
+		<operation name="GetAuthorizationState">
+			<soap12:operation soapAction="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.0#GetAuthorizationState" soapActionRequired="true"/>
+			<input>
+				<soap12:body use="literal"/>
+			</input>
+			<output>
+				<soap12:body use="literal"/>
+			</output>
+			<fault name="FaultName">
 				<soap12:fault name="FaultMessage" use="literal"/>
 			</fault>
 		</operation>

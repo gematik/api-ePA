@@ -1,3 +1,15 @@
+# Release 2.0.6-Pre1
+- update 'Berechtigungskonzept' 
+
+- added OID-based identifier (vocabulary) 
+
+- explanation on colons (hcp-policy-dedfinition.xml) 
+
+- new operation GetauthorizationState (AuthorizationService) 
+
+- additional parameter 'AllMandators' in CheckRecordExists (AuthorizationService.xsd) 
+
+
 # Release 2.0.5-2
 - new folder "ePA 2 Beispielnachrichten PS - Konnektor" 
 
