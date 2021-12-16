@@ -1,3 +1,7 @@
+# Release 2.0.6-Pre2
+- introduce a fhir-ressource based on 'dummy' values. Shall be used as Practitioner (KBV_PR_MIO_CMR_Practitioner) in parental notices of a childs medical record V1.0.0 (C_10907) ' 
+
+
 # Release 2.0.6-Pre1
 - update 'Berechtigungskonzept' 
 
