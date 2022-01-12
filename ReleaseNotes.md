@@ -1,3 +1,10 @@
+# Release 2.1.0-Pre1
+- enable 'Paging' for GetSignedAuditEvents in AuthorizationService, AuthenticationService and AccountManagemnetService (C_10962)  
+
+
+- add <AuditMessages> to healthcare-security-audit.xsd for validation improvement on export packages (Proto291.xml) (C_10890) 
+
+
 # Release 2.0.6-Pre2
 - introduce a fhir-ressource based on 'dummy' values. Shall be used as Practitioner (KBV_PR_MIO_CMR_Practitioner) in parental notices of a childs medical record V1.0.0 (C_10907) ' 
 

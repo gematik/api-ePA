@@ -5,10 +5,11 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
-			version: V1.6
+			version: V1.6.0
 			===========
 			*** added GetAuthorizationState, GetAuthorizationStateResponse and AuthorizedApplicationType
 			*** added Paramter AllMandators and HomeCommunityId to CheckRecordExists
+			*** added Paramters for Paging to GetSignedAuditEvents (Request and Response)
 
 			version: V1.5.4
 			===========
@@ -254,6 +255,21 @@
 			<sequence>
 				<element name="RecordIdentifier" type="phr:RecordIdentifierType"/>
 				<element name="DeviceID" type="phr:DeviceIdType"/>
+				<element name="PageSize" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="1"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="PageNumber" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="1"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="LastDay" type="date" minOccurs="0"/>
 			</sequence>
 		</complexType>
 	</element>
@@ -261,6 +277,34 @@
 		<complexType>
 			<sequence>
 				<element name="SignedAuditEventList" type="base64Binary"/>
+				<element name="PageSize" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="1"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="PageNumber" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="1"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="TotalPages" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="0"/>
+						</restriction>
+					</simpleType>
+				</element>
+				<element name="TotalEntries" minOccurs="0">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="0"/>
+						</restriction>
+					</simpleType>
+				</element>
 			</sequence>
 		</complexType>
 	</element>
