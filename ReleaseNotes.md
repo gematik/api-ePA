@@ -1,3 +1,9 @@
+# Release 2.1.0
+- new samples for ePA 2 Request Facility Authorization  
+
+- withdrawal of doubled folder association for parental notice (childsrecord and patientdoc) (C_10981) 
+
+
 # Release 2.1.0-Pre1
 - enable 'Paging' for GetSignedAuditEvents in AuthorizationService, AuthenticationService and AccountManagemnetService (C_10962)  
 

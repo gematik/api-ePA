@@ -12,6 +12,8 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Release Tag | Gültig ab | Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen | Betroffene GitHub-Artefakte |
 |---|---|---|---|---|
+|2.1.0|2022-01-31|alle Dokumente zu ePA Release 2.1.0 verfügar unter fachportal.gematik.de|---| - [request.xml](\samples\ePA%202%20Beispielnachrichten%20PS%20-%20Konnektor\requestFacilityAuthorization\request.xml)<br/> - [response.xml](\samples\ePA%202%20Beispielnachrichten%20PS%20-%20Konnektor\requestFacilityAuthorization\response.xml)<br/> - [berechtigungskonzept.adoc](\docs\berechtigungskonzept.adoc)|
+|2.1.0-Pre1|2022-01-13|---|Alle Änderungen gemäß ePA_Maintenance 21.4 und 21.5| - [healthcare-security-audit.xsd](\src\schema\ext\IHE\healthcare-security-audit.xsd)<br/>- [AccountManagementService.xsd](\src\schema\fd\phr\AccountManagementService.xsd) <br/>- [AuthenticationService.xsd](\src\schema\fd\phr\AuthenticationService.xsd)<br/>- [AuthorizationService.xsd](\src\schema\fd\phr\AuthorizationService.xsd)|
 | 2.0.6-Pre2 | 2021-12-16 |  |  | - [KBV_PR_MIO_CMR_Practitioner](/src/implementation_guides/KBV_PR_MIO_CMR_Practitioner_Dummy_Value.xml) |
 |  |  |  |  |  |
 |  |  |  |  |  |

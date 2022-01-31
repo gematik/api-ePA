@@ -49,9 +49,7 @@ Die einzelnen in den Zellen der Matrix vorhandenen Buchstaben entsprechen den Op
 
 Das heißt, dass die Berechtigungsmatrix ausschließlich Vorgaben für diese Operationen macht und keinerlei Einfluss auf alle weitere Operationen vornimmt. Der Zugriff auf Aktenkonto-Operationen - wie etwa das Abrufen von Zugriffsprotokollen - ist direkt über die jeweilige Schnittstelle geschützt und obliegt nur dem ePA-FdV und damit dem Versicherten oder seinen berechtigten Vertreter.
 
-=== Sonderfall Elternnotiz
-
-Dokumente oder medizinsiche Informationsobjekte (MIOs) gehören im Allgemeinen nur einer einzigen Dokumentenkategorie an, mit Ausnahme des Sonderfalles "Elternnotiz" als Teil des Kinderuntersuchungsheftes. Die Elternnotiz ist ein im Regelfall durch den Versicherten gepflegtes Teildokument des Kinderuntersuchungsheftes und liegt sowohl im Ordner der Kategorie patientdoc als auch in einem Ordner der Kategorie childsrecord, in welchem auch alle weiteren Teildokumente des Kinderuntersuchungsheftes abgelegt werden.
+Sonderfall Elternnotiz: Sofern ein Versicherter/Vertreter der Einsteller der Elternnotiz ist, darf er abweichend von den oben aufgeführten Zugriffsunterbindungsregeln in die Dokumentenkategorie mit dem technischen Identifier childsrecord schreiben.
 
 == Policy Documents
 
