@@ -1,3 +1,16 @@
+# Release MIO_20220211
+- added implementation guides for new mio versions 
+
+
+- changed json schema for implementation guides 
+
+
+- updated implementation guides regarding to new schema 
+
+
+- added new mios and "validfrom" date to value sets section 
+
+
 # Release 2.1.0
 - new samples for ePA 2 Request Facility Authorization  
 

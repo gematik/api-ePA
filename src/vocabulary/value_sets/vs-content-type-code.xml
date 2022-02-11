@@ -4,15 +4,20 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
     <url value="https://gematik.de/fhir/ValueSet/content-type-codes-phr-system"/>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.583"/>
     </identifier>
-    <version value="2.0.6"/>
+    <version value="1.0.0"/>
     <name value="value-set-of-content-type-codes"/>
     <title value="Value Set of Content Type Codes"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <publisher value="gematik GmbH"/>
     <contact>
@@ -58,8 +63,7 @@
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString
-                            value="Regelmäßige Übertragungen (z.B. Implantate, Fitnesstracker), auch wenn durch den Patienten ursprünglich veranlasst, werden über das Konzept 11 (&quot;Monitoring&quot;) abgebildet."/>
+                    <valueString value="Regelmäßige Übertragungen (z.B. Implantate, Fitnesstracker), auch wenn durch den Patienten ursprünglich veranlasst, werden über das Konzept 11 ('Monitoring') abgebildet."/>
                 </extension>
                 <code value="8"/>
                 <display value="Veranlassung durch Patient"/>

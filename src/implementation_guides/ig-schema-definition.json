@@ -160,16 +160,15 @@
 				"folderCardinality": {
 					"$ref": "#/definitions/CardinalityDefinition"
 				},
-				"validFromRelease": {
-					"type": "string"
-				},
-				"releaseDate": {
+				"validFromDate": {
+					"description": "Date from which the sructured document is accepted (upload/download) by ePA-server.",
 					"type": "string",
-					"format": "date-time"
+					"format": "date"
 				},
-				"status": {
-					"description": "Whether this structured document definition is valid (i.e. approved) or invalid (i.e. deprecated).",
-					"type": "string"
+				"clientReadOnlyFromDate": {
+					"description": "Date from which the structured document is accepted (only download) by ePA-server. The upload is rejected by ePA-server",
+					"type": "string",
+					"format": "date"
 				},
 				"type": {
 					"description": "The collection type of the structured document - either 'mixed', 'uniform' or 'atomic'.",
@@ -194,9 +193,7 @@
 				"description",
 				"guidelineDefinition",
 				"folderCardinality",
-				"validFromRelease",
-				"releaseDate",
-				"status",
+				"validFromDate",
 				"type",
 				"metadata",
 				"documentCategory",

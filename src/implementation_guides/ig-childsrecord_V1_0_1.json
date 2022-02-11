@@ -3,14 +3,14 @@
 	"description": "Child medical records defined as a medical information object (MIO) by KBV. It may include participation card and parental notes.",
 	"guidelineDefinition": {
 		"url": "https://mio.kbv.de/display/UH1X0/U-Heft",
-		"version": "1.0.0"
+		"version": "1.0.1"
 	},
 	"folderCardinality": {
 		"min": "0",
 		"max": "n",
 		"unique": false
 	},
-	"validFromDate": "2021-05-05",
+	"validFromDate": "2022-03-31",
 	"type": "mixed",
 	"metadata": {
 		"name": "folder.codeList",
@@ -29,7 +29,7 @@
 	"documentCategory": "childsrecord",
 	"elements": [
 		{
-			"version": "1.0.0",
+			"version": "1.0.1",
 			"name": "KBV_PR_MIO_CMR_Bundle",
 			"description": "This document is a child medical record.",
 			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_CMR_Bundle",
@@ -65,7 +65,7 @@
 				{
 					"name": "documentEntry.formatCode",
 					"value": {
-						"code": "urn:gematik:ig:KinderuntersuchungsheftUntersuchungen:v1.0.0",
+						"code": "urn:gematik:ig:KinderuntersuchungsheftUntersuchungen:v1.0.1",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
 						"displayName": "Untersuchungen Kinderuntersuchungsheft"
 					}
@@ -85,7 +85,7 @@
 			}
 		},
 		{
-			"version": "1.0.0",
+			"version": "1.0.1",
 			"name": "KBV_PR_MIO_PC_Bundle",
 			"description": "This document is a participation card.",
 			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PC_Bundle",
@@ -121,7 +121,7 @@
 				{
 					"name": "documentEntry.formatCode",
 					"value": {
-						"code": "urn:gematik:ig:KinderuntersuchungsheftTeilnahmekarte:v1.0.0",
+						"code": "urn:gematik:ig:KinderuntersuchungsheftTeilnahmekarte:v1.0.1",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
 						"displayName": "Teilnahmekarte Kinderuntersuchungsheft"
 					}
@@ -141,7 +141,7 @@
 			}
 		},
 		{
-			"version": "1.0.0",
+			"version": "1.0.1",
 			"name": "KBV_PR_MIO_PN_Bundle",
 			"description": "This document holds parental notes.",
 			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PN_Bundle",
@@ -177,7 +177,7 @@
 				{
 					"name": "documentEntry.formatCode",
 					"value": {
-						"code": "urn:gematik:ig:KinderuntersuchungsheftNotizen:v1.0.0",
+						"code": "urn:gematik:ig:KinderuntersuchungsheftNotizen:v1.0.1",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
 						"displayName": "Notizen Kinderuntersuchungsheft"
 					}

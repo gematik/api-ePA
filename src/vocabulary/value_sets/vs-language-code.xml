@@ -4,15 +4,20 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
     </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
     <url value="https://gematik.de/fhir/ValueSet/language-codes-phr-system"/>
     <identifier>
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.588"/>
     </identifier>
-    <version value="2.0.6"/>
+    <version value="1.0.0"/>
     <name value="value-set-of-language-codes"/>
     <title value="Value Set of Language Codes"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
     <publisher value="gematik GmbH"/>
     <contact>

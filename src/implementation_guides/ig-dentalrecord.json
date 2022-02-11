@@ -10,9 +10,7 @@
 		"max": "1",
 		"unique": true
 	},
-	"validFromRelease": "2.0.3",
-	"releaseDate": "2021-05-05",
-	"status": "approved",
+	"validFromDate": "2021-05-05",
 	"type": "uniform",
 	"metadata": {
 		"name": "folder.codeList",
