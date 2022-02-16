@@ -1,3 +1,10 @@
+# Release MIO_20220216
+- removed implementation guides for outdated mio version (prescription) 
+
+
+- added format codes for eVerordnung (prescription 1.0.2) 
+
+
 # Release MIO_20220211
 - added implementation guides for new mio versions 
 

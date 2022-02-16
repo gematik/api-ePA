@@ -62,7 +62,7 @@
 				{
 					"name": "documentEntry.formatCode",
 					"value": {
-						"code": "urn:gematik:ig:VerordnungsdatensatzMedikation::v1.0.2",
+						"code": "urn:gematik:ig:VerordnungsdatensatzMedikation:v1.0.2",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
 						"displayName": "Verordnungsdatensatz Medikation (gematik)"
 					}
