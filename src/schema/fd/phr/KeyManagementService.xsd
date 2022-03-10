@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2019 sp2 (x64) (http://www.altova.com) von n/a (Gematik) bearbeitet -->
 <!-- ===================================================================== -->
 <!-- Copyright (C) 2020 gematik GmbH. Alle Rechte vorbehalten.             -->
 <!-- ===================================================================== -->
 <!-- 
 		Version History
 		
+			version: V1.3.0
+			===============
+			*** correction cardinality DocumentKeyList under GetAllDocumentKeysResponse and PutAllDocumentKeys
+			*** correction cardinality KeyList under DocumentKeyList
+			*** correction cardinality Key under KeyListType
+			*** correction AuthorizedIDList (types and cardinality)
+
 			version: V1.2.0
 			===============
 			*** added type for DocumentUniqueId and namespace urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0
@@ -19,7 +27,7 @@
 
 	 	End of Version History
 -->
-<xs:schema xmlns="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:phrc="http://ws.gematik.de/fa/phr/v1.1" xmlns:gerror="http://ws.gematik.de/tel/error/v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2.0">
+<xs:schema xmlns="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:phrc="http://ws.gematik.de/fa/phr/v1.1" xmlns:gerror="http://ws.gematik.de/tel/error/v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.3.0">
 	<xs:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="../../ext/xenc-schema.xsd"/>
 	<xs:import namespace="http://ws.gematik.de/fa/phrext/v1.0" schemaLocation="../../ext/IHE/healthcare-security-audit.xsd"/>
 	<xs:import namespace="http://ws.gematik.de/tel/error/v2.0" schemaLocation="../../tel/error/TelematikError.xsd"/>
@@ -41,7 +49,7 @@
 	<xs:element name="StartKeyChangeResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="AuthorizedIDList" type="AuthorizedID" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element name="AuthorizedIDList" type="AuthorizedIDListType" minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -64,7 +72,7 @@
 	<xs:element name="GetAllDocumentKeysResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="DocumentKeyList" type="KeyList" minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="DocumentKeyList" type="KeyListType" minOccurs="1" maxOccurs="1">
 					<xs:annotation>
 						<xs:documentation>Liste aller Document Keys, jeweils verschlüsselt mit altem Aktenschlüssel</xs:documentation>
 					</xs:annotation>
@@ -77,7 +85,7 @@
 			<xs:sequence>
 				<!-- element ref="SAML:Assertion"/ -->
 				<!-- AuthenticationAssertion wird im SOAP-Header übertragen -->
-				<xs:element name="DocumentKeyList" type="KeyList" minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="DocumentKeyList" type="KeyListType" minOccurs="1" maxOccurs="1">
 					<xs:annotation>
 						<xs:documentation>Liste aller Document Keys, jeweils verschlüsselt mit neuem Aktenschlüssel</xs:documentation>
 					</xs:annotation>
@@ -104,7 +112,15 @@
 	</xs:element>
 	<xs:element name="FinishKeyChangeResponse"/>
 	<!-- Datentypen-->
-	<xs:complexType name="AuthorizedID">
+	<xs:complexType name="AuthorizedIDListType">
+		<xs:annotation>
+			<xs:documentation>Liste der Berechtigten (KVNR oder Telematik-ID)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AuthorizedID" type="AuthorizedIDEntryType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AuthorizedIDEntryType">
 		<xs:sequence>
 			<xs:element name="ID" type="xs:string"/>
 			<xs:element name="Type" type="AuthorizedIDType"/>
@@ -116,12 +132,12 @@
 			<xs:enumeration value="TELEMATIK_ID"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="KeyList">
+	<xs:complexType name="KeyListType">
 		<xs:annotation>
 			<xs:documentation>Schlüsseleinträge, eines pro verschlüsseltem Dokumentenschlüssel</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="Key" type="KeyType"/>
+			<xs:element name="Key" type="KeyType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="KeyType">

@@ -1,3 +1,19 @@
+# Release 2.1.1-Pre1
+- corrected AuthorizedIdList (KeyManagementService.xsd)  (C_10977)  
+
+
+- corrected cardinality for Key in KeListType (KeyManagementService.xsd)  (C_10976)  
+
+
+- corrected MIO versions in vs-foramt-code.xml 
+
+
+- corrected SOAP-Action for consistence with specification (KeyManagementService.wsdl)  (C_11029)  
+
+
+- added LastTimeStamp in getAuditEvenets and getSignedAuditEvents (AuthenticaionService.xsd, AuthorizationService.xsd, AccountManagementService.xsd) (C_11019) 
+
+
 # Release MIO_20220216
 - removed implementation guides for outdated mio version (prescription) 
 

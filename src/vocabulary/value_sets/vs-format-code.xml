@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.461"/>
     </identifier>
-    <version value="1.0.0"/>
+    <version value="1.0.1"/>
     <name value="Value Set of Format Codes"/>
     <title value="Value Set of Format Codes"/>
     <status value="active"/>
@@ -321,9 +321,23 @@
                 <display value="Datensatz für persönliche Erklärungen (gematik)"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="urn:gematik:ig:Impfausweis:r4.0"/>
+                <display value="Impfausweis (gematik)"/>
+            </concept>            
+            <concept>
                 <code value="urn:gematik:ig:Impfausweis:v1.1.0"/>
                 <display value="Impfausweis (gematik)"/>
             </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>                
+                <code value="urn:gematik:ig:Mutterpass:r4.0"/>
+                <display value="Mutterpass (gematik)"/>
+            </concept>            
             <concept>
                 <code value="urn:gematik:ig:Mutterpass:v1.0.0"/>
                 <display value="Mutterpass (gematik)"/>
@@ -332,6 +346,13 @@
                 <code value="urn:gematik:ig:Mutterpass:v1.1.0"/>
                 <display value="Mutterpass (gematik)"/>
             </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="urn:gematik:ig:Kinderuntersuchungsheft:r4.0"/>
+                <display value="Kinderuntersuchungsheft (gematik)"/>
+            </concept>    
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
                     <valueBoolean value="true"/>
@@ -382,6 +403,20 @@
                 <code value="urn:hl7-de:DGUV-StatEntlassbrief:2020"/>
                 <display value="DGUV Stationärer Entlassbrief"/>
             </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="urn:gematik:ig:Zahnbonusheft:r4.0"/>
+                <display value="Zahnbonusheft (gematik)"/>
+            </concept>             
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="urn:gematik:ig:Zahnbonusheft:v1.0.0"/>
+                <display value="Zahnbonusheft (gematik)"/>
+            </concept>            
             <concept>
                 <code value="urn:gematik:ig:Zahnbonusheft:v1.1.0"/>
                 <display value="Zahnbonusheft (gematik)"/>
