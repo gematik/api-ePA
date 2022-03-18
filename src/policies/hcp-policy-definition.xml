@@ -12,7 +12,7 @@ Comply with the following rules in order to instantiate a valid policy:
 
 -->
 
-<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.3"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.4"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:lei:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
 
 	<Description/><!-- 1..1 string The name and professional OID of the healthcare professional institution with the following pattern: <name>:<professionOID>. The name MUST be displayed at the insurant frontend. The certificate extension 'professionOID' might be taken from the signer certificate C.HCI.OSIG (cf. [gemSpec_PKI#Anhang A]). Please note that a colon can also appear in the name. -->
 
@@ -60,7 +60,7 @@ Comply with the following rules in order to instantiate a valid policy:
 					<Resource><!--  1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend access to more document categories. Note that document category MUST match ProfessionOID extracted from SMC-B / Authentication Assertion (cf. A_19303). If two confidentiality codes should be set for one document category, another additional Resource + ResourceMatch (OR expression) with the same document category and the additional confidentiality code MUST be defined separately. -->
 						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal"><!-- 1..1 -->
 							<AttributeValue DataType="urn:hl7-org:v3#CV">
-								<CodedValue xmlns="urn:hl7-org:v3"/><!-- attribute 'code': A code from the code system '1.2.276.0.76.5.511': 'practitioner', 'hospital', 'laboratory', 'physiotherapy', 'psychotherapy', 'dermatology', 'gynaecology_urology', 'dentistry_oms', 'other_medical', 'other_non_medical' or a code from the code system '1.2.276.0.76.5.512': 'emp', 'nfd', 'eab', 'dentalrecord', 'childsrecord', 'mothersrecord', 'vaccination', 'patientdoc', 'ega', 'receipt', 'care', 'prescription', 'eau', 'other' --><!-- attribute 'codeSystem': Either the code system OID '1.2.276.0.76.5.511' or '1.2.276.0.76.5.512' MUST be set. --></AttributeValue>
+								<CodedValue xmlns="urn:hl7-org:v3"/><!-- attribute 'code': A code from the code system '1.2.276.0.76.5.511': 'practitioner', 'hospital', 'laboratory', 'physiotherapy', 'psychotherapy', 'dermatology', 'gynaecology_urology', 'dentistry_oms', 'other_medical', 'other_non_medical' or a code from the code system '1.2.276.0.76.5.512': 'emp', 'nfd', 'eab', 'dentalrecord', 'childsrecord', 'mothersrecord', 'vaccination', 'patientdoc', 'ega', 'receipt', 'diga', 'care', 'prescription', 'eau', 'other' --><!-- attribute 'codeSystem': Either the code system OID '1.2.276.0.76.5.511' or '1.2.276.0.76.5.512' MUST be set. --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
 						</ResourceMatch>
 						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal"><!-- 1..1 A further restriction is expressed via a confidentiality code. -->
@@ -83,7 +83,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 1..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the blacklist with an additional document or folder. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (i.e. collection types 'mixed' or 'uniform'; cf. A_21647). It should be noted that a falsely defined entryUUID in both a blacklist and a whitelist evaluates to the authorization decision 'Permit' due to the ordering of these policies. --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>
 					</Resource>
@@ -100,7 +100,7 @@ Comply with the following rules in order to instantiate a valid policy:
 				<Resources>
 					<Resource><!-- 0..* Add an additional Resource + ResourceMatch (OR expression) in order to extend the whitelist with an additional document. -->
 						<ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (solely dynamic folders, such as 'mothersrecord' or 'childsrecord'). --></AttributeValue>
+							<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string A URN-encoded DocumentEntry.entryUUID or Folder.entryUUID (i.e. collection types 'mixed' or 'uniform'; cf. A_21647). --></AttributeValue>
 							<ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
 						</ResourceMatch>						
 					</Resource>										

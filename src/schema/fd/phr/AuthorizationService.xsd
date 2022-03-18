@@ -5,6 +5,10 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
+			version: V1.7.1
+			===========
+			*** added regex for UserAgentsType value
+
 			version: V1.7.0
 			===========
 			*** added LastTimeStamp to GetAuditEvents and GetSignedÁuditEvents
@@ -89,7 +93,7 @@
 
 	 	End of Version History
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:phrs="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" xmlns:phr="http://ws.gematik.de/fa/phr/v1.1" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:SAML="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tel="http://ws.gematik.de/tel/error/v2.0" targetNamespace="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.7.0">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:phrs="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" xmlns:phr="http://ws.gematik.de/fa/phr/v1.1" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:SAML="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tel="http://ws.gematik.de/tel/error/v2.0" targetNamespace="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.7.1">
 	<annotation>
 		<documentation xml:lang="de">
 			Copyright (c) 2021, gematik GmbH
@@ -579,7 +583,8 @@
 				<simpleType>
 					<restriction base="string">
 						<maxLength value="65"/>
-						<minLength value="17"/>
+						<minLength value="5"/>
+						<pattern value="[a-zA-Z0-9 _.\-+():]{1,20}/[a-zA-Z0-9 _.\-+():]{1,23}/[a-zA-Z0-9 _.\-+():]{1,20}"/>
 					</restriction>
 				</simpleType>
 			</element>

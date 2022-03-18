@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2022-03-31"/>
+            <start value="2023-01-01"/>
         </valuePeriod>
     </extension>
     <url value="https://gematik.de/fhir/ValueSet/format-codes-phr-system"/>
@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.461"/>
     </identifier>
-    <version value="1.0.1"/>
+    <version value="1.1.0"/>
     <name value="Value Set of Format Codes"/>
     <title value="Value Set of Format Codes"/>
     <status value="active"/>
@@ -420,6 +420,10 @@
             <concept>
                 <code value="urn:gematik:ig:Zahnbonusheft:v1.1.0"/>
                 <display value="Zahnbonusheft (gematik)"/>
+            </concept>
+            <concept>
+                <code value="urn:gematik:ig:diga:v1.0"/>
+                <display value="DiGA (gematik)"/>
             </concept>
         </include>
         <include>

@@ -1,3 +1,16 @@
+# Release 2.5.0-CC
+- Feature: Verarbeitung von Daten der ePA zu Forschungszwecken  
+
+
+- Feature:  Anbindung digitaler Gesundheitsanwendungen an die ePA 
+
+
+- (latest 2.1.1 changes) regex pattern for UserAgentType (AuthorizationService.xsd)  (C_11027)  
+
+
+- (latest 2.1.1 changes) static folders on allow- or deny-lists (hcp-policy-definition.xml)  (C_11003)  
+
+
 # Release 2.1.1-Pre1
 - corrected AuthorizedIdList (KeyManagementService.xsd)  (C_10977)  
 

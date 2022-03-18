@@ -1,0 +1,81 @@
+{
+	"insurantConsent": {
+		"consentState": "given",
+		"consentValidFrom": "2022-02-01T00:00:00"
+	},
+	"dataSubmissionTracking": [
+		{
+			"documentTitle": "Impfpass",
+			"documentUniqueId": "<folder.uniqueId>",
+			"submissionDocumentIdSet": [
+				{
+					"uniqueId": "aUniqueId"
+				},
+				{
+					"uniqueId": "aUniqueId"
+				},
+				{
+					"uniqueId": "aUniqueId"
+				}
+			],
+			"submissions": [
+				{
+					"submissionState": "delivered",
+					"submissionDateTime": "2022-03-02T20:00:00",
+					"insurantId": "kvnr-insurant",
+					"insurantName": "Martina Musterfrau"
+				},
+				{
+					"submissionState": "withdrawn",
+					"submissionDateTime": "2022-02-20T20:00:00",
+					"insurantId": "kvnr-representative",
+					"insurantName": "Max Mustermann"
+				},
+				{
+					"submissionState": "delivered",
+					"submissionDateTime": "2022-02-10T20:00:00",
+					"insurantId": "kvnr-insurant",
+					"insurantName": "EMartina Musterfrau"
+				}
+			]
+		},
+		{
+			"documentTitle": "Zahnbonusheft",
+			"documentUniqueId": "<folder.uniqueId>",
+			"submissionDocumentIdSet": [
+				{
+					"uniqueId": "aUniqueId"
+				},
+				{
+					"uniqueId": "aUniqueId"
+				}
+			],
+			"submissions": [
+				{
+					"submissionState": "delivered",
+					"submissionDateTime": "2022-02-10T20:00:00",
+					"insurantId": "kvnr-insurant",
+					"insurantName": "Martina Musterfrau"
+				}
+			]
+		},
+		{
+			"documentTitle": "Mutterpass",
+			"documentUniqueId": "<folder.uniqueId>",
+			"submissions": [
+				{
+					"submissionState": "withdrawn",
+					"submissionDateTime": "2022-02-10T21:00:00",
+					"insurantId": "kvnr-insurant",
+					"insurantName": "Martina Musterfrau"
+				},
+				{
+					"submissionState": "delivered",
+					"submissionDateTime": "2022-02-10T20:00:00",
+					"insurantId": "kvnr-insurant",
+					"insurantName": "Martina Musterfrau"
+				}
+			]
+		}
+	]
+}

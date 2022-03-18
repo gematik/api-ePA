@@ -1,0 +1,143 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$id": "http://gematik.de/forschungsdatenliste.schema.v1.0.1.json",
+	"title": "Research Data Submission Tracking List",
+	"description": "Detailed record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes. ",
+	"type": "object",
+	"properties": {
+		"insurantConsent": {
+			"description": "Information about user's consent referring $363 SGB V. A given consent enables the provision of speudonymous data for research purposes",
+			"type": "object",
+			"properties": {
+				"consentState": {
+					"description": "State of consent(given or withdrawn)",
+					"type": "string",
+					"enum": [
+						"given",
+						"withdrawn"
+					]
+				},
+				"consentValidFrom": {
+					"description": "timestamp of last change of consent state",
+					"type": "string",
+					"format": "date-time"
+				}
+			},
+			"required": [
+				"consentState",
+				"consentValidFrom"
+			],
+			"additionalProperties": false
+		},
+		"dataSubmissionTracking": {
+			"description": "List of delivered / withdrawn structured documents (MIOs). For each instance of a MIO, one submissionEntry shall exist, i.e. one for each static folder and one for each instance of dynamic folders. An entry may be established on first data submission",
+			"type": "array",
+			"items": {
+				"description": "submission entries, max. one for each MIO",
+				"$ref": "#/definitions/SubmissionEntryType"
+			}
+		}
+	},
+	"required": [
+		"insurantConsent",
+		"dataSubmissionTracking"
+	],
+	"additionalProperties": false,
+	"definitions": {
+		"SubmissionEntryType": {
+			"type": "object",
+			"properties": {
+				"documentTitle": {
+					"description": "human readable name of the covered MIO (folder.Title for uniform & mixed collections) oder (document.Title for atomic documents)",
+					"type": "string",
+					"examples": [
+						"Zahnbonusheft",
+						"Kinderuntersuchungsheft"
+					]
+				},
+				"documentUniqueId": {
+					"description": "A unique identifier for this particular document (folder.UniqueId)",
+					"type": "string"
+				},
+				"submissionDocumentIdSet": {
+					"description": "Set of unique identifiers for a particular document (XDS Document document.uniqueId for each bundle of the MIO). For subsequent deliveries, new identifiers are added, but never removed (list always grows). This guaratees an overall complete list of all ever delivered XDS Documents since first use, respectivly since last withdrawal. The list shall be cleared after withdrawal",
+					"$ref": "#/definitions/SubmissionDocumentIdSetType"
+				},
+				"submissions": {
+					"description": "Each entry in submissions represents a delivery or a withdrawal of a MIO for research purposes. ",
+					"type": "array",
+					"items": {
+						"description": "submissions of a MIO, providing delivery state and sender",
+						"$ref": "#/definitions/SubmissionType"
+					}
+				}
+			},
+			"required": [
+				"documentTitle"
+			],
+			"additionalProperties": false
+		},
+		"SubmissionType": {
+			"type": "object",
+			"properties": {
+				"submissionState": {
+					"description": "state of a submission",
+					"type": "string",
+					"examples": [
+						"withdrawn",
+						"delivered"
+					]
+				},
+				"submissionDateTime": {
+					"description": "date and time of last data submission",
+					"type": "string",
+					"format": "date-time"
+				},
+				"insurantId": {
+					"description": "identification of sender (KVNR of patient or representative)",
+					"type": "string"
+				},
+				"insurantName": {
+					"description": "Human readable name of sender (patient or representative)",
+					"type": "string",
+					"examples": [
+						"Versicherter",
+						"Vertreter"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"SubmissionInfoType": {
+			"type": "object",
+			"additionalProperties": false
+		},
+		"SubmissionDocumentIdSetType": {
+			"description": "This list shall have an entry for each document delivered to the research data center, starting from first use or since last withdrawal. Each new submssion of type delivery shall only add new documents, never remove any. Finally this list contains identifiers of any document delivered which is not yet withdrawn. In case of a withdrawal (always complete mio with all its history can be withdrawn) this list shall be cleared",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"uniqueId": {
+						"description": "XDS document.uniqueId as assigned by health record repository",
+						"type": "string"
+					}
+				},
+				"additionalProperties": false
+			}
+		},
+		"NeueDefinition": {}
+	},
+	"version": "1.0.1",
+	"examples": [
+		{
+			"insurantConsent": {
+				"consentState": "given",
+				"consentValidFrom": "2019-08-24T14:15:22Z"
+			},
+			"dataSubmissionTracking": [
+				null
+			]
+		}
+	]
+}

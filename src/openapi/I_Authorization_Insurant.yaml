@@ -1,0 +1,95 @@
+openapi: 3.0.3
+info:
+  title: I_Authorization_Insurant_REST_extension - Transport token service
+  description: >-
+    Retrieve signed transport token (jwt) for research data center and trust
+    center data exchange.
+  version: 1.0.0
+tags:
+  - name: Transport token service
+    description: >-
+      Retrieve signed transport token (jwt) for research data center and trust
+      center data exchange
+paths:
+  '/transportToken/{hcid}/{kvnr}/{deviceId}':
+    get:
+      tags:
+        - Generate token
+      summary: 'Generate Transport token for trust center (VST) and research data center (FDZ)'
+      operationId: getTransportToken
+      parameters:
+        - name: AuthenticationAssertion
+          in: header
+          description: 'The Authentication Assertion from the Authentication Service'
+          required: true
+          schema:
+            $ref: '#/components/schemas/AuthenticationAssertionType'
+        - name: deviceId
+          in: path
+          description: 'The requesting clients device Id'
+          required: true
+          schema:
+            $ref: '#/components/schemas/DeviceIdType'
+        - name: hcid
+          in: path
+          description: 'The Home community Id associated to the health record provider'
+          required: true
+          schema:
+            $ref: '#/components/schemas/HomeCommunityIdType'
+        - name: kvnr
+          in: path
+          description: 'The KVNR identifyying the record' 
+          required: true
+          schema:
+            $ref: '#/components/schemas/KVNRType'
+      responses:
+        '200':
+          description: 'OK. Both token generated succesfully'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransportTokenSetType'
+        '400':
+          description: 'bad request'
+        '403':
+          description: 'forbidden. Request not allowed. Invalid authentication'
+        '404':
+          description: 'not found. Addressed record not found'
+        '412':
+          description: 'precondition failed. Device unknown for the adressed record'
+        '500':
+          description: 'internal error'
+components:
+  schemas:
+    TransportTokenSetType:
+      type: object
+      properties:
+        tokenVst:
+          description: >-
+            Transport token (trust center), claiming Arbeitsnummer (wn) and
+            Lieferpseudonym (dp)
+          type: string
+          format: byte
+        tokenFdz:
+          description: Transport token (research data center), claiming Arbeitsnummer (wn)
+          type: string
+          format: byte
+      required:
+        - tokenVst
+        - tokenFdz
+    AuthenticationAssertionType:
+      description: Authentication assertion as provided by authentication service
+      type: string
+      format: byte
+    KVNRType:
+      type: string
+      description: The ID / KVNR of an insurant
+      pattern: ^[A-Z]{1}\d{9}$
+      example: Z123456789
+    HomeCommunityIdType:
+      description: The Home community Id (OID) of a health record system
+      type: string
+    DeviceIdType:
+      description: The ID of a device, encoded as base64url
+      type: string
+      format: base64url
