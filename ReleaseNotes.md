@@ -1,3 +1,7 @@
+# Release 2.5.0-Pre1
+- correction regex for UserAgents (missing escape character for '.') (AuthorizationService.xsd)  
+
+
 # Release 2.5.0-CC
 - Feature: Verarbeitung von Daten der ePA zu Forschungszwecken  
 

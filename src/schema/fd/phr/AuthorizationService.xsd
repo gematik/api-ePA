@@ -584,7 +584,7 @@
 					<restriction base="string">
 						<maxLength value="65"/>
 						<minLength value="5"/>
-						<pattern value="[a-zA-Z0-9 _.\-+():]{1,20}/[a-zA-Z0-9 _.\-+():]{1,23}/[a-zA-Z0-9 _.\-+():]{1,20}"/>
+						<pattern value="[a-zA-Z0-9 _\.\-+():]{1,20}/[a-zA-Z0-9 _\.\-+():]{1,23}/[a-zA-Z0-9 _\.\-+():]{1,20}"/>
 					</restriction>
 				</simpleType>
 			</element>

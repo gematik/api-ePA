@@ -5,7 +5,8 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen | Betroffene GitHub-Artefakte |
 |---|---|---|---|---|
-|2.5.0|2022-03-18|alle Dokumente zu ePA Release 2.5.0 verfügar unter fachportal.gematik.de||initialer Release |
+|2.5.0-Pre1|2022-03-21|Bugfix ||initialer Release Bugfix|
+|2.5.0-CC|2022-03-18|alle Dokumente zu ePA Release 2.5.0 verfügar unter fachportal.gematik.de||initialer Release zur Kommentierung|
 |2.1.1|2022-03-18|alle Dokumente zu ePA Release 2.1.1 verfügar unter fachportal.gematik.de|| - [hcp-policy-definition.xml](src/policies/hcp-policy-definition.xml)<br/> - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)|
 |2.1.1-Pre1|2022-03-09||alle Änderungen gemäß ePA_Maintenance 22.1| - [vs-format-code.xml](src/vocabulary/value_sets/vs-format-code.xml)<br/> - [KeyManagementService.wsdl](src/schema/fd/phr/KeyManagementService.wsdl)<br/> - [KeyManagementService.xsd](src/schema/fd/phr/KeyManagementService.xsd)<br/> - [AuthenticationService.xsd](src/schema/fd/phr/AuthenticationService.xsd)<br/> - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)<br/> - [AccountManagementService.xsd](src/schema/fd/phr/AccountManagementService.xsd)|
 |MIO_20220216||Implementation Guides und ValueSet Updates für MIOs, Stand: 16. Februar 2022<br/>(Nachtrag zu MIO_20220211) || - [ig-prescription_V_1_0_2.json](src/implementation_guides/ig-prescription_V_1_0_2.json)<br/> - [vs-format-code.xml](src/vocabulary/value_sets/vs-format-code.xml)
