@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing"/>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:6258d786-522f-49d8-a1b7-6b0d0223fc85</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+    <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">721bcef8-9d42-4819-b2cf-13e3faf6f5a6</RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <ns4:GetAuthorizationListResponse xmlns:ns12="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns11="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns10="urn:hl7-org:v3" xmlns:ns9="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns7="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+      <ns2:Status>
+        <ns2:Result>OK</ns2:Result>
+      </ns2:Status>
+      <ns4:AuthorizationList>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110411319"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-01-15Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110406598"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-02-05Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110498983"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2022-06-21Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110490339"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-02-02Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X460120571"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2022-06-22Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110400595"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.321.12.1.60.22</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-02-28Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110431741"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.321.12.1.60.22</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-02-21Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110458421"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.321.12.1.60.22</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-01-13Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110464500"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.321.12.1.60.22</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-01-13Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="I881347051"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.405</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2021-01-18Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110473550"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.405</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>2022-06-16Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+        <ns4:AuthorizationEntry>
+          <ns5:RecordIdentifier>
+            <ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110489022"/>
+            <ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.405</ns5:HomeCommunityId>
+          </ns5:RecordIdentifier>
+          <ns4:ValidTo>9999-12-30Z</ns4:ValidTo>
+        </ns4:AuthorizationEntry>
+      </ns4:AuthorizationList>
+    </ns4:GetAuthorizationListResponse>
+  </soap:Body>
+</soap:Envelope>
+<!--GetAuthorizationList_ExecTime=8,115711-->

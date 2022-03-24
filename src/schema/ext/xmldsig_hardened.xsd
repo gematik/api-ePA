@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- gematik revision="\main\rel_online\rel_ors1\1" -->
-<!-- edited with XMLSpy v2010 (http://www.altova.com) by n.n. (gematik) -->
-<!DOCTYPE schema PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd" [
-	<!ATTLIST schema
-		xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#"
-	>
-	<!ENTITY dsig 'http://www.w3.org/2000/09/xmldsig#'>
-	<!ENTITY % p ''>
-	<!ENTITY % s ''>
-]>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "XMLSchema.dtd">
 <!-- Schema for XML Signatures
     http://www.w3.org/2000/09/xmldsig#
-    $Revision: 1.1 $ on $Date: 2002/02/08 20:32:26 $ by $Author: reagle $
+    $Revision: 1.2 $ on $Date: 2013-04-16 12:48:49 $ by $Author: denis $
 
     Copyright 2001 The Internet Society and W3C (Massachusetts Institute
     of Technology, Institut National de Recherche en Informatique et en
@@ -24,11 +15,10 @@
     [1] http://www.w3.org/Consortium/Legal/copyright-software-19980720
     [2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" targetNamespace="http://www.w3.org/2000/09/xmldsig#" version="0.1" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" targetNamespace="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" version="0.1">
 	<!-- Basic Types Defined for Signatures -->
 	<simpleType name="CryptoBinary">
-		<restriction base="base64Binary">
-  </restriction>
+		<restriction base="base64Binary"/>
 	</simpleType>
 	<!-- Start Signature -->
 	<element name="Signature" type="ds:SignatureType"/>
@@ -70,7 +60,7 @@
 	<element name="SignatureMethod" type="ds:SignatureMethodType"/>
 	<complexType name="SignatureMethodType" mixed="true">
 		<sequence>
-			<element name="HMACOutputLength" minOccurs="0" type="ds:HMACOutputLengthType"/>
+			<element name="HMACOutputLength" type="ds:HMACOutputLengthType" minOccurs="0"/>
 			<any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
 			<!-- (0,unbounded) elements from (1,1) external namespace -->
 		</sequence>
@@ -85,13 +75,13 @@
 			<element ref="ds:DigestValue"/>
 		</sequence>
 		<attribute name="Id" type="ID" use="optional"/>
-		<attribute name="URI" type="anyURI" use="optional"/>
+		<attribute name="URI" type="ds:LocalRefURI" use="optional"/>
 		<attribute name="Type" type="anyURI" use="optional"/>
 	</complexType>
 	<element name="Transforms" type="ds:TransformsType"/>
 	<complexType name="TransformsType">
 		<sequence>
-			<element ref="ds:Transform" maxOccurs="unbounded"/>
+			<element ref="ds:Transform" maxOccurs="64"/>
 		</sequence>
 	</complexType>
 	<element name="Transform" type="ds:TransformType"/>
@@ -120,14 +110,15 @@
 	<element name="KeyInfo" type="ds:KeyInfoType"/>
 	<complexType name="KeyInfoType" mixed="true">
 		<choice maxOccurs="unbounded">
-			<element ref="ds:KeyName"/>
-			<element ref="ds:KeyValue"/>
-			<element ref="ds:RetrievalMethod"/>
+			<!-- Schemahärtung -->
+			<!--<element ref="ds:KeyName"/>
+    <element ref="ds:KeyValue"/> 
+    <element ref="ds:RetrievalMethod"/>-->
 			<element ref="ds:X509Data"/>
-			<element ref="ds:PGPData"/>
-			<element ref="ds:SPKIData"/>
-			<element ref="ds:MgmtData"/>
-			<any processContents="lax" namespace="##other"/>
+			<!--<element ref="ds:PGPData"/>
+    <element ref="ds:SPKIData"/>
+    <element ref="ds:MgmtData"/>
+    <any processContents="lax" namespace="##other"/>-->
 			<!-- (1,1) elements from (0,unbounded) namespaces -->
 		</choice>
 		<attribute name="Id" type="ID" use="optional"/>
@@ -160,7 +151,8 @@
 				<element name="X509SubjectName" type="string"/>
 				<element name="X509Certificate" type="base64Binary"/>
 				<element name="X509CRL" type="base64Binary"/>
-				<any namespace="##other" processContents="lax"/>
+				<!-- Schemahärtung -->
+				<!--<any namespace="##other" processContents="lax"/>-->
 			</choice>
 		</sequence>
 	</complexType>
@@ -205,13 +197,14 @@
 		</sequence>
 		<attribute name="Id" type="ID" use="optional"/>
 		<attribute name="MimeType" type="string" use="optional"/>
-		<!-- add a grep facet -->
 		<attribute name="Encoding" type="anyURI" use="optional"/>
+		<!-- add a grep facet -->
 	</complexType>
 	<element name="Manifest" type="ds:ManifestType"/>
 	<complexType name="ManifestType">
 		<sequence>
-			<element ref="ds:Reference" maxOccurs="unbounded"/>
+			<element ref="ds:Reference" maxOccurs="25"/>
+			<!-- Schemahärtung -->
 		</sequence>
 		<attribute name="Id" type="ID" use="optional"/>
 	</complexType>
@@ -262,4 +255,10 @@
 	</complexType>
 	<!-- End KeyValue Element-types -->
 	<!-- End Signature -->
+	<!-- Schemahärtung -->
+	<simpleType name="LocalRefURI">
+		<restriction base="anyURI">
+			<pattern value="#.*"/>
+		</restriction>
+	</simpleType>
 </schema>

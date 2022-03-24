@@ -1,0 +1,199 @@
+{
+	"name": "Child Medical Records",
+	"description": "Child medical records defined as a medical information object (MIO) by KBV. It may include participation card and parental notes.",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/UH1X0/U-Heft",
+		"version": "1.0.0"
+	},
+	"folderCardinality": {
+		"min": "0",
+		"max": "n",
+		"unique": false
+	},
+	"validFromDate": "2021-05-05",
+	"type": "mixed",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "childsrecord",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "Kinderuntersuchungsheft",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "Daten gemäß der nach § 92 Absatz 1 Satz 2 Nummer 3 und Absatz 4 in Verbindung mit § 26 beschlossenen Richtlinie des Gemeinsamen Bundesausschusses zur Früherkennung von Krankheiten bei Kindern (elektronisches Untersuchungsheft für Kinder)"
+				}
+			]
+		}
+	},
+	"documentCategory": "childsrecord",
+	"elements": [
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_CMR_Bundle",
+			"description": "This document is a child medical record.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_CMR_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Medizinischer Ausweis",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ausweise, Pässe und ähnliche kurze Datensätze, die wichtige medizinische Informationen zusammenfassen. Beispiele: Allergiepass, Allergieausweis, Impfpass, Impfausweis, Impfbuch, Notfalldatensatz"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "BERI",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Arztberichte",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ärztliche Zusammenfassungen und Verlaufsbeurteilungen von Behandlungsepisoden, Epikrisen und Abschlussberichte zu stationären oder ambulanten Behandlungsfällen. Beispiele: Arztbrief, Entlassungsbericht, Ärztliche Stellungnahme, Durchgangsarztbericht / BG-Bericht, Rehabericht, Verlegungsbericht, vorläufiger Arztbericht, ärztlicher Verlaufsbericht, Ambulanzbericht"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftUntersuchungen:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "Untersuchungen Kinderuntersuchungsheft"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pkcs7-mime"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n",
+				"unique": false
+			}
+		},
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_PC_Bundle",
+			"description": "This document is a participation card.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PC_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Medizinischer Ausweis",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ausweise, Pässe und ähnliche kurze Datensätze, die wichtige medizinische Informationen zusammenfassen. Beispiele: Allergiepass, Allergieausweis, Impfpass, Impfausweis, Impfbuch, Notfalldatensatz"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "BESC",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Ärztliche Bescheinigungen",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Bestätigung eines Arztes über einen bestimmten, patientenbezogenen Sachverhalt. Beispiele: Arbeitsunfähigkeitsbescheinigung, Beurlaubung, Todesbescheinigung, Ärztliche Bescheinigung, Notfall-/ Vertretungsschein"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftTeilnahmekarte:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "Teilnahmekarte Kinderuntersuchungsheft"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pkcs7-mime"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n",
+				"unique": false
+			}
+		},
+		{
+			"version": "1.0.0",
+			"name": "KBV_PR_MIO_PN_Bundle",
+			"description": "This document holds parental notes.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_PN_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "AUS",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Medizinischer Ausweis",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ausweise, Pässe und ähnliche kurze Datensätze, die wichtige medizinische Informationen zusammenfassen. Beispiele: Allergiepass, Allergieausweis, Impfpass, Impfausweis, Impfbuch, Notfalldatensatz"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "PATD",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Patienteneigene Dokumente",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Dokumente, welche der Patient zu seinem Kontakt in der Gesundheitseinrichtung mitbringt, die aber nicht in unmittelbarem Zusammenhang mit dem aktuellen Kontakt stehen müssen. Sowie Dokumente, in denen das mitgebrachte Patienteneigentum festgehalten wird. Beispiele: Ausweise, Vorsorgevollmacht, Patientenverfügung, Wertgegenständeverwaltung, Notfalldatensatz, Patiententagebuch"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:KinderuntersuchungsheftNotizen:v1.0.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "Notizen Kinderuntersuchungsheft"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n",
+				"unique": false
+			}
+		}
+	]
+}

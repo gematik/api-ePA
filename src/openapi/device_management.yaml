@@ -1,0 +1,326 @@
+openapi: 3.0.1
+info:
+  title: "ePA Authorization Service - Device Management"
+  description: |
+    This REST API describes the interface of the ePA Authorization Service for Device Management.
+  contact:
+    name: "gematik"
+    email: "epa@gematik.de"
+  version: "1.0.2"
+  # 1.0.2 - deviceID parameter moved to header
+  #       - new error reponse 412 (DeviceUnknown) added
+  #       - unused error responses deleted
+  # 1.0.1 - fixed typo in AuthenticationAssertion 
+  # 1.0.0 - fixed bugs of version 0.0.1, 
+  #       - renamed parameters for search/update/delete, 
+  #       - some editorial modifications
+  # 0.0.1 - initial version
+tags:
+  - name: "Devices"
+    description: "Everything about a Device in the ePA Authorization Service."
+paths:
+  /devices/{hcid}/{kvnr}:
+    get:
+      tags:
+      - "Devices"
+      summary: "Get a list of all devices."
+      operationId: "getDevices"
+      parameters:
+      - name: "AuthenticationAssertion"
+        in: header
+        description: "The Authentication Assertion from the Authentication Service"
+        required: true
+        schema:
+          $ref: '#/components/schemas/AuthenticationAssertionType'
+      - name: "deviceId"
+        in: header
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "hcid"
+        in: path
+        description: "The HCID to identify the tenant"
+        required: true
+        schema:
+          $ref: '#/components/schemas/HomeCommunityIdType'
+      - name: "kvnr"
+        in: path
+        description: "The KVNR to identify the record"
+        required: true
+        schema:
+          $ref: '#/components/schemas/KVNRType'
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DeviceType'
+        403:
+          $ref: "#/components/responses/Error403NotAllowed"
+        404:
+          $ref: "#/components/responses/Error404RecordNotFound"
+        412:
+          $ref: "#/components/responses/Error412DeviceUnknown"
+        500:
+          $ref: "#/components/responses/Error500InternalError"
+  /devices/{hcid}/{kvnr}/{affectedId}:
+    get:
+      tags:
+      - "Devices"
+      summary: "Find a device"
+      description: |
+        Returns information of a single device.
+      operationId: "getDeviceById"
+      parameters:
+      - name: "AuthenticationAssertion"
+        in: header
+        description: "The Authentication Assertion from the Authentication Service"
+        required: true
+        schema:
+          $ref: '#/components/schemas/AuthenticationAssertionType'
+      - name: "deviceId"
+        in: header
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "hcid"
+        in: path
+        description: "The HCID to identify the tenant"
+        required: true
+        schema:
+          $ref: '#/components/schemas/HomeCommunityIdType'
+      - name: "kvnr"
+        in: path
+        description: "The KVNR to identify the record"
+        required: true
+        schema:
+          $ref: '#/components/schemas/KVNRType'
+      - name: "affectedId"
+        in: "path"
+        description: "The Id of the device to be searched for."
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceType'
+        403:
+          $ref: "#/components/responses/Error403NotAllowed"
+        404:
+          $ref: "#/components/responses/Error404DeviceNotFound"
+        412:
+          $ref: "#/components/responses/Error412DeviceUnknown"
+        500:
+          $ref: "#/components/responses/Error500InternalError"
+    put:
+      tags:
+      - "Devices"
+      summary: "Update an existing device"
+      description: |
+        To rename a device, set `name` to the new value.  
+        To lock a device, set the `state` to `LOCKED`.
+        To unlock a device, set the `state` to `ACTIVATED`.
+      operationId: "updateDevice"
+      parameters:
+      - name: "AuthenticationAssertion"
+        in: header
+        description: "The Authentication Assertion from the Authentication Service"
+        required: true
+        schema:
+          $ref: '#/components/schemas/AuthenticationAssertionType'
+      - name: "deviceId"
+        in: header
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "hcid"
+        in: path
+        description: "The HCID to identify the tenant"
+        required: true
+        schema:
+          $ref: '#/components/schemas/HomeCommunityIdType'
+      - name: "kvnr"
+        in: path
+        description: "The KVNR to identify the record"
+        required: true
+        schema:
+          $ref: '#/components/schemas/KVNRType'
+      - name: "affectedId"
+        in: "path"
+        description: "The Id of the device to be updated."
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      requestBody:
+        $ref: '#/components/requestBodies/DeviceUpdateBody'
+      responses:
+        200:
+          description: "Device updated successfully."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceType'
+        400:
+          $ref: "#/components/responses/Error400DataInvalid"
+        403:
+          $ref: "#/components/responses/Error403NotAllowed"
+        404:
+          $ref: "#/components/responses/Error404DeviceNotFound"
+        412:
+          $ref: "#/components/responses/Error412DeviceUnknown"
+        500:
+          $ref: "#/components/responses/Error500InternalError"
+    delete:
+      tags:
+      - "Devices"
+      summary: "Delete a device"
+      description: |
+        The device will be deleted.
+        The active device can't be deleted (Condition: affectedId != deviceId).
+      operationId: "deleteDevice"
+      parameters:
+      - name: "AuthenticationAssertion"
+        in: header
+        description: "The Authentication Assertion from the Authentication Service"
+        required: true
+        schema:
+          $ref: '#/components/schemas/AuthenticationAssertionType'
+      - name: "deviceId"
+        in: header
+        description: "The requesting clients device Id (user's device Id)"
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      - name: "hcid"
+        in: path
+        description: "The HCID to identify the tenant"
+        required: true
+        schema:
+          $ref: '#/components/schemas/HomeCommunityIdType'
+      - name: "kvnr"
+        in: path
+        description: "The KVNR to identify the record"
+        required: true
+        schema:
+          $ref: '#/components/schemas/KVNRType'
+      - name: "affectedId"
+        in: "path"
+        description: "The Id of the device to be deleted."
+        required: true
+        schema:
+          $ref: '#/components/schemas/DeviceIdType'
+      responses:
+        200:
+          description: "Device deleted successfully"
+        403:
+          $ref: "#/components/responses/Error403NotAllowed"
+        404:
+          $ref: "#/components/responses/Error404DeviceNotFound"
+        412:
+          $ref: "#/components/responses/Error412DeviceUnknown"
+        500:
+          $ref: "#/components/responses/Error500InternalError"
+  
+components:
+  
+  # SCHEMAS
+  schemas:
+    DeviceType:
+      type: object
+      required:
+      - "deviceId"
+      - "name"
+      - "state"
+      - "added"
+      properties:
+        deviceId:
+          $ref: '#/components/schemas/DeviceIdType'
+        name:
+          $ref: '#/components/schemas/DeviceNameType'
+        state:
+          $ref: '#/components/schemas/DeviceStateType'
+        added:
+          type: string
+          format: date-time
+          description: "Point in time when the device was added, i.e. the point in time when the activation process has been started."
+        lastUsed:
+          type: string
+          format: date-time
+          description: "Point in time when this device has been used the last time."
+    DeviceUpdateSchema:
+      type: object
+      properties:
+        name:
+          $ref: '#/components/schemas/DeviceNameType'
+        state:
+          $ref: '#/components/schemas/DeviceStateType'
+    DeviceStateType:
+      type: string
+      description: "Represents the state of a Device"
+      enum:
+      - "ACTIVATION_PENDING"
+      - "ACTIVATED"
+      - "LOCKED"
+    DeviceIdType:
+      type: "string"
+      format: base64url
+      description: "The ID of a Device. It needs to be encoded using base64url. Base64 is not sufficient, as it may contain e.g. slashes which alter the path when the device id is used in the url. "
+      example: "ofDbYdEeFm3CQ1OgK4Dlp4RODOa38NJv_EHr4cJMyJA"
+    DeviceNameType:
+      type: "string"
+      description: "The Name of a Device"
+      minLength: 1
+      maxLength: 64
+    AuthenticationAssertionType:
+      type: "string"
+      format: byte
+      description: "Base64-encoded authentication assertion"
+    KVNRType:
+      type: "string"
+      description: "The ID / KVNR of an insurant"
+      pattern: '^[A-Z]{1}\d{9}$'
+      example: "Z123456789"
+    HomeCommunityIdType:
+      type: "string"
+      description: "The HCID (OID) of a Record System"
+      example: "1.2.276.0.76.3.1.315.3.1"
+  # REQUESTS
+  requestBodies:
+    DeviceUpdateBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DeviceUpdateSchema'
+      description: Device object that needs to be updated
+      required: true
+
+  # RESPONSES
+  responses:
+    Error400DataInvalid:
+      description: |
+        Invalid Data supplied
+    Error403NotAllowed:
+      description: |
+        Not allowed
+    Error404RecordNotFound:
+      description: |
+        Record not found
+    Error404DeviceNotFound:
+      description: |
+        Device not found
+    Error412DeviceUnknown:
+      description: |
+        Device unknown
+    Error500InternalError:
+      description: |
+        Internal Error

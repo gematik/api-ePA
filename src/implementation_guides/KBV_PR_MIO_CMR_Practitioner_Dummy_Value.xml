@@ -1,0 +1,27 @@
+<!--Die Elternnotiz enthält in der Version 1.0.0 des Kinderuntersuchungshefts u.a. eine Referenz auf die  Person, die die Untersuchung (Encounter) durchführt (CMR_Practitioner).Um eine gültige Elternnotiz zu erstellen, müssen die verpfllichtenden Daten dafür eingetragen werden. Einige davon (z.B. "identifier" oder "name") sind den Eltern u.U. nicht bekannt. Anstelle eines realen Wertes muss deshalb für die Ressource CMR_Practitioner die folgende Dummy-Befüllung verwendet werden.-->
+<!--(Issue ANFEPA-1603 / C_10907)-->
+<Practitioner xmlns="http://hl7.org/fhir">  
+	<meta>    
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_CMR_Practitioner|1.0.0"/>  
+	</meta>  
+	<identifier>    
+		<type>      
+			<coding>        
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>        
+				<code value="DN"/>      
+			</coding>    
+		</type>    
+		<system value="http://fhir.de/NamingSystem/bundesaerztekammer/efn"/>    
+		<value value="802760000000009’"/>   
+	</identifier>  
+		<name>    
+			<use value="official"/>    
+			<text value="Kein Arzt abbildbar"/>    
+			<family value="Kein Arzt abbildbar">      
+				<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">        		
+					<valueString value="Kein Arzt abbildbar"/>     
+				</extension>    
+			</family>   
+		<given value="Kein Arzt abbildbar"/>  
+	</name>
+</Practitioner>

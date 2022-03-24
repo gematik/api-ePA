@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="language-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/language-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.588"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="value-set-of-language-codes"/>
+    <title value="Value Set of Language Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Sprache, in der das Dokument abgefasst ist."/>
+    <compose>
+        <include>
+            <concept>
+                <code value="bg-BG"/>
+                <display value="bulgarisch, Bulgarien"/>
+            </concept>
+            <concept>
+                <code value="it-IT"/>
+                <display value="italienisch, Italien"/>
+            </concept>
+            <concept>
+                <code value="it-CH"/>
+                <display value="italienisch, Schweiz"/>
+            </concept>
+            <concept>
+                <code value="cs-CZ"/>
+                <display value="tschechisch, Tschechien"/>
+            </concept>
+            <concept>
+                <code value="lt-LT"/>
+                <display value="litauisch, Litauen"/>
+            </concept>
+            <concept>
+                <code value="da-DK"/>
+                <display value="dänisch, Dänemark"/>
+            </concept>
+            <concept>
+                <code value="lb-LU"/>
+                <display value="luxemburgisch, Luxemburg"/>
+            </concept>
+            <concept>
+                <code value="de-AT"/>
+                <display value="deutsch, Österreich"/>
+            </concept>
+            <concept>
+                <code value="de-DE"/>
+                <display value="deutsch, Deutschland"/>
+            </concept>
+            <concept>
+                <code value="de-CH"/>
+                <display value="deutsch,Schweiz"/>
+            </concept>
+            <concept>
+                <code value="de-LI"/>
+                <display value="deutsch, Liechtenstein"/>
+            </concept>
+            <concept>
+                <code value="de-LU"/>
+                <display value="deutsch, Luxemburg"/>
+            </concept>
+            <concept>
+                <code value="lv-LV"/>
+                <display value="lettisch, Lettland"/>
+            </concept>
+            <concept>
+                <code value="el-GR"/>
+                <display value="griechisch, Griechenland"/>
+            </concept>
+            <concept>
+                <code value="mt-MT"/>
+                <display value="maltesisch, Malta"/>
+            </concept>
+            <concept>
+                <code value="en-AU"/>
+                <display value="englisch, Australien"/>
+            </concept>
+            <concept>
+                <code value="en-GB"/>
+                <display value="englisch, Vereinigtes Königreich"/>
+            </concept>
+            <concept>
+                <code value="en-CA"/>
+                <display value="englisch, Kanada"/>
+            </concept>
+            <concept>
+                <code value="en-US"/>
+                <display value="englisch, USA"/>
+            </concept>
+            <concept>
+                <code value="nl-NL"/>
+                <display value="niederländisch, Niederlande"/>
+            </concept>
+            <concept>
+                <code value="nl-BE"/>
+                <display value="niederländisch, Belgien"/>
+            </concept>
+            <concept>
+                <code value="es-ES"/>
+                <display value="spanisch, Spanien"/>
+            </concept>
+            <concept>
+                <code value="no-NO"/>
+                <display value="norwegisch, Norwegen"/>
+            </concept>
+            <concept>
+                <code value="et-EE"/>
+                <display value="estnisch, Estland"/>
+            </concept>
+            <concept>
+                <code value="pl-PL"/>
+                <display value="polnisch, Polen"/>
+            </concept>
+            <concept>
+                <code value="fi-FI"/>
+                <display value="finnisch, Finnland"/>
+            </concept>
+            <concept>
+                <code value="pt-PT"/>
+                <display value="portugiesisch, Portugal"/>
+            </concept>
+            <concept>
+                <code value="fr-CA"/>
+                <display value="französisch, Kanada"/>
+            </concept>
+            <concept>
+                <code value="fr-FR"/>
+                <display value="französisch, Frankreich"/>
+            </concept>
+            <concept>
+                <code value="fr-CH"/>
+                <display value="französisch, Schweiz"/>
+            </concept>
+            <concept>
+                <code value="fr-LU"/>
+                <display value="französisch, Luxemburg"/>
+            </concept>
+            <concept>
+                <code value="fr-BE"/>
+                <display value="französisch, Belgien"/>
+            </concept>
+            <concept>
+                <code value="rm-CH"/>
+                <display value="rätoromanisch, Schweiz"/>
+            </concept>
+            <concept>
+                <code value="ga-IE"/>
+                <display value="irisch, Irland"/>
+            </concept>
+            <concept>
+                <code value="ro-RO"/>
+                <display value="rumänisch, Rumänien"/>
+            </concept>
+            <concept>
+                <code value="hr-HR"/>
+                <display value="kroatisch, Kroatien"/>
+            </concept>
+            <concept>
+                <code value="sk-SK"/>
+                <display value="slowakisch, Slowakei"/>
+            </concept>
+            <concept>
+                <code value="hu-HU"/>
+                <display value="ungarisch, Ungarn"/>
+            </concept>
+            <concept>
+                <code value="sl-SI"/>
+                <display value="slowenisch, Slowenien"/>
+            </concept>
+            <concept>
+                <code value="is-IS"/>
+                <display value="isländisch, Island"/>
+            </concept>
+            <concept>
+                <code value="sv-SE"/>
+                <display value="schwedisch, Schweden"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

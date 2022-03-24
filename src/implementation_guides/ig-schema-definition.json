@@ -1,0 +1,205 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$ref": "#/definitions/StructureDefinition",
+	"definitions": {
+		"CardinalityDefinition": {
+			"description": "Constraints on the amount of the XDS folder or document in order to support that structured document in the electronic health record system.",
+			"type": "object",
+			"properties": {
+				"min": {
+					"type": "string"
+				},
+				"max": {
+					"type": "string"
+				},
+				"unique": {
+					"description": "The value 'true' means that solely one document/folder with the availablility status 'approved' is allowed to be registered with the given metadata combination. False means that multiple instances may be submitted.",
+					"type": "boolean"
+				}
+			},
+			"required": [
+				"min",
+				"max"
+			],
+			"additionalProperties": false
+		},
+		"FolderDefinition": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"value": {
+					"anyOf": [
+						{
+							"title": "value",
+							"type": "object",
+							"properties": {
+								"code": {
+									"type": "string"
+								},
+								"codeSystem": {
+									"type": "string"
+								},
+								"displayName": {
+									"type": "string"
+								},
+								"desc": {
+								  "$ref": "#/definitions/DescriptionDefinition"
+								}							
+							},
+							"required": [
+								"code",
+								"codeSystem",
+								"displayName"
+							],
+							"additionalProperties": false
+						},
+						{
+							"title": "value",
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					]
+				}
+			},
+			"required": [
+				"name",
+				"value"
+			],
+			"additionalProperties": false
+		},		
+		"DescriptionDefinition": {
+		  "type": "array",
+		  "title": "desc",
+		  "items": {
+			"type": "object",
+			"required": [
+			  "language",
+			  "#text"
+			],
+			"additionalProperties": false,
+			"properties": {
+			  "language": {
+				"type": "string"
+			  },
+			  "#text": {
+				"type": "string"
+			  }
+			}
+		  }
+		},					
+		"DocumentDefinition": {
+			"type": "object",
+			"properties": {
+				"version": {
+					"description": "The version of the document format.",
+					"type": "string"
+				},
+				"name": {
+					"description": "The name of the specific document.",
+					"type": "string"
+				},
+				"description": {
+					"description": "The description of the specific document.",
+					"type": "string"
+				},
+				"canonicalUrl": {
+					"description": "A canonical URL of the structure definiton of the specific document.",
+					"type": "string"
+				},
+				"metadata": {
+					"title": "metadata",
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/FolderDefinition"
+					}
+				},
+				"documentCardinality": {
+					"$ref": "#/definitions/CardinalityDefinition"
+				}
+			},
+			"required": [
+				"name",
+				"description",
+				"metadata",
+				"documentCardinality"
+			],
+			"additionalProperties": false
+		},
+		"StructureDefinition": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "The technical name of the structured document.",
+					"type": "string"
+				},
+				"description": {
+					"description": "The overall description of the structured document.",
+					"type": "string"
+				},
+				"guidelineDefinition": {
+					"description": "A link to the (FHIR) implementation guideline including its version.",
+					"type": "object",
+					"properties": {
+						"url": {
+							"type": "string",
+							"format": "uri"
+						},
+						"version": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"url"
+					],
+					"additionalProperties": false
+				},
+				"folderCardinality": {
+					"$ref": "#/definitions/CardinalityDefinition"
+				},
+				"validFromDate": {
+					"description": "Date from which the sructured document is accepted (upload/download) by ePA-server.",
+					"type": "string",
+					"format": "date"
+				},
+				"clientReadOnlyFromDate": {
+					"description": "Date from which the structured document is accepted (only download) by ePA-server. The upload is rejected by ePA-server",
+					"type": "string",
+					"format": "date"
+				},
+				"type": {
+					"description": "The collection type of the structured document - either 'mixed', 'uniform' or 'atomic'.",
+					"type": "string"
+				},
+				"metadata": {
+					"$ref": "#/definitions/FolderDefinition"
+				},
+				"documentCategory": {
+					"description": "The access rights (CRUD) are expressed via a document category.",
+					"type": "string"
+				},
+				"elements": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/DocumentDefinition"
+					}
+				}
+			},
+			"required": [
+				"name",
+				"description",
+				"guidelineDefinition",
+				"folderCardinality",
+				"validFromDate",
+				"type",
+				"metadata",
+				"documentCategory",
+				"elements"
+			],
+			"additionalProperties": false
+		}
+	}
+}

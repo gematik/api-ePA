@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="dicom-cid-4-AnatomicRegion"/>
+    <url value="http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4.html"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.840.10008.6.1.2"/>
+    </identifier>
+    <version value="20200704"/>
+    <name value="AnatomicRegion"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <date value="2021-09-10"/>
+    <publisher value="NEMA MITA DICOM"/>
+    <description value="Transitive closure of CID 4 AnatomicRegion"/>
+    <copyright value="© 2021 NEMA"/>
+    <compose>
+        <include>
+            <system value="http://dicom.nema.org/resources/ontology/DCM"/>
+            <concept>
+                <code value="113681"/>
+                <display value="Phantom"/>
+            </concept>
+        </include>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="133945003"/>
+                <display value="Left hypochondriac region"/>
+            </concept>
+            <concept>
+                <code value="9454009"/>
+                <display value="Subclavian vein"/>
+            </concept>
+            <concept>
+                <code value="113269004"/>
+                <display value="External iliac artery"/>
+            </concept>
+            <concept>
+                <code value="72001000"/>
+                <display value="Bone of lower limb"/>
+            </concept>
+            <concept>
+                <code value="57850000"/>
+                <display value="Truncus coeliacus"/>
+            </concept>
+            <concept>
+                <code value="59011009"/>
+                <display value="Basilar artery"/>
+            </concept>
+            <concept>
+                <code value="2095001"/>
+                <display value="Paranasal sinus"/>
+            </concept>
+            <concept>
+                <code value="128565007"/>
+                <display value="Apex of right ventricle"/>
+            </concept>
+            <concept>
+                <code value="74670003"/>
+                <display value="Wrist joint"/>
+            </concept>
+            <concept>
+                <code value="79361005"/>
+                <display value="Fontanel of skull"/>
+            </concept>
+            <concept>
+                <code value="123851003"/>
+                <display value="Mouth"/>
+            </concept>
+            <concept>
+                <code value="128559007"/>
+                <display value="Genicular artery"/>
+            </concept>
+            <concept>
+                <code value="70238003"/>
+                <display value="Left ventricle inflow"/>
+            </concept>
+            <concept>
+                <code value="60184004"/>
+                <display value="Sigmoid colon"/>
+            </concept>
+            <concept>
+                <code value="312535008"/>
+                <display value="Pharynx and larynx"/>
+            </concept>
+            <concept>
+                <code value="69105007"/>
+                <display value="Carotid Artery"/>
+            </concept>
+            <concept>
+                <code value="60819002"/>
+                <display value="Cheek"/>
+            </concept>
+            <concept>
+                <code value="50536004"/>
+                <display value="Umbilical artery"/>
+            </concept>
+            <concept>
+                <code value="14944004"/>
+                <display value="Primitive aorta"/>
+            </concept>
+            <concept>
+                <code value="13418002"/>
+                <display value="Left ventricle outflow tract"/>
+            </concept>
+            <concept>
+                <code value="45631007"/>
+                <display value="Radial artery"/>
+            </concept>
+            <concept>
+                <code value="1101003"/>
+                <display value="Intracranial"/>
+            </concept>
+            <concept>
+                <code value="69833005"/>
+                <display value="Right femoral artery"/>
+            </concept>
+            <concept>
+                <code value="661005"/>
+                <display value="Jaw region"/>
+            </concept>
+            <concept>
+                <code value="113270003"/>
+                <display value="Left femoral artery"/>
+            </concept>
+            <concept>
+                <code value="91747007"/>
+                <display value="Lumen of blood vessel"/>
+            </concept>
+            <concept>
+                <code value="80144004"/>
+                <display value="Calcaneus"/>
+            </concept>
+            <concept>
+                <code value="32849002"/>
+                <display value="Endo-esophageal"/>
+            </concept>
+            <concept>
+                <code value="128553008"/>
+                <display value="Antecubital vein"/>
+            </concept>
+            <concept>
+                <code value="91609006"/>
+                <display value="Mandible"/>
+            </concept>
+            <concept>
+                <code value="91691001"/>
+                <display value="Parasternal"/>
+            </concept>
+            <concept>
+                <code value="34411009"/>
+                <display value="Broad ligament"/>
+            </concept>
+            <concept>
+                <code value="83330001"/>
+                <display value="Patent ductus arteriosus"/>
+            </concept>
+            <concept>
+                <code value="128583004"/>
+                <display value="Mesenteric vein"/>
+            </concept>
+            <concept>
+                <code value="43799004"/>
+                <display value="Intra-thoracic"/>
+            </concept>
+            <concept>
+                <code value="816092008"/>
+                <display value="Pelvis"/>
+            </concept>
+            <concept>
+                <code value="122972007"/>
+                <display value="Pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="41801008"/>
+                <display value="Coronary artery"/>
+            </concept>
+            <concept>
+                <code value="53120007"/>
+                <display value="Upper limb"/>
+            </concept>
+            <concept>
+                <code value="63507001"/>
+                <display value="External iliac vein"/>
+            </concept>
+            <concept>
+                <code value="111289009"/>
+                <display value="Pulmonary arteriovenous fistula"/>
+            </concept>
+            <concept>
+                <code value="32672002"/>
+                <display value="Descending aorta"/>
+            </concept>
+            <concept>
+                <code value="36765005"/>
+                <display value="Subclavian artery"/>
+            </concept>
+            <concept>
+                <code value="58602004"/>
+                <display value="Flank"/>
+            </concept>
+            <concept>
+                <code value="70925003"/>
+                <display value="Maxilla"/>
+            </concept>
+            <concept>
+                <code value="39607008"/>
+                <display value="Lung"/>
+            </concept>
+            <concept>
+                <code value="53549008"/>
+                <display value="Ophthalmic artery"/>
+            </concept>
+            <concept>
+                <code value="45206002"/>
+                <display value="Nose"/>
+            </concept>
+            <concept>
+                <code value="69930009"/>
+                <display value="Pancreatic duct"/>
+            </concept>
+            <concept>
+                <code value="85562004"/>
+                <display value="Hand"/>
+            </concept>
+            <concept>
+                <code value="20115005"/>
+                <display value="Brachial vein"/>
+            </concept>
+            <concept>
+                <code value="50519007"/>
+                <display value="Right upper quadrant of abdomen"/>
+            </concept>
+            <concept>
+                <code value="81745001"/>
+                <display value="Eye"/>
+            </concept>
+            <concept>
+                <code value="41216001"/>
+                <display value="Prostate"/>
+            </concept>
+            <concept>
+                <code value="16953009"/>
+                <display value="Elbow joint"/>
+            </concept>
+            <concept>
+                <code value="76015000"/>
+                <display value="Hepatic artery"/>
+            </concept>
+            <concept>
+                <code value="77568009"/>
+                <display value="Back"/>
+            </concept>
+            <concept>
+                <code value="91397008"/>
+                <display value="Facial bones"/>
+            </concept>
+            <concept>
+                <code value="56873002"/>
+                <display value="Sternum"/>
+            </concept>
+            <concept>
+                <code value="8821006"/>
+                <display value="Peroneal artery"/>
+            </concept>
+            <concept>
+                <code value="417437006"/>
+                <display value="Neck and Chest"/>
+            </concept>
+            <concept>
+                <code value="44627009"/>
+                <display value="Right ventricle outflow tract"/>
+            </concept>
+            <concept>
+                <code value="38848004"/>
+                <display value="Duodenum"/>
+            </concept>
+            <concept>
+                <code value="133946002"/>
+                <display value="Right hypochondriac region"/>
+            </concept>
+            <concept>
+                <code value="43863001"/>
+                <display value="Superior left pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="28273000"/>
+                <display value="Bile duct"/>
+            </concept>
+            <concept>
+                <code value="128589000"/>
+                <display value="Systemic collateral artery to lung"/>
+            </concept>
+            <concept>
+                <code value="76365002"/>
+                <display value="Upper outer quadrant of breast"/>
+            </concept>
+            <concept>
+                <code value="818982008"/>
+                <display value="Abdomen and Pelvis"/>
+            </concept>
+            <concept>
+                <code value="34635009"/>
+                <display value="Lumbar artery"/>
+            </concept>
+            <concept>
+                <code value="110621006"/>
+                <display value="Pancreatic duct and bile duct systems"/>
+            </concept>
+            <concept>
+                <code value="128564006"/>
+                <display value="Apex of left ventricle"/>
+            </concept>
+            <concept>
+                <code value="28726007"/>
+                <display value="Cornea"/>
+            </concept>
+            <concept>
+                <code value="4596009"/>
+                <display value="Larynx"/>
+            </concept>
+            <concept>
+                <code value="81040000"/>
+                <display value="Pulmonary artery"/>
+            </concept>
+            <concept>
+                <code value="7657000"/>
+                <display value="Femoral artery"/>
+            </concept>
+            <concept>
+                <code value="15497006"/>
+                <display value="Ovary"/>
+            </concept>
+            <concept>
+                <code value="244411005"/>
+                <display value="Iliac vein"/>
+            </concept>
+            <concept>
+                <code value="89546000"/>
+                <display value="Skull"/>
+            </concept>
+            <concept>
+                <code value="297172009"/>
+                <display value="Thoraco-lumbar spine"/>
+            </concept>
+            <concept>
+                <code value="13648007"/>
+                <display value="Endo-urethral"/>
+            </concept>
+            <concept>
+                <code value="69748006"/>
+                <display value="Thyroid"/>
+            </concept>
+            <concept>
+                <code value="69536005"/>
+                <display value="Head"/>
+            </concept>
+            <concept>
+                <code value="23451007"/>
+                <display value="Adrenal gland"/>
+            </concept>
+            <concept>
+                <code value="85856004"/>
+                <display value="Acromioclavicular joint"/>
+            </concept>
+            <concept>
+                <code value="90290004"/>
+                <display value="Umbilical region"/>
+            </concept>
+            <concept>
+                <code value="2334006"/>
+                <display value="Calyx"/>
+            </concept>
+            <concept>
+                <code value="128558004"/>
+                <display value="Congenital coronary artery fistula to right ventricle"/>
+            </concept>
+            <concept>
+                <code value="128569001"/>
+                <display value="Posterior medial tributary"/>
+            </concept>
+            <concept>
+                <code value="7844006"/>
+                <display value="Sternoclavicular joint"/>
+            </concept>
+            <concept>
+                <code value="18962004"/>
+                <display value="Endo-nasopharyngeal"/>
+            </concept>
+            <concept>
+                <code value="110861005"/>
+                <display value="Esophagus, stomach and duodenum"/>
+            </concept>
+            <concept>
+                <code value="76752008"/>
+                <display value="Breast"/>
+            </concept>
+            <concept>
+                <code value="45048000"/>
+                <display value="Neck"/>
+            </concept>
+            <concept>
+                <code value="7569003"/>
+                <display value="Finger"/>
+            </concept>
+            <concept>
+                <code value="170887008"/>
+                <display value="Submental"/>
+            </concept>
+            <concept>
+                <code value="128320002"/>
+                <display value="Cranial venous system"/>
+            </concept>
+            <concept>
+                <code value="32361000"/>
+                <display value="Popliteal fossa"/>
+            </concept>
+            <concept>
+                <code value="128584005"/>
+                <display value="Pulmonary artery conduit"/>
+            </concept>
+            <concept>
+                <code value="73829009"/>
+                <display value="Right atrium"/>
+            </concept>
+            <concept>
+                <code value="53085002"/>
+                <display value="Right ventricle"/>
+            </concept>
+            <concept>
+                <code value="45503006"/>
+                <display value="Common ventricle"/>
+            </concept>
+            <concept>
+                <code value="64688005"/>
+                <display value="Coccyx"/>
+            </concept>
+            <concept>
+                <code value="774007"/>
+                <display value="Head and Neck"/>
+            </concept>
+            <concept>
+                <code value="81502006"/>
+                <display value="Hypopharynx"/>
+            </concept>
+            <concept>
+                <code value="21814001"/>
+                <display value="Ventricle"/>
+            </concept>
+            <concept>
+                <code value="35039007"/>
+                <display value="Uterus"/>
+            </concept>
+            <concept>
+                <code value="53620006"/>
+                <display value="Temporomandibular joint"/>
+            </concept>
+            <concept>
+                <code value="110726009"/>
+                <display value="Trachea and bronchus"/>
+            </concept>
+            <concept>
+                <code value="8993003"/>
+                <display value="Hepatic vein"/>
+            </concept>
+            <concept>
+                <code value="40689003"/>
+                <display value="Testis"/>
+            </concept>
+            <concept>
+                <code value="416631005"/>
+                <display value="Pelvis and lower extremities"/>
+            </concept>
+            <concept>
+                <code value="69327007"/>
+                <display value="Internal mammary artery"/>
+            </concept>
+            <concept>
+                <code value="89837001"/>
+                <display value="Bladder"/>
+            </concept>
+            <concept>
+                <code value="45292006"/>
+                <display value="Vulva"/>
+            </concept>
+            <concept>
+                <code value="14742008"/>
+                <display value="Large intestine"/>
+            </concept>
+            <concept>
+                <code value="14975008"/>
+                <display value="Forearm"/>
+            </concept>
+            <concept>
+                <code value="89545001"/>
+                <display value="Face"/>
+            </concept>
+            <concept>
+                <code value="421060004"/>
+                <display value="Spine"/>
+            </concept>
+            <concept>
+                <code value="56459004"/>
+                <display value="Foot"/>
+            </concept>
+            <concept>
+                <code value="416152001"/>
+                <display value="Neck, Chest and Abdomen"/>
+            </concept>
+            <concept>
+                <code value="22286001"/>
+                <display value="External carotid artery"/>
+            </concept>
+            <concept>
+                <code value="42258001"/>
+                <display value="Superior mesenteric artery"/>
+            </concept>
+            <concept>
+                <code value="30608006"/>
+                <display value="Muscle of upper limb"/>
+            </concept>
+            <concept>
+                <code value="13363002"/>
+                <display value="Posterior tibial artery"/>
+            </concept>
+            <concept>
+                <code value="83419000"/>
+                <display value="Femoral vein"/>
+            </concept>
+            <concept>
+                <code value="68300000"/>
+                <display value="Right auricular appendage"/>
+            </concept>
+            <concept>
+                <code value="818987002"/>
+                <display value="Intra-abdominopelvic"/>
+            </concept>
+            <concept>
+                <code value="13881006"/>
+                <display value="Zygoma"/>
+            </concept>
+            <concept>
+                <code value="8887007"/>
+                <display value="Innominate vein"/>
+            </concept>
+            <concept>
+                <code value="818981001"/>
+                <display value="Abdomen"/>
+            </concept>
+            <concept>
+                <code value="181349008"/>
+                <display value="Superficial Femoral Artery"/>
+            </concept>
+            <concept>
+                <code value="110639002"/>
+                <display value="Uterus and fallopian tubes"/>
+            </concept>
+            <concept>
+                <code value="61685007"/>
+                <display value="Lower limb"/>
+            </concept>
+            <concept>
+                <code value="43119007"/>
+                <display value="Posterior communication artery"/>
+            </concept>
+            <concept>
+                <code value="128563000"/>
+                <display value="Juxtaposed atrial appendage"/>
+            </concept>
+            <concept>
+                <code value="57034009"/>
+                <display value="Aortic arch"/>
+            </concept>
+            <concept>
+                <code value="110517009"/>
+                <display value="Vertebral column and cranium"/>
+            </concept>
+            <concept>
+                <code value="21306003"/>
+                <display value="Jejunum"/>
+            </concept>
+            <concept>
+                <code value="416775004"/>
+                <display value="Chest, Abdomen and Pelvis"/>
+            </concept>
+            <concept>
+                <code value="7832008"/>
+                <display value="Abdominal aorta"/>
+            </concept>
+            <concept>
+                <code value="80891009"/>
+                <display value="Endo-cardiac"/>
+            </concept>
+            <concept>
+                <code value="27949001"/>
+                <display value="Tarsal joint"/>
+            </concept>
+            <concept>
+                <code value="41695006"/>
+                <display value="Scalp"/>
+            </concept>
+            <concept>
+                <code value="20699002"/>
+                <display value="Cephalic vein"/>
+            </concept>
+            <concept>
+                <code value="21974007"/>
+                <display value="Tongue"/>
+            </concept>
+            <concept>
+                <code value="113264009"/>
+                <display value="Lingual artery"/>
+            </concept>
+            <concept>
+                <code value="110568007"/>
+                <display value="Gastric vein"/>
+            </concept>
+            <concept>
+                <code value="128557009"/>
+                <display value="Congenital coronary artery fistula to right atrium"/>
+            </concept>
+            <concept>
+                <code value="87342007"/>
+                <display value="Fibula"/>
+            </concept>
+            <concept>
+                <code value="363654007"/>
+                <display value="Orbital structure"/>
+            </concept>
+            <concept>
+                <code value="18911002"/>
+                <display value="Penis"/>
+            </concept>
+            <concept>
+                <code value="195416006"/>
+                <display value="Inferior cardiac vein"/>
+            </concept>
+            <concept>
+                <code value="128981007"/>
+                <display value="Baffle"/>
+            </concept>
+            <concept>
+                <code value="59749000"/>
+                <display value="Lacrimal artery"/>
+            </concept>
+            <concept>
+                <code value="31145008"/>
+                <display value="Occipital artery"/>
+            </concept>
+            <concept>
+                <code value="59820001"/>
+                <display value="Endo-vascular"/>
+            </concept>
+            <concept>
+                <code value="18619003"/>
+                <display value="Sclera"/>
+            </concept>
+            <concept>
+                <code value="12738006"/>
+                <display value="Brain"/>
+            </concept>
+            <concept>
+                <code value="128568009"/>
+                <display value="Systemic venous atrium"/>
+            </concept>
+            <concept>
+                <code value="111002"/>
+                <display value="Parathyroid"/>
+            </concept>
+            <concept>
+                <code value="303270005"/>
+                <display value="Liver and biliary structure"/>
+            </concept>
+            <concept>
+                <code value="128585006"/>
+                <display value="Anomalous pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="26493002"/>
+                <display value="Suprasternal notch"/>
+            </concept>
+            <concept>
+                <code value="297171002"/>
+                <display value="Cervico-thoracic spine"/>
+            </concept>
+            <concept>
+                <code value="38864007"/>
+                <display value="Perineum"/>
+            </concept>
+            <concept>
+                <code value="34402009"/>
+                <display value="Endo-rectal"/>
+            </concept>
+            <concept>
+                <code value="71341001"/>
+                <display value="Femur"/>
+            </concept>
+            <concept>
+                <code value="194996006"/>
+                <display value="Anterior cardiac vein"/>
+            </concept>
+            <concept>
+                <code value="15776009"/>
+                <display value="Pancreas"/>
+            </concept>
+            <concept>
+                <code value="82471001"/>
+                <display value="Left atrium"/>
+            </concept>
+            <concept>
+                <code value="88556005"/>
+                <display value="Cerebral artery"/>
+            </concept>
+            <concept>
+                <code value="79601000"/>
+                <display value="Scapula"/>
+            </concept>
+            <concept>
+                <code value="33795007"/>
+                <display value="Inferior mesenteric artery"/>
+            </concept>
+            <concept>
+                <code value="64033007"/>
+                <display value="Endo-renal"/>
+            </concept>
+            <concept>
+                <code value="60734001"/>
+                <display value="Great saphenous vein"/>
+            </concept>
+            <concept>
+                <code value="113346000"/>
+                <display value="Omental bursa"/>
+            </concept>
+            <concept>
+                <code value="110837003"/>
+                <display value="Bladder and urethra"/>
+            </concept>
+            <concept>
+                <code value="122494005"/>
+                <display value="Cervical spine"/>
+            </concept>
+            <concept>
+                <code value="299716001"/>
+                <display value="Iliac and/or femoral artery"/>
+            </concept>
+            <concept>
+                <code value="86117002"/>
+                <display value="Internal carotid artery"/>
+            </concept>
+            <concept>
+                <code value="87953007"/>
+                <display value="Endo-ureteric"/>
+            </concept>
+            <concept>
+                <code value="54735007"/>
+                <display value="Sacrum"/>
+            </concept>
+            <concept>
+                <code value="30315005"/>
+                <display value="Small intestine"/>
+            </concept>
+            <concept>
+                <code value="361078006"/>
+                <display value="Internal Auditory Canal"/>
+            </concept>
+            <concept>
+                <code value="8629005"/>
+                <display value="Superior right pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="131183008"/>
+                <display value="Intra-articular"/>
+            </concept>
+            <concept>
+                <code value="25990002"/>
+                <display value="Renal pelvis"/>
+            </concept>
+            <concept>
+                <code value="64131007"/>
+                <display value="Inferior vena cava"/>
+            </concept>
+            <concept>
+                <code value="78480002"/>
+                <display value="Right pulmonary artery"/>
+            </concept>
+            <concept>
+                <code value="91470000"/>
+                <display value="Axilla"/>
+            </concept>
+            <concept>
+                <code value="82849001"/>
+                <display value="Retroperitoneum"/>
+            </concept>
+            <concept>
+                <code value="9875009"/>
+                <display value="Thymus"/>
+            </concept>
+            <concept>
+                <code value="34340008"/>
+                <display value="Venous network"/>
+            </concept>
+            <concept>
+                <code value="253276007"/>
+                <display value="Common atrium"/>
+            </concept>
+            <concept>
+                <code value="85050009"/>
+                <display value="Humerus"/>
+            </concept>
+            <concept>
+                <code value="22356005"/>
+                <display value="Ilium"/>
+            </concept>
+            <concept>
+                <code value="128551005"/>
+                <display value="Aortic fistula"/>
+            </concept>
+            <concept>
+                <code value="72021004"/>
+                <display value="Superior thyroid artery"/>
+            </concept>
+            <concept>
+                <code value="10293006"/>
+                <display value="Iliac artery"/>
+            </concept>
+            <concept>
+                <code value="74386004"/>
+                <display value="Nasal bone"/>
+            </concept>
+            <concept>
+                <code value="68053000"/>
+                <display value="Anterior tibial artery"/>
+            </concept>
+            <concept>
+                <code value="71252005"/>
+                <display value="Cervix"/>
+            </concept>
+            <concept>
+                <code value="61959006"/>
+                <display value="Truncus arteriosus communis"/>
+            </concept>
+            <concept>
+                <code value="51114001"/>
+                <display value="Endo-arterial"/>
+            </concept>
+            <concept>
+                <code value="32062004"/>
+                <display value="Common carotid artery"/>
+            </concept>
+            <concept>
+                <code value="39352004"/>
+                <display value="Joint"/>
+            </concept>
+            <concept>
+                <code value="46862004"/>
+                <display value="Buttock"/>
+            </concept>
+            <concept>
+                <code value="5713008"/>
+                <display value="Submandibular area"/>
+            </concept>
+            <concept>
+                <code value="55024004"/>
+                <display value="Optic canal"/>
+            </concept>
+            <concept>
+                <code value="15825003"/>
+                <display value="Aorta"/>
+            </concept>
+            <concept>
+                <code value="15672000"/>
+                <display value="Superficial temporal artery"/>
+            </concept>
+            <concept>
+                <code value="29092000"/>
+                <display value="Endo-venous"/>
+            </concept>
+            <concept>
+                <code value="59066005"/>
+                <display value="Mastoid bone"/>
+            </concept>
+            <concept>
+                <code value="128556000"/>
+                <display value="Congenital coronary artery fistula to left ventricle"/>
+            </concept>
+            <concept>
+                <code value="416319003"/>
+                <display value="Neck, Chest, Abdomen and Pelvis"/>
+            </concept>
+            <concept>
+                <code value="68367000"/>
+                <display value="Thigh"/>
+            </concept>
+            <concept>
+                <code value="78961009"/>
+                <display value="Spleen"/>
+            </concept>
+            <concept>
+                <code value="416550000"/>
+                <display value="Chest and Abdomen"/>
+            </concept>
+            <concept>
+                <code value="113273001"/>
+                <display value="Inferior right pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="44567001"/>
+                <display value="Trachea"/>
+            </concept>
+            <concept>
+                <code value="91830000"/>
+                <display value="Body conduit"/>
+            </concept>
+            <concept>
+                <code value="33564002"/>
+                <display value="Lower outer quadrant of breast"/>
+            </concept>
+            <concept>
+                <code value="70258002"/>
+                <display value="Ankle joint"/>
+            </concept>
+            <concept>
+                <code value="48367006"/>
+                <display value="Endo-vesical"/>
+            </concept>
+            <concept>
+                <code value="72410000"/>
+                <display value="Mediastinum"/>
+            </concept>
+            <concept>
+                <code value="113305005"/>
+                <display value="Cerebellum"/>
+            </concept>
+            <concept>
+                <code value="8017000"/>
+                <display value="Right ventricle inflow"/>
+            </concept>
+            <concept>
+                <code value="86570000"/>
+                <display value="Mesenteric artery"/>
+            </concept>
+            <concept>
+                <code value="43899006"/>
+                <display value="Popliteal artery"/>
+            </concept>
+            <concept>
+                <code value="68505006"/>
+                <display value="Left lower quadrant of abdomen"/>
+            </concept>
+            <concept>
+                <code value="431491007"/>
+                <display value="Upper urinary tract"/>
+            </concept>
+            <concept>
+                <code value="128567004"/>
+                <display value="Pulmonary venous atrium"/>
+            </concept>
+            <concept>
+                <code value="955009"/>
+                <display value="Bronchus"/>
+            </concept>
+            <concept>
+                <code value="58742003"/>
+                <display value="Sesamoid bones of foot"/>
+            </concept>
+            <concept>
+                <code value="90024005"/>
+                <display value="Internal iliac artery"/>
+            </concept>
+            <concept>
+                <code value="128586007"/>
+                <display value="Pulmonary chamber of cor triatriatum"/>
+            </concept>
+            <concept>
+                <code value="79741001"/>
+                <display value="Common bile duct"/>
+            </concept>
+            <concept>
+                <code value="48345005"/>
+                <display value="Superior vena cava"/>
+            </concept>
+            <concept>
+                <code value="44984001"/>
+                <display value="Ulnar artery"/>
+            </concept>
+            <concept>
+                <code value="87878005"/>
+                <display value="Left ventricle"/>
+            </concept>
+            <concept>
+                <code value="17388009"/>
+                <display value="Anterior spinal artery"/>
+            </concept>
+            <concept>
+                <code value="52612000"/>
+                <display value="Lumbar region"/>
+            </concept>
+            <concept>
+                <code value="27398004"/>
+                <display value="Omentum"/>
+            </concept>
+            <concept>
+                <code value="110612005"/>
+                <display value="Anus, rectum and sigmoid colon"/>
+            </concept>
+            <concept>
+                <code value="35819009"/>
+                <display value="Splenic vein"/>
+            </concept>
+            <concept>
+                <code value="71854001"/>
+                <display value="Colon"/>
+            </concept>
+            <concept>
+                <code value="54019009"/>
+                <display value="Submandibular gland"/>
+            </concept>
+            <concept>
+                <code value="133943005"/>
+                <display value="Left lumbar region"/>
+            </concept>
+            <concept>
+                <code value="122495006"/>
+                <display value="Thoracic spine"/>
+            </concept>
+            <concept>
+                <code value="362072009"/>
+                <display value="Saphenous vein"/>
+            </concept>
+            <concept>
+                <code value="28231008"/>
+                <display value="Gallbladder"/>
+            </concept>
+            <concept>
+                <code value="12691009"/>
+                <display value="Innominate artery"/>
+            </concept>
+            <concept>
+                <code value="22083002"/>
+                <display value="Splenic artery"/>
+            </concept>
+            <concept>
+                <code value="2841007"/>
+                <display value="Renal artery"/>
+            </concept>
+            <concept>
+                <code value="24136001"/>
+                <display value="Hip joint"/>
+            </concept>
+            <concept>
+                <code value="40983000"/>
+                <display value="Upper arm"/>
+            </concept>
+            <concept>
+                <code value="66019005"/>
+                <display value="Extremity"/>
+            </concept>
+            <concept>
+                <code value="816094009"/>
+                <display value="Thorax"/>
+            </concept>
+            <concept>
+                <code value="23074001"/>
+                <display value="Facial artery"/>
+            </concept>
+            <concept>
+                <code value="27947004"/>
+                <display value="Epigastric region"/>
+            </concept>
+            <concept>
+                <code value="72107004"/>
+                <display value="Azygos vein"/>
+            </concept>
+            <concept>
+                <code value="17137000"/>
+                <display value="Brachial artery"/>
+            </concept>
+            <concept>
+                <code value="10200004"/>
+                <display value="Liver"/>
+            </concept>
+            <concept>
+                <code value="29836001"/>
+                <display value="Hip"/>
+            </concept>
+            <concept>
+                <code value="113197003"/>
+                <display value="Rib"/>
+            </concept>
+            <concept>
+                <code value="371195002"/>
+                <display value="Bone of upper limb"/>
+            </concept>
+            <concept>
+                <code value="76784001"/>
+                <display value="Endo-vaginal"/>
+            </concept>
+            <concept>
+                <code value="19100000"/>
+                <display value="Lower inner quadrant of breast"/>
+            </concept>
+            <concept>
+                <code value="51299004"/>
+                <display value="Clavicle"/>
+            </concept>
+            <concept>
+                <code value="45289007"/>
+                <display value="Parotid gland"/>
+            </concept>
+            <concept>
+                <code value="181347005"/>
+                <display value="Common Femoral Artery"/>
+            </concept>
+            <concept>
+                <code value="816989007"/>
+                <display value="Intra-pelvic"/>
+            </concept>
+            <concept>
+                <code value="69695003"/>
+                <display value="Stomach"/>
+            </concept>
+            <concept>
+                <code value="5076001"/>
+                <display value="Subxiphoid"/>
+            </concept>
+            <concept>
+                <code value="77831004"/>
+                <display value="Upper inner quadrant of breast"/>
+            </concept>
+            <concept>
+                <code value="8012006"/>
+                <display value="Anterior communicating artery"/>
+            </concept>
+            <concept>
+                <code value="128555001"/>
+                <display value="Congenital coronary artery fistula to left atrium"/>
+            </concept>
+            <concept>
+                <code value="37117007"/>
+                <display value="Right inguinal region"/>
+            </concept>
+            <concept>
+                <code value="113262008"/>
+                <display value="Thoracic aorta"/>
+            </concept>
+            <concept>
+                <code value="35532006"/>
+                <display value="Vena cava"/>
+            </concept>
+            <concept>
+                <code value="90219004"/>
+                <display value="Coronary sinus"/>
+            </concept>
+            <concept>
+                <code value="67937003"/>
+                <display value="Axillary Artery"/>
+            </concept>
+            <concept>
+                <code value="50408007"/>
+                <display value="Left pulmonary artery"/>
+            </concept>
+            <concept>
+                <code value="34707002"/>
+                <display value="Biliary tract"/>
+            </concept>
+            <concept>
+                <code value="86598002"/>
+                <display value="Apex of Lung"/>
+            </concept>
+            <concept>
+                <code value="34516001"/>
+                <display value="Ileum"/>
+            </concept>
+            <concept>
+                <code value="59652004"/>
+                <display value="Atrium"/>
+            </concept>
+            <concept>
+                <code value="72696002"/>
+                <display value="Knee"/>
+            </concept>
+            <concept>
+                <code value="85234005"/>
+                <display value="Vertebral artery"/>
+            </concept>
+            <concept>
+                <code value="48544008"/>
+                <display value="Right lower quadrant of abdomen"/>
+            </concept>
+            <concept>
+                <code value="128566008"/>
+                <display value="Pulmonary vein confluence"/>
+            </concept>
+            <concept>
+                <code value="128587003"/>
+                <display value="Saphenofemoral junction"/>
+            </concept>
+            <concept>
+                <code value="12123001"/>
+                <display value="Internal jugular vein"/>
+            </concept>
+            <concept>
+                <code value="371398005"/>
+                <display value="Eye region"/>
+            </concept>
+            <concept>
+                <code value="128979005"/>
+                <display value="Lacrimal artery of right eye"/>
+            </concept>
+            <concept>
+                <code value="297173004"/>
+                <display value="Lumbo-sacral spine"/>
+            </concept>
+            <concept>
+                <code value="39723000"/>
+                <display value="Sacroiliac joint"/>
+            </concept>
+            <concept>
+                <code value="53505006"/>
+                <display value="Anus"/>
+            </concept>
+            <concept>
+                <code value="284639000"/>
+                <display value="Umbilical vein"/>
+            </concept>
+            <concept>
+                <code value="38266002"/>
+                <display value="Entire body"/>
+            </concept>
+            <concept>
+                <code value="46027005"/>
+                <display value="Common iliac vein"/>
+            </concept>
+            <concept>
+                <code value="26893007"/>
+                <display value="Inguinal region"/>
+            </concept>
+            <concept>
+                <code value="53342003"/>
+                <display value="Endo-nasal"/>
+            </concept>
+            <concept>
+                <code value="11708003"/>
+                <display value="Hypogastric region"/>
+            </concept>
+            <concept>
+                <code value="133944004"/>
+                <display value="Right lumbar region"/>
+            </concept>
+            <concept>
+                <code value="76505004"/>
+                <display value="Thumb"/>
+            </concept>
+            <concept>
+                <code value="122496007"/>
+                <display value="Lumbar spine"/>
+            </concept>
+            <concept>
+                <code value="5928000"/>
+                <display value="Great cardiac vein"/>
+            </concept>
+            <concept>
+                <code value="91707000"/>
+                <display value="Primitive pulmonary artery"/>
+            </concept>
+            <concept>
+                <code value="42575006"/>
+                <display value="Sella turcica"/>
+            </concept>
+            <concept>
+                <code value="32764006"/>
+                <display value="Portal vein"/>
+            </concept>
+            <concept>
+                <code value="20233005"/>
+                <display value="Scrotum"/>
+            </concept>
+            <concept>
+                <code value="51249003"/>
+                <display value="Inferior left pulmonary vein"/>
+            </concept>
+            <concept>
+                <code value="30021000"/>
+                <display value="Lower leg"/>
+            </concept>
+            <concept>
+                <code value="297174005"/>
+                <display value="Sacro-coccygeal Spine"/>
+            </concept>
+            <concept>
+                <code value="56400007"/>
+                <display value="Renal vein"/>
+            </concept>
+            <concept>
+                <code value="128548003"/>
+                <display value="Boyd's perforating vein"/>
+            </concept>
+            <concept>
+                <code value="117590005"/>
+                <display value="Ear"/>
+            </concept>
+            <concept>
+                <code value="77621008"/>
+                <display value="Supraclavicular region of neck"/>
+            </concept>
+            <concept>
+                <code value="73634005"/>
+                <display value="Common iliac artery"/>
+            </concept>
+            <concept>
+                <code value="29707007"/>
+                <display value="Toe"/>
+            </concept>
+            <concept>
+                <code value="16982005"/>
+                <display value="Shoulder"/>
+            </concept>
+            <concept>
+                <code value="2748008"/>
+                <display value="Spinal cord"/>
+            </concept>
+            <concept>
+                <code value="118375008"/>
+                <display value="Vascular graft"/>
+            </concept>
+            <concept>
+                <code value="33626005"/>
+                <display value="Left auricular appendage"/>
+            </concept>
+            <concept>
+                <code value="11279006"/>
+                <display value="Circle of Willis"/>
+            </concept>
+            <concept>
+                <code value="85119005"/>
+                <display value="Left inguinal region"/>
+            </concept>
+            <concept>
+                <code value="80243003"/>
+                <display value="Eyelid"/>
+            </concept>
+            <concept>
+                <code value="102292000"/>
+                <display value="Muscle of lower limb"/>
+            </concept>
+            <concept>
+                <code value="86367003"/>
+                <display value="Left upper quadrant of abdomen"/>
+            </concept>
+            <concept>
+                <code value="54247002"/>
+                <display value="Ascending aorta"/>
+            </concept>
+            <concept>
+                <code value="128560002"/>
+                <display value="Hunterian perforating vein"/>
+            </concept>
+            <concept>
+                <code value="19695001"/>
+                <display value="Subcostal"/>
+            </concept>
+            <concept>
+                <code value="31677005"/>
+                <display value="Profunda Femoris Artery"/>
+            </concept>
+            <concept>
+                <code value="54066008"/>
+                <display value="Pharynx"/>
+            </concept>
+            <concept>
+                <code value="84301002"/>
+                <display value="External auditory canal"/>
+            </concept>
+            <concept>
+                <code value="68705008"/>
+                <display value="Axillary vein"/>
+            </concept>
+            <concept>
+                <code value="64234005"/>
+                <display value="Patella"/>
+            </concept>
+            <concept>
+                <code value="360955006"/>
+                <display value="Nasopharynx"/>
+            </concept>
+            <concept>
+                <code value="32114007"/>
+                <display value="Occipital vein"/>
+            </concept>
+            <concept>
+                <code value="128554002"/>
+                <display value="Dodd's perforating vein"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

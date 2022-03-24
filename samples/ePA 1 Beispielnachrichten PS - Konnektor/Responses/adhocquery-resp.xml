@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing"/>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:487233b0-86de-4c9b-a897-c7ab0e3c0935</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+    <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">60ec313a-e08a-457e-92ac-f1ff808d4045</RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <ns9:AdhocQueryResponse xmlns:ns18="urn:ihe:iti:rmd:2017" xmlns:ns17="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns16="urn:hl7-org:v3" xmlns:ns15="http://www.w3.org/2000/09/xmldsig#" xmlns:ns14="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns13="http://ws.gematik.de/tel/error/v2.0" xmlns:ns12="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns11="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:ihe:iti:xds-b:2007" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0" startIndex="0" totalResultCount="5" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success">
+      <ns7:RegistryObjectList>
+        <ns7:ExtrinsicObject mimeType="application/pdf" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" home="urn:oid:1.2.276.0.76.3.1.405">
+          <ns7:Slot name="creationTime">
+            <ns7:ValueList>
+              <ns7:Value>20191209124919</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="languageCode">
+            <ns7:ValueList>
+              <ns7:Value>de-DE</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="URI">
+            <ns7:ValueList>
+              <ns7:Value>vhitg_ab.pdf</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="repositoryUniqueId">
+            <ns7:ValueList>
+              <ns7:Value>urn:oid:1.2.276.0.76.3.1.405</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="size">
+            <ns7:ValueList>
+              <ns7:Value>58946</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Name>
+            <ns7:LocalizedString xml:lang="de-DE" value="PsSim: vhitg-Arztbrief pdf/a"/>
+          </ns7:Name>
+          <ns7:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="BEF" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:f9a9988c-f33a-44d4-ac69-5bfe06e6c6bb">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Befundbericht"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="LEI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:bcca3f74-2b6c-4589-bd65-0717961490e4">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.2.276.0.76.5.491</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokument einer Leistungserbringerinstitution"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="urn:ihe-d:spec:PDF_A1:2005" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:18e60ef0-4e61-4828-a7e2-09d6449cc75f">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.6</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="PDF/A-1"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="PRA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:8443ffbd-90e9-49e6-87f0-f190f006a8ff">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.2</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Arztpraxis"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:b759841b-8178-4234-b24c-df2cdf8c1bbd">
+            <ns7:Slot name="authorRole">
+              <ns7:ValueList>
+                <ns7:Value>11^^^&amp;amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;amp;ISO</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Slot name="authorPerson">
+              <ns7:ValueList>
+                <ns7:Value>^Müller-Holzscheit^Marcello-Bernhardino^^^Dr.^^^</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="ALLG" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:90277057-a946-48c8-9466-92111927328c">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.4</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Allgemeinmedizin"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" nodeRepresentation="BEFU" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:cefb4612-49eb-46e5-b871-21f90764420c">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Ergebnisse Diagnostik"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110473550^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:23aa6da4-1dd8-4b45-ae87-eab59c371d82">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:0021c05f-3226-4621-beed-d99a90fb4505" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.840.113556.1.8000.2554.32303.45978.3936.16765.40464.15881777.14966634" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:b5b926ba-f1b9-4b7c-8c22-06f884f509e3">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+        </ns7:ExtrinsicObject>
+        <ns7:ExtrinsicObject mimeType="application/pdf" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" home="urn:oid:1.2.276.0.76.3.1.405">
+          <ns7:Slot name="creationTime">
+            <ns7:ValueList>
+              <ns7:Value>20201101230000</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="languageCode">
+            <ns7:ValueList>
+              <ns7:Value>de-DE</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="URI">
+            <ns7:ValueList>
+              <ns7:Value>pssim_Aktenschluessel.pdf</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="repositoryUniqueId">
+            <ns7:ValueList>
+              <ns7:Value>urn:oid:1.2.276.0.76.3.1.405</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="size">
+            <ns7:ValueList>
+              <ns7:Value>146979</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Name>
+            <ns7:LocalizedString xml:lang="de-DE" value="PsSim: mein Aktenschlüssel"/>
+          </ns7:Name>
+          <ns7:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="DOK" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:44202f6a-dd9c-43cb-a2ec-bb304ffe5fe4">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokumente ohne besondere Form (Notizen)"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="LEI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:df4d689e-b723-4619-864f-da7ff99f6052">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.2.276.0.76.5.491</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokument einer Leistungserbringerinstitution"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="H1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:f2b70885-962c-46b1-b8c8-99221db5a00f">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.15</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="vom Patienten mitgebracht"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="urn:ihe:iti:xds:2017:mimeTypeSufficient" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:7c973bba-18aa-4468-a491-0bfac86b39e8">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.1.2.3</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Format aus MIME Type ableitbar"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:863964f6-75fa-4566-8406-171764edbe88">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.3</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patient außerhalb der Betreuung"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:36c2755c-600f-4832-a7b2-3873fa250afb">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.5</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patient außerhalb der Betreuung"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" nodeRepresentation="PATD" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:a3d94751-f992-4705-9cef-b3ef8112dcc1">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patienteneigene Dokumente"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:f4a75445-f822-4226-a462-27a724cca6c3">
+            <ns7:Slot name="authorRole">
+              <ns7:ValueList>
+                <ns7:Value>102^^^&amp;amp;1.3.6.1.4.1.19376.3.276.1.5.14&amp;amp;ISO</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Slot name="authorPerson">
+              <ns7:ValueList>
+                <ns7:Value>^Wesseltoft^Anna Stephanie^^^^^^</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+          </ns7:Classification>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110473550^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:496e7f09-0152-41a9-862a-e94dfff646a4">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:453eccac-1c4e-40c1-b2ac-a76ca706551b" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.840.113556.1.8000.2554.9931.19832.54409.18874.38942.14993508.6836922" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:9e0bdfb0-53b7-4a5c-bbcf-3c2f49e46e1a">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+        </ns7:ExtrinsicObject>
+        <ns7:ExtrinsicObject mimeType="application/xml" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" home="urn:oid:1.2.276.0.76.3.1.405">
+          <ns7:Slot name="creationTime">
+            <ns7:ValueList>
+              <ns7:Value>20191209124919</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="languageCode">
+            <ns7:ValueList>
+              <ns7:Value>de-DE</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="URI">
+            <ns7:ValueList>
+              <ns7:Value>pssim_nfd.xml</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="repositoryUniqueId">
+            <ns7:ValueList>
+              <ns7:Value>urn:oid:1.2.276.0.76.3.1.405</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="size">
+            <ns7:ValueList>
+              <ns7:Value>15710</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Name>
+            <ns7:LocalizedString xml:lang="de-DE" value="PsSim: Notfalldaten"/>
+          </ns7:Name>
+          <ns7:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="AUS" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:725a9238-6c9a-4394-9a75-17a25f45ff89">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Medizinischer Ausweis"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="LEI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:8f5a5406-e6ec-4272-ae19-6d88d2f39188">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.2.276.0.76.5.491</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokument einer Leistungserbringerinstitution"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="urn:gematik:ig:Notfalldatensatz:r3.1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:1c1ad7b8-62e1-417d-b8f4-867565ce4630">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.6</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Notfalldatensatz"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="PRA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:e919a0ed-d659-4643-8428-38bc5bd30d26">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.2</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Arztpraxis"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:e8fdeb74-15cc-4d0a-8461-b0ef94beb9b2">
+            <ns7:Slot name="authorRole">
+              <ns7:ValueList>
+                <ns7:Value>11^^^&amp;amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;amp;ISO</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Slot name="authorPerson">
+              <ns7:ValueList>
+                <ns7:Value>^Müller-Holzscheit^Marcello-Bernhardino^^^Dr.^^^</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="ALLG" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:4358d0a3-383c-417f-b950-fa5fce143950">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.4</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Allgemeinmedizin"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" nodeRepresentation="BESC" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:ddffbf46-1ce3-4b8f-9cb1-bedc90b38691">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Ärztliche Bescheinigungen"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110473550^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:1e05153e-4ee8-4c25-858e-daf3cceed6f0">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:ad1da523-e8c2-4055-9833-b65266bfb9ad" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.840.113556.1.8000.2554.24479.16830.19763.16970.44197.12958115.10621730" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:707c18e0-4493-4eab-befc-754bca5d3eb9">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+        </ns7:ExtrinsicObject>
+        <ns7:ExtrinsicObject mimeType="application/xml" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" home="urn:oid:1.2.276.0.76.3.1.405">
+          <ns7:Slot name="creationTime">
+            <ns7:ValueList>
+              <ns7:Value>20191209124919</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="languageCode">
+            <ns7:ValueList>
+              <ns7:Value>de-DE</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="URI">
+            <ns7:ValueList>
+              <ns7:Value>pssim_emp.xml</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="repositoryUniqueId">
+            <ns7:ValueList>
+              <ns7:Value>urn:oid:1.2.276.0.76.3.1.405</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="size">
+            <ns7:ValueList>
+              <ns7:Value>1717</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Name>
+            <ns7:LocalizedString xml:lang="de-DE" value="PsSim: Medikationsplan"/>
+          </ns7:Name>
+          <ns7:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="PLA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:552538b4-8708-4acc-ba61-d65be6e9a115">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Planungsdokument"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="LEI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:ca8e018b-6dbc-45a4-b6e1-6346868ee225">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.2.276.0.76.5.491</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokument einer Leistungserbringerinstitution"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="urn:gematik:ig:Medikationsplan:r3.1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:6edb1872-6214-42cb-be5b-906e8c3d777c">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.6</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Medikationsplan (gematik)"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="PRA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:578577a8-7280-4f42-b269-9ab0966c609e">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.2</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Arztpraxis"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:ddc0f509-8e53-49cc-a4b2-27ed9f9ba75a">
+            <ns7:Slot name="authorRole">
+              <ns7:ValueList>
+                <ns7:Value>11^^^&amp;amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;amp;ISO</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Slot name="authorPerson">
+              <ns7:ValueList>
+                <ns7:Value>^Müller-Holzscheit^Marcello-Bernhardino^^^Dr.^^^</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="ALLG" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:d0057f3e-c950-4303-a79a-15347fe00805">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.4</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Allgemeinmedizin"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" nodeRepresentation="MEDI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:978e60f3-4a99-4863-8bd3-242eead74be7">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Medikamentöse Therapien"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110473550^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:dcf941fe-ec1a-451b-9af4-2471aa29669a">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:b49a8b6f-8ae2-4fab-ae85-f1a29dd96809" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.840.113556.1.8000.2554.3750.34709.5633.16805.48169.5536134.13361538" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:ddd0fff9-1d43-4289-bbc1-0c1a645db757">
+            <ns7:Name>
+              <ns7:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+        </ns7:ExtrinsicObject>
+        <ns7:ExtrinsicObject mimeType="application/pdf" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" home="urn:oid:1.2.276.0.76.3.1.405">
+          <ns7:Slot name="languageCode">
+            <ns7:ValueList>
+              <ns7:Value>de-DE</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="URI">
+            <ns7:ValueList>
+              <ns7:Value>file____d__vhitg_ab (1).pdf</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="creationTime">
+            <ns7:ValueList>
+              <ns7:Value>20201223104109</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="repositoryUniqueId">
+            <ns7:ValueList>
+              <ns7:Value>urn:oid:1.2.276.0.76.3.1.405</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Slot name="size">
+            <ns7:ValueList>
+              <ns7:Value>58946</ns7:Value>
+            </ns7:ValueList>
+          </ns7:Slot>
+          <ns7:Name>
+            <ns7:LocalizedString xml:lang="de-DE" value="Arztbrief über FdV"/>
+          </ns7:Name>
+          <ns7:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="DOK" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:c8c0062b-5c26-4f6f-9bbc-391114f41990">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokumente ohne besondere Form (Notizen)"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="H1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:7db7995e-aa1e-49a6-ad16-0099b74ad6a9">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.15</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="vom Patienten mitgebracht"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="urn:ihe:iti:xds:2017:mimeTypeSufficient" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:6702f793-d208-4aa2-ad07-d017e16f236a">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.1.2.3</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Format aus MIME Type ableitbar"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:26140074-4962-4908-88a3-e1057834e689">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.3</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patient außerhalb der Betreuung"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:de91a14d-6fc6-4354-89b9-4871beb5fae9">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.5</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patient außerhalb der Betreuung"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="PATD" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:a9b5b82a-ad0c-4f8c-92c0-75835d46f87e">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Patienteneigene Dokumente"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="urn:uuid:518e52e0-72bd-419a-91d6-9cbcb51dff49">
+            <ns7:Slot name="codingScheme">
+              <ns7:ValueList>
+                <ns7:Value>1.2.276.0.76.5.491</ns7:Value>
+              </ns7:ValueList>
+            </ns7:Slot>
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="Dokument eines Versicherten"/>
+            </ns7:Name>
+          </ns7:Classification>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.3.6.1.4.1.21367.2020.3.186561647.2" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:5b0fd867-ff60-4f22-91ee-31aa8cfb8413">
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="XDSDocumentEntry.uniqueId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+          <ns7:ExternalIdentifier registryObject="urn:uuid:e77859f2-2560-48eb-8bb8-5665d0bdafcd" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110473550^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="urn:uuid:45320c06-2add-4e22-95df-83285f91d89f">
+            <ns7:Name>
+              <ns7:LocalizedString xml:lang="de-DE" value="XDSDocumentEntry.patientId"/>
+            </ns7:Name>
+          </ns7:ExternalIdentifier>
+        </ns7:ExtrinsicObject>
+      </ns7:RegistryObjectList>
+    </ns9:AdhocQueryResponse>
+  </soap:Body>
+</soap:Envelope>
+<!--AdhocQueryRequest_ExecTime=23,514777-->
