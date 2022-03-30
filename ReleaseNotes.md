@@ -1,3 +1,7 @@
+# Release 2.1.1
+- no changes compared to 2.1.1-Pre3 
+
+
 # Release 2.1.1-Pre3
 - regex pattern for UserAgentType (AuthorizationService.xsd)  (bugfix)  
 
