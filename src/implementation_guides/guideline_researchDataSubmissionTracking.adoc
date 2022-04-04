@@ -23,50 +23,52 @@ toc::[]
 
 Auf oberster Ebene enthält die Liste (researchDataSubmissionTrackingList.json) zwei Elemente:
 
-1. der Status der Einwilligung § 363 Absatz 2 SGB V
-2. Liste der Freigaben / Widerrufe
+1. den Status der Einwilligung § 363 Absatz 2 SGB V (insurantConsent)
+2. Liste der Freigaben / Widerrufe (dataSubmissionTracking)
 
 
 == insurantConsent
-Hier wird vermerkt, ob die Einwilligung gemäß §363 Absatz 2 SGB erteilt ('given') oder entzogen ('withdrawn') wurde und wann die letzte Änderung des Status erfolgte (siehe auch A_21878). Bei einem Wechsel des FdV oder bei Datenfreigabe durch einen Vertreter kann dieser hinterlegte Zuzstand ausgewertet werden, beispielsweise um die Auswahl der Dokumente für die Freigabe zu Forschungszwecken zu ermöglichen.
+Hier wird vermerkt, ob die Einwilligung gemäß §363 Absatz 2 SGB erteilt ('given') oder entzogen ('withdrawn') wurde und wann die letzte Änderung des Status erfolgte (siehe auch A_21878). Bei einem Wechsel des FdV oder bei Datenfreigabe durch einen Vertreter kann dieser hinterlegte Zustand ausgewertet werden, beispielsweise um die Auswahl der Dokumente für die Freigabe zu Forschungszwecken zu ermöglichen.
 
 == dataSubmissionTracking
-Dieses Array erfasst die Freigaben und Widerrufe aller zum Zweck der Forschung bereitgestellten Dokumente. Pro struktieriertem Dokument existiert dazu genau ein Eintrag (submissionEntryType), der bei der ersten Freigabe erstellt wird. Innerhalb des Eintrags erfolgt dann die Aufzeichnung der Informationen zu den Freigaben.
+Dieses Array erfasst die Freigaben und Widerrufe aller zum Zweck der Forschung bereitgestellten Dokumente. Pro struktieriertem Dokument (Instanz eines MIOs) existiert dazu genau ein Eintrag (submissionEntryType), der bei der ersten Freigabe des strukturierten Dokuments erstellt wird. Innerhalb des Eintrags erfolgt dann die Aufzeichnung der Informationen zu den Freigaben und Widerrufen.
 
-Ein Dokument in diesem Sinne ist dabei immer ein vollständiges MIO. Das gilt speziell für die Sammlungstypen mixed und unique. Für jeden statischen Ordner (Impfpass, Zahnbonusheft) existiert maximal ein Eintrag im Array, für dynamische Ordner (Mutterpass, U-Heft) kann pro Instanz ein Eintrag im Array vorliegen. 
+Ein Dokument in diesem Sinne ist dabei immer ein vollständiges MIO. Das gilt speziell für die Sammlungstypen _mixed_ und _unique_. Für jeden statischen Ordner (Impfpass, Zahnbonusheft) existiert maximal ein Eintrag submissionEntry des Typs submissionEntryType im Array, für dynamische Ordner (Mutterpass, U-Heft) kann pro Instanz ein Eintrag im Array vorliegen. 
 
-MIOs, die auf einem 'atomic'-Typ aufbauen und in der Akte durch jeweils ein einzelnes XDS Dokument vollständig repräsentiert sind, erhalten auch jeweils einen eigenen Eintrag 
+MIOs, die auf einem _atomic_-Typ aufbauen und in der Akte durch jeweils ein einzelnes XDS Dokument vollständig repräsentiert sind, erhalten auch jeweils einen eigenen Eintrag 
 
 === SubmissionEntryType
-==== documentTitle und documentUniqueId:
-Für jeden Eintrag des Arrays wird der Dokumententitel erfasst und zusätzlich die UniqueId des Ordners. 
+==== documentTitle, documentUniqueId, pseudonymousDocumentId:
+Jeder Eintrag submissionEntry für ein MIO erfasst den lesbaren Dokumententitel (documentTitle) und die Referenz des MIOs im Aktensystem (documentUniqueId). Diese Referenz ist bei _atomic_-Typen die document.UniqueId und bei Sammlunstypen _mixed_ und _uniform_ die folder.UniqueId.
 
-==== submissionDocumentIdSet:
-Bei einer Freigabe wird hier die Liste der document.UniqueIds der XDS Dokumente der Freigabe erfasst.
-Bei jeder weiteren Freigabe wird diese Liste um neu hinzugekommene IDs erweitert. Dabei werden Ids lediglich hinzugefügt und niemals entfernt, um im Falle eines Widerrufs die vollständige Liste der in allen aufeinanderfolgenden Freigaben dem Forschungsdatenzentrum zur Verfügung gestellten Dokumente zu verwenden.
+Für jeden Eintrag submissionEntry für ein MIO wird bei der ersten Erstellung auch eine Referenz für das pseudonymisierte Dokument erzeugt (pseudonymousDocumentId). Diese Referenz wird für Freigaben und Widerrufe in den Aufrufen der Schnittstelle des Forschungsdatenzentrums genutzt (P-Document-Id) 
 
-Bei einem Widerruf erfolgt der Widerruf aller Teildokumente der unter submissionDocumentIdSet abgelegten Ids. 
+Bei jeder Freigabe des referenzierten Dokuments (documentUniqueId) werden immer alle zu diesem Zeitpunkt zu einem Dokument gehörenden Teildokumente (XDS Documents mit Status approved) pseudonymisiert und mit einem HTTP POST unter Beistellung der pseudonymousDocumentId an das Forschungsdatenzentrum über dessen Schnittstelle versendet.
+Bei einer Freigabe mehrerer Dokumente (MIOs) ist dieser Vorgang jeweils zu wiederholen.
 
-Nach einem Widerruf liegen im Forschungsdatenzentrum keine pseudonymisierten XDS Dokumente mehr vor und die Liste hier kann entfernt werden. Ein fehlendes Element submissionDocumentIdSet und ein leeres Array sind dabei gleichbedeutend.
+Bei einer erneuten Freigabe eines zuvor schon einmal freigebenen Dokuments nach einer erfolgten Änderung an diesem Dokument wird der Freigabevorgang in gleicher Weise wiederholt.
 
+Ein Widerruf umfasst immer implizit den WIderruf aller zuvor freigegebenen Versionen eines Dokuments. Mit einem HTTP DELETE und unter Beistellung der pseudonymousDocumentId an das Forschungsdatenzentrum über dessen Schnittstelle wird der Widerruf versendet und vollständig alle zu diesem Dokument jemals übermittelten Dokumententeile gegenüber dem Forschungsdatenzentrum widerrufen.
 
-_Beispiel: Ein Impfpass besteht aus 3 Impfeinträgen (jeweils ein FHIR-Bundle in jeweils einem XDS Dokument). 
-Bei einer Freigabe werden alle 3 Teile pseudonymisisert an das FDZ übertragen und im submissionDocumentIDSet werden die UniqueIds (001, 002, 003) vermerkt.
-Später kommt ein Impeintrag hinzu, abgebildet durch ein weiteres FHIR-Bundle in einem eigenen XDS Dokument mit der UniqueId 004. Bei einer erneuten Freigabe werden nun die XDS Dokumente 001 -004 pseudonymisiert übertragen und submissionDocumentIdSet wird um den Eintrag 004 erweitert._
-
-Es ist zu beachten, dass die Liste jeweils erweitert wird. Dieses verhindert, dass UniqueIds von XDS Dokumenten, die in der Akte gelöscht wurden aber immer noch beim Forschungsdatenzentrum vorliegen, nicht mehr in der Liste aufgeführt und somit nicht widerrufen werden können.
 
 ==== submissions:
 Dieses Element erfasst die Freigaben und Widerrufe für das assozierte MIO. ALs Status muss 'delivered' und 'withdrawn' für Freigabe und Widerruf verwendet werden. 
 
 Für jede Freigabe und für jeden Widerruf wird ein zusätzlicher Eintrag des Typs submissionType erzeugt. Aufeinanderfolgende Freigaben und Widerrufe können aufgrund der Aufzeichnung des Zeitstempels zur Nachvollziehbarkeit vergangener Aktivitäten verwendet werden.
 
-Einträge, die älter als 3 Jahre sind, können zur Kürzung der Liste entfernt werden.
+Einträge, die älter als 3 Jahre sind, können zur Kürzung der Liste entfernt werden. Ist der jüngste Eintrag kein Eintrag mit Status 'delivered', so muss der jünste Eintrag in der Liste verbleiben, ungeachtet seines Alters. Dieses ermöglicht den Widerruf gegenüber dem Forschungsdatenzentrum.
 
 Der jüngste Eintrag repräsentiert immer den aktuellen Freigabestatus für das MIO. 
 
-_Hinweis: Zeigt der jüngste Eintrag den Status 'delivered', dann MUSS submissionDocumentIdSet mindestens eine UniqueId enthalten.
-Zeigt der jüngste Eintrag den Status 'withdrawn', dann MUSS submissionDocumentIdSet leer sein._
+
+== Hinweise
+=== Erneute Freigabe
+Eine erneute Freigabe soll nur nach Änderung des Dokuments erfolgen. Zur Festellung einer Änderung kann der Zeistempel der jüngsten submission verwendet werden, wenn diese den Status 'delivered' hat.
+Zeigt die jüngste submission den Status 'withdrawn' oder existiert kein submission Eintrag, kann ebenfalls eine Freigabe erfolgen. 
+
+=== Erzeugung pseudonymousDocumentID
+Dieser Identifier wird für die erste Freigabe eines Dokument erzeugt und wird bei allen aufeinanderfolgenden, weiteren Freigaben verwendet. Nach einem Widerruf des Dokuments soll auch dieser Identifier gelöscht werden, bzw. bei einer erneuten Freigabe muss dann ein neuer Identifier erzeugt werden.
+
 
 
 

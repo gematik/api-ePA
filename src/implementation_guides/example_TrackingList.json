@@ -7,17 +7,7 @@
 		{
 			"documentTitle": "Impfpass",
 			"documentUniqueId": "<folder.uniqueId>",
-			"submissionDocumentIdSet": [
-				{
-					"uniqueId": "aUniqueId"
-				},
-				{
-					"uniqueId": "aUniqueId"
-				},
-				{
-					"uniqueId": "aUniqueId"
-				}
-			],
+			"pseudonymousDocumentId": "<a generated id>",
 			"submissions": [
 				{
 					"submissionState": "delivered",
@@ -42,14 +32,7 @@
 		{
 			"documentTitle": "Zahnbonusheft",
 			"documentUniqueId": "<folder.uniqueId>",
-			"submissionDocumentIdSet": [
-				{
-					"uniqueId": "aUniqueId"
-				},
-				{
-					"uniqueId": "aUniqueId"
-				}
-			],
+			"pseudonymousDocumentId": "<a generated id>",
 			"submissions": [
 				{
 					"submissionState": "delivered",
@@ -62,6 +45,7 @@
 		{
 			"documentTitle": "Mutterpass",
 			"documentUniqueId": "<folder.uniqueId>",
+			"pseudonymousDocumentId": "<a generated id>",
 			"submissions": [
 				{
 					"submissionState": "withdrawn",

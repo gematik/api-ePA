@@ -5,6 +5,7 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen | Betroffene GitHub-Artefakte |
 |---|---|---|---|---|
+|2.5.0|2022-04-04|alle Dokumente zu ePA Release 2.5.0 - verfügar unter fachportal.gematik.de||initialer Release</br>(inklusive relevanter Änderungen aus Release ePA 2.1.1)|
 |2.5.0-Pre1|2022-03-21|Bugfix ||initialer Release Bugfix|
 |2.5.0-CC|2022-03-18|alle Dokumente zu ePA Release 2.5.0 verfügar unter fachportal.gematik.de||initialer Release zur Kommentierung|
 |2.1.1|2022-03-18|alle Dokumente zu ePA Release 2.1.1 verfügar unter fachportal.gematik.de|| - [hcp-policy-definition.xml](src/policies/hcp-policy-definition.xml)<br/> - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)|

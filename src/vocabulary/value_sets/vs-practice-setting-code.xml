@@ -188,6 +188,9 @@
                 <display value="Haut- und Geschlechtskrankheiten"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Das Konzept ist obsolet; stattdessen kann das Konzept PATH (Pathologie) verwendet werden."/>
                 </extension>
@@ -304,7 +307,7 @@
                     <valueString value="Die Transplantationsmedizin befasst sich mit der Übertragung von Zellen, Geweben, Organen oder Organsystemen von einem Organismus auf einen anderen Organismus. Die gesetzlichen Rahmenbedingungen der Transplantationsmedizin sind in Deutschland im Transplantationsgesetz geregelt, woraus sich die Bildung interdisziplinärer Einrichtungen zur Übertragung von Spenderorganen ableitet. Solche Transplantationszentren übernehmen in Ergänzung zu den jeweiligen spezialisierten klinischen Fachgebieten (z.B. Viszeralchirurgie, Herzchirurgie, Nephrologie) insbesondere Aufgaben im Bereich der Indikationsstellung, Vorbereitung, Dokumentation und Nachsorge bei Organtransplantationen und Lebend-Organspenden, sowie beim Wartelistenmanagement und bei erforderlicher psychischer Betreuung der Patienten im Krankenhaus vor und nach der Organübertragung. Sofern Dokumente in solchen oder vergleichbaren Transplantationsmedizinischen Einrichtungen erstellt werden und nicht einer spezifischeren, an Transplantationen beteiligten Fachrichtung zuzuordnen sind, können sie mit diesem Konzept codiert werden. Dokumente aus der Transplantationsimmunologie sollen mit dem Konzept TRAN (Transfusionsmedizin) codiert werden."/>
                 </extension>
                 <code value="TRPL"/>
-                <display value="Transplantantionsmedizin"/>
+                <display value="Transplantationsmedizin"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">

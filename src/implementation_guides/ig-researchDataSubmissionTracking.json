@@ -3,7 +3,7 @@
 	"description": "Detailled record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes.",
 	"guidelineDefinition": {
 		"url": "https://fachportal.gematik.de/",
-		"version": "1.0.0"
+		"version": "1.0.1"
 	},
 	"folderCardinality": {
 		"min": "1",
@@ -21,7 +21,7 @@
 			"desc": [
 				{
 					"language": "de-DE",
-					"#text": "Gesundheitsdaten, die durch den Versicherten zur Verfügung gestellt werden "
+					"#text": "Gesundheitsdaten, die durch den Versicherten zur Verfügung gestellt werden"
 				}
 			]
 		}
@@ -81,7 +81,13 @@
 					"value": [
 						"urn:uuid:c7999edc-0609-44bc-a6f3-cec7ddfa2e3b"
 					]
-				}
+				},
+				{
+                    "name": "documentEntry.referenceIdList",
+                    "value": [
+                        "urn:uuid:c7999edc-0609-44bc-a6f3-cec7ddfa2e3b^^^&1.2.276.0.76.3.1.91&ISO^urn:ihe:iti:xds:2013:uniqueId"
+                    ]
+                }				
 			],
 			"documentCardinality": {
 				"min": "0",

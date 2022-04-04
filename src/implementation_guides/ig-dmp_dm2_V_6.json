@@ -1,0 +1,92 @@
+{
+	"name": "eDMP-Datensatz Diabetes mellitus Typ 2",
+	"description": "Indikationsspezifischer Datensatz für das strukturierte Behandlungsprogramm Diabetes mellitus Typ 2",
+	"guidelineDefinition": {
+		"url": "https://update.kbv.de/ita-update/Medizinische-Dokumentationen/Diabetes_m1_m2/"
+	},
+	"folderCardinality": {
+		"min": "1",
+		"max": "1",
+		"unique": true
+	},
+	"validFromDate": "2023-01-01",
+	"type": "atomic",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "other",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "in andere Kategorien nicht einzuordnende Dokumente",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten"
+				}
+			]
+		}
+	},
+	"documentCategory": "other",
+	"elements": [
+		{
+			"name": "eDMP record for type 2 diabetes",
+			"description": "This document is an HL7 CDA-based document.",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "BEF",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Befundbericht",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Befundberichte von bildgebenden Modalitäten (CT, MRT), weiterer Funktionsdiagnostik (EEG, EKG), sowie manuellen Untersuchungen; solange es keine spezifischeren classCodes gibt (z.B LAB 'Laborergebnisse'). Eine weitere Spezialisierung der Befundberichte (z.B. Histopathologie) kann über den typeCode realisiert werden, insofern sie nicht über den practiceSettingCode abgebildet werden."
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "BERI",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Arztberichte",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Ärztliche Zusammenfassungen und Verlaufsbeurteilungen von Behandlungsepisoden, Epikrisen und Abschlussberichte zu stationären oder ambulanten Behandlungsfällen. Beispiele: Arztbrief, Entlassungsbericht, Ärztliche Stellungnahme, Durchgangsarztbericht / BG-Bericht, Rehabericht, Verlegungsbericht, vorläufiger Arztbericht, ärztlicher Verlaufsbericht, Ambulanzbericht"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:DMP-DM2:v6",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "eDMP Diabetes mellitus Typ 2 (gematik)"
+					}
+				},
+				{
+					"name": "documentEntry.eventCodeList",
+					"value": {
+						"code": "01",
+						"codeSystem": "1.2.276.0.76.5.223",
+						"displayName": "DM2"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/hl7-v3"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n",
+				"unique": false
+			}
+		}
+	]
+}

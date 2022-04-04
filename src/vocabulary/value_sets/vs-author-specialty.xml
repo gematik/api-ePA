@@ -1576,6 +1576,9 @@
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="obsolet"/>
                 </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>                
                 <code value="5"/>
                 <display value="Tiermedizinischer Fachangestellter"/>
             </concept>

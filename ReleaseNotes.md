@@ -1,3 +1,28 @@
+# Release 2.5.0
+- added de-identification property for documents in implementation-guideline-scheme (ig-schema-definition.json)  
+
+
+- introduced referencedIdList meta data for research data tracking list  (ig-researchDataSubmissionTracking.json)  
+
+
+- several updates to value sets (vocabulary)  
+
+
+- new code system DMP (KBV_CS_SFHIR_KBV_DMP_V1.05.xml  
+
+
+- changed tracking of research data (removed submissionDocumentIdSet) (scheme researchDataSubmissionTrackingLIst.json)  
+
+
+- corrected regex for UserAgents (AuthorizationService.xsd)  
+
+
+- added several ig for DMP (implementation_guides)  
+
+
+- corrected policy (C_11003) (hcp-policy-definition.xml)  
+
+
 # Release 2.5.0-Pre1
 - correction regex for UserAgents (missing escape character for '.') (AuthorizationService.xsd)  
 

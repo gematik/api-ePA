@@ -305,6 +305,16 @@
                 <display value="PDF/UA"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Dieser Code wurde verwendet, wenn das Dokumentenformat ausreichend durch den MIME Type beschrieben war. Dafür gibt es nun den internationalen Code 'urn:ihe:iti:xds:2017:mimeTypeSufficient' mit Code System 1.3.6.1.4.1.19376.1.2.3. Daher gilt dieser Code als obsolet (engl. 'deprecated') und sollte nicht mehr für neue Dokumente verwendet werden."/>
+                </extension>
+                <code value="urn:ihe-d:mime"/>
+                <display value="durch MIME Type beschrieben"/>
+            </concept>            
+            <concept>
                 <code value="urn:gematik:ig:Arztbrief:r3.1"/>
                 <display value="Arztbrief § 291f SGB V"/>
             </concept>
