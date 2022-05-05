@@ -76,8 +76,7 @@
 			],
 			"documentCardinality": {
 				"min": "0",
-				"max": "n",
-				"unique": false
+				"max": "n"
 			}
 		}
 	]

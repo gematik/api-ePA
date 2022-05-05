@@ -3,7 +3,7 @@
 	"description": "DiGA Toolkit defined as a medical information object (MIO) by KBV.",
 	"guidelineDefinition": {
 		"url": "https://mio.kbv.de/display/DIGA1X0X0",
-		"version": "1.0.0"
+		"version": "1.0"
 	},
 	"folderCardinality": {
 		"min": "0",
@@ -29,7 +29,7 @@
 	"documentCategory": "diga",
 	"elements": [
 		{
-			"version": "1.0.0",
+			"version": "1.0",
 			"name": "KBV_PR_MIO_DIGA_Bundle",
 			"description": "This document is of FHIR resource type KBV_PR_MIO_DIGA_Bundle.",
 			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Bundle",
@@ -65,8 +65,7 @@
 			],
 			"documentCardinality": {
 				"min": "0",
-				"max": "n",
-				"unique": false
+				"max": "n"
 			}
 		}
 	]

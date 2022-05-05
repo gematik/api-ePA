@@ -30,7 +30,7 @@
 	"elements": [
 		{
 			"version": "1.0.0",
-			"name": " Aufzeichnungsliste Datenfreigabe Forschung",
+			"name": "Aufzeichnungsliste Datenfreigabe Forschung",
 			"description": "This document is a detailed record of all pseudonymous documents submiited to a research data center for medical research data analysis",
 			"canonicalUrl": "https://github.com/gematik/api-epa/src/sharedResearchData/researchDataSubmissionTrackingList.json",
 			"metadata": [
@@ -91,8 +91,7 @@
 			],
 			"documentCardinality": {
 				"min": "0",
-				"max": "1",
-				"unique": true
+				"max": "1"
 			}
 		}
 	]

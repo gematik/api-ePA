@@ -374,5 +374,59 @@
                 <display value="Workflow abgeschlossen"/>
             </concept>
         </include>
+		<include>
+			<extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+			      <valueString value="KBV_CS_SFHIR_KBV_DMP"/>
+			</extension>
+			<system value="urn:oid:1.2.276.0.76.5.223"/>
+			<concept>
+				<code value="00"/>
+				<display value="nicht gesetzt"/>
+			</concept>
+			<concept>
+				<code value="01"/>
+				<display value="DM2"/>
+			</concept>
+			<concept>
+				<code value="02"/>
+				<display value="BRK"/>
+			</concept>
+			<concept>
+				<code value="03"/>
+				<display value="KHK"/>
+			</concept>
+			<concept>
+				<code value="04"/>
+				<display value="DM1"/>
+			</concept>
+			<concept>
+				<code value="05"/>
+				<display value="Asthma"/>
+			</concept>
+			<concept>
+				<code value="06"/>
+				<display value="COPD"/>
+			</concept>
+			<concept>
+				<code value="07"/>
+				<display value="HI"/>
+			</concept>
+			<concept>
+				<code value="08"/>
+				<display value="Depression"/>
+			</concept>
+			<concept>
+				<code value="09"/>
+				<display value="Rueckenschmerz"/>
+			</concept>
+			<concept>
+				<code value="10"/>
+				<display value="Rheuma"/>
+			</concept>
+			<concept>
+				<code value="11"/>
+				<display value="Osteoporose"/>
+			</concept>
+		</include>        
     </compose>
 </ValueSet>

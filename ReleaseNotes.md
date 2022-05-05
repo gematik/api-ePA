@@ -1,3 +1,31 @@
+# Release 2.5.0-1
+- clarification an dexplanation of folder visibility (berechtigungskonzept.adoc)  
+
+
+- reintroduced outdated ig-prescription for reference  (ig-prescription.json)  
+
+
+- several updates to value sets, including new codes for DMP, Telemonitoring and Referral (C_11058, C_11082) (vocabulary)  
+
+
+- removed attribute 'unique' in all existing implementaion-guides (implementation_guides)  
+
+
+- new ig for referral (care) and telemonitoring (implementation_guides)  
+
+
+- moved sample for tracking list (example_TrackingList.json)  
+
+
+- reduced DMP format codes to major/minor version only (vs-format-code.xml))  
+
+
+- removed leading space in name elements of ig (ANFEPA_1944))(implementation_guides)  
+
+
+- new example message for getAuthorizationState (samplesPA 2 Beispielnachrichten PS - Konnektor)  
+
+
 # Release 2.5.0
 - added de-identification property for documents in implementation-guideline-scheme (ig-schema-definition.json)  
 
