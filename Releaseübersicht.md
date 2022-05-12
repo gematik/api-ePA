@@ -1,10 +1,11 @@
 ## Release-Übersicht EPA-2.5
 
-Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifikationen sowie dieses Repository.<br/>
+Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifikationen sowie dieses Branches.<br/>
 
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen |
 |---|---|---|---|
+|2.5.0-2|2022-05-12|redaktionelle Korrekturen an ImplementeationGuides und ValueSets </br> redaktionelle Korrektur Berechtigungskonzept||
 |2.5.0-1|2022-05-05|neue ImplementationGuides und Codes in ValueSets für DMP, Telemedizinische Monitoring und Pflegeüberleitungsbogen </br> Präzisiertes Berechtigungskonzept zur Sichtbarkeit von Ordnern </br> Diverse Korrekturen||
 |2.5.0|2022-04-04|alle Dokumente zu ePA Release 2.5.0 - verfügar unter fachportal.gematik.de||initialer Release</br>(inklusive relevanter Änderungen aus Release ePA 2.1.1)|
 |2.5.0-Pre1|2022-03-21|Bugfix ||

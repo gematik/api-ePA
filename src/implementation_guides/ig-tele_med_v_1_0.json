@@ -17,11 +17,11 @@
 		"value": {
 			"code": "other",
 			"codeSystem": "1.2.276.0.76.5.512",
-			"displayName": "in andere Kategorien nicht einzuordnende Dokumente",
+			"displayName": "in andere Kategorien nicht einzuordnende Dokumente, eDMPs sowie Telemedizinisches Monitoring",
 			"desc": [
 				{
 					"language": "de-DE",
-					"#text": "sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten"
+					"#text": "sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten, insbesondere Daten, die sich aus der Teilnahme des Versicherten an strukturierten Behandlungsprogrammen bei chronischen Krankheiten gemäß § 137f ergeben"
 				}
 			]
 		}

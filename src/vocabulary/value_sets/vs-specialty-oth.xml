@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.467"/>
     </identifier>
-    <version value="1.1.0"/>
+    <version value="1.1.1"/>
     <name value="value-set-of-specialty-oth-codes"/>
     <title value="Value Set of Specialty OTH Codes"/>
     <status value="active"/>
@@ -36,11 +36,11 @@
                     <valueString value="Daten des elektronischen Medikationsplans nach § 334 Absatz 1 Satz 2 Nummer 4"/>
                 </extension>
                 <code value="emp"/>
-                <display value="Elektronischer  Medikationsplan"/>
+                <display value="Elektronischer Medikationsplan"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Daten der elektronischen Notfalldaten nach § 334 Absatz 1 Satz 2 Nummer 5"/>
+                    <valueString value="Daten der elektronischen Notfalldaten nach § 334 Absatz 1 Satz 2 Nummer 5 und 7"/>
                 </extension>
                 <code value="nfd"/>
                 <display value="Notfalldaten"/>
@@ -87,7 +87,7 @@
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="esundheitsdaten, die durch den Versicherten zur Verfügung gestellt werden"/>
+                    <valueString value="Gesundheitsdaten, die durch den Versicherten zur Verfügung gestellt werden"/>
                 </extension>
                 <code value="patientdoc"/>
                 <display value="vom Versicherten eingestellte Dokumente"/>
@@ -95,7 +95,7 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString
-                            value="Dokumente, die gemäß Paragraph §41 Absatz 2 Satz 7 PDSG, bzw.  Paragraph 68 Sozialgesetzbuch (SGB) V) importiert worden sind"/>
+                            value="Dokumente, die gemäß Paragraph § 41 Absatz 2 Satz 7 PDSG, bzw. Paragraph 68 Sozialgesetzbuch (SGB) V) importiert worden sind"/>
                 </extension>
                 <code value="ega"/>
                 <display value="Elektronische Gesundheitsakte (eGA)"/>
@@ -111,10 +111,10 @@
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString
-                            value="Daten gemäß der nach § 92 Absatz 1 Satz 2 Nummer 4 in Verbindung mit den §§ 24c bis 24f beschlossenen Richtlinie des Gemeinsamen Bundesausschusses über die ärztliche Betreuung während der Schwangerschaft und nach der Entbindung (elektronischer Mutterpass) sowie Daten, die sich aus der Versorgung der Versicherten mit Hebammenhilfe ergeben."/>
+                            value="Daten des Versicherten aus digitalen Gesundheitsanwendungen des Versicherten nach § 33a,"/>
                 </extension>
                 <code value="diga"/>
-                <display value="DiGA Toolkit"/>
+                <display value="DiGA"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
@@ -126,10 +126,10 @@
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString value="Daten elektronischer Verordnungen nach § 360 Absatz 1"/>
+                    <valueString value="Verordnungsdaten und Dispensierinformationen elektronischer Verordnungen nach § 360"/>
                 </extension>
                 <code value="prescription"/>
-                <display value="Verordnungen"/>
+                <display value="Verordnungsdaten und Dispensierinformationen"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
@@ -137,15 +137,15 @@
                             value="nach § 73 Absatz 2 Satz 1 Nummer 9 ausgestellte Bescheinigung über eine Arbeitsunfähigkeit"/>
                 </extension>
                 <code value="eau"/>
-                <display value="Elektronische Arbeitsunfähigkeits-bescheinigungen"/>
+                <display value="Elektronische Arbeitsunfähigkeitsbescheinigungen"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString
-                            value="sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten"/>
+                            value="sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten, insbesondere Daten, die sich aus der Teilnahme des Versicherten an strukturierten Behandlungsprogrammen bei chronischen Krankheiten gemäß § 137f ergeben"/>
                 </extension>
                 <code value="other"/>
-                <display value="in andere Kategorien nicht einzuordnende Dokumente"/>
+                <display value="in andere Kategorien nicht einzuordnende Dokumente, eDMPs sowie Telemedizinisches Monitoring"/>
             </concept>
         </include>
     </compose>

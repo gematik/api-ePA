@@ -16,7 +16,7 @@
 		"value": {
 			"code": "emp",
 			"codeSystem": "1.2.276.0.76.5.512",
-			"displayName": "Elektronischer  Medikationsplan",
+			"displayName": "Elektronischer Medikationsplan",
 			"desc": [
 				{
 					"language": "de-DE",

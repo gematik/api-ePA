@@ -17,11 +17,11 @@
 		"value": {
 			"code": "prescription",
 			"codeSystem": "1.2.276.0.76.5.512",
-			"displayName": "Verordnungen",
+			"displayName": "Verordnungsdaten und Dispensierinformationen",
 			"desc": [
 				{
 					"language": "de-DE",
-					"#text": "Daten der elektronischen Verordnung)"
+					"#text": "Verordnungsdaten und Dispensierinformationen elektronischer Verordnungen nach § 360"
 				}
 			]
 		}

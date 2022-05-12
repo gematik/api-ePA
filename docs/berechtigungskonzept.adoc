@@ -85,7 +85,7 @@ Neben Dokumenten dürfen auch Ordner auf einer Deny- oder Allowlist aufgelistet 
 Einige Dokumente sind durch eine Strukturdefinition mit anderen Dokumenten verbunden.
 
 * Sammlungen des Typs "mixed" enthalten potentiell mehrere Dokumente, die von unterschiedlichem Typ sein können, d.h. über unterschiedliche DocumentEntry.formatCodes verfügen können. In der Summe haben die Dokumente einen fachlichen Zusammenhang. Die Definition einer spezifischen Sammlung gibt jeweils die darin erlaubten Dokumententypen vor. Ein Beispiel für eine derartige Sammlung ist das Kinderuntersuchungsheft. 
-* Sammlungen des Typs "uniform" enthalten potentiell mehrere Dokumente, die jedoch im Gegensatz zu Sammlungen des Typs "mixed" immer aus Dokumenten desselben Typs bestehen. Ein Beispiel ist das Zahnbonusheft oder der Impfpass.
+* Sammlungen des Typs "uniform" enthalten potentiell mehrere Dokumente, die jedoch im Gegensatz zu Sammlungen des Typs "mixed" immer aus Dokumenten desselben Typs bestehen. Beispiele sind das Zahnbonusheft oder der Impfpass.
 * Sammlungen des Typs "atomic" sind strukturierte Dokumente, die für sich stehen können und nicht zusammen mit anderen Dokumenten interpretiert und verwaltet werden. Es handelt sich sozusagen um den "Default"-Typ, für den keine besonderen Anforderungen (über die allgemeinen Vorgaben für strukturierte Dokumente hinaus) gelten.
 
 Ein einzelnes Vorkommen einer Sammlung (z.B. ein Kinderuntersuchungsheft, ein Impfpass, ein Arztbrief etc.) wird auch als _Sammlungsinstanz_ bezeichnet. Sammlungen als auch _Sammlungsinstanzen_ können explizit berechtigt werden.
@@ -133,6 +133,11 @@ In diesem Fall findet der LE durch ein FindFolder die Folder.entryUUID (A_20533)
 === Darf der Ordner sichtbar sein, obwohl er auf einer Denylist steht, und kein Dokument dieses Ordners auf der Allowlist steht (und die Vertraulichkeitsstufe passt)? 
 
 Es gibt kein Leserecht auf den Ordner, da dieser auf der Denylist steht. Kein Dokument dieses Ordners steht auf der Allowlist. In diesem Fall findet der LE durch ein FindFolder die Folder.entryUUID nicht. Der Ordner ist nicht sichtbar.
+
+=== Darf ein Ordner der Sammlungstypen „uniform“ und „mixed“ sichtbar sein, obwohl die MIOs darin nicht die passende Vertraulichkeitsstufe haben (z.B. MIO "vertraulich", Freigabe für "normal")?
+
+Eine Freigabe der Dokumentenkategorie für die Sammlungstypen „uniform“ und „mixed“ besteht, aber die darin enthaltenen Sammlungen haben nicht die passende Vertraulichkeitsstufe. Obwohl eine Kategorienfreigabe  besteht oder ein Ordner auf der Allowlist steht, sollen diese Ordner nicht sichtbar sein, damit LE nicht MIOs einstellt, da er glaubt, diese wären noch nicht vorhanden. Eine Ausnahme bildet hierbei der Ordner mothersrecord, weil neben dem Mutterpass auch Hebammendokumente enthalten sein können. Hier ist der Ordner sichtbar, obwohl der Mutterpass aufgrund der unzureichenden Vertraulichkeitsstufe für den LE nicht sichtbar ist. 
+
 
 === Wie sieht eine Suchstrategie für das PS aus, so dass dieses erkennt, auf welche Kategorien es berechtigt ist? 
 

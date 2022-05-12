@@ -1,3 +1,13 @@
+# Release 2.5.0-2
+- minor correction fpr mixed folders (berechtigungskonzept.adoc)  
+
+
+- correction of "display" and extension "valueString" fro some concepts according to SGB V § 341 vs-speciality-oth.xml)  
+
+
+- correction of ig-files, considering the changes in vs-speciality-oth (implementation_guides)  
+
+
 # Release 2.5.0-1
 - clarification an dexplanation of folder visibility (berechtigungskonzept.adoc)  
 
