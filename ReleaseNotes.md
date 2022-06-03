@@ -1,3 +1,8 @@
+# Release 2.5.0-3
+- corrections in scheme researchDataSubmissionTracking.json and related example document
+
+- guideline_researchDataSubmissionTracking.adoc moved to 'docs' folder
+
 # Release 2.5.0-2
 - minor correction for mixed folders (berechtigungskonzept.adoc)  
 

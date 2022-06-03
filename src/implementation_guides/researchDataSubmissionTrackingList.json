@@ -66,6 +66,7 @@
 				"submissions": {
 					"description": "Each entry in submissions represents a delivery or a withdrawal of a MIO for research purposes. ",
 					"type": "array",
+					"minItems": 1,
 					"items": {
 						"description": "submissions of a MIO, providing delivery state and sender",
 						"$ref": "#/definitions/SubmissionType"
@@ -73,7 +74,10 @@
 				}
 			},
 			"required": [
-				"documentTitle"
+				"documentTitle",
+				"documentUniqueId",
+				"pseudonymousDocumentId",
+				"submissions"
 			],
 			"additionalProperties": false
 		},
@@ -82,14 +86,13 @@
 			"properties": {
 				"submissionState": {
 					"description": "state of a submission",
-					"type": "string",
-					"examples": [
+					"enum": [
 						"withdrawn",
 						"delivered"
 					]
 				},
 				"submissionDateTime": {
-					"description": "date and time of last data submission",
+					"description": "date and time of last data submission. This timestamp is always UTC, formatted as YYYY-MM-DDThh:mm:ssZ",
 					"type": "string",
 					"format": "date-time"
 				},
@@ -101,30 +104,18 @@
 					"description": "Human readable name of sender (patient or representative)",
 					"type": "string",
 					"examples": [
-						"Versicherter",
-						"Vertreter"
+						"Erika Musterfrau",
+						"Max Mustermann"
 					]
 				}
 			},
+			"required": [
+				"submissionState",
+				"submissionDateTime",
+				"insurantId",
+				"insurantName"
+			],
 			"additionalProperties": false
-		},
-		"SubmissionInfoType": {
-			"type": "object",
-			"additionalProperties": false
-		},
-		"SubmissionDocumentIdSetType": {
-			"description": "This list shall have an entry for each document delivered to the research data center, starting from first use or since last withdrawal. Each new submssion of type delivery shall only add new documents, never remove any. Finally this list contains identifiers of any document delivered which is not yet withdrawn. In case of a withdrawal (always complete mio with all its history can be withdrawn) this list shall be cleared",
-			"type": "array",
-			"items": {
-				"type": "object",
-				"properties": {
-					"uniqueId": {
-						"description": "XDS document.uniqueId as assigned by health record repository",
-						"type": "string"
-					}
-				},
-				"additionalProperties": false
-			}
 		}
 	},
 	"version": "1.0.1",
@@ -132,10 +123,66 @@
 		{
 			"insurantConsent": {
 				"consentState": "given",
-				"consentValidFrom": "2019-08-24T14:15:22Z"
+				"consentValidFrom": "2022-02-01T00:00:00Z"
 			},
 			"dataSubmissionTracking": [
-				null
+				{
+					"documentTitle": "Impfpass",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-03-02T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						},
+						{
+							"submissionState": "withdrawn",
+							"submissionDateTime": "2022-02-20T20:00:00Z",
+							"insurantId": "kvnr-representative",
+							"insurantName": "Max Mustermann"
+						},
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				},
+				{
+					"documentTitle": "Zahnbonusheft",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				},
+				{
+					"documentTitle": "Mutterpass",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "withdrawn",
+							"submissionDateTime": "2022-02-10T21:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						},
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				}
 			]
 		}
 	]
