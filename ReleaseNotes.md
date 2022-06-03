@@ -1,15 +1,15 @@
 # Release 2.5.0-2
-- minor correction fpr mixed folders (berechtigungskonzept.adoc)  
+- minor correction for mixed folders (berechtigungskonzept.adoc)  
 
 
-- correction of "display" and extension "valueString" fro some concepts according to SGB V § 341 vs-speciality-oth.xml)  
+- correction of "display" and extension "valueString" for some concepts according to SGB V § 341 vs-speciality-oth.xml)  
 
 
 - correction of ig-files, considering the changes in vs-speciality-oth (implementation_guides)  
 
 
 # Release 2.5.0-1
-- clarification an dexplanation of folder visibility (berechtigungskonzept.adoc)  
+- clarification and explanation of folder visibility (berechtigungskonzept.adoc)  
 
 
 - reintroduced outdated ig-prescription for reference  (ig-prescription.json)  
@@ -33,7 +33,7 @@
 - removed leading space in name elements of ig (ANFEPA_1944))(implementation_guides)  
 
 
-- new example message for getAuthorizationState (samplesPA 2 Beispielnachrichten PS - Konnektor)  
+- new example message for getAuthorizationState (samples: ePA 2 Beispielnachrichten PS - Konnektor)  
 
 
 # Release 2.5.0
