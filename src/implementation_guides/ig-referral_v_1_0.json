@@ -26,7 +26,6 @@
 			]
 		}
 	},
-	"documentCategory": "eab",
 	"elements": [
 		{
 			"version": "1.0",
@@ -51,13 +50,13 @@
 				{
 					"name": "documentEntry.typeCode",
 					"value": {
-						"code": "BERI",
+						"code": "PFLG",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
-						"displayName": "Arztberichte",
+						"displayName": "Pflegedokumentation",
 						"desc": [
 							{
 								"language": "de-DE",
-								"#text": "Ärztliche Zusammenfassungen und Verlaufsbeurteilungen von Behandlungsepisoden, Epikrisen und Abschlussberichte zu stationären oder ambulanten Behandlungsfällen. Beispiele: Arztbrief, Entlassungsbericht, Ärztliche Stellungnahme, Durchgangsarztbericht / BG-Bericht, Rehabericht, Verlegungsbericht, vorläufiger Arztbericht, ärztlicher Verlaufsbericht, Ambulanzbericht"
+								"#text": "Alle Arten von Dokumenten, welche üblicherweise vom Pflegepersonal erstellt oder ausgefüllt werden, sofern sie nicht durch spezifischere Konzepte abgebildet werden (z.B. Wunddokumentation, Ergebnisse Funktionsdiagnostik, Intensivmedizinische Dokumente). Anforderungen von Therapien werden durch Therapiedokumentation abgebildet. Beispiele: Pflegebericht, Pflegekurve, Pflegeplan, Pflegeüberleitungsbogen, Sturzprotokoll, Überwachungsprotokoll, Pflegeanamnesebogen, Ernährungsplan, Dekubitusrisikoeinschätzung, Barthel-Index, Bradenskala, Diabetikerkurve"
 							}
 						]
 					}

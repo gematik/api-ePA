@@ -3,8 +3,14 @@
 	"$id": "http://gematik.de/forschungsdatenliste.schema.v1.0.1.json",
 	"title": "Research Data Submission Tracking List",
 	"description": "Detailed record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes. ",
+	"version": "1.0.2",
 	"type": "object",
 	"properties": {
+		"schema-version":{
+			"description": "actual schema version for a researchDataTrackingList document instance.",
+			"type":"string",
+			"pattern": "\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}"
+		},
 		"insurantConsent": {
 			"description": "Information about user's consent referring $363 SGB V. A given consent enables the provision of speudonymous data for research purposes",
 			"type": "object",
@@ -118,9 +124,9 @@
 			"additionalProperties": false
 		}
 	},
-	"version": "1.0.1",
 	"examples": [
 		{
+			"schema-version": "1.0.2",
 			"insurantConsent": {
 				"consentState": "given",
 				"consentValidFrom": "2022-02-01T00:00:00Z"

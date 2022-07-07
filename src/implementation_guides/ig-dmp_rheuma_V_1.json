@@ -1,8 +1,8 @@
 {
-	"name": "eDMP-Datensatz Diabetes mellitus Typ 2",
-	"description": "Indikationsspezifischer Datensatz für das strukturierte Behandlungsprogramm Diabetes mellitus Typ 2",
+	"name": "eDMP-Datensatz Rheumatoide Arthritis",
+	"description": "Indikationsspezifischer Datensatz für das strukturierte Behandlungsprogramm Rheumatoide Arthritis",
 	"guidelineDefinition": {
-		"url": "https://update.kbv.de/ita-update/Medizinische-Dokumentationen/Diabetes_m1_m2/"
+		"url": "https://update.kbv.de/ita-update/Medizinische-Dokumentationen/Rheuma/"
 	},
 	"folderCardinality": {
 		"min": "1",
@@ -27,7 +27,7 @@
 	},
 	"elements": [
 		{
-			"name": "eDMP record for type 2 diabetes",
+			"name": "eDMP record for rheumatoid arthritis",
 			"description": "This document is an HL7 CDA-based document.",
 			"metadata": [
 				{
@@ -61,17 +61,17 @@
 				{
 					"name": "documentEntry.formatCode",
 					"value": {
-						"code": "urn:gematik:ig:DMP-DM2:v6",
+						"code": "urn:gematik:ig:DMP-Rheuma:v1",
 						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
-						"displayName": "eDMP Diabetes mellitus Typ 2 (gematik)"
+						"displayName": "eDMP Rheumatoide Arthritis (gematik)"
 					}
 				},
 				{
 					"name": "documentEntry.eventCodeList",
 					"value": {
-						"code": "01",
+						"code": "10",
 						"codeSystem": "1.2.276.0.76.5.223",
-						"displayName": "DM2"
+						"displayName": "Rheuma"
 					}
 				},
 				{

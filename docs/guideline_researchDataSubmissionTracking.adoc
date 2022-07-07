@@ -69,7 +69,8 @@ Zeigt die jüngste submission den Status 'withdrawn' oder existiert kein submiss
 === Erzeugung pseudonymousDocumentID
 Dieser Identifier wird für die erste Freigabe eines Dokument erzeugt und wird bei allen aufeinanderfolgenden, weiteren Freigaben verwendet. Nach einem Widerruf des Dokuments soll auch dieser Identifier gelöscht werden, bzw. bei einer erneuten Freigabe muss dann ein neuer Identifier erzeugt werden.
 
-
-
+=== Kein Löschen der Aufzeichnungsliste
+Die Aufzeichnungsliste soll nicht aus der Akte gelöscht werden. Dieses ist implizit dadurch gegeben, dass ein FdV diese Funktion nicht umsetzt. Einem Nutzer ist die Möglichkeit des Löschens dieses Dokument ('reguläres' Löschen von Dokumenten durch einen Nutzer) nicht gegeben, da Inhalte des gesonderten Ordners im Aktensystem, in welchem auch die Aufzeichnungsliste abgelegt ist, für einen Nutzer nicht sichtbar sind.
+Nach eigenem Ermessen können Aktensysteme darüber hinaus das Löschen der Aufzeichnungsliste technisch verhindern.
 
 

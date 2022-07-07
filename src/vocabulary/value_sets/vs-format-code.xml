@@ -14,7 +14,7 @@
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:1.2.276.0.76.11.461"/>
 	</identifier>
-	<version value="1.1.0"/>
+	<version value="1.2.0"/>
 	<name value="Value Set of Format Codes"/>
 	<title value="Value Set of Format Codes"/>
 	<status value="active"/>
@@ -485,7 +485,11 @@
 			<concept>
 				<code value="urn:gematik:ig:Pflegeueberleitungsbogen:v1.0"/>
 				<display value="Pflegeüberleitungsbogen (gematik)"/>
-			</concept>			
+			</concept>	
+			<concept>
+				<code value="urn:gematik:ig:DMP-Rheuma:v1"/>
+				<display value="eDMP Rheumatoide Arthritis (gematik)"/>
+			</concept>
 		</include>
 		<include>
 			<extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">

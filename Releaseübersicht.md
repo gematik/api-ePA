@@ -5,6 +5,7 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen |
 |---|---|---|---|
+|2.5.1-CC|2022-07-07|alle Artefakte zu ePA Release 2.5.1 - (Dokumente verfügar unter fachportal.gematik.de)|||
 |2.5.0-3|2022-06-03|Präzisierung des json-Schemas für die Aufzeichnungsliste freigegebener Dokumente für Forschungszwecke||
 |2.5.0-2|2022-05-12|redaktionelle Korrekturen an ImplementeationGuides und ValueSets </br> redaktionelle Korrektur Berechtigungskonzept||
 |2.5.0-1|2022-05-05|neue ImplementationGuides und Codes in ValueSets für DMP, Telemedizinische Monitoring und Pflegeüberleitungsbogen </br> Präzisiertes Berechtigungskonzept zur Sichtbarkeit von Ordnern </br> Diverse Korrekturen||

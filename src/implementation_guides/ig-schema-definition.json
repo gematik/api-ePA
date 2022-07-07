@@ -1,6 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$ref": "#/definitions/StructureDefinition",
+	"version":"1.1.0",
 	"definitions": {
 		"CardinalityDefinition": {
 			"description": "Constraints on the amount of the XDS folder or document in order to support that structured document in the electronic health record system.",
@@ -37,51 +38,51 @@
 							"properties": {
 								"code": {
 									"type": "string"
-							},
+								},
 								"codeSystem": {
 									"type": "string"
-							},
+								},
 								"displayName": {
 									"type": "string"
-							},
-							"desc": {
-								"$ref": "#/definitions/DescriptionDefinition"
-								}							
+								},
+								"desc": {
+									"$ref": "#/definitions/DescriptionDefinition"
+								}
 							},
 							"required": [
-							"code",
-							"codeSystem",
-							"displayName"
+								"code",
+								"codeSystem",
+								"displayName"
 							],
 							"additionalProperties": false
 						},
 						{
 							"title": "value",
 							"type": "array",
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "code": {
-                                        "type": "string"
-                                    },
-                                    "codeSystem": {
-                                        "type": "string"
-                                    },
-                                    "displayName": {
-                                        "type": "string"
-                                    },
-                                    "desc": {
-                                        "$ref": "#/definitions/DescriptionDefinition"
-                                    }							
-                                },
-                                "required": [
-                                 "code",
-                                 "codeSystem",
-                                 "displayName"
-                                ],
-                                "additionalProperties": false
-                            }
-                        },
+							"items": {
+								"type": "object",
+								"properties": {
+									"code": {
+										"type": "string"
+									},
+									"codeSystem": {
+										"type": "string"
+									},
+									"displayName": {
+										"type": "string"
+									},
+									"desc": {
+										"$ref": "#/definitions/DescriptionDefinition"
+									}
+								},
+								"required": [
+									"code",
+									"codeSystem",
+									"displayName"
+								],
+								"additionalProperties": false
+							}
+						},
 						{
 							"title": "value",
 							"type": "array",
@@ -97,27 +98,27 @@
 				"value"
 			],
 			"additionalProperties": false
-		},		
+		},
 		"DescriptionDefinition": {
-		  "type": "array",
-		  "title": "desc",
-		  "items": {
-			"type": "object",
-			"required": [
-			  "language",
-			  "#text"
-			],
-			"additionalProperties": false,
-			"properties": {
-			  "language": {
-				"type": "string"
-			  },
-			  "#text": {
-				"type": "string"
-			  }
+			"title": "desc",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"language": {
+						"type": "string"
+					},
+					"#text": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"language",
+					"#text"
+				],
+				"additionalProperties": false
 			}
-		  }
-		},					
+		},
 		"DocumentDefinition": {
 			"type": "object",
 			"properties": {
@@ -147,6 +148,10 @@
 				"documentCardinality": {
 					"$ref": "#/definitions/CardinalityDefinition"
 				},
+				"maxDocumentHistory": {
+					"description": "Defines the maximum amount of deprecated elements to be kept in a XDS RPLC chain (approved document does not count). Oldest entries may be deleted when this limit gets exeeded",
+					"type": "integer"
+				},
 				"deidentification": {
 					"description": "Provides all information to de-identify (anonymize) a FHIR document of the associated FHIR profile. All FHIR elements addressed by a FHIRPath in the list 'allowList' shall be applied in order to de-identify the document without changing its content.",
 					"type": "object",
@@ -154,8 +159,7 @@
 						"allowList": {
 							"$ref": "#/definitions/DeidentificationDefinition"
 						}
-					},
-					"additionalProperties": false
+					}
 				}
 			},
 			"required": [
@@ -214,10 +218,6 @@
 				"metadata": {
 					"$ref": "#/definitions/FolderDefinition"
 				},
-				"documentCategory": {
-					"description": "The access rights (CRUD) are expressed via a document category.",
-					"type": "string"
-				},
 				"elements": {
 					"type": "array",
 					"items": {
@@ -232,15 +232,31 @@
 				"validFromDate",
 				"type",
 				"elements"
-			],
-			"additionalProperties": false
+			]
 		},
 		"DeidentificationDefinition": {
-			"description": "a list of fhir path elements",
+			"description": "a list of fhir path elements arranged as list of paths for each possible profile",
 			"type": "array",
 			"items": {
-				"type": "string"
+				"type": "object",
+				"properties": {
+					"profile": {
+						"description": "Profile canocial-url",
+						"type": "string"
+					},
+					"fhir": {
+						"description": "Resource profile specific list of fhir path entries defining allowed elements for research data submission. An addressed element shall appear in a pseudonymized document with the same path and including all child elements.",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"required": [
+					"profile",
+					"fhir"
+				]
 			}
-		}		
+		}
 	}
 }

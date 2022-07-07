@@ -290,7 +290,7 @@
                     <valueBoolean value="true"/>
                 </extension>
                 <code value="341"/>
-                <display value="FA Kinder-und Jugendmedizin"/>
+                <display value="FA Kinder- und Jugendmedizin"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
@@ -1612,7 +1612,7 @@
             </concept>
             <concept>
                 <code value="13"/>
-                <display value="Betriebswirt  Sozialversicherung"/>
+                <display value="Betriebswirt Sozialversicherung"/>
             </concept>
             <concept>
                 <code value="14"/>
@@ -1827,6 +1827,13 @@
                 <display value="Tanz- und Bewegungstherapeut"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+					<valueBoolean value="true"/>
+				</extension>
+                <code value="67"/>
+                <display value="Tierheilpraktiker"/>
+            </concept>
+            <concept>
                 <code value="68"/>
                 <display value="Sozialtherapeut"/>
             </concept>
@@ -1836,7 +1843,7 @@
             </concept>
             <concept>
                 <code value="70"/>
-                <display value="Apotheker /Fachapotheker"/>
+                <display value="Apotheker / Fachapotheker"/>
             </concept>
             <concept>
                 <code value="71"/>

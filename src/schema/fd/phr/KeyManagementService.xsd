@@ -6,6 +6,10 @@
 <!-- 
 		Version History
 		
+			version: V1.3.1
+			===============
+			*** removed OKDate from GetAllDocumentKeys
+			
 			version: V1.3.0
 			===============
 			*** correction cardinality DocumentKeyList under GetAllDocumentKeysResponse and PutAllDocumentKeys
@@ -27,7 +31,7 @@
 
 	 	End of Version History
 -->
-<xs:schema xmlns="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:phrc="http://ws.gematik.de/fa/phr/v1.1" xmlns:gerror="http://ws.gematik.de/tel/error/v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.3.0">
+<xs:schema xmlns="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:phrc="http://ws.gematik.de/fa/phr/v1.1" xmlns:gerror="http://ws.gematik.de/tel/error/v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="http://ws.gematik.de/fd/phr/I_Key_Management/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.3.1">
 	<xs:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="../../ext/xenc-schema.xsd"/>
 	<xs:import namespace="http://ws.gematik.de/fa/phrext/v1.0" schemaLocation="../../ext/IHE/healthcare-security-audit.xsd"/>
 	<xs:import namespace="http://ws.gematik.de/tel/error/v2.0" schemaLocation="../../tel/error/TelematikError.xsd"/>
@@ -54,20 +58,8 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="GetAllDocumentKeys">
-		<xs:complexType>
-			<xs:sequence>
-				<!-- element ref="SAML:Assertion"/ -->
-				<!-- AuthenticationAssertion wird im SOAP-Header übertragen -->
-				<xs:element name="OkDate" type="xs:base64Binary">
-					<xs:annotation>
-						<xs:documentation>
-						Zeitpunkt, an dem die Komponente Autorisierung PutForReplacement() erfolgreich ausgeführt hat.
-						Signierte xsd:dateTime, base64-kodiert
-						</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
+		<!-- element ref="SAML:Assertion"/ -->
+		<!-- AuthenticationAssertion wird im SOAP-Header übertragen -->
 	</xs:element>
 	<xs:element name="GetAllDocumentKeysResponse">
 		<xs:complexType>

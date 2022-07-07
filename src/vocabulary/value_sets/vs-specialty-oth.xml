@@ -147,6 +147,14 @@
                 <code value="other"/>
                 <display value="in andere Kategorien nicht einzuordnende Dokumente, eDMPs sowie Telemedizinisches Monitoring"/>
             </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="technische Dokumente, die nicht für Leistungserbringer berechtigt und einem Versicherten oder Vertreter nicht direkt im ePA-FdV zur Anzeige gebracht werden"/>
+                </extension>
+                <code value="technical"/>
+                <display value="technische Dokumente"/>
+            </concept>
         </include>
     </compose>
 </ValueSet>

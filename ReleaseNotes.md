@@ -1,3 +1,38 @@
+# Release 2.5.1-CC
+- changed class- and type code in several IG
+
+- new implementation guide for 'Rheumatoide Arthritis'
+
+- update cs-kdl.xml to 2022 version
+
+- update vs-event-code.xml to latest kdl, ops and icd-10 code systems (C_11108)
+
+- new attribute 'maxDocumentHistory' in ig-schema-definition.json (C_11123)
+
+- Timestamp format in GetAuditEvents and GetSignedAuditEvents (C_11124)
+
+- changed displayName eventCodeList in ig-dmp_cr_V_1.json
+
+- metadata and valueset changes for researchDataTrackingList handling (C_11110)
+
+- new implementation_guide ig-medical-image.json (C_11065)
+
+- removed OKDate in finishKeyChangeResponse (C_11979)
+
+- new element 'schema-version' for researchDataSubmissionTrackingList (C_11131)
+
+- removed keyword format from tokenstructure in I_Authorization_Insurant.yaml (C_11136)
+
+- removed OKDate from PutForReplacement and GetAllDocumentKeys (C_11066)
+
+- maintenance: synchronization src/schema/ext with repo api-telematik/ext (import)
+
+- new structure for DeidentificationDefinition in schema for implementation_guides (C_11158)
+
+- removed documentCategory from all implementation-guides and ig-schema-definition (C_11109)
+
+- added obsolete code for "Tierheilpraktiker" to value set
+
 # Release 2.5.0-3
 - corrections in scheme researchDataSubmissionTracking.json and related example document
 
