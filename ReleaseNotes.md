@@ -1,3 +1,8 @@
+# Release UPD_20220711
+- new example DiGA-Policy in src/samples
+
+- removed doubled code 131001 FA Immunologie from vs-author-speciality.xml
+
 # Release 2.5.1-CC
 - changed class- and type code in several IG
 

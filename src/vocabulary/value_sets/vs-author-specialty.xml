@@ -1428,10 +1428,6 @@
                 <display value="FA Innere und Allgemeinmedizin (Hausarzt)"/>
             </concept>
             <concept>
-                <code value="131001"/>
-                <display value="FA Immunologie"/>
-            </concept>
-            <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Facharzt für Innere Medizin mit Schwerpunkt Geriatrie"/>
                 </extension>
