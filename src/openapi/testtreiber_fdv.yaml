@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.0.4
+  version: 2.5.0
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -11,7 +11,7 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0'
 servers:
-  - url: 'https://frontend.titus.ti-dienste.de'
+  - url: 'https://localhost:9107/'
 paths:
   /login:
     post:
@@ -552,6 +552,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResponseDTO'
+  /pseudomiseMio:
+    post:
+      summary: PseudoAnonymise MIO
+      operationId: pseudomise-mio
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PseudomiseResponseDTO'
+              examples: {}
+      description: Operation für die Prüfung der pseudonymisierung der Dokumente
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PseudomiseRequestDTO'
+        description: ''
 components:
   schemas:
     ResponseDTO:
@@ -1255,11 +1274,11 @@ components:
         Access Level für eine Kategorie auf "N" und "R" setzen:
           value:
             permissionAccessCategory:
-              - level: N
+              - level: 'N'
                 category: practitioner
               - level: R
                 category: practitioner
-              - level: N
+              - level: 'N'
                 category: patientdoc
               - level: R
                 category: patientdoc
@@ -1631,7 +1650,7 @@ components:
       x-examples:
         '''Normal'' access für practitioner Folder':
           value:
-            level: N
+            level: 'N'
             category: practitioner
         '''Restricted'' access für practitioner Folder':
           value:
@@ -1642,14 +1661,74 @@ components:
           type: string
           description: Vertraulikeitscode (N oder R)
           enum:
-            - N
+            - 'N'
             - R
             - V
-          example: N
-          default: N
+          example: 'N'
+          default: 'N'
         category:
           type: string
           description: 'Folder Code (z.B. practitioner, patientdoc)'
       required:
         - level
         - category
+    PseudomiseRequestDTO:
+      title: PseudomiseRequestDTO
+      x-stoplight:
+        id: 2lq5shkjrj9c9
+      type: object
+      description: Request Objekt für die Operation "pseudomiseMio"
+      x-examples:
+        Beispiel mit 1 Dokument:
+          documentSet:
+            - document: Base64-Encodierte-Inhalt-Hier
+        Beispiel mit mehreren Dokumenten:
+          documentSet:
+            - document: Base64-Encodierte-Inhalt-Hier
+            - document: Base64-Encodierte-Inhalt-Hier
+            - document: Base64-Encodierte-Inhalt-Hier
+            - document: Base64-Encodierte-Inhalt-Hier
+      x-tags:
+        - pseudomise
+      properties:
+        documentSet:
+          type: array
+          items:
+            $ref: '#/components/schemas/Document'
+      required:
+        - documentSet
+    PseudomiseResponseDTO:
+      title: PseudomiseResponseDTO
+      x-stoplight:
+        id: qcbl3p2dgdabv
+      type: object
+      description: Response Objekt für die Operation "pseudomiseMio"
+      x-examples:
+        Beispiel mit 1 Dokument:
+          success: 'true'
+          statusMessage: Operation completed successfully
+          documentSet:
+            - document: Base64-Ecodierte-Inhalt-Hier
+        Beispiel mit mehreren Dokumenten:
+          success: 'true'
+          statusMessage: Operation completed successfully
+          documentSet:
+            - document: Base64-Ecodierte-Inhalt-Hier
+            - document: Base64-Ecodierte-Inhalt-Hier
+            - document: Base64-Ecodierte-Inhalt-Hier
+      properties:
+        success:
+          type: string
+          enum:
+            - 'true'
+            - 'false'
+          example: 'true'
+        statusMessage:
+          type: string
+        documentSet:
+          type: array
+          items:
+            $ref: '#/components/schemas/Document'
+      required:
+        - success
+        - documentSet

@@ -1,3 +1,14 @@
+# Release 2.5.1
+- changed description regarding proffessionOID source in policies for diga, hcp and insurance
+
+- added new formatCode (dummy / proprietary) in ig for researchDataSubmissionTrackingList
+
+- clarification date-time format for consentValidFrom in researchDataSubmissionTrackingList
+
+- corrected KeyType (removed algorithm attribute) for ContextKey in KeyManagement.xsd
+
+- modified testtreiber_fdv.yaml for researchDataSubmission testing
+
 # Release UPD_20220711
 - new example DiGA-Policy in src/samples
 

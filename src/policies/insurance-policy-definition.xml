@@ -13,7 +13,7 @@ Comply with the following rules in order to instantiate a valid policy:
 
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.3"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:ktr:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
 
-	<Description/><!-- 1..1 string The name and professional OID of the insurance with the following pattern: <name>:<professionOID>. The name MUST be displayed at the insurant frontend. The certificate extension 'professionOID' might be taken from the signer certificate C.HCI.OSIG (cf. [gemSpec_PKI#Anhang A]). Please note that a colon can also appear in the name. -->
+	<Description/><!-- 1..1 string The name and professional OID of the insurance with the following pattern: <name>:<professionOID>. The name MUST be displayed at the insurant frontend. The certificate extension 'professionOID' might be taken from the signer certificate C.HCI.ENC (cf. [gemSpec_PKI#Anhang A]). Please note that a colon can also appear in the name. -->
 
 	<Target>
 		

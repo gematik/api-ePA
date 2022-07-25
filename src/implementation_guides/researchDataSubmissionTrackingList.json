@@ -24,7 +24,7 @@
 					]
 				},
 				"consentValidFrom": {
-					"description": "timestamp of last change of consent state",
+					"description": "date and time of last change of consent state. This timestamp is always UTC, formatted as YYYY-MM-DDThh:mm:ssZ",
 					"type": "string",
 					"format": "date-time"
 				}

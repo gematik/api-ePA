@@ -3,7 +3,7 @@
 	"description": "Detailled record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes.",
 	"guidelineDefinition": {
 		"url": "https://fachportal.gematik.de/",
-		"version": "1.0.1"
+		"version": "1.0.2"
 	},
 	"folderCardinality": {
 		"min": "1",
@@ -17,11 +17,11 @@
 		"value": {
 			"code": "technical",
 			"codeSystem": "1.2.276.0.76.5.512",
-			"displayName": "technische Dokumente.",
+			"displayName": "Technische Dokumente",
 			"desc": [
 				{
 					"language": "de-DE",
-					"#text": "technische Dokumente, die nicht für Leistungserbringer berechtigt und einem Versicherten oder Vertreter nicht direkt im ePA-FdV zur Anzeige gebracht werden"
+					"#text": "Technische Dokumente, die nicht für Leistungserbringer berechtigt und einem Versicherten oder Vertreter nicht direkt im ePA-FdV zur Anzeige gebracht werden"
 				}
 			]
 		}
@@ -34,10 +34,26 @@
 			"canonicalUrl": "https://github.com/gematik/api-epa/src/sharedResearchData/researchDataSubmissionTrackingList.json",
 			"metadata": [
 				{
-					"name": "documentEntry.title",
-					"value": [
-						"Aufzeichnungsliste Forschungsdatenfreigabe"
-					]
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "ADM",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Administratives Dokument",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Anträge, Aufklärung, Bescheinigungen; auch juristische Dokumente, Vereinbarungen und Verträge; Anmeldungen, Regelungen, Einwilligungen, Bestellungen, Rechnungen, Bescheide, Anordnungen (im juristischen Sinne), Aufträge, Ausweise (außer medizinische Ausweise wie Impfpässe, siehe Konzept AUS ('Medizinischer Ausweis')), Meldungen, Qualitätssicherungsdokumente"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:researchDataSubmissionTracking:v1.0",
+						"codeSystem": "2.25.154081344090540725127779452347992051720",
+						"displayName": "Aufzeichnungsliste Forschungsdatenfreigabe"
+					}
 				},
 				{
 					"name": "documentEntry.mimeType",
