@@ -5,6 +5,7 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen |
 |---|---|---|---|
+|2.5.1-1|2022-08-12|alle Artefakte der ersten Nachlieferung zu ePA Release 2.5.1|||
 |2.5.1|2022-07-25|alle Artefakte zu ePA Release 2.5.1 - (Dokumente verfügar unter fachportal.gematik.de)|||
 |UPDATE_20220711|2022-07-11|Beispiel einer DiGA-Policy </br> Doppelter Code aus ValueSet entfernt|| 
 |2.5.1-CC|2022-07-07|alle Artefakte zu ePA Release 2.5.1 - (Dokumente verfügar unter fachportal.gematik.de)|||

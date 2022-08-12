@@ -148,6 +148,10 @@
 				"documentCardinality": {
 					"$ref": "#/definitions/CardinalityDefinition"
 				},
+				"implementationArtifact": {
+					"description": "This usage specification is not intended for verifying structured documents.",
+					"type": "boolean"
+				},
 				"maxDocumentHistory": {
 					"description": "Defines the maximum amount of deprecated elements to be kept in a XDS RPLC chain (approved document does not count). Oldest entries may be deleted when this limit gets exeeded",
 					"type": "integer"

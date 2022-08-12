@@ -589,6 +589,9 @@
             </extension>
             <system value="urn:oid:1.2.276.0.76.5.494"/>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Das Fachgebiet Allgemeine Zahnheilkunde stellt eine Weiterbildung innerhalb der Zahnmedizin im Kammergebiet Brandenburg dar. Es beinhaltet die Erkennung, Verhütung und Behandlung von Erkrankungen und Erscheinungsformen des orofacialen Systems."/>
                 </extension>
@@ -596,6 +599,9 @@
                 <display value="Allgemeine Zahnheilkunde"/>
             </concept>
             <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
                     <valueString value="Das Fachgebiet Öffentliches Gesundheitswesen stellt eine Weiterbildung innerhalb der Zahnmedizin dar. Das Gebiet beinhaltet die Bewertung des Gesundheitszustandes der Bevölkerung, Organisation und Durchführung gruppenprophylaktischer Maßnahmen, Maßnahmen der Gesundheitsförderung, der Gesundheitserziehung und der präventiven Zahngesundheitspflege bei unterschiedlichen Alters- und Bevölkerungsgruppen."/>
                 </extension>

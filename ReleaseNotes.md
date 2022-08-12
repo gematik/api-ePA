@@ -1,3 +1,8 @@
+# Release 2.5.1-1
+- deprecated marker for obsolete codes (vs-practice-setting-code.xml)
+
+- additional optional entry in ig-schema-definition.json to identify implementation-guides of type 'implementationArtifact', first used in ig-medical-image.json
+
 # Release 2.5.1
 - changed description regarding proffessionOID source in policies for diga, hcp and insurance
 
