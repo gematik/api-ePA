@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.5.0
+  version: 2.5.1
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -223,13 +223,44 @@ paths:
       tags:
         - permissions
       summary: Berechtigung für eine LEI ändern
-      description: Diese Operation führt den Anwendungsfall "Berechtigung für LEI ändern" in einer mit insurantId identifizierten Aktensession aus.
+      description: |-
+        Diese Operation führt den Anwendungsfall "Berechtigung für LEI ändern" in einer mit insurantId identifizierten Aktensession aus.  Die Policy für eine, bereits berechtigte Identität wird wie folgt geändert: 
+        1. nur Abschnitte (bezogen auf eine RuleId, z.b. blacklist), die auch im Request angegeben werden , werden in der vorhandenen Policy überschrieben.
+        2. andere eventuell vorhandene Abschnitte (z.b. lei-permission bzw Kategorie basierte Berechtigung) bleiben unverändert
+        3. die Angabe eines Abschnitts als leere Liste bedeutet das Entfernen dieses Abschnittes aus der Policy bzw der Einträge dieses Abschnittes
       operationId: permissionHcpo_update
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/PermissionHcpoDTO'
+            examples:
+              'permissionAccessCategory wird übergeschrieben, die LEI bekommt auf keine Kategorie ein Leserecht, evtl bereits erteilte feingranulare Berechtigungen bleiben erhalten. Entsprechend ist das Policy Dokument zu erstellen.':
+                value:
+                  account:
+                    account: K1234567890
+                    insurantId: K1234567890
+                    pkcs12: PKCS12
+                    passwordPrivateKey: PASSWORD
+                    passwordKeyStore: PASSWORD
+                  hcpoTelematikId: 1-SMC-B-Testkarte-883110000092397
+                  permissionLeiProperties:
+                    validThrough: '2022-07-21'
+                    permissionAccessCategory: []
+              'permissionAccessCategory wird übergeschrieben, die LEI bekommt ausschließlich auf Kategorie "eab" level "N" ein Leserecht, evtl bereits erteilte feingranulare Berechtigungen bleiben erhalten. Entsprechend ist das Policy Dokument zu erstellen.':
+                value:
+                  account:
+                    account: K1234567890
+                    insurantId: K1234567890
+                    pkcs12: PKCS12
+                    passwordPrivateKey: PASSWORD
+                    passwordKeyStore: PASSWORD
+                  hcpoTelematikId: 1-SMC-B-Testkarte-883110000092397
+                  permissionLeiProperties:
+                    validThrough: '2022-07-21'
+                    permissionAccessCategory:
+                      - level: 'N'
+                        category: eab
       responses:
         default:
           description: default response
@@ -563,13 +594,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PseudomiseResponseDTO'
-              examples: {}
+              examples:
+                Beispiel Antwort:
+                  value:
+                    success: 'true'
+                    statusMessage: Operation Completed
+                    documentSet:
+                      - content: PEJ1bmRsZSB4bWxucz0iaHR0cDovL2hsNy5vcmcvZmhpciI+CiAgICA8aWQgdmFsdWU9IjAwMTU3OGY4LTBiNzYtNDE5Ny1hZmQ5LWQ4MzIyNzUxNmU0NiIgLz4KICAgIDxtZXRhPgogICAgICAgIDxsYXN0VXBkYXRlZCB2YWx1ZT0iMjAxOS0xMi0yNFQxMjozMDowMloiIC8+CiAgICAgICAgPHByb2ZpbGUgdmFsdWU9Imh0dHBzOi8vZmhpci5rYnYuZGUvU3RydWN0dXJlRGVmaW5pdGlvbi9LQlZfUFJfTUlPX1ZhY2NpbmF0aW9uX0J1bmRsZV9FbnRyeXwxLjEuMCIgLz4KICAgIDwvbWV0YT4KPC9CdW5kbGU+
+                        formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
       description: Operation für die Prüfung der pseudonymisierung der Dokumente
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/PseudomiseRequestDTO'
+            examples:
+              Beispiel Request:
+                value:
+                  documents:
+                    - content: PEJ1bmRsZSB4bWxucz0iaHR0cDovL2hsNy5vcmcvZmhpciI+CiAgICA8aWQgdmFsdWU9IjAwMTU3OGY4LTBiNzYtNDE5Ny1hZmQ5LWQ4MzIyNzUxNmU0NiIgLz4KICAgIDxtZXRhPgogICAgICAgIDxsYXN0VXBkYXRlZCB2YWx1ZT0iMjAxOS0xMi0yNFQxMjozMDowMloiIC8+CiAgICAgICAgPHByb2ZpbGUgdmFsdWU9Imh0dHBzOi8vZmhpci5rYnYuZGUvU3RydWN0dXJlRGVmaW5pdGlvbi9LQlZfUFJfTUlPX1ZhY2NpbmF0aW9uX0J1bmRsZV9FbnRyeXwxLjEuMCIgLz4KICAgIDwvbWV0YT4KPC9CdW5kbGU+
+                      formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
         description: ''
 components:
   schemas:
@@ -1674,61 +1718,105 @@ components:
         - category
     PseudomiseRequestDTO:
       title: PseudomiseRequestDTO
-      x-stoplight:
-        id: 2lq5shkjrj9c9
       type: object
       description: Request Objekt für die Operation "pseudomiseMio"
       x-examples:
-        Beispiel mit 1 Dokument:
-          documentSet:
-            - document: Base64-Encodierte-Inhalt-Hier
+        Beispiel mit einem Dokument:
+          documents:
+            - content: Base64-Encodierte-Inhalt
+              formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
+          account:
+            account: K1234567890
+            insurantId: K123456890
+            pkcs12: string
+            passwordPrivateKey: string
+            passwordKeyStore: string
+            pin: 0
+            can: string
+            token: string
         Beispiel mit mehreren Dokumenten:
-          documentSet:
-            - document: Base64-Encodierte-Inhalt-Hier
-            - document: Base64-Encodierte-Inhalt-Hier
-            - document: Base64-Encodierte-Inhalt-Hier
-            - document: Base64-Encodierte-Inhalt-Hier
+          documents:
+            - content: Base64-Encodierte-Inhalt
+              formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
+            - content: Base64-Encodierte-Inhalt
+              formatCode: 'urn:gematik:ig:Mutterpass:v1.1.0'
+          account:
+            account: K1234567890
+            insurantId: K123456890
+            pkcs12: string
+            passwordPrivateKey: string
+            passwordKeyStore: string
+            pin: 0
+            can: string
+            token: string
       x-tags:
         - pseudomise
       properties:
-        documentSet:
+        documents:
           type: array
           items:
-            $ref: '#/components/schemas/Document'
+            $ref: '#/components/schemas/PseudomiseDocument'
+        account:
+          $ref: '#/components/schemas/Login'
       required:
-        - documentSet
+        - documents
     PseudomiseResponseDTO:
       title: PseudomiseResponseDTO
-      x-stoplight:
-        id: qcbl3p2dgdabv
       type: object
       description: Response Objekt für die Operation "pseudomiseMio"
       x-examples:
-        Beispiel mit 1 Dokument:
-          success: 'true'
-          statusMessage: Operation completed successfully
-          documentSet:
-            - document: Base64-Ecodierte-Inhalt-Hier
+        Beispiel mit einem Dokument:
+          success: true
+          statusMessage: string
+          documents:
+            - content: string
+              formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
         Beispiel mit mehreren Dokumenten:
-          success: 'true'
-          statusMessage: Operation completed successfully
-          documentSet:
-            - document: Base64-Ecodierte-Inhalt-Hier
-            - document: Base64-Ecodierte-Inhalt-Hier
-            - document: Base64-Ecodierte-Inhalt-Hier
+          success: true
+          statusMessage: Operation Completed
+          documents:
+            - content: Base64-String
+              formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
+            - content: Base64-String
+              formatCode: 'urn:gematik:ig:Mutterpass:v1.1.0'
+        Beispiel mit Fehler:
+          success: false
+          statusMessage: 'Could not perform the operation: invalid schema'
+          documents: []
       properties:
         success:
-          type: string
+          type: boolean
           enum:
-            - 'true'
-            - 'false'
+            - true
+            - false
           example: 'true'
         statusMessage:
           type: string
-        documentSet:
+          description: Eine optionale Meldung für die Operation
+        documents:
           type: array
+          description: Liste von pseudoanonymisierten Dokumenten
           items:
-            $ref: '#/components/schemas/Document'
+            $ref: '#/components/schemas/PseudomiseDocument'
       required:
         - success
-        - documentSet
+        - documents
+    PseudomiseDocument:
+      title: PseudomiseDocument
+      type: object
+      description: Ein Dokument für die Pseudonymisierung Operation
+      properties:
+        content:
+          type: string
+          description: Dokument-Inhalt als Base64 encodiertes Wert
+        formatCode:
+          type: string
+          example: 'urn:gematik:ig:Impfausweis:v1.1.0'
+          description: Format Code als documentEntry.formatCode.code
+      required:
+        - content
+        - formatCode
+      x-examples:
+        Beispiel Impfausweis (leer):
+          content: PEJ1bmRsZSB4bWxucz0iaHR0cDovL2hsNy5vcmcvZmhpciI+CiAgICA8aWQgdmFsdWU9IjAwMTU3OGY4LTBiNzYtNDE5Ny1hZmQ5LWQ4MzIyNzUxNmU0NiIgLz4KICAgIDxtZXRhPgogICAgICAgIDxsYXN0VXBkYXRlZCB2YWx1ZT0iMjAxOS0xMi0yNFQxMjozMDowMloiIC8+CiAgICAgICAgPHByb2ZpbGUgdmFsdWU9Imh0dHBzOi8vZmhpci5rYnYuZGUvU3RydWN0dXJlRGVmaW5pdGlvbi9LQlZfUFJfTUlPX1ZhY2NpbmF0aW9uX0J1bmRsZV9FbnRyeXwxLjEuMCIgLz4KICAgIDwvbWV0YT4KPC9CdW5kbGU+
+          formatCode: 'urn:gematik:ig:Impfausweis:v1.1.0'
