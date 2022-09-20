@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.584"/>
     </identifier>
-    <version value="1.1.0"/>
+    <version value="1.1.1"/>
     <name value="value-set-of-event-codes"/>
     <title value="Value Set of Event Codes"/>
     <status value="active"/>
@@ -65,13 +65,19 @@
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
                 <valueString value="Signature Type Codes"/>
             </extension>
-            <system value="urn:oid:1.2.840.10065.1.12"/>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Include signature type codes from the value set 1.2.840.10065.1.12."/>
+            </extension>           
+            <system value="urn:oid:2.16.840.1.113883.4.642.4.64"/>
         </include>
         <include>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
                 <valueString value="Acquisition Modality Codes"/>
             </extension>
-            <system value="urn:oid:1.2.840.10008.6.1.19"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="The codes below are taken from DICOM Part 16, Context Group 29 'Acquisition Modality' (Value Set 1.2.840.10008.6.1.19)."/>
+            </extension> 
+            <system value="urn:oid:1.2.840.10008.2.16.4"/>
             <concept>
                 <code value="BDUS"/>
                 <display value="Ultrasound Bone Densitometry"/>

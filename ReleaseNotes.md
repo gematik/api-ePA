@@ -1,3 +1,10 @@
+# Release 2.5.1-3
+- updated OIDs of 'Signature Type Codes' and 'Acquisition Modality Codes' with code system OID instead of value set OID (vs-event-code.xml)
+
+- ig-dentalrecord.json with two typecodes and versioning for igs (ig-schema-definition.json)
+
+- removed ig-dmp-rheuma.json - new validFrom date to be clarified (not available yet but not before 1.4.23))
+
 # Release 2.5.1-2
 Updated FDV OpenAPI Specification to include PseudomyseMio Operation
 

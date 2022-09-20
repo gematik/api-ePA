@@ -5,6 +5,7 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen |
 |---|---|---|---|
+|2.5.1-3|2022-08-20|Korrekturen an Implementation_Guides|||
 |2.5.1-2|2022-08-23|Anpassung der FDV Testtreiber Schnittstelle|||
 |2.5.1-1|2022-08-12|alle Artefakte der ersten Nachlieferung zu ePA Release 2.5.1|||
 |2.5.1|2022-07-25|alle Artefakte zu ePA Release 2.5.1 - (Dokumente verfügar unter fachportal.gematik.de)|||
