@@ -5,6 +5,8 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen | Betroffene GitHub-Artefakte |
 |---|---|---|---|---|
+|2.1.1-1|2022-09-20|Korrekturen Value Sets|| - [vs-event-code.xml](src/vocabulary/value_sets/vs-event-code.xml)</br> - [cs-signature-type.xml](src/vocabulary/code_systems/cs-signature-type.xml)|
+|2.1.1-Pre2|2022-03-24||2. Vorveröffentlichung zu Release 2.1.1| - [hcp-policy-definition.xml](src/policies/hcp-policy-definition.xml)<br/> - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)|
 |2.1.1|2022-03-30|alle Dokumente zu ePA Release 2.1.1 verfügar unter fachportal.gematik.de|| keine Änderung gegenüber 2.1.1-Pre3|
 |2.1.1-Pre3|2022-03-24||3. Vorveröffentlichung zu Release 2.1.1</br> (Korrektur des regulären Ausdrucks UserAgents)| - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)|
 |2.1.1-Pre2|2022-03-24||2. Vorveröffentlichung zu Release 2.1.1| - [hcp-policy-definition.xml](src/policies/hcp-policy-definition.xml)<br/> - [AuthorizationService.xsd](src/schema/fd/phr/AuthorizationService.xsd)|

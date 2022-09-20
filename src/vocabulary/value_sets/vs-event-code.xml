@@ -6,7 +6,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
         <valuePeriod>
-            <start value="2022-03-31"/>
+            <start value="2023-01-01"/>
         </valuePeriod>
     </extension>
     <url value="https://gematik.de/fhir/ValueSet/event-codes-phr-system"/>
@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.584"/>
     </identifier>
-    <version value="1.0.0"/>
+    <version value="1.1.1"/>
     <name value="value-set-of-event-codes"/>
     <title value="Value Set of Event Codes"/>
     <status value="active"/>
@@ -28,19 +28,33 @@
     </contact>
     <description value="Ereignisse, die zur Erstellung des Dokuments geführt haben"/>
     <compose>
-        <!-- optional code systems
         <include>
-            <!-\- ICD -\->
-            <system value="urn:oid:1.2.276.0.76.5.471" />
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="icd10gm2022"/>
+            </extension>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme (ICD), 10. Revision, German Modification ICD-10-GM Version 2022 BfArM, BMG"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.518" />
         </include>
         <include>
-            <!-\- OPS -\->
-            <system value="urn:oid:1.2.276.0.76.5.472" />
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="ops2022"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Operationen- und Prozedurenschlüssel nach §301 SGB V - OPS Internationale Klassifikation der Prozeduren in der Medizin Version 2022; BfArM, BMG"/>
+                </extension>            
+            <system value="urn:oid:1.2.276.0.76.5.519" />
         </include>
         <include>
-            <!-\- KDL -\->
-            <system value="urn:oid:1.2.276.0.76.5.523" />
-        </include>-->
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="codesystem-kdl-2022"/>
+            </extension>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="CodeSystem Klinische Dokumentenklassen-Liste (Version 2022)"/>
+            </extension>            
+            <system value="urn:oid:1.2.276.0.76.5.533" />
+        </include>
         <include>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
                 <valueString value="DICOM Anatomic Region"/>
@@ -51,13 +65,19 @@
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
                 <valueString value="Signature Type Codes"/>
             </extension>
-            <system value="urn:oid:1.2.840.10065.1.12"/>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Include signature type codes from the value set 1.2.840.10065.1.12."/>
+            </extension>           
+            <system value="urn:oid:2.16.840.1.113883.4.642.4.64"/>
         </include>
         <include>
             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
                 <valueString value="Acquisition Modality Codes"/>
             </extension>
-            <system value="urn:oid:1.2.840.10008.6.1.19"/>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="The codes below are taken from DICOM Part 16, Context Group 29 'Acquisition Modality' (Value Set 1.2.840.10008.6.1.19)."/>
+            </extension> 
+            <system value="urn:oid:1.2.840.10008.2.16.4"/>
             <concept>
                 <code value="BDUS"/>
                 <display value="Ultrasound Bone Densitometry"/>
