@@ -10,7 +10,7 @@
 		"max": "1",
 		"unique": true
 	},
-	"validFromDate": "2023-01-01",
+	"validFromDate": "2024-01-01",
 	"type": "atomic",
 	"metadata": {
 		"name": "folder.codeList",

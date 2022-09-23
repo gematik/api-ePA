@@ -1,3 +1,10 @@
+# Release 2.5.1-4
+- removed doubled typecode section in ig-dentalrecord.json (remaining typecode section covers PATD and ABRE)
+
+- new validFrom date = 2024-01-01 for ig-referral_v_1_0.json and ig-tele_med_v_1_0.json
+
+- republish ig-DMP_rheuma_V_1.json with new validFrom date = 2023-04-01 to solve ambiguities with formatCode entries in vs-format-code.xml. This is a preliminary date and may be changed according to roadmap decisions!
+
 # Release 2.5.1-3
 - updated OIDs of 'Signature Type Codes' and 'Acquisition Modality Codes' with code system OID instead of value set OID (vs-event-code.xml)
 
