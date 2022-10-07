@@ -5,6 +5,7 @@ Die nachstehende Tabelle dokumentiert Hinweise zu Änderungen an den ePA-Spezifi
 
 | Tag | Gültig ab | Information / Betroffene Spezifikationen/Steckbriefe im Fachportal | Vorabveröffentlichungen |
 |---|---|---|---|
+|2.5.1-5|2022-10-07|Redaktionelle Korrekturen an Implementation_Guides|||
 |2.5.1-4|2022-09-23|erneute Korrekturen an Implementation_Guides|||
 |2.5.1-3|2022-09-20|Korrekturen an Implementation_Guides|||
 |2.5.1-2|2022-08-23|Anpassung der FDV Testtreiber Schnittstelle|||

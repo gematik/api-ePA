@@ -1,3 +1,6 @@
+# Release 2.5.1-5
+- update 'guidelineDefinitions' (including introduction of 'version') for several implementation_guidelines (editorial)
+
 # Release 2.5.1-4
 - removed doubled typecode section in ig-dentalrecord.json (remaining typecode section covers PATD and ABRE)
 

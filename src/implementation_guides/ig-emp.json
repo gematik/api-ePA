@@ -1,8 +1,10 @@
 {
 	"name": "Medication Plan",
-	"description": "Medication plan defined by gematik (cf. [gemSpec_Info_AMTS])",
+	"description": "Medication plan defined by gematik (cf. [gemSpec_Info_AMTS] and [https://github.com/gematik/api-telematik/tree/OPB5/fa/amtss/])",
+	"igVersion": "1.0.1",
 	"guidelineDefinition": {
-		"url": "https://fachportal.gematik.de/"
+		"url": "https://fachportal.gematik.de/fileadmin/Fachportal/Downloadcenter/Releases/TI-Baseline/Spezifikationen_Release_TI-Baseline_2022-1.zip",
+		"version": "1.6.0"
 	},
 	"folderCardinality": {
 		"min": "1",

@@ -1,8 +1,10 @@
 {
 	"name": "Electronic Prescription Record",
 	"description": "Prescription Explanation Record (standing for 'eRezept/Verordnungsdatensatz') defined by gematik",
+	"igVersion": "1.0.1",
 	"guidelineDefinition": {
-		"url": "https://fachportal.gematik.de/"
+		"url": "https://simplifier.net/packages/kbv.ita.erp/1.0.2/",
+		"version": "1.0.2"
 	},
 	"folderCardinality": {
 		"min": "1",

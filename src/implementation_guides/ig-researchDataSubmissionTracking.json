@@ -1,8 +1,9 @@
 {
 	"name": "Research Data Submission Tracking",
 	"description": "Detailled record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes.",
+	"igVersion": "1.0.1",
 	"guidelineDefinition": {
-		"url": "https://fachportal.gematik.de/",
+		"url": "https://github.com/gematik/api-ePA/blob/2.5.1/src/implementation_guides/researchDataSubmissionTrackingList.json",
 		"version": "1.0.2"
 	},
 	"folderCardinality": {
