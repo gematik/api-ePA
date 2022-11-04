@@ -1,6 +1,7 @@
 {
 	"name": "Medical Image",
 	"description": "Usage specification for registering medical images in the PHR (former requirement A_17540). The codes below are taken from DICOM Part 16, Context Group 29 'Acquisition Modality' (Value Set 1.2.840.10008.6.1.19).",
+	"igVersion": "1.1.0",
 	"guidelineDefinition": {
 		"url": "https://fachportal.gematik.de/"
 	},
@@ -160,7 +161,8 @@
 					"value": [
 						"image/jpeg",
 						"image/png",
-						"image/tiff"
+						"image/tiff",
+						"application/pdf"
 					]
 				}
 			],

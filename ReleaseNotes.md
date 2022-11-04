@@ -1,3 +1,14 @@
+# Release 2.5.2-Pre1
+- added OPS and ICD10 codesystems (now available in fhir format)
+
+- change 'validFrom' date to '01.07.2023' for researchDataSubmissionTracking.json
+
+- added 'maxHistory' attribute (value = 10) in DiGA implementation guide
+
+- added missing codes 175 - 178 in valueset author-specialilty
+
+- added mimetype pdf in medical-image implementation guide (C_11241)
+
 # Release 2.5.1-5
 - update 'guidelineDefinitions' (including introduction of 'version') for several implementation_guidelines (editorial)
 

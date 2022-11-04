@@ -14,7 +14,7 @@
         <system value="urn:ietf:rfc:3986"/>
         <value value="urn:oid:1.2.276.0.76.11.580"/>
     </identifier>
-    <version value="1.0.0"/>
+    <version value="1.0.1"/>
     <name value="value-set-of-author-specialty"/>
     <title value="Value Set of Author Specialties"/>
     <status value="active"/>
@@ -702,27 +702,21 @@
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString
-                            value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Endokrinologie und Reproduktionsmedizin"
-                    />
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
                 </extension>
                 <code value="082101"/>
                 <display value="SP Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString
-                            value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Onkologie"
-                    />
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Onkologie"/>
                 </extension>
                 <code value="082102"/>
                 <display value="SP Gynäkologische Onkologie"/>
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
-                    <valueString
-                            value="FA Frauenheilkunde und Geburtshilfe mit SP Spezielle Geburtshilfe und Perinatalmedizin"
-                    />
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Spezielle Geburtshilfe und Perinatalmedizin"/>
                 </extension>
                 <code value="082103"/>
                 <display value="SP Spezielle Geburtshilfe und Perinatalmedizin"/>
@@ -1743,6 +1737,22 @@
                 <display value="Pflegewissenschaftler"/>
             </concept>
             <concept>
+                <code value="175"/>
+                <display value="Fachgesundheits- und krankenpfleger für Intensivpflege und Anästhesie"/>
+            </concept>
+            <concept>
+                <code value="176"/>
+                <display value="Fachgesundheits- und krankenpfleger im Operations-/Endoskopiedienst"/>
+            </concept>
+            <concept>
+                <code value="177"/>
+                <display value="Fachgesundheits- und krankenpfleger für Hygiene"/>
+            </concept>
+            <concept>
+                <code value="178"/>
+                <display value="Fachgesundheits- und krankenpfleger für Palliativ- und Hospizpflege"/>
+            </concept>
+            <concept>
                 <code value="47"/>
                 <display value="Nichtärztliche Behandlung, Therapie (außer Psychotherapie)"/>
             </concept>
@@ -1824,8 +1834,8 @@
             </concept>
             <concept>
                 <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
-					<valueBoolean value="true"/>
-				</extension>
+                    <valueBoolean value="true"/>
+                </extension>
                 <code value="67"/>
                 <display value="Tierheilpraktiker"/>
             </concept>
