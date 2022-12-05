@@ -1,3 +1,6 @@
+# Release 2.5.2
+- no changes compared to previous update (see Tag 2.5.2-Pre1)
+
 # Release 2.5.2-Pre1
 - added OPS and ICD10 codesystems (now available in fhir format)
 
