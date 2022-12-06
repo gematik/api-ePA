@@ -1,7 +1,7 @@
 ## Branchinformation
 
 |Dieser Branch|ePA-2.5.2|
-|:----|----|
+|:----|:----|
 | Bezeichnung  | __Release 2.5.2__ </br> __(ePA_2.5_Maintenance_22.3)__   |
 | Status aktuell | __Freigegeben (released)__      |
 | Releasedatum    | __06.12.2022__    |

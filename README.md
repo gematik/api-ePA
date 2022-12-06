@@ -37,8 +37,7 @@ api-epa
 |     |     └-- [fd/phr](src/schema/fd/phr) (Schnittstellen ePA Aktensystem)
 |     └-- [vocabulary](src/vocabulary) (Terminologien)
 |- [Readme.md](Readme.md) (diese Information)
-|- [Branchinformation.md](Branchinformation.md) (Informationen zu Releasebezug und -Status)
-└- [Licence](License) (Lizenzinformation)
+└- [Branchinformation.md](Branchinformation.md) (Informationen zu Releasebezug und -Status)
 </pre>
 </code>
 
