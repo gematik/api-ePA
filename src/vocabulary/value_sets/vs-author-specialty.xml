@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="author-specialty-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/author-specialty-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.580"/>
+    </identifier>
+    <version value="1.0.1"/>
+    <name value="value-set-of-author-specialty"/>
+    <title value="Value Set of Author Specialties"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Fachliche Spezialisierung des Autors des Dokuments für ePA 1.0 und ePA 2.0"/>
+    <compose>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="S_BAR2_WBO"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.114"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="010"/>
+                <display value="FA Allgemeinmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="020"/>
+                <display value="FA Anästhesiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="030"/>
+                <display value="FA Augenheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="050"/>
+                <display value="FA Frauenheilkunde und Geburtshilfe"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="060"/>
+                <display value="FA Hals-, Nasen-, Ohrenheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="070"/>
+                <display value="FA Haut- und Geschlechtskrankheiten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="080"/>
+                <display value="FA Innere Medizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="091"/>
+                <display value="SP Kinderkardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="093"/>
+                <display value="SP Neonatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="102"/>
+                <display value="FA Kinder- und Jugendpsychiatrie und -psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="110"/>
+                <display value="FA Laboratoriumsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="130"/>
+                <display value="FA Mund-Kiefer-Gesichts-Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="142"/>
+                <display value="FA Neurologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="147"/>
+                <display value="FA Psychiatrie und Psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="150"/>
+                <display value="FA Neurochirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="170"/>
+                <display value="FA Pathologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="180"/>
+                <display value="FA Pharmakologie und Toxikologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="196"/>
+                <display value="SP Kinderradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="197"/>
+                <display value="SP Neuroradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="200"/>
+                <display value="FA Urologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="210"/>
+                <display value="FA Arbeitsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="220"/>
+                <display value="FA Nuklearmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="230"/>
+                <display value="FA Öffentliches Gesundheitswesen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="240"/>
+                <display value="FA Rechtsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="250"/>
+                <display value="FA Hygiene und Umweltmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="271"/>
+                <display value="FA Neuropathologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="281"/>
+                <display value="FA Klinische Pharmakologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="291"/>
+                <display value="FA Strahlentherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="301"/>
+                <display value="FA Anatomie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="302"/>
+                <display value="FA Biochemie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="303"/>
+                <display value="FA Transfusionsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="304"/>
+                <display value="FA Kinderchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="308"/>
+                <display value="FA Physiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="313"/>
+                <display value="FA Herzchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="314"/>
+                <display value="FA Humangenetik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="330"/>
+                <display value="FA Physikalische und Rehabilitative Medizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="341"/>
+                <display value="FA Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="359"/>
+                <display value="Fachzahnarzt für Mikrobiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="360"/>
+                <display value="Fachzahnarzt für Kieferchirurgie (§ 6 Abs. 1 BMV)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="361"/>
+                <display value="Fachzahnarzt für theoretisch-experimentelle Medizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="511"/>
+                <display value="FA Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="512"/>
+                <display value="FA Orthopädie und Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="513"/>
+                <display value="FA Thoraxchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="514"/>
+                <display value="FA Visceralchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="515"/>
+                <display value="SP Gynäkologische Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="516"/>
+                <display value="SP Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="517"/>
+                <display value="SP Spezielle Geburtshilfe und Perinatalmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="518"/>
+                <display value="FA Sprach-, Stimm- und kindliche Hörstörungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="521"/>
+                <display value="FA Innere Medizin und (SP) Angiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="522"/>
+                <display value="FA Innere Medizin und (SP) Endokrinologie und Diabetologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="523"/>
+                <display value="FA Innere Medizin und (SP) Gastroenterologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="524"/>
+                <display value="FA Innere Medizin und (SP) Hämatologie und Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="525"/>
+                <display value="FA Innere Medizin und (SP) Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="526"/>
+                <display value="FA Innere Medizin und (SP) Nephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="527"/>
+                <display value="FA Innere Medizin und (SP) Pneumologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="528"/>
+                <display value="FA Innere Medizin und (SP) Rheumatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="530"/>
+                <display value="SP Kinder-Hämatologie und -Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="531"/>
+                <display value="SP Neuropädiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="532"/>
+                <display value="FA Mikrobiologie, Virologie und Infektionsepidemiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="533"/>
+                <display value="SP Forensische Psychiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="534"/>
+                <display value="FA Psychosomatische Medizin und Psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="535"/>
+                <display value="FA Radiologie (neue (M-)WBO)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="542"/>
+                <display value="FA Plastische und Ästhetische Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="544"/>
+                <display value="FA Allgemeinchirurgie"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Facharzttitel der Ärztekammern"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.514"/>
+            <concept>
+                <code value="011001"/>
+                <display value="FA Allgemeinmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Allgemeinmedizin mit SP Geriatrie"/>
+                </extension>
+                <code value="012901"/>
+                <display value="SP Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="021001"/>
+                <display value="FA Anästhesiologie"/>
+            </concept>
+            <concept>
+                <code value="021002"/>
+                <display value="FA Anästhesiologie und Intensivtherapie"/>
+            </concept>
+            <concept>
+                <code value="031001"/>
+                <display value="FA Anatomie"/>
+            </concept>
+            <concept>
+                <code value="041001"/>
+                <display value="FA Arbeitshygiene"/>
+            </concept>
+            <concept>
+                <code value="041002"/>
+                <display value="FA Arbeitsmedizin"/>
+            </concept>
+            <concept>
+                <code value="051001"/>
+                <display value="FA Augenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="061001"/>
+                <display value="FA Biochemie"/>
+            </concept>
+            <concept>
+                <code value="071107"/>
+                <display value="FA Allgemeinchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071101"/>
+                <display value="FA Allgemeine Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="071001"/>
+                <display value="FA Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="071102"/>
+                <display value="FA Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071002"/>
+                <display value="FA Herzchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071202"/>
+                <display value="FA Kinder- und Jugendchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071003"/>
+                <display value="FA Kinderchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071004"/>
+                <display value="FA Orthopädie"/>
+            </concept>
+            <concept>
+                <code value="071103"/>
+                <display value="FA Orthopädie und Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071005"/>
+                <display value="FA Plastische Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="071106"/>
+                <display value="FA Plastische und Ästhetische Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="071201"/>
+                <display value="FA Plastische; Rekonstruktive und Ästhetische Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="071104"/>
+                <display value="FA Thoraxchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071105"/>
+                <display value="FA Visceralchirurgie"/>
+            </concept>
+            <concept>
+                <code value="071108"/>
+                <display value="FA Viszeralchirurgie"/>
+            </concept>
+            <concept>
+                <code value="072001"/>
+                <display value="SP Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit SP Rheumatologie (Orthopädie)"/>
+                </extension>
+                <code value="072002"/>
+                <display value="SP Rheumatologie (Orthopädie)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit SP Thoraxchirurgie in der Chirurgie"/>
+                </extension>
+                <code value="072003"/>
+                <display value="SP Thoraxchirurgie in der Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit SP Thoraxchirurgie in der Herzchirurgie"/>
+                </extension>
+                <code value="072004"/>
+                <display value="SP Thoraxchirurgie in der Herzchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit SP Unfallchirurgie"/>
+                </extension>
+                <code value="072005"/>
+                <display value="SP Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit SP Visceralchirurgie"/>
+                </extension>
+                <code value="072006"/>
+                <display value="SP Visceralchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Echokardiologie herznaher Gefäße"/>
+                </extension>
+                <code value="073001"/>
+                <display value="TG Echokardiologie herznaher Gefäße"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Gefäßchirurgie"/>
+                </extension>
+                <code value="073002"/>
+                <display value="TG Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Herz- und Gefäßchirurgie"/>
+                </extension>
+                <code value="073003"/>
+                <display value="TG Herz- und Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Kinderchirurgie"/>
+                </extension>
+                <code value="073004"/>
+                <display value="TG Kinderchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Plastische Chirurgie"/>
+                </extension>
+                <code value="073005"/>
+                <display value="TG Plastische Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Rheumatologie (Orthopädie)"/>
+                </extension>
+                <code value="073006"/>
+                <display value="TG Rheumatologie (Orthopädie)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Thorax- und Kardiovaskularchirurgie"/>
+                </extension>
+                <code value="073007"/>
+                <display value="TG Thorax- und Kardiovaskularchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Thoraxchirurgie"/>
+                </extension>
+                <code value="073008"/>
+                <display value="TG Thoraxchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Chirurgie mit TG Unfallchirurgie"/>
+                </extension>
+                <code value="073009"/>
+                <display value="TG Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <code value="081001"/>
+                <display value="FA Frauenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="081002"/>
+                <display value="FA Frauenheilkunde und Geburtshilfe"/>
+            </concept>
+            <concept>
+                <code value="081003"/>
+                <display value="FA Gynäkologie und Geburtshilfe"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
+                </extension>
+                <code value="082101"/>
+                <display value="SP Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Gynäkologische Onkologie"/>
+                </extension>
+                <code value="082102"/>
+                <display value="SP Gynäkologische Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Frauenheilkunde und Geburtshilfe mit SP Spezielle Geburtshilfe und Perinatalmedizin"/>
+                </extension>
+                <code value="082103"/>
+                <display value="SP Spezielle Geburtshilfe und Perinatalmedizin"/>
+            </concept>
+            <concept>
+                <code value="091001"/>
+                <display value="FA Hals-Nasen-Ohrenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="091002"/>
+                <display value="FA Phoniatrie und Pädaudiologie"/>
+            </concept>
+            <concept>
+                <code value="091101"/>
+                <display value="FA Sprach-; Stimm- und kindliche Hörstörungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Hals- Nasen- Ohrenheilkunde mit TG Audiologie"/>
+                </extension>
+                <code value="093001"/>
+                <display value="TG Audiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Hals- Nasen- Ohrenheilkunde mit TG Phoniatrie"/>
+                </extension>
+                <code value="093002"/>
+                <display value="TG Phoniatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Hals- Nasen- Ohrenheilkunde mit TG Phoniatrie und Pädaudiologie"/>
+                </extension>
+                <code value="093003"/>
+                <display value="TG Phoniatrie und Pädaudiologie"/>
+            </concept>
+            <concept>
+                <code value="101001"/>
+                <display value="FA Dermatologie und Venerologie"/>
+            </concept>
+            <concept>
+                <code value="101002"/>
+                <display value="FA Haut- und Geschlechtskrankheiten"/>
+            </concept>
+            <concept>
+                <code value="111001"/>
+                <display value="FA Humangenetik"/>
+            </concept>
+            <concept>
+                <code value="121001"/>
+                <display value="FA Hygiene"/>
+            </concept>
+            <concept>
+                <code value="121002"/>
+                <display value="FA Hygiene und Umweltmedizin"/>
+            </concept>
+            <concept>
+                <code value="131001"/>
+                <display value="FA Immunologie"/>
+            </concept>
+            <concept>
+                <code value="141002"/>
+                <display value="FA Innere Medizin"/>
+            </concept>
+            <concept>
+                <code value="141110"/>
+                <display value="FA Innere Medizin und Angiologie"/>
+            </concept>
+            <concept>
+                <code value="141111"/>
+                <display value="FA Innere Medizin und Endokrinologie und Diabetologie"/>
+            </concept>
+            <concept>
+                <code value="141112"/>
+                <display value="FA Innere Medizin und Gastroenterologie"/>
+            </concept>
+            <concept>
+                <code value="141903"/>
+                <display value="FA Innere Medizin und Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="141113"/>
+                <display value="FA Innere Medizin und Hämatologie und Onkologie"/>
+            </concept>
+            <concept>
+                <code value="141904"/>
+                <display value="FA Innere Medizin und Infektiologie"/>
+            </concept>
+            <concept>
+                <code value="141114"/>
+                <display value="FA Innere Medizin und Kardiologie"/>
+            </concept>
+            <concept>
+                <code value="141115"/>
+                <display value="FA Innere Medizin und Nephrologie"/>
+            </concept>
+            <concept>
+                <code value="141116"/>
+                <display value="FA Innere Medizin und Pneumologie"/>
+            </concept>
+            <concept>
+                <code value="141117"/>
+                <display value="FA Innere Medizin und Rheumatologie"/>
+            </concept>
+            <concept>
+                <code value="141102"/>
+                <display value="FA Innere Medizin und Schwerpunkt Angiologie"/>
+            </concept>
+            <concept>
+                <code value="141103"/>
+                <display value="FA Innere Medizin und Schwerpunkt Endokrinologie und Diabetologie"/>
+            </concept>
+            <concept>
+                <code value="141104"/>
+                <display value="FA Innere Medizin und Schwerpunkt Gastroenterologie"/>
+            </concept>
+            <concept>
+                <code value="141901"/>
+                <display value="FA Innere Medizin und Schwerpunkt Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="141902"/>
+                <display value="FA Innere Medizin und Schwerpunkt gesamte Innere Medizin"/>
+            </concept>
+            <concept>
+                <code value="141105"/>
+                <display value="FA Innere Medizin und Schwerpunkt Hämatologie und Onkologie"/>
+            </concept>
+            <concept>
+                <code value="141106"/>
+                <display value="FA Innere Medizin und Schwerpunkt Kardiologie"/>
+            </concept>
+            <concept>
+                <code value="141107"/>
+                <display value="FA Innere Medizin und Schwerpunkt Nephrologie"/>
+            </concept>
+            <concept>
+                <code value="141108"/>
+                <display value="FA Innere Medizin und Schwerpunkt Pneumologie"/>
+            </concept>
+            <concept>
+                <code value="141109"/>
+                <display value="FA Innere Medizin und Schwerpunkt Rheumatologie"/>
+            </concept>
+            <concept>
+                <code value="141003"/>
+                <display value="FA Internist/Lungen- und Bronchialheilkunde"/>
+            </concept>
+            <concept>
+                <code value="141005"/>
+                <display value="FA Lungen- und Bronchialheilkunde"/>
+            </concept>
+            <concept>
+                <code value="141004"/>
+                <display value="FA Lungenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="142001"/>
+                <display value="SP Angiologie"/>
+            </concept>
+            <concept>
+                <code value="142002"/>
+                <display value="SP Endokrinologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Endokrinologie und Diabetologie"/>
+                </extension>
+                <code value="142901"/>
+                <display value="SP Endokrinologie und Diabetologie"/>
+            </concept>
+            <concept>
+                <code value="142003"/>
+                <display value="SP Gastroenterologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Geriatrie"/>
+                </extension>
+                <code value="142004"/>
+                <display value="SP Geriatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Hämatologie und Internistische Onkologie"/>
+                </extension>
+                <code value="142005"/>
+                <display value="SP Hämatologie und Internistische Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Infektiologie"/>
+                </extension>
+                <code value="142006"/>
+                <display value="SP Infektiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Kardiologie"/>
+                </extension>
+                <code value="142007"/>
+                <display value="SP Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Nephrologie"/>
+                </extension>
+                <code value="142008"/>
+                <display value="SP Nephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Pneumologie"/>
+                </extension>
+                <code value="142009"/>
+                <display value="SP Pneumologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit SP Rheumatologie"/>
+                </extension>
+                <code value="142010"/>
+                <display value="SP Rheumatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Diabetologie"/>
+                </extension>
+                <code value="143001"/>
+                <display value="TG Diabetologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Endokrinologie"/>
+                </extension>
+                <code value="143002"/>
+                <display value="TG Endokrinologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Gastroenterologie"/>
+                </extension>
+                <code value="143003"/>
+                <display value="TG Gastroenterologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Hämatologie"/>
+                </extension>
+                <code value="143004"/>
+                <display value="TG Hämatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Infektions- und Tropenmedizin"/>
+                </extension>
+                <code value="143005"/>
+                <display value="TG Infektions- und Tropenmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Kardiologie"/>
+                </extension>
+                <code value="143006"/>
+                <display value="TG Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Kardiologie und Angiologie"/>
+                </extension>
+                <code value="143901"/>
+                <display value="TG Kardiologie und Angiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Lungen- und Bronchialheilkunde"/>
+                </extension>
+                <code value="143007"/>
+                <display value="TG Lungen- und Bronchialheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Nephrologie"/>
+                </extension>
+                <code value="143008"/>
+                <display value="TG Nephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Innere Medizin mit TG Rheumatologie"/>
+                </extension>
+                <code value="143009"/>
+                <display value="TG Rheumatologie"/>
+            </concept>
+            <concept>
+                <code value="151002"/>
+                <display value="FA Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <code value="151001"/>
+                <display value="FA Kinderheilkunde"/>
+            </concept>
+            <concept>
+                <code value="152901"/>
+                <display value="SP Endokrinologie und Diabetologie in der Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <code value="152902"/>
+                <display value="SP Gastroenterologie in der Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Infektiologie"/>
+                </extension>
+                <code value="152001"/>
+                <display value="SP Infektiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Kinder- und Jugend-Hämatologie und -Onkologie"/>
+                </extension>
+                <code value="152201"/>
+                <display value="SP Kinder- und Jugend-Hämatologie und -Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Kinder- und Jugend-Kardiologie"/>
+                </extension>
+                <code value="152202"/>
+                <display value="SP Kinder- und Jugend-Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Kinder-Hämatologie und -Onkologie"/>
+                </extension>
+                <code value="152101"/>
+                <display value="SP Kinder-Hämatologie und -Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Kinder-Kardiologie"/>
+                </extension>
+                <code value="152002"/>
+                <display value="SP Kinder-Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Kinderpneumologie"/>
+                </extension>
+                <code value="152906"/>
+                <display value="SP Kinderpneumologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Neonatologie"/>
+                </extension>
+                <code value="152003"/>
+                <display value="SP Neonatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Nephrologie"/>
+                </extension>
+                <code value="152903"/>
+                <display value="SP Nephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Neuropädiatrie"/>
+                </extension>
+                <code value="152102"/>
+                <display value="SP Neuropädiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Pädiatrische Rheumatologie"/>
+                </extension>
+                <code value="152904"/>
+                <display value="SP Pädiatrische Rheumatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit SP Pulmologie in der Kinder- und Jugendmedizin"/>
+                </extension>
+                <code value="152905"/>
+                <display value="SP Pulmologie in der Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderdiabetologie"/>
+                </extension>
+                <code value="153001"/>
+                <display value="TG Kinderdiabetologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kindergastroenterologie"/>
+                </extension>
+                <code value="153002"/>
+                <display value="TG Kindergastroenterologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderhämatologie"/>
+                </extension>
+                <code value="153003"/>
+                <display value="TG Kinderhämatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderkardiologie"/>
+                </extension>
+                <code value="153004"/>
+                <display value="TG Kinderkardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderlungen- und -bronchialheilkunde"/>
+                </extension>
+                <code value="153005"/>
+                <display value="TG Kinderlungen- und -bronchialheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderneonatologie"/>
+                </extension>
+                <code value="153006"/>
+                <display value="TG Kinderneonatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kindernephrologie"/>
+                </extension>
+                <code value="153007"/>
+                <display value="TG Kindernephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Kinder- und Jugendmedizin mit TG Kinderneuropsychiatrie"/>
+                </extension>
+                <code value="153008"/>
+                <display value="TG Kinderneuropsychiatrie"/>
+            </concept>
+            <concept>
+                <code value="161001"/>
+                <display value="FA Kinder- und Jugendpsychiatrie"/>
+            </concept>
+            <concept>
+                <code value="161002"/>
+                <display value="FA Kinder- und Jugendpsychiatrie und -psychotherapie"/>
+            </concept>
+            <concept>
+                <code value="171001"/>
+                <display value="FA Laboratoriumsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Laboratoriumsmedizin mit TG Medizinische Mikrobiologie"/>
+                </extension>
+                <code value="173001"/>
+                <display value="TG Medizinische Mikrobiologie"/>
+            </concept>
+            <concept>
+                <code value="181001"/>
+                <display value="FA Mikrobiologie"/>
+            </concept>
+            <concept>
+                <code value="181002"/>
+                <display value="FA Mikrobiologie und Infektionsepidemiologie"/>
+            </concept>
+            <concept>
+                <code value="181101"/>
+                <display value="FA Mikrobiologie; Virologie und Infektionsepidemiologie"/>
+            </concept>
+            <concept>
+                <code value="191001"/>
+                <display value="FA Kieferchirurgie"/>
+            </concept>
+            <concept>
+                <code value="191002"/>
+                <display value="FA Mund-Kiefer-Gesichtschirurgie"/>
+            </concept>
+            <concept>
+                <code value="191901"/>
+                <display value="FA Oralchirurgie"/>
+            </concept>
+            <concept>
+                <code value="201001"/>
+                <display value="FA Nervenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="201002"/>
+                <display value="FA Nervenheilkunde (Neurologie und Psychiatrie)"/>
+            </concept>
+            <concept>
+                <code value="201003"/>
+                <display value="FA Neurologie und Psychiatrie (Nervenarzt)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Nervenheilkunde mit TG Kinderneuropsychiatrie"/>
+                </extension>
+                <code value="203001"/>
+                <display value="TG Kinderneuropsychiatrie"/>
+            </concept>
+            <concept>
+                <code value="211001"/>
+                <display value="FA Neurochirurgie"/>
+            </concept>
+            <concept>
+                <code value="221001"/>
+                <display value="FA Neurologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Neurologie mit SP Geriatrie"/>
+                </extension>
+                <code value="222901"/>
+                <display value="SP Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="231001"/>
+                <display value="FA Nuklearmedizin"/>
+            </concept>
+            <concept>
+                <code value="241001"/>
+                <display value="FA Öffentliches Gesundheitswesen"/>
+            </concept>
+            <concept>
+                <code value="251001"/>
+                <display value="FA Neuropathologie"/>
+            </concept>
+            <concept>
+                <code value="251002"/>
+                <display value="FA Pathobiochemie und Labordiagnostik"/>
+            </concept>
+            <concept>
+                <code value="251003"/>
+                <display value="FA Pathologie"/>
+            </concept>
+            <concept>
+                <code value="251004"/>
+                <display value="FA Pathologische Anatomie"/>
+            </concept>
+            <concept>
+                <code value="251005"/>
+                <display value="FA Pathologische Physiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Pathologie mit TG Neuropathologie"/>
+                </extension>
+                <code value="253001"/>
+                <display value="TG Neuropathologie"/>
+            </concept>
+            <concept>
+                <code value="261001"/>
+                <display value="FA Klinische Pharmakologie"/>
+            </concept>
+            <concept>
+                <code value="261002"/>
+                <display value="FA Pharmakologie"/>
+            </concept>
+            <concept>
+                <code value="261003"/>
+                <display value="FA Pharmakologie und Toxikologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Pharmakologie mit TG Klinische Pharmakologie"/>
+                </extension>
+                <code value="263001"/>
+                <display value="TG Klinische Pharmakologie"/>
+            </concept>
+            <concept>
+                <code value="381201"/>
+                <display value="Phoniatrie und Pädaudiologie"/>
+            </concept>
+            <concept>
+                <code value="271001"/>
+                <display value="FA Physikalische und Rehabilitative Medizin"/>
+            </concept>
+            <concept>
+                <code value="271002"/>
+                <display value="FA Physiotherapie"/>
+            </concept>
+            <concept>
+                <code value="281001"/>
+                <display value="FA Physiologie"/>
+            </concept>
+            <concept>
+                <code value="291001"/>
+                <display value="FA Psychiatrie"/>
+            </concept>
+            <concept>
+                <code value="291002"/>
+                <display value="FA Psychiatrie und Psychotherapie"/>
+            </concept>
+            <concept>
+                <code value="292101"/>
+                <display value="SP Forensische Psychiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Psychiatrie und Psychotherapie mit SP Geriatrie"/>
+                </extension>
+                <code value="292901"/>
+                <display value="SP Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="301101"/>
+                <display value="FA Psychosomatische Medizin und Psychotherapie"/>
+            </concept>
+            <concept>
+                <code value="301001"/>
+                <display value="FA Psychotherapeutische Medizin"/>
+            </concept>
+            <concept>
+                <code value="301002"/>
+                <display value="FA Psychotherapie"/>
+            </concept>
+            <concept>
+                <code value="311001"/>
+                <display value="FA Diagnostische Radiologie"/>
+            </concept>
+            <concept>
+                <code value="311002"/>
+                <display value="FA Radiologie"/>
+            </concept>
+            <concept>
+                <code value="311003"/>
+                <display value="FA Radiologische Diagnostik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit SP Kinder- und Jugendradiologie"/>
+                </extension>
+                <code value="312201"/>
+                <display value="SP Kinder- und Jugendradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit SP Kinderradiologie"/>
+                </extension>
+                <code value="312001"/>
+                <display value="SP Kinderradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit SP Neuroradiologie"/>
+                </extension>
+                <code value="312002"/>
+                <display value="SP Neuroradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit TG Kinderradiologie"/>
+                </extension>
+                <code value="313001"/>
+                <display value="TG Kinderradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit TG Neuroradiologie"/>
+                </extension>
+                <code value="313002"/>
+                <display value="TG Neuroradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="FA Radiologie mit TG Strahlentherapie"/>
+                </extension>
+                <code value="313003"/>
+                <display value="TG Strahlentherapie"/>
+            </concept>
+            <concept>
+                <code value="321001"/>
+                <display value="FA Rechtsmedizin"/>
+            </concept>
+            <concept>
+                <code value="351001"/>
+                <display value="FA Strahlentherapie"/>
+            </concept>
+            <concept>
+                <code value="361001"/>
+                <display value="FA Blutspende- und Transfusionswesen"/>
+            </concept>
+            <concept>
+                <code value="361002"/>
+                <display value="FA Transfusionsmedizin"/>
+            </concept>
+            <concept>
+                <code value="371001"/>
+                <display value="FA Urologie"/>
+            </concept>
+            <concept>
+                <code value="011002"/>
+                <display value="FA Praktischer Arzt"/>
+            </concept>
+            <concept>
+                <code value="011101"/>
+                <display value="FA Innere und Allgemeinmedizin (Hausarzt)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Facharzt für Innere Medizin mit Schwerpunkt Geriatrie"/>
+                </extension>
+                <code value="142902"/>
+                <display value="SP Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="331001"/>
+                <display value="FA Sozialhygiene"/>
+            </concept>
+            <concept>
+                <code value="341001"/>
+                <display value="FA Sportmedizin"/>
+            </concept>
+            <concept>
+                <code value="590001"/>
+                <display value="Biomathematik"/>
+            </concept>
+            <concept>
+                <code value="590002"/>
+                <display value="Biophysik"/>
+            </concept>
+            <concept>
+                <code value="590003"/>
+                <display value="Geschichte der Medizin"/>
+            </concept>
+            <concept>
+                <code value="590004"/>
+                <display value="Industrietoxikologie"/>
+            </concept>
+            <concept>
+                <code value="590005"/>
+                <display value="Kieferchirurgie"/>
+            </concept>
+            <concept>
+                <code value="590006"/>
+                <display value="Klinische Strahlenphysik"/>
+            </concept>
+            <concept>
+                <code value="590007"/>
+                <display value="Medizinische Genetik"/>
+            </concept>
+            <concept>
+                <code value="590008"/>
+                <display value="Medizinische Informatik"/>
+            </concept>
+            <concept>
+                <code value="590009"/>
+                <display value="Medizinische Physik und Biophysik"/>
+            </concept>
+            <concept>
+                <code value="590010"/>
+                <display value="Medizinische Wissenschaftsinformation"/>
+            </concept>
+            <concept>
+                <code value="590011"/>
+                <display value="Pathologische Biochemie"/>
+            </concept>
+            <concept>
+                <code value="000001"/>
+                <display value="Ärztin/Arzt"/>
+            </concept>
+            <concept>
+                <code value="000011"/>
+                <display value="Praktische Ärztin/Praktischer Arzt (EWG-Recht ab 86/457/EWG)"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Qualifikationen zahnärztlicher Autoren"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.492"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Zahnärztin und Zahnarzt allgemein"/>
+                </extension>
+                <code value="1"/>
+                <display value="Zahnärztin/Zahnarzt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fachzahnarzt für allgemeine Zahnheilkunde"/>
+                </extension>
+                <code value="2"/>
+                <display value="FZA Allgemeine Zahnheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fachzahnarzt für Parodontologie"/>
+                </extension>
+                <code value="3"/>
+                <display value="FZA Parodontologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fachzahnarzt für Oralchirurgie"/>
+                </extension>
+                <code value="4"/>
+                <display value="FZA Oralchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fachzahnarzt für Kieferorthopädie"/>
+                </extension>
+                <code value="5"/>
+                <display value="FZA Kieferorthopädie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Fachzahnarzt öffentliches Gesundheitswesen"/>
+                </extension>
+                <code value="6"/>
+                <display value="FZA öffentliches Gesundheitswesen"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Qualifikationen nicht ärztlicher Autoren"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.11"/>
+            <concept>
+                <code value="1"/>
+                <display value="Gesundheits- Sozial-, Sportmanagement"/>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="Arzthilfe, Praxisorganisation, -verwaltung"/>
+            </concept>
+            <concept>
+                <code value="179"/>
+                <display value="Physician Assistant"/>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="Kaufmann/-frau - Gesundheitswesen"/>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Medizinischer Fachangestellter"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="obsolet"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>                
+                <code value="5"/>
+                <display value="Tiermedizinischer Fachangestellter"/>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="Zahnmedizinischer Fachangestellter"/>
+            </concept>
+            <concept>
+                <code value="7"/>
+                <display value="Arztsekretär"/>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Sozial-, Gesundheitsmanagement"/>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="Gesundheitsaufseher / Hygienekontrolleur"/>
+            </concept>
+            <concept>
+                <code value="10"/>
+                <display value="Assistent Gesundheits- und Sozialwesen"/>
+            </concept>
+            <concept>
+                <code value="11"/>
+                <display value="Beamte Sozialversicherung"/>
+            </concept>
+            <concept>
+                <code value="12"/>
+                <display value="Beamte Sozialverwaltung"/>
+            </concept>
+            <concept>
+                <code value="13"/>
+                <display value="Betriebswirt Sozialversicherung"/>
+            </concept>
+            <concept>
+                <code value="14"/>
+                <display value="Gesundheitsmanager"/>
+            </concept>
+            <concept>
+                <code value="15"/>
+                <display value="Sozialökonom, -wirt"/>
+            </concept>
+            <concept>
+                <code value="16"/>
+                <display value="Sozialversicherungsfachangestellte"/>
+            </concept>
+            <concept>
+                <code value="17"/>
+                <display value="Sportmanagement"/>
+            </concept>
+            <concept>
+                <code value="18"/>
+                <display value="Sportassistent"/>
+            </concept>
+            <concept>
+                <code value="19"/>
+                <display value="Fachwirt Fitness"/>
+            </concept>
+            <concept>
+                <code value="20"/>
+                <display value="Sport- und Fitnesskaufmann"/>
+            </concept>
+            <concept>
+                <code value="21"/>
+                <display value="Sportmanager, Sportökonom"/>
+            </concept>
+            <concept>
+                <code value="22"/>
+                <display value="nichtärztliche medizinische Analyse, Beratung, Pflege, Therapie"/>
+            </concept>
+            <concept>
+                <code value="23"/>
+                <display value="Gesundheitsberatung, -förderung"/>
+            </concept>
+            <concept>
+                <code value="24"/>
+                <display value="Assistenten für Gesundheitstourismus, -prophylaxe"/>
+            </concept>
+            <concept>
+                <code value="25"/>
+                <display value="Diätassistent"/>
+            </concept>
+            <concept>
+                <code value="26"/>
+                <display value="Gesundheitsförderer, -pädagoge"/>
+            </concept>
+            <concept>
+                <code value="27"/>
+                <display value="Gesundheitswissenschaftler"/>
+            </concept>
+            <concept>
+                <code value="28"/>
+                <display value="Oekotrophologe"/>
+            </concept>
+            <concept>
+                <code value="29"/>
+                <display value="Tai-Chi-Chuan- und Qigong-Lehrer"/>
+            </concept>
+            <concept>
+                <code value="30"/>
+                <display value="Yogalehrer"/>
+            </concept>
+            <concept>
+                <code value="31"/>
+                <display value="Sportfachmann"/>
+            </concept>
+            <concept>
+                <code value="32"/>
+                <display value="Sportwissenschaftler"/>
+            </concept>
+            <concept>
+                <code value="33"/>
+                <display value="Kranken-, Altenpflege, Geburtshilfe"/>
+            </concept>
+            <concept>
+                <code value="34"/>
+                <display value="Altenpflegehelfer"/>
+            </concept>
+            <concept>
+                <code value="35"/>
+                <display value="Altenpfleger"/>
+            </concept>
+            <concept>
+                <code value="36"/>
+                <display value="Fachkraft Pflegeassistenz"/>
+            </concept>
+            <concept>
+                <code value="37"/>
+                <display value="Gesundheits- und Kinderkrankenpfleger"/>
+            </concept>
+            <concept>
+                <code value="38"/>
+                <display value="Gesundheits- und Krankenpflegehelfer"/>
+            </concept>
+            <concept>
+                <code value="39"/>
+                <display value="Gesundheits- und Krankenpfleger"/>
+            </concept>
+            <concept>
+                <code value="40"/>
+                <display value="Haus- und Familienpfleger"/>
+            </concept>
+            <concept>
+                <code value="41"/>
+                <display value="Hebamme / Entbindungspfleger"/>
+            </concept>
+            <concept>
+                <code value="42"/>
+                <display value="Heilerziehungspfleger"/>
+            </concept>
+            <concept>
+                <code value="43"/>
+                <display value="Helfer Altenpflege"/>
+            </concept>
+            <concept>
+                <code value="44"/>
+                <display value="Helfer stationäre Krankenpflege"/>
+            </concept>
+            <concept>
+                <code value="45"/>
+                <display value="Heilerziehungspflegehelfer"/>
+            </concept>
+            <concept>
+                <code value="46"/>
+                <display value="Pflegewissenschaftler"/>
+            </concept>
+            <concept>
+                <code value="175"/>
+                <display value="Fachgesundheits- und krankenpfleger für Intensivpflege und Anästhesie"/>
+            </concept>
+            <concept>
+                <code value="176"/>
+                <display value="Fachgesundheits- und krankenpfleger im Operations-/Endoskopiedienst"/>
+            </concept>
+            <concept>
+                <code value="177"/>
+                <display value="Fachgesundheits- und krankenpfleger für Hygiene"/>
+            </concept>
+            <concept>
+                <code value="178"/>
+                <display value="Fachgesundheits- und krankenpfleger für Palliativ- und Hospizpflege"/>
+            </concept>
+            <concept>
+                <code value="47"/>
+                <display value="Nichtärztliche Behandlung, Therapie (außer Psychotherapie)"/>
+            </concept>
+            <concept>
+                <code value="48"/>
+                <display value="Akademischer Sprachtherapeut"/>
+            </concept>
+            <concept>
+                <code value="49"/>
+                <display value="Atem-, Sprech- und Stimmlehrer"/>
+            </concept>
+            <concept>
+                <code value="50"/>
+                <display value="Ergotherapeut"/>
+            </concept>
+            <concept>
+                <code value="51"/>
+                <display value="Fachangestellter für Bäderbetriebe"/>
+            </concept>
+            <concept>
+                <code value="52"/>
+                <display value="Heilpraktiker"/>
+            </concept>
+            <concept>
+                <code value="53"/>
+                <display value="Klinischer Linguist"/>
+            </concept>
+            <concept>
+                <code value="54"/>
+                <display value="Kunsttherapeut"/>
+            </concept>
+            <concept>
+                <code value="55"/>
+                <display value="Logopäde"/>
+            </concept>
+            <concept>
+                <code value="56"/>
+                <display value="Masseur und medizinische Bademeister"/>
+            </concept>
+            <concept>
+                <code value="57"/>
+                <display value="Motologe"/>
+            </concept>
+            <concept>
+                <code value="58"/>
+                <display value="Musiktherapeut"/>
+            </concept>
+            <concept>
+                <code value="59"/>
+                <display value="Orthoptist"/>
+            </concept>
+            <concept>
+                <code value="60"/>
+                <display value="Physiotherapeut"/>
+            </concept>
+            <concept>
+                <code value="61"/>
+                <display value="Podologe"/>
+            </concept>
+            <concept>
+                <code value="62"/>
+                <display value="Sporttherapeut"/>
+            </concept>
+            <concept>
+                <code value="63"/>
+                <display value="Sprechwissenschaftler"/>
+            </concept>
+            <concept>
+                <code value="64"/>
+                <display value="Staatlich anerkannter Sprachtherapeut"/>
+            </concept>
+            <concept>
+                <code value="65"/>
+                <display value="Stomatherapeut"/>
+            </concept>
+            <concept>
+                <code value="66"/>
+                <display value="Tanz- und Bewegungstherapeut"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="67"/>
+                <display value="Tierheilpraktiker"/>
+            </concept>
+            <concept>
+                <code value="68"/>
+                <display value="Sozialtherapeut"/>
+            </concept>
+            <concept>
+                <code value="69"/>
+                <display value="Pharmazeutische Beratung, Pharmavertrieb"/>
+            </concept>
+            <concept>
+                <code value="70"/>
+                <display value="Apotheker / Fachapotheker"/>
+            </concept>
+            <concept>
+                <code value="71"/>
+                <display value="Pharmazeut"/>
+            </concept>
+            <concept>
+                <code value="72"/>
+                <display value="Pharmazeutisch-technischer Assistent – PTA"/>
+            </concept>
+            <concept>
+                <code value="73"/>
+                <display value="Pharmazeutisch-kaufmännischer Angestellter"/>
+            </concept>
+            <concept>
+                <code value="180"/>
+                <display value="Pharmazieingenieur"/>
+            </concept>
+            <concept>
+                <code value="181"/>
+                <display value="Apothekenassistent"/>
+            </concept>
+            <concept>
+                <code value="182"/>
+                <display value="Apothekerassistent"/>
+            </concept>
+            <concept>
+                <code value="74"/>
+                <display value="Psychologische Analyse, Beratung, Therapie"/>
+            </concept>
+            <concept>
+                <code value="75"/>
+                <display value="Gesundheits- und Rehabilitationspsychologe"/>
+            </concept>
+            <concept>
+                <code value="76"/>
+                <display value="Kinder- und Jugendpsychotherapeut"/>
+            </concept>
+            <concept>
+                <code value="77"/>
+                <display value="Klinischer Psychologe"/>
+            </concept>
+            <concept>
+                <code value="78"/>
+                <display value="Kommunikationspsychologe"/>
+            </concept>
+            <concept>
+                <code value="79"/>
+                <display value="Pädagogischer Psychologe"/>
+            </concept>
+            <concept>
+                <code value="80"/>
+                <display value="Psychoanalytiker"/>
+            </concept>
+            <concept>
+                <code value="81"/>
+                <display value="Psychologe"/>
+            </concept>
+            <concept>
+                <code value="82"/>
+                <display value="Psychologischer Psychotherapeut"/>
+            </concept>
+            <concept>
+                <code value="183"/>
+                <display value="Psychotherapeut"/>
+            </concept>
+            <concept>
+                <code value="184"/>
+                <display value="Fachpsychotherapeut für Kinder und Jugendliche"/>
+            </concept>
+            <concept>
+                <code value="185"/>
+                <display value="Fachpsychotherapeut für Erwachsene"/>
+            </concept>
+            <concept>
+                <code value="83"/>
+                <display value="Sportpsychologe"/>
+            </concept>
+            <concept>
+                <code value="84"/>
+                <display value="Verkehrspsychologe"/>
+            </concept>
+            <concept>
+                <code value="85"/>
+                <display value="Wirtschaftspsychologe"/>
+            </concept>
+            <concept>
+                <code value="86"/>
+                <display value="Rettungsdienst"/>
+            </concept>
+            <concept>
+                <code value="87"/>
+                <display value="Ingenieur Rettungswesen"/>
+            </concept>
+            <concept>
+                <code value="88"/>
+                <display value="Notfallsanitäter"/>
+            </concept>
+            <concept>
+                <code value="89"/>
+                <display value="Rettungsassistent"/>
+            </concept>
+            <concept>
+                <code value="90"/>
+                <display value="Rettungshelfer"/>
+            </concept>
+            <concept>
+                <code value="91"/>
+                <display value="Rettungssanitäter"/>
+            </concept>
+            <concept>
+                <code value="92"/>
+                <display value="med. Datenverarbeitung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="93"/>
+                <display value="Medizinische Datenerhebung"/>
+            </concept>
+            <concept>
+                <code value="94"/>
+                <display value="Medizinischer Dokumentar"/>
+            </concept>
+            <concept>
+                <code value="95"/>
+                <display value="Medizinischer Dokumentationsassistent"/>
+            </concept>
+            <concept>
+                <code value="173"/>
+                <display value="Fachangestellter f. Medien- und Informationsdienste - Medizinische Dokumentation"/>
+            </concept>
+            <concept>
+                <code value="174"/>
+                <display value="Medizinischer Informationsmanager"/>
+            </concept>
+            <concept>
+                <code value="96"/>
+                <display value="Soziales, Pädagogik"/>
+            </concept>
+            <concept>
+                <code value="97"/>
+                <display value="Kinderbetreuung, -erziehung"/>
+            </concept>
+            <concept>
+                <code value="98"/>
+                <display value="Pädagoge"/>
+            </concept>
+            <concept>
+                <code value="99"/>
+                <display value="Kinderdorfmutter, -vater"/>
+            </concept>
+            <concept>
+                <code value="100"/>
+                <display value="Kinderpfleger"/>
+            </concept>
+            <concept>
+                <code value="101"/>
+                <display value="Erzieher"/>
+            </concept>
+            <concept>
+                <code value="102"/>
+                <display value="Erzieher Jugend- und Heimerziehung"/>
+            </concept>
+            <concept>
+                <code value="103"/>
+                <display value="Lehrer"/>
+            </concept>
+            <concept>
+                <code value="104"/>
+                <display value="Orientierungs- und Mobilitätslehrer"/>
+            </concept>
+            <concept>
+                <code value="105"/>
+                <display value="Medien-, Kulturpädagogik"/>
+            </concept>
+            <concept>
+                <code value="106"/>
+                <display value="Musikpädagoge"/>
+            </concept>
+            <concept>
+                <code value="107"/>
+                <display value="Sozialberatung, -arbeit"/>
+            </concept>
+            <concept>
+                <code value="108"/>
+                <display value="Sozialarbeiter / Sozialpädagoge"/>
+            </concept>
+            <concept>
+                <code value="109"/>
+                <display value="Betreuungskraft / Alltagsbegleiter"/>
+            </concept>
+            <concept>
+                <code value="110"/>
+                <display value="Gerontologe"/>
+            </concept>
+            <concept>
+                <code value="111"/>
+                <display value="Psychosozialer Prozessbegleiter"/>
+            </concept>
+            <concept>
+                <code value="112"/>
+                <display value="Rehabilitationspädagoge"/>
+            </concept>
+            <concept>
+                <code value="113"/>
+                <display value="Sozialassistent"/>
+            </concept>
+            <concept>
+                <code value="114"/>
+                <display value="Seelsorge"/>
+            </concept>
+            <concept>
+                <code value="115"/>
+                <display value="Religionspädagoge"/>
+            </concept>
+            <concept>
+                <code value="116"/>
+                <display value="Gemeindehelfer, Gemeindediakon"/>
+            </concept>
+            <concept>
+                <code value="117"/>
+                <display value="Theologe"/>
+            </concept>
+            <concept>
+                <code value="118"/>
+                <display value="Medizintechnik, Laboranalyse"/>
+            </concept>
+            <concept>
+                <code value="119"/>
+                <display value="Medizin-, Orthopädie- und Rehatechnik"/>
+            </concept>
+            <concept>
+                <code value="120"/>
+                <display value="Assistent Medizinische Gerätetechnik"/>
+            </concept>
+            <concept>
+                <code value="121"/>
+                <display value="Augenoptiker"/>
+            </concept>
+            <concept>
+                <code value="122"/>
+                <display value="Hörakustiker / Hörgeräteakustiker"/>
+            </concept>
+            <concept>
+                <code value="123"/>
+                <display value="Hörgeräteakustikermeister"/>
+            </concept>
+            <concept>
+                <code value="124"/>
+                <display value="Ingenieur Augenoptik"/>
+            </concept>
+            <concept>
+                <code value="125"/>
+                <display value="Ingenieur - Hörtechnik und Audiologie"/>
+            </concept>
+            <concept>
+                <code value="126"/>
+                <display value="Ingenieur - Medizintechnik"/>
+            </concept>
+            <concept>
+                <code value="127"/>
+                <display value="Ingenieur - Orthopädie- und Rehatechnik"/>
+            </concept>
+            <concept>
+                <code value="128"/>
+                <display value="Medizinphysiker (z.B. in Strahlenmedizin)"/>
+            </concept>
+            <concept>
+                <code value="129"/>
+                <display value="Orthopädieschuhmacher"/>
+            </concept>
+            <concept>
+                <code value="130"/>
+                <display value="Orthopädietechnik-Mechaniker"/>
+            </concept>
+            <concept>
+                <code value="131"/>
+                <display value="Zahntechniker"/>
+            </concept>
+            <concept>
+                <code value="132"/>
+                <display value="Glasbläser (Fachrichtung Kunstaugen)"/>
+            </concept>
+            <concept>
+                <code value="133"/>
+                <display value="staatlich geprüfter Techniker der Fachrichtung Medizintechnik"/>
+            </concept>
+            <concept>
+                <code value="134"/>
+                <display value="Medizinisch-technische Assistenz"/>
+            </concept>
+            <concept>
+                <code value="135"/>
+                <display value="Anästhesietechnischer Assistent"/>
+            </concept>
+            <concept>
+                <code value="136"/>
+                <display value="HNO Audiologieassistent"/>
+            </concept>
+            <concept>
+                <code value="137"/>
+                <display value="Medizinisch-Technischer Assistent Funktionsdiagnostik – MTA-F"/>
+            </concept>
+            <concept>
+                <code value="138"/>
+                <display value="Medizinisch-Technischer Laboratoriumsassistent – MTA-L"/>
+            </concept>
+            <concept>
+                <code value="139"/>
+                <display value="Medizinisch-Technischer Radiologieassistent – MTA-R"/>
+            </concept>
+            <concept>
+                <code value="140"/>
+                <display value="Operationstechnischer Angestellter"/>
+            </concept>
+            <concept>
+                <code value="141"/>
+                <display value="Operationstechnischer Assistent"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="142"/>
+                <display value="Veterinärmedizinischer-technischer Assistent"/>
+            </concept>
+            <concept>
+                <code value="143"/>
+                <display value="Zytologieassistent"/>
+            </concept>
+            <concept>
+                <code value="144"/>
+                <display value="Chemie, naturwissenschaftliche Laboranalyse (außer MTA)"/>
+            </concept>
+            <concept>
+                <code value="145"/>
+                <display value="Biochemiker (z.B. klinische Chemie)"/>
+            </concept>
+            <concept>
+                <code value="146"/>
+                <display value="Chemiker (z.B. klinische Chemie)"/>
+            </concept>
+            <concept>
+                <code value="147"/>
+                <display value="Humangenetiker"/>
+            </concept>
+            <concept>
+                <code value="148"/>
+                <display value="Mikrobiologe"/>
+            </concept>
+            <concept>
+                <code value="149"/>
+                <display value="Dienstleistungen am Menschen (außer medizinische)"/>
+            </concept>
+            <concept>
+                <code value="150"/>
+                <display value="Körperpflege"/>
+            </concept>
+            <concept>
+                <code value="151"/>
+                <display value="Fachkraft Beauty und Wellness"/>
+            </concept>
+            <concept>
+                <code value="152"/>
+                <display value="Friseur"/>
+            </concept>
+            <concept>
+                <code value="153"/>
+                <display value="Kosmetiker"/>
+            </concept>
+            <concept>
+                <code value="154"/>
+                <display value="Bestattungswesen"/>
+            </concept>
+            <concept>
+                <code value="155"/>
+                <display value="Bestattungsfachkraft"/>
+            </concept>
+            <concept>
+                <code value="156"/>
+                <display value="Berufe aus sonstigen Berufsfeldern"/>
+            </concept>
+            <concept>
+                <code value="157"/>
+                <display value="Umwelt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="158"/>
+                <display value="Medien, Kultur, Gestaltung, Kunst (außer Pädagogen)"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="159"/>
+                <display value="Schutz und Sicherheit"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="162"/>
+                <display value="Verfahrens- und Produktentwicklung, technisches Zeichnen, Konstruktion"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="163"/>
+                <display value="Sprachen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="164"/>
+                <display value="Produktion, Produktionsplanung, Produktionssteuerung, Instandhaltung"/>
+            </concept>
+            <concept>
+                <code value="165"/>
+                <display value="Jurist"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="166"/>
+                <display value="Reinigung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="167"/>
+                <display value="Bau, Architektur, Rohstoffe"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="168"/>
+                <display value="Verwaltungsberufe (außer medizinische), kaufmännische Berufe, Verkehr"/>
+            </concept>
+            <concept>
+                <code value="169"/>
+                <display value="Taxifahrer bei Krankentransport"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="170"/>
+                <display value="Elektro, Energie, Ver- und Entsorgung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="171"/>
+                <display value="Gastgewerbe und Tourismus, Veranstaltungsmanagement und Hauswirtschaft"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="172"/>
+                <display value="IT"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Ärztliche Berufsvarianten"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.493"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Arzt, der noch keinen Facharzttitel hat, sich jedoch momentan in der Weiterbildung befindet"/>
+                </extension>
+                <code value="1"/>
+                <display value="Arzt in Facharztausbildung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Dieser Code kann additiv zu einer vorhanden Spezialisierung oder Weiterbildung eines Autors hinzugefügt werden, um auszudrücken, dass sich der Autor in einer hausärztlichen Tätigkeit befindet."/>
+                </extension>
+                <code value="2"/>
+                <display value="Hausarzt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <code value="3"/>
+                <display value="Praktischer Arzt"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

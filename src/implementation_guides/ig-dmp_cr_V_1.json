@@ -1,0 +1,90 @@
+{
+	"name": "eDMP-Datensatz Rückenschmerz",
+	"description": "Indikationsspezifischer Datensatz für das strukturierte Behandlungsprogramm Rückenschmerz",
+	"guidelineDefinition": {
+		"url": "https://update.kbv.de/ita-update/Medizinische-Dokumentationen/Rueckenschmerz/"
+	},
+	"folderCardinality": {
+		"min": "1",
+		"max": "1",
+		"unique": true
+	},
+	"validFromDate": "2023-01-01",
+	"type": "atomic",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "other",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "in andere Kategorien nicht einzuordnende Dokumente, eDMPs sowie Telemedizinisches Monitoring",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "sonstige von den Leistungserbringern für den Versicherten bereitgestellte Daten, insbesondere Daten, die sich aus der Teilnahme des Versicherten an strukturierten Behandlungsprogrammen bei chronischen Krankheiten gemäß § 137f ergeben"
+				}
+			]
+		}
+	},
+	"elements": [
+		{
+			"name": "eDMP record for chronic back pain",
+			"description": "This document is an HL7 CDA-based document.",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "BRI",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Brief",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Alle Varianten von Arztbriefen wie Überweisungsbrief, Entlassbrief, etc. sowie weitere zusammenfassende Dokumente mit einer ärztlichen oder pflegerischen Bewertung der Fakten. Befundberichte werden über das Konzept BEF (Befundbericht) abgedeckt"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "FPRO",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Therapiedokumentation",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Dokumentation zur Durchführung von Therapien, durch ärztliche und nicht-ärztliche Therapeuten. Auch die zugehörigen Therapieanforderungen werden mit diesem Konzept abgebildet. Bei fachspezifischen Dokumententypen wie Bestrahlungsprotokollen, sollte stattdessen das spezifischere Konzept verwendet werden, z.B. BSTR (Bestrahlungsdokumentation), OPDK (OP-Dokumente). Reine Dokumentation der Medikation wird durch das Konzept MEDI (Medikamentöse Therapien) abgebildet. Beispiele: Ergotherapieprotokoll, Logopädieprotokoll, Physiotherapieprotokoll, Schmerztherapieprotokoll, Reanimationsprotokoll, Dialysedokumente, Psychotherapeutische Dokumente"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:DMP-Rueckenschmerz:v1",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "eDMP Rückenschmerz (gematik)"
+					}
+				},
+				{
+					"name": "documentEntry.eventCodeList",
+					"value": {
+						"code": "09",
+						"codeSystem": "1.2.276.0.76.5.223",
+						"displayName": "Rueckenschmerz"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/hl7-v3"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			}
+		}
+	]
+}

@@ -1,0 +1,60 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Action xmlns="http://www.w3.org/2005/08/addressing">http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0/RequestFacilityAuthorization</Action>
+		<MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:829fe736-6b4b-4f2b-ae0c-8e0e37ec0d32</MessageID>
+		<To xmlns="http://www.w3.org/2005/08/addressing">http://10.11.219.162:80/ws/PHRManagementService</To>
+		<ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+			<Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+		</ReplyTo>
+	</soap:Header>
+	<soap:Body>
+		<ns3:RequestFacilityAuthorization xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0" xmlns:ns4="http://ws.gematik.de/tel/error/v2.0" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns6="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns7="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns9="urn:hl7-org:v3" xmlns:ns10="urn:oasis:names:tc:SAML:1.0:assertion">
+			<ns2:Context>
+				<MandantId>MANDANT_ARZTPRAXIS</MandantId>
+				<ClientSystemId>Clientsystem_ePA</ClientSystemId>
+				<WorkplaceId>Workplace_ePA</WorkplaceId>
+				<UserId>User1</UserId>
+			</ns2:Context>
+			<EhcHandle>EGK-32</EhcHandle>
+			<ns3:AuthorizationConfiguration>
+				<ns3:AuthorizationConfidentiality>normal</ns3:AuthorizationConfidentiality>
+				<ns3:DocumentCategoryList>
+					<ns3:DocumentCategoryElement>psychotherapy</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>physiotherapy</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>laboratory</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>dentistry_oms</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>prescription</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>care</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>eab</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>hospital</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>other</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>childsrecord</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>other_non_medical</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>patientdoc</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>other_medical</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>dermatology</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>dentalrecord</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>gynaecology_urology</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>emp</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>practitioner</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>vaccination</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>mothersrecord</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>ega</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>receipt</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>eau</ns3:DocumentCategoryElement>
+					<ns3:DocumentCategoryElement>nfd</ns3:DocumentCategoryElement>
+				</ns3:DocumentCategoryList>
+				<ns3:ExpirationDate>2022-10-25+02:00</ns3:ExpirationDate>
+			</ns3:AuthorizationConfiguration>
+			<ns3:RecordIdentifier>
+				<ns5:InsurantId root="1.2.276.0.76.4.8" extension="X110474970"/>
+				<ns5:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1</ns5:HomeCommunityId>
+			</ns3:RecordIdentifier>
+			<ns3:OrganizationName>arztpraxis</ns3:OrganizationName>
+			<ns3:InsurantName>
+				<ns3:Vorname>Swantje Mãrianne N. M. P. </ns3:Vorname>
+				<ns3:Nachname>Wesseltoft</ns3:Nachname>
+			</ns3:InsurantName>
+		</ns3:RequestFacilityAuthorization>
+	</soap:Body>
+</soap:Envelope>

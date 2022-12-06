@@ -1,0 +1,2528 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="kdl-cs-2022" />
+  <url value="http://dvmd.de/fhir/CodeSystem/kdl" />
+  <identifier>
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:1.2.276.0.76.5.533" />
+  </identifier>
+  <version value="2022" />
+  <name value="codesystem-kdl-2022" />
+  <title value="CodeSystem Klinische Dokumentenklassen-Liste (Version 2022)" />
+  <status value="active" />
+  <date value="2022-04-01" />
+  <publisher value="Der Fachverband für Dokumentation und Informationsmanagement in der Medizin (DVMD)" />
+  <contact>
+    <name value="Der Fachverband für Dokumentation und Informationsmanagement in der Medizin (DVMD)" />
+    <telecom>
+      <system value="email" />
+      <value value="dvmd@dvmd.de" />
+    </telecom>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dvmd.de" />
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Leitung der Arbeitsgruppe: Annett Müller" />
+    <telecom>
+      <system value="email" />
+      <value value="mueller@dvmd.de" />
+    </telecom>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.dvmd.de" />
+    </telecom>
+  </contact>
+  <description value="Diese CodeSystem-Ressource definiert alle in der Klinischen Dokumentenklassen-Liste" />
+  <copyright value="2022 DVMD e.V." />
+  <valueSet value="http://dvmd.de/fhir/ValueSet/kdl" />
+  <content value="complete" />
+  <count value="425" />
+  <property>
+    <code value="status" />
+    <uri value="http://hl7.org/fhir/concept-properties#status" />
+    <description value="A property that indicates the status of the concept. One of active, experimental, deprecated,retired" />
+    <type value="code" />
+  </property>
+  <concept>
+    <code value="AD" />
+    <display value="Arztdokumentation" />
+    <concept>
+      <code value="AD0101" />
+      <display value="Arztberichte" />
+      <concept>
+        <code value="AD010101" />
+        <display value="Ärztliche Stellungnahme" />
+        <definition value="Die Dokumentation beinhaltet die ärztliche Einschätzung zum Gesundheitszustand für nachfolgende Zwecke. Inkl.: Gutachten, Unfallanzeige, KBV Muster 36, PTV5/8 Exkl.: MD-Gutachten" />
+      </concept>
+      <concept>
+        <code value="AD010102" />
+        <display value="Durchgangsarztbericht" />
+        <definition value="Die Dokumentation beinhaltet die ärztliche Beurteilung des Arbeits- bzw. Wegeunfalls auf standardisiertem Formular. Exkl.: Nachschaubericht" />
+      </concept>
+      <concept>
+        <code value="AD010103" />
+        <display value="Entlassungsbericht intern" />
+        <definition value="Die Dokumentation beinhaltet die endgültige Zusammenfassung des stationären Aufenthaltes. Erstellt von der entlassenden Einrichtung. Exkl.: Verlegungsbericht intern" />
+      </concept>
+      <concept>
+        <code value="AD010104" />
+        <display value="Entlassungsbericht extern" />
+        <definition value="Die Dokumentation beinhaltet die endgültige Zusammenfassung des stationären Aufenthaltes. Erstellt von vorbehandelnden Einrichtungen. Exkl.: Verlegungsbericht extern" />
+      </concept>
+      <concept>
+        <code value="AD010105" />
+        <display value="Reha-Bericht" />
+        <definition value="Die Dokumentation beinhaltet die Zusammenfassung des Aufenthaltes während der Rehabilitation." />
+      </concept>
+      <concept>
+        <code value="AD010106" />
+        <display value="Verlegungsbericht intern" />
+        <definition value="Die Dokumentation beinhaltet die endgültige Zusammenfassung des stationären Aufenthaltes für die Verlegung auf eine andere Station, Fachbereich oder Einrichtung. Exkl.: Entlassungsbericht intern" />
+      </concept>
+      <concept>
+        <code value="AD010107" />
+        <display value="Verlegungsbericht extern" />
+        <definition value="Die Dokumentation beinhaltet die endgültige Zusammenfassung des stationären Aufenthaltes für die Verlegung von einer anderen Einrichtung. Erstellt von der vorbehandelnden Einrichtung. Exkl.: Entlassungsbericht extern" />
+      </concept>
+      <concept>
+        <code value="AD010108" />
+        <display value="Vorläufiger Arztbericht" />
+        <definition value="Die Dokumentation beinhaltet die vorläufige Fassung des Entlassungsberichtes." />
+      </concept>
+      <concept>
+        <code value="AD010109" />
+        <display value="Ärztlicher Befundbericht" />
+        <definition value="Die Dokumentation beinhaltet die ausführliche ärztliche Zusammenfassung von Befunden. Exkl.: Befundbogen" />
+      </concept>
+      <concept>
+        <code value="AD010110" />
+        <display value="Ärztlicher Verlaufsbericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum chronologischen Verlauf der Erkrankung und durchgeführten Maßnahmen aus Sicht des Arztes. Inkl.: Standardisierte Formulare zur ärztlichen Verlaufsdokumentation Exkl.: Visitenprotokoll" />
+      </concept>
+      <concept>
+        <code value="AD010111" />
+        <display value="Ambulanzbrief" />
+        <definition value="Die Dokumentation beinhaltet die Zusammenfassung einer ambulanten Behandlung." />
+      </concept>
+      <concept>
+        <code value="AD010112" />
+        <display value="Kurzarztbrief" />
+        <definition value="Die Dokumentation beinhaltet die Zusammenfassung des stationären Aufenthaltes in Kurzform." />
+      </concept>
+      <concept>
+        <code value="AD010113" />
+        <display value="Nachschaubericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Nachbehandlung eines Arbeits- bzw. Wegeunfalls durch den Durchgangsarzt auf standardisiertem Formular. Exkl.: Durchgangsarztbericht" />
+      </concept>
+      <concept>
+        <code value="AD010114" />
+        <display value="Interventionsbericht" />
+        <definition value="Die Dokumentation beinhaltet diagnostische und therapeutische Interventionen/Eingriffe. Ekl.: Elektrokonvulsionstherapie, Herzkatheterprotokoll, Angiographiebefund, Punktionsprotokoll, OP Bericht" />
+      </concept>
+      <concept>
+        <code value="AD010199" />
+        <display value="Sonstiger Arztbericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: DUV F2222,  Autopsiebericht, Obduktionsbericht, Ärztliche Information (Briefform) des einweisenden bzw. überweisenden Arztes" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AD0201" />
+      <display value="Bescheinigungen" />
+      <concept>
+        <code value="AD020101" />
+        <display value="Arbeitsunfähigkeitsbescheinigung" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Arbeitsunfähigkeit. Inkl.: AU KV 52" />
+      </concept>
+      <concept>
+        <code value="AD020102" />
+        <display value="Beurlaubung" />
+        <definition value="Die Dokumentation beinhaltet die Erklärung über die Unterbrechung des stationären Aufenthaltes über einen festgelegten Zeitraum." />
+      </concept>
+      <concept>
+        <code value="AD020103" />
+        <display value="Todesbescheinigung" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Verstorbenen, zur Feststellung des Todes, zur Todesart sowie weiteren Zusatzangaben. Inkl.: Leichenbegleitschein, Sterbefallanzeige" />
+      </concept>
+      <concept>
+        <code value="AD020104" />
+        <display value="Ärztliche Bescheinigung" />
+        <definition value="Die Dokumentation beinhaltet Bescheinigungen vom Arzt über z. B. die stationäre Behandlung, Atteste, Krankheitszustand. Exkl.: Arbeitsunfähigkeit Inkl.: KBV Muster 3 (Zeugnis über den mutmaßlichen Tag der Entbindung), 9 (Bescheinigung einer Frühgeburt oder einer Behinderung des Kindes), 21 (Ärztliche Bescheinigung für den Bezug von Krankengeld bei Erkrankung eines Kindes), 55 (Bescheinigung einer schwerwiegenden chronischen Erkrankung)" />
+      </concept>
+      <concept>
+        <code value="AD020105" />
+        <display value="Notfall-/Vertretungsschein" />
+        <definition value="Die Dokumentation beinhaltet Diagnosen, Befunde, Therapien im Rahmen einer ambulanten Notfall-/Vertretungsbehandlung (KBV Muster 19). Exkl.: Abrechnungsschein, Überweisungsschein" />
+      </concept>
+      <concept>
+        <code value="AD020106" />
+        <display value="Wiedereingliederungsplan" />
+        <definition value="Die Dokumentation beinhaltet Maßnahmen zur Wiedereingliederung in das Erwerbsleben (KBV Muster 20)." />
+      </concept>
+      <concept>
+        <code value="AD020107" />
+        <display value="Aufenthaltsbescheinigung" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis, in welchem Zeitraum der stationäre Aufenthalt stattgefunden hat." />
+      </concept>
+      <concept>
+        <code value="AD020108" />
+        <display value="Geburtsanzeige" />
+        <definition value="Die Dokumentation beinhaltet administrative Angaben über die Eltern sowie das neugeborene Kind, welche an das Standesamt übermittelt werden." />
+      </concept>
+      <concept>
+        <code value="AD020199" />
+        <display value="Sonstige Bescheinigung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. z.B. Bescheinigungen, die auch von nicht-ärztlichen Berufsgruppen ausgestellt werden. Inkl.: Beratungsbescheinigung, administrative Bescheinigung über den Krankenhausaufenthalt, Schulbescheinigung Inkl.: KBV Muster 85 (Nachweis der Anspruchsberechtigung)" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AD0202" />
+      <display value="Befunderhebungen" />
+      <concept>
+        <code value="AD020201" />
+        <display value="Anatomische Skizze" />
+        <definition value="Die Dokumentation beinhaltet anatomische Abbildungen, die zur Befunderhebung dienen." />
+      </concept>
+      <concept>
+        <code value="AD020202" />
+        <display value="Befundbogen" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse der ärztlichen Untersuchung. Exkl.: Funktionsdiagnostik, bildgebende Diagnostik, Funktionstest, Ärztlicher Befundbericht" />
+      </concept>
+      <concept>
+        <code value="AD020203" />
+        <display value="Bericht Gesundheitsuntersuchung" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse der ärztlichen Untersuchung, die von öffentlichen Trägern vorgegeben wird. Inkl.: Ergänzungsberichte D-Arzt (z. B. F1002, F1004, F1006), Vorsorgeuntersuchungen, Befundbogen von Nachuntersuchungen Exkl.: Krebsfrüherkennung, Durchgangsarztbericht, Nachschaubericht, Ärztlicher Befundbericht" />
+      </concept>
+      <concept>
+        <code value="AD020204" />
+        <display value="Krebsfrüherkennung" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von empfohlenen Untersuchungen gemäß §25 SGB V zur Krebsfrüherkennung. z.B. Brustkrebs, Prostata Inkl.: KBV Muster 39 (Krebsfrüherkennung Zervix-Karzinom) und 40 (Krebsfrüherkennung Männer)" />
+      </concept>
+      <concept>
+        <code value="AD020205" />
+        <display value="Messblatt" />
+        <definition value="Die Dokumentation beinhaltet Messungen von Teilen des Körpers, Gewicht und Körpergröße. Exkl.: Perzentilkurve" />
+      </concept>
+      <concept>
+        <code value="AD020206" />
+        <display value="Belastungserprobung" />
+        <definition value="Die Dokumentation beinhaltet die Regelung zur Art und Dauer der Rückkehr in das Berufsleben. Inkl.: KBV-Formular F3110 und F3112" />
+      </concept>
+      <concept>
+        <code value="AD020207" />
+        <display value="Ärztlicher Fragebogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu gezielten Fragen, die ausschließlich durch einen Arzt beantwortet werden. z.B. Ärztlicher Fragebogen zur Aufnahme in die vollstationäre Pflege, Kurzzeitpflege oder Tagespflege." />
+      </concept>
+      <concept>
+        <code value="AD020208" />
+        <display value="Befund extern" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von verschiedenen ärztlichen/therapeutischen Untersuchungen und Befunderhebungen, welche in vorbehandelnden Einrichtungen/Praxen entstanden sind, aber nicht durch eine spezifischere KDL abgebildet werden kann. Exkl. Laborbefund extern" />
+      </concept>
+      <concept>
+        <code value="AD020299" />
+        <display value="Sonstige ärztliche Befunderhebung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AD0601" />
+      <display value="Fallbesprechungen" />
+      <concept>
+        <code value="AD060101" />
+        <display value="Konsilanforderung" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung/Anmeldung einer Befundung durch einen Facharzt aus einem weiteren Leistungsbereich." />
+      </concept>
+      <concept>
+        <code value="AD060102" />
+        <display value="Konsilanmeldung" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AD060103" />
+        <display value="Konsilbericht intern" />
+        <definition value="Die Dokumentation beinhaltet die Befundung und Empfehlung eines konsiliarischen Facharztes für den weiteren Behandlungsverlauf. Erstellt von der entlassenden Einrichtung." />
+      </concept>
+      <concept>
+        <code value="AD060104" />
+        <display value="Konsilbericht extern" />
+        <definition value="Die Dokumentation beinhaltet die Zusammenfassung der Befundung und Empfehlung eines Facharztes für den weiteren Behandlungsverlauf. Erstellt von einer Fremdeinrichtung. Inkl.: KBV Muster 22 (Konsiliarbericht vor Aufnahme einer Psychotherapie)" />
+      </concept>
+      <concept>
+        <code value="AD060105" />
+        <display value="Visitenprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu einer ärztlichen, therapeutischen und pflegerischen Besprechung zum aktuellen Zustand sowie weitere Maßnahmen. Visiten erfolgen in der Regel direkt im Beisein des zu Behandelnden. Exkl.: Ärztlicher Verlaufsbericht, Pflegevisite" />
+      </concept>
+      <concept>
+        <code value="AD060106" />
+        <display value="Tumorkonferenzprotokoll" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AD060107" />
+        <display value="Teambesprechungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu einer interdisziplinären Beratung über den aktuellen Gesundheitszustand mit Risikeinschätzung, Indikationsstellung und der Planung des weiteren Verlaufes/Vorgehens inkl. beteiligte Berufsgruppen/Facharztgruppen (z.B. Herzteam-Protokoll). Exkl.: Tumorkonferenzprotokoll" />
+      </concept>
+      <concept>
+        <code value="AD060108" />
+        <display value="Anordnung/Verordnung" />
+        <definition value="Die Dokumentation beinhaltet die Festlegung therapeutischer Maßnahmen. Inkl.: KBV Muster 63/64/65 (Verordnung spezialisierter ambulanter Palliativversorgung) Exkl.: Heil-/ Hilfsmittelverordnung, Rezept, Psychologische Therapieanordnung, Verordnung von Krankenhausbehandlung, Postoperative Verordnung, Bestrahlungsverordnung" />
+      </concept>
+      <concept>
+        <code value="AD060109" />
+        <display value="Verordnung" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AD060199" />
+        <display value="Sonstige Fallbesprechung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Angehörigengespräch, Gesprächsnotiz" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="AM" />
+    <display value="Administration" />
+    <concept>
+      <code value="AM0101" />
+      <display value="Abrechnungsdokumente" />
+      <concept>
+        <code value="AM010101" />
+        <display value="Bogen abrechnungsrelevanter Diagnosen / Prozeduren" />
+        <definition value="Die Dokumentation beinhaltet alle Diagnosen und Leistungen während eines Krankenhausaufenthaltes, welche die Grundlage zur Abrechnung beim jeweiligen Kostenträger bilden." />
+      </concept>
+      <concept>
+        <code value="AM010102" />
+        <display value="G-AEP Kriterien" />
+        <definition value="Die Dokumentation beinhaltet festgelegte Kriterien zur Feststellung der Notwendigkeit einer stationären Behandlung. Inkl.: Indikationsbogen zur Aufnahme" />
+      </concept>
+      <concept>
+        <code value="AM010103" />
+        <display value="Kostenübernahmeverlängerung" />
+        <definition value="Die Dokumentation beinhaltet die Bestätigung zur Kostenübernahme bei Weiterführung der Behandlung." />
+      </concept>
+      <concept>
+        <code value="AM010104" />
+        <display value="Schriftverkehr MD Kasse" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenz in Bezug auf MD relevante Fälle zwischen MD und Krankenkasse. Exkl.: MD Prüfauftrag, MD Gutachten, Schriftverkehr MD Arzt" />
+      </concept>
+      <concept>
+        <code value="AM010105" />
+        <display value="Abrechnungsschein" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die als Nachweis über die erfolgte ambulante Behandlung und deren Abrechnung dient. Inkl.: KBV Muster 5 Exkl.: Notfall-/Vertretungsschein, Überweisungsschein" />
+      </concept>
+      <concept>
+        <code value="AM010106" />
+        <display value="Rechnung ambulante/stationäre Behandlung" />
+        <definition value="Die Dokumentation beinhaltet eine individuelle Kostenerstellung der erbrachten Leistungen an den jeweiligen Kostenträger." />
+      </concept>
+      <concept>
+        <code value="AM010107" />
+        <display value="MD Prüfauftrag" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Ankündigung zur Überprüfung eines abrechnungsrelevanten Sachverhaltes durch den Medizinischen Dienst.  Exkl.: Schriftverkehr MD Kasse, MD Gutachten, Schriftverkehr MD Arzt" />
+      </concept>
+      <concept>
+        <code value="AM010108" />
+        <display value="MD Gutachten" />
+        <definition value="Die Dokumentation beinhaltet das Ergebnis einer Begutachtung durch den Medizinischen Dienst." />
+      </concept>
+      <concept>
+        <code value="AM010199" />
+        <display value="Sonstige Abrechnungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Dokumentation erbrachte Leistungen (GOÄ), Einzahlungsquittung, Individual Checkliste, Liquidation, Zahlungsaufforderung, Checkliste Abrechnung, Entlassungsschein" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM0102" />
+      <display value="Anträge" />
+      <concept>
+        <code value="AM010201" />
+        <display value="Antrag auf Rehabilitation" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage an den zuständigen Kostenträger für Maßnahmen zum Erhalt oder Verbesserung des Gesundheitszustandes. Inkl.: KBV Muster 25 (Anregung einer ambulanten Vorsorgeleistung in anerkannten Kurorten)" />
+      </concept>
+      <concept>
+        <code value="AM010202" />
+        <display value="Antrag auf Betreuung" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage auf eine gesetzliche Vormundschaft durch das Gericht." />
+      </concept>
+      <concept>
+        <code value="AM010203" />
+        <display value="Antrag auf gesetzliche Unterbringung" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage bei Gericht auf Unterbringung von Patient*innen aller Altersgruppen in eine geschlossene Einrichtung durch einen Arzt, wenn eifreiheitsentziehende Maßnahmen erforderlich sind." />
+      </concept>
+      <concept>
+        <code value="AM010204" />
+        <display value="Verlängerungsantrag" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage zur Übernahme der Kosten bei Weiterführung der Behandlung / Rehabilitation." />
+      </concept>
+      <concept>
+        <code value="AM010205" />
+        <display value="Antrag auf Psychotherapie" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage für eine gezielte professionelle Behandlung psychischer Störungen. Inkl.: KBV Muster PTV1/PTV2" />
+      </concept>
+      <concept>
+        <code value="AM010206" />
+        <display value="Antrag auf Pflegeeinstufung" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage an den MD zur Genehmigung eines Pflegegrades bei Pflegebedürftigkeit." />
+      </concept>
+      <concept>
+        <code value="AM010207" />
+        <display value="Kostenübernahmeantrag" />
+        <definition value="Die Dokumentation beinhaltet eine Anfrage zur Kostenübernahme für eine geplante Behandlung. Inkl.: KBV Muster 56" />
+      </concept>
+      <concept>
+        <code value="AM010208" />
+        <display value="Antrag auf Leistungen der Pflegeversicherung" />
+        <definition value="Die Dokumentation beinhaltet einen Antrag zur Inanspruchnahme von Leistungen, welche durch die Pflegeversicherung übernommen werden sollen. Beispiel: Pflegegeld, Pflegehilfsmittel, etc." />
+      </concept>
+      <concept>
+        <code value="AM010209" />
+        <display value="Antrag auf Kurzzeitpflege" />
+        <definition value="Die Dokumentation beinhaltet einen Antrag zur Inanspruchnahme einer begrenzten oder vollstationären Pflege einer pflegebedürftigen Person." />
+      </concept>
+      <concept>
+        <code value="AM010210" />
+        <display value="Antrag auf Fixierung/Isolierung beim Amtsgericht" />
+        <definition value="Die Dokumentation beinhaltet die Anfrage beim Gericht auf notwendige Fixierungs- oder Isolierungsmaßnahmen." />
+      </concept>
+      <concept>
+        <code value="AM010299" />
+        <display value="Sonstiger Antrag" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Antrag auf Haushaltshilfe, Obduktionsantrag" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM0103" />
+      <display value="Aufklärungen" />
+      <concept>
+        <code value="AM010301" />
+        <display value="Anästhesieaufklärungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Aufklärung der geplanten Anästhesie. Inkl.: Anamnese, Begleitmedikation, geplanter Eingriff, Vitaldaten, Präoperative Visite" />
+      </concept>
+      <concept>
+        <code value="AM010302" />
+        <display value="Diagnostischer Aufklärungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Aufklärung der geplanten Diagnostik, inklusive anamnestischer Erhebungen." />
+      </concept>
+      <concept>
+        <code value="AM010303" />
+        <display value="Operationsaufklärungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Aufklärung der geplanten Operation, inklusive anamnestischer Erhebungen." />
+      </concept>
+      <concept>
+        <code value="AM010304" />
+        <display value="Aufklärungsbogen Therapie" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Aufklärung der geplanten Therapie, inklusive anamnestischer Erhebungen." />
+      </concept>
+      <concept>
+        <code value="AM010399" />
+        <display value="Sonstiger Aufklärungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Aufklärung - Zentralvenöser Katheter, Aufklärungsbogen - Geburtseinleitung, Aufklärung - Anwesenheit des Vaters/ einer Vertrauensperson bei der Entbindung, Aufklärung - Eigenblutspende einschließlich Eigenblutrückübertragung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM0301" />
+      <display value="Checklisten Administration" />
+      <concept>
+        <code value="AM030101" />
+        <display value="Aktenlaufzettel" />
+        <definition value="Die Dokumentation beinhaltet einen Nachweis über den aktuellen Verbleib sowie den Aktenlauf." />
+      </concept>
+      <concept>
+        <code value="AM030102" />
+        <display value="Checkliste Entlassung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, ob die zur Entlassung notwendigen Dokumente/Gegenstände vollständig sind." />
+      </concept>
+      <concept>
+        <code value="AM030103" />
+        <display value="Entlassungsplan" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Vorbereitung einer Entlassung nach stationärem Aufenthalt." />
+      </concept>
+      <concept>
+        <code value="AM030104" />
+        <display value="Patientenlaufzettel" />
+        <definition value="Die Dokumentation beinhaltet einen Nachweis über Terminvereinbarungen, durchgeführte Diagnostiken, Behandlungen o.ä. während des Aufenthaltes." />
+      </concept>
+      <concept>
+        <code value="AM030199" />
+        <display value="Sonstige Checkliste Administration" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Aktendeckblatt, Aktencheckliste, Checkliste zur Archivierung der Krankengeschichte" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM0501" />
+      <display value="Einwilligungen/Erklärungen" />
+      <concept>
+        <code value="AM050101" />
+        <display value="Datenschutzerklärung" />
+        <definition value="Die Dokumentation beinhaltet eine Erklärung zum Schutz von sensiblen Daten und deren Verwendung ." />
+      </concept>
+      <concept>
+        <code value="AM050102" />
+        <display value="Einverständniserklärung" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AM050103" />
+        <display value="Erklärung Nichtansprechbarkeit Patienten" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AM050104" />
+        <display value="Einverständniserklärung Abrechnung" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Erlaubnis, sensible Daten zu Abrechnungszwecken an Dritte weiterzugeben." />
+      </concept>
+      <concept>
+        <code value="AM050105" />
+        <display value="Einverständniserklärung Behandlung" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Erlaubnis um eine geplante Behandlung durchführen und dokumentieren zu können. Inkl.: Einwilligungserklärung Fotodokumentation, Einverständniserklärung Neugeborenenscreening." />
+      </concept>
+      <concept>
+        <code value="AM050106" />
+        <display value="Einwilligung und Datenschutzerklärung Entlassungsmanagement" />
+        <definition value="Die Dokumentation beinhaltet ein bundeseinheitliches Formular zu Inhalten und Zielen des Entlassmanagement mit schriftlicher Einwilligung zur Datenübermittlung an die Krankenkasse mit Widerruf." />
+      </concept>
+      <concept>
+        <code value="AM050107" />
+        <display value="Schweigepflichtentbindung" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Einwilligung um medizinische Daten, die der ärztlichen Schweigepflicht unterliegen, an Dritte weitergeben zu dürfen." />
+      </concept>
+      <concept>
+        <code value="AM050108" />
+        <display value="Entlassung gegen ärztlichen Rat" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Einwilligung, die stationäre Behandlung vorzeitig gegen ärztlichen Rat abzubrechen." />
+      </concept>
+      <concept>
+        <code value="AM050109" />
+        <display value="Aufforderung zur Herausgabe der medizinischen Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet eine Anweisung die Akte/Daten des Mandanten herauszugeben (Art. 15 DSGVO)." />
+      </concept>
+      <concept>
+        <code value="AM050110" />
+        <display value="Aufforderung zur Löschung der medizinischen Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet eine Anweisung die Akte/Daten des Mandanten zu löschen (Art. 17 DSGVO)." />
+      </concept>
+      <concept>
+        <code value="AM050111" />
+        <display value="Aufforderung zur Berichtigung der medizinischen Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet eine Anweisung die Akte/Daten des Mandanten zu berichtigen (Art. 16 DSGVO)." />
+      </concept>
+      <concept>
+        <code value="AM050199" />
+        <display value="Sonstige Einwilligung/Erklärung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Abtretungserklärung, Aushändigung der Explantate, Einwilligung zum Tragen des Patientenidentifikationsarmbandes, Patientenerklärung Europäische Krankenversicherung, Zustimmungserklärung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1601" />
+      <display value="Patienteneigene Dokumente" />
+      <concept>
+        <code value="AM160101" />
+        <display value="Blutgruppenausweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Blutgruppe und zum Rhesusfaktor." />
+      </concept>
+      <concept>
+        <code value="AM160102" />
+        <display value="Impfausweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu durchgeführten Impfungen mit Angaben zur Charge." />
+      </concept>
+      <concept>
+        <code value="AM160103" />
+        <display value="Vorsorgevollmacht" />
+        <definition value="Die Dokumentation beinhaltet die schriftliche Bevollmächtigung, bestimmte Interessen Dritter zu vertreten." />
+      </concept>
+      <concept>
+        <code value="AM160104" />
+        <display value="Patientenverfügung" />
+        <definition value="Die Dokumentation beinhaltet den vorsorglich festgehaltenen letzten Willen." />
+      </concept>
+      <concept>
+        <code value="AM160105" />
+        <display value="Wertgegenständeverwaltung" />
+        <definition value="Die Dokumentation beinhaltet eine Sachauflistung zu Gegenständen, die bei Aufnahme mit in die Einrichtung gebracht wurden. Inkl.: Nachweise über Ein- und Ausgang von Geld, Verlustmeldungen" />
+      </concept>
+      <concept>
+        <code value="AM160106" />
+        <display value="Allergiepass" />
+        <definition value="Die Dokumentation beinhaltet eine vollständige Auflistung zu bekannten Allergien in Form eines Ausweises." />
+      </concept>
+      <concept>
+        <code value="AM160107" />
+        <display value="Herzschrittmacherausweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum implantierten Schrittmacher einer Person in Form eines Ausweises." />
+      </concept>
+      <concept>
+        <code value="AM160108" />
+        <display value="Nachlassprotokoll" />
+        <definition value="Die Dokumentation beinhaltet ein Übergabeprotokoll, mit dem aufgelisteten Nachlass." />
+      </concept>
+      <concept>
+        <code value="AM160109" />
+        <display value="Mutterpass (Kopie)" />
+        <definition value="Die Dokumentation beinhaltet Angaben in dem alle relevanten Daten zum Schwangerschaftsverlauf erfasst werden." />
+      </concept>
+      <concept>
+        <code value="AM160110" />
+        <display value="Ausweiskopie" />
+        <definition value="Die Dokumentation beinhaltet die Kopie eines Ausweisdokumentes. Exkl.: Herzschrittmacherausweis, Implantat-Ausweis" />
+      </concept>
+      <concept>
+        <code value="AM160111" />
+        <display value="Implantat-Ausweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu Implantaten einer Person." />
+      </concept>
+      <concept>
+        <code value="AM160112" />
+        <display value="Betreuerausweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben über einen gesetzlichen Vertreter einer Person." />
+      </concept>
+      <concept>
+        <code value="AM160113" />
+        <display value="Patientenbild" />
+        <definition value="Die Dokumentation beinhaltet Fotos von Patienten, welche aus administrativen Gründen angefertigt wurden. Für Fotografien, die im Zusammenhang mit der Behandlung stehen, sind die spezifischeren KDL-Kodes zu verwenden." />
+      </concept>
+      <concept>
+        <code value="AM160199" />
+        <display value="Sonstiges patienteneigenes Dokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Ausweis Antikoagulanzienbehandlung, Betreuerausweis, Urkunde (Notar), Zeugnis" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1602" />
+      <display value="Patienteninformationen" />
+      <concept>
+        <code value="AM160201" />
+        <display value="Belehrung" />
+        <definition value="Die Dokumentation beinhaltet eine Aufklärung bzw. Anweisung wie, wann und wo eine bestimmte Handlung bzw. ein Verhalten auszuführen ist." />
+      </concept>
+      <concept>
+        <code value="AM160202" />
+        <display value="Informationsblatt" />
+        <definition value="Die Dokumentation beinhaltet wichtige Hinweise, die für eine Behandlung oder stationären Aufenthalt notwendig sind. Inkl.: KBV Muster PTV 10/11" />
+      </concept>
+      <concept>
+        <code value="AM160203" />
+        <display value="Informationsblatt Entlassungsmanagement" />
+        <definition value="Die Dokumentation beinhaltet Informationen, die den Patienten über die lückenlose Anschlussversorgung nach dem Krankenhausaufenthalt aufklären." />
+      </concept>
+      <concept>
+        <code value="AM160299" />
+        <display value="Sonstiges Patienteninformationsblatt" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1603" />
+      <display value="Poststationäre Verordnungen" />
+      <concept>
+        <code value="AM160301" />
+        <display value="Heil- / Hilfsmittelverordnung" />
+        <definition value="Die Dokumentation beinhaltet eine ärztliche Anweisung zur Durchführung von therapeutischen Behandlungen (Bsp. Physiotherapie, Ergotherapie, Logotherapie etc.) sowie die Verordnung von Hilfsmitteln zur therapeutischen Unterstützung (Bsp. Bandagen, Gehilfen, Prothesen etc.). Inkl.: KBV Muster 8 (Sehhilfenverordnung), 8a (Verordnung von vergrößernden Sehhilfen), 13 (Heilmittelverordnung Physikalische Th.), 14, 15 (Verordnung einer Hörhilfe), 18 (Verordnung Ergotherapie), 28 (Verordnung Soziotherapie)" />
+      </concept>
+      <concept>
+        <code value="AM160302" />
+        <display value="Krankentransportschein" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über durchgeführte oder geplante Krankenbeförderungen." />
+      </concept>
+      <concept>
+        <code value="AM160303" />
+        <display value="Verordnung häusliche Krankenpflege" />
+        <definition value="Die Dokumentation beinhaltet eine ärztliche Anweisung für die Krankenpflege zu Hause (KBV Muster 12)." />
+      </concept>
+      <concept>
+        <code value="AM160399" />
+        <display value="Sonstige poststationäre Verordnung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: KBV Muster 61, Verordnung von medizinischer Rehabilitation, Ärztliche Verordnung zur nachstationären Versorgung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1701" />
+      <display value="Qualitätssicherungen" />
+      <concept>
+        <code value="AM170101" />
+        <display value="Dokumentationsbogen Meldepflicht" />
+        <definition value="Die Dokumentation beinhaltet meldepflichtigen Daten an Dritte. Inkl.: Infektionserkrankungen, Krankheitserreger, unerwünschte Ereignisse durch Medizinprodukte" />
+      </concept>
+      <concept>
+        <code value="AM170102" />
+        <display value="Hygienestandard" />
+        <definition value="Die Dokumentation beinhaltet eine festgelegte Leitlinie bezüglich der Durchführung von Hygienemaßnahmen zum Vermeiden von Gesundheitsschäden durch Erreger." />
+      </concept>
+      <concept>
+        <code value="AM170103" />
+        <display value="Patientenfragebogen" />
+        <definition value="Die Dokumentation beinhaltet Fragen bzgl. relevanter Informationen zur Verbesserung eines Behandlungsprozesses. Inkl.: Fragebogen Beckenboden präoperativ, Fragebogen zur Tagesschläfrigkeit, Patientenumfragen" />
+      </concept>
+      <concept>
+        <code value="AM170104" />
+        <display value="Pflegestandard" />
+        <definition value="Die Dokumentation beinhaltet standardisierte Vorgaben zur Durchführung von Pflegemaßnahmen." />
+      </concept>
+      <concept>
+        <code value="AM170105" />
+        <display value="Qualitätssicherungsbogen" />
+        <definition value="Die Dokumentation beinhaltet gesetzlich vorgeschriebene Qualitätssicherungsverfahren. Inkl.: laut IQTIG" />
+      </concept>
+      <concept>
+        <code value="AM170199" />
+        <display value="Sonstiges Qualitätssicherungsdokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Behandlungspfade, Komplikationsbogen, Leitfäden, Nachbehandlungsschema," />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1901" />
+      <display value="Schriftverkehr" />
+      <concept>
+        <code value="AM190101" />
+        <display value="Anforderung Unterlagen" />
+        <definition value="Die Dokumentation beinhaltet eine Anforderung von Unterlagen, die für den aktuellen Behandlungsverlauf relevant sind. Exkl.: Anforderung Unterlagen MD" />
+      </concept>
+      <concept>
+        <code value="AM190102" />
+        <display value="Schriftverkehr Amtsgericht" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenz zwischen medizinischer Einrichtung und Amtsgericht. Inkl.: Bestellungsurkunde, Betreuer, Beschluss" />
+      </concept>
+      <concept>
+        <code value="AM190103" />
+        <display value="Schriftverkehr MD Arzt" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenz zwischen Arzt und Medizinischen Dienst. Inkl. KBV Muster 11 (Bericht für den Medizinischen Dienst), Muster 86 (Weiterleitungsbogen für angeforderte Befunde an den MD)" />
+      </concept>
+      <concept>
+        <code value="AM190104" />
+        <display value="Schriftverkehr Krankenkasse" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenz zwischen medizinischer Einrichtung und Krankenkasse. Inkl.: KBV Muster 50/51, PTV4 Exkl.: Widerspruchsbegründung" />
+      </concept>
+      <concept>
+        <code value="AM190105" />
+        <display value="Schriftverkehr Deutsche Rentenversicherung" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenz zwischen medizinischer Einrichtung und der deutschen Rentenversicherung." />
+      </concept>
+      <concept>
+        <code value="AM190106" />
+        <display value="Sendebericht" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über das Versenden eines Fax." />
+      </concept>
+      <concept>
+        <code value="AM190107" />
+        <display value="Empfangsbestätigung" />
+        <definition value="Die Dokumentation beinhaltet einen Nachweis für den Empfang sowie über die Ausgabe von Dokumenten, Medikamenten, Hilfsmittel usw." />
+      </concept>
+      <concept>
+        <code value="AM190108" />
+        <display value="Handschriftliche Notiz" />
+        <definition value="Die Dokumentation beinhaltet ausschließlich handschriftliche Informationen auf einem formlosen Bogen." />
+      </concept>
+      <concept>
+        <code value="AM190109" />
+        <display value="Lieferschein" />
+        <definition value="Die Dokumentation beinhaltet Angaben über eine Lieferung." />
+      </concept>
+      <concept>
+        <code value="AM190110" />
+        <display value="Schriftverkehr Amt/Behörde/Anwalt" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenzen von Ämtern, Behörden oder Anwälten. Inkl.: Schriftverkehr Strafverfolgung und Schadenersatz Exkl.: Schriftverkehr Amtsgericht, Schriftverkehr Strafverfolgung und Schadensersatz" />
+      </concept>
+      <concept>
+        <code value="AM190111" />
+        <display value="Schriftverkehr Strafverfolgung und Schadensersatz" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenzen mit Ämtern und Behörden, die im Rahmen der Strafverfolgung, Fahndung oder Schadensersatz entsteht. Exkl.: Schriftverkehr Amt/Behörde/Anwalt allgemein, Schriftverkehr Amtsgericht allgemein" />
+      </concept>
+      <concept>
+        <code value="AM190112" />
+        <display value="Anforderung Unterlagen MD" />
+        <definition value="Die Dokumentation beinhaltet eine Liste mit den zur Prüfung der Abrechnung notwendigen Unterlagen in der Klassifikation nach IHE/KDL (gem. Abschnitt 6.2, Anlage 1,eVV) Exkl.: Anforderung Unterlagen" />
+      </concept>
+      <concept>
+        <code value="AM190113" />
+        <display value="Widerspruchsbegründung" />
+        <definition value="Die Dokumentation beinhaltet den (medizinischen) Widerspruch gegen einen Leistungsentscheid. Exkl.: Ärztlicher Widerspruch im laufenden MD-Verfahren (Schriftkehr MD Arzt)" />
+      </concept>
+      <concept>
+        <code value="AM190199" />
+        <display value="Sonstiger Schriftverkehr" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: KBV Muster 53 (Anfrage zum Zusammenhang von Arbeitsunfähigkeitszeiten), Mitteilung Termin, Übersendung Unterlagen, Mitteilung Termin stationäre Aufnahme" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM1902" />
+      <display value="Sozialdienst" />
+      <concept>
+        <code value="AM190201" />
+        <display value="Beratungsbogen Sozialer Dienst" />
+        <definition value="Die Dokumentation beinhaltet Angaben des Sozialdienstes zu empfohlenen Maßnahmen. Beinhaltet auch Notizen des Gesprächsverlaufes und festgelegte Vereinbarungen." />
+      </concept>
+      <concept>
+        <code value="AM190202" />
+        <display value="Soziotherapeutischer Betreuungsplan" />
+        <definition value="Die Dokumentation beinhaltet Angaben mit Therapiezielen, verordneten empfohlenen Maßnahmen usw., welche durch den Sozialen Dienst an die Krankenkasse weitergeleitet werden. Inkl.: Muster 27 (KBV)" />
+      </concept>
+      <concept>
+        <code value="AM190203" />
+        <display value="Einschätzung Sozialdienst" />
+        <definition value="Die Dokumentation beinhaltet eine Einschätzung eines Patienten durch den Sozialdienst." />
+      </concept>
+      <concept>
+        <code value="AM190204" />
+        <display value="Abschlussbericht Sozialdienst" />
+        <definition value="Die Dokumentation beinhaltet einen Bericht bzw. eine Zusammenfassung eines Patientenfalls bezüglich der nachstationären Betreuung oder weiteren Behandlung." />
+      </concept>
+      <concept>
+        <code value="AM190299" />
+        <display value="Sonstiges Dokument Sozialdienst" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Anforderung Sozialdienst, Meldung an Sozialdienst, Verlaufsdokumentation Sozialdienst" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AM2201" />
+      <display value="Verträge" />
+      <concept>
+        <code value="AM220101" />
+        <display value="Behandlungsvertrag" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Umfang einer Behandlung und die damit verbundenen Rechte und Pflichten zwischen  Einrichtung und Patient." />
+      </concept>
+      <concept>
+        <code value="AM220102" />
+        <display value="Wahlleistungsvertrag" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu zusätzlich gewählten Leistungen, während einer Behandlung, zwischen Einrichtung und Patient." />
+      </concept>
+      <concept>
+        <code value="AM220103" />
+        <display value="Heimvertrag" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Vertrag zwischen einer Einrichtung und einem Bewohner." />
+      </concept>
+      <concept>
+        <code value="AM220104" />
+        <display value="Angaben zur Vergütung von Mitarbeitenden" />
+        <definition value="Die Dokumentation beinhaltet Namen und Vergütung der Mitarbeiter mit abgeschlossener Ausbildung, die zur Überwachung und/oder Behandlung von Patientinnen und Patienten eingesetzt werden." />
+      </concept>
+      <concept>
+        <code value="AM220199" />
+        <display value="Sonstiger Vertrag" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Allgemeine Vertragsbedingungen, Individuelle Vereinbarungen" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="AU" />
+    <display value="Aufnahme" />
+    <concept>
+      <code value="AU0101" />
+      <display value="Aufnahmedokumente" />
+      <concept>
+        <code value="AU010101" />
+        <display value="Anamnesebogen" />
+        <definition value="Die Dokumentation beinhaltet medizinische, relevante Informationen zur Vorgeschichte. Inkl.: Krankengeschichte" />
+      </concept>
+      <concept>
+        <code value="AU010102" />
+        <display value="Anmeldung Aufnahme" />
+        <definition value="Die Dokumentation beinhaltet persönliche und organisatorische Angaben zur Aufnahme. Inkl. KBV Muster PTV12" />
+      </concept>
+      <concept>
+        <code value="AU010103" />
+        <display value="Aufnahmebogen" />
+        <definition value="Die Dokumentation beinhaltet den Befund des aktuellen Zustands bei Aufnahme und Informationen zur Vorgeschichte. Inkl.: Aufahmebefund, Aufnahmeblatt, Krankenblatt" />
+      </concept>
+      <concept>
+        <code value="AU010104" />
+        <display value="Checkliste Aufnahme" />
+        <definition value="Die Dokumentation beinhaltet Angaben über erforderliche medizinische, organisatorische Maßnahmen zum Aufnahmezeitpunkt. Erfolgte Durchführungen werden gekennzeichnet." />
+      </concept>
+      <concept>
+        <code value="AU010105" />
+        <display value="Stammblatt" />
+        <definition value="Die Dokumentation beinhaltet zusammengefasst administrative und persönliche Daten im Überblick." />
+      </concept>
+      <concept>
+        <code value="AU010199" />
+        <display value="Sonstige Aufnahmedokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Aufnahmegespräch, Übersicht über bisherigen Behandlungverlauf, Aufnahme/Mitaufnahme Begleitperson Exkl.: Covid Fragebogen (Dokumentation COVID)" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AU0501" />
+      <display value="Einweisungs-/ Überweisungsdokumente" />
+      <concept>
+        <code value="AU050101" />
+        <display value="Verordnung von Krankenhausbehandlung" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Grund der stationären Aufnahme. Standardisiertes Einweisungsdokument gemäß Kassenärztliche Bundesvereinigung (KBV Muster 2)." />
+      </concept>
+      <concept>
+        <code value="AU050102" />
+        <display value="Überweisungsschein" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur geplanten Behandlungsart, Fachabteilung, Diagnosen, Behandlungsauftrag, Vertragsarzt. Inkl.: standardisierter Überweisungsschein gem. Kassenärztliche Bundesvereinigung (KBV Muster 6 und 7), Überweisung D-Arzt. Exkl.: Abrechnungsschein, Notfall/Vertretungsschein" />
+      </concept>
+      <concept>
+        <code value="AU050103" />
+        <display value="Überweisungsschein Entlassung" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AU050104" />
+        <display value="Verlegungsschein Intern" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur krankenhausinternen Verlegung auf eine andere Station oder einen Fachbereich. Exkl.: Verlegungsbericht, Ärztliche Stellungnahme" />
+      </concept>
+      <concept>
+        <code value="AU050199" />
+        <display value="Sonstiges Einweisungs-/Überweisungsdokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden können. Inkl.: telefonische Überweisung, Patient Admission Form" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="AU1901" />
+      <display value="Rettungsstelle" />
+      <concept>
+        <code value="AU190101" />
+        <display value="Einsatzprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben über den notarztspezifischen Einsatz. Inkl.: Rettungsstellenprotokoll, Nothilfeprotokoll" />
+      </concept>
+      <concept>
+        <code value="AU190102" />
+        <display value="Notaufnahmebericht" />
+        <definition value="Die Dokumentation beinhaltet den ärztlichen Bericht über die Behandlung in der Notaufnahme." />
+      </concept>
+      <concept>
+        <code value="AU190103" />
+        <display value="Notaufnahmebogen" />
+        <definition value="Die Dokumentation beinhaltet den Befund des aktuellen Zustands in der Notaufnahme (inkl. Triage)" />
+      </concept>
+      <concept>
+        <code value="AU190104" />
+        <display value="Notfalldatensatz" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="AU190105" />
+        <display value="ISAR Screening" />
+        <definition value="Die Dokumentation beinhaltet Angaben für das Screening zur Ermittlung des geriatrischen Hilfebedarfs." />
+      </concept>
+      <concept>
+        <code value="AU190199" />
+        <display value="Sonstige Dokumentation Rettungsstelle" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: ZNA Notfallschein, Checkliste Notfallambulanz" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="DG" />
+    <display value="Diagnostik" />
+    <concept>
+      <code value="DG0201" />
+      <display value="Bildgebende Diagnostiken" />
+      <concept>
+        <code value="DG020101" />
+        <display value="Anforderung bildgebende Diagnostik" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung oder Anmeldung einer Diagnostik durch ärztliches Personal, bei der die Untersuchungsergebnisse bildlich dargestellt werden." />
+      </concept>
+      <concept>
+        <code value="DG020102" />
+        <display value="Angiographiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer speziellen radiologischen Untersuchung, bei der Arterien, Venen oder Lymphbahnen bildlich dargestellt und ausgewertet werden. Inkl.: Phlebographiebefund Exkl.: Herzkatheterprotokoll" />
+      </concept>
+      <concept>
+        <code value="DG020103" />
+        <display value="CT-Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer speziellen radiologischen Untersuchung. Es entsteht ein mehrdimensionaler Querschnitt von Knochen und Weichteilen, welcher bildlich dargestellt und ausgewertet wird. Exkl.: PET-Befund" />
+      </concept>
+      <concept>
+        <code value="DG020104" />
+        <display value="Echokardiographiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer ultraschallgestützten Untersuchung der Struktur und Funktion des Herzens, welche bildlich dargestellt und ausgewertet werden." />
+      </concept>
+      <concept>
+        <code value="DG020105" />
+        <display value="Endoskopiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung bei der Körperhöhlen und Hohlorgane von innen bildlich dargestellt und ausgewertet werden." />
+      </concept>
+      <concept>
+        <code value="DG020106" />
+        <display value="Herzkatheterprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer minimalinvasiven Untersuchung des Herzens, unter radiologischer Kontrolle, über einen speziellen Katheter. Exkl.: Angiographieprotokoll" />
+      </concept>
+      <concept>
+        <code value="DG020107" />
+        <display value="MRT-Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer speziellen radiologischen Untersuchung, bei der Schnittbilder von Knochen und Weichteilen im menschlichen Körper, mit Hilfe von Magnetfeldern, bildlich dargestellt und ausgewertet werden." />
+      </concept>
+      <concept>
+        <code value="DG020108" />
+        <display value="OCT-Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer tomographischen Untersuchung, bei der mehrdimensionale Aufnahmen des Auges bildlich dargestellt und ausgewertet werden. Exkl.: Augenuntersuchung" />
+      </concept>
+      <concept>
+        <code value="DG020109" />
+        <display value="PET-Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer nuklearmedizinischen Untersuchung, welche zum größten Teil im Rahmen der Tumordiagnostik eingesetzt wird. Die Stoffwechselvorgänge im Gewebe werden bildlich dargestellt und ausgewertet. Es handelt sich um eine Positronen-Emissions-Tomographie. Exkl.: CT-Befund, SPECT-Befund, Szintigraphie" />
+      </concept>
+      <concept>
+        <code value="DG020110" />
+        <display value="Röntgenbefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer radiologischen Untersuchung bei der Körperstrukturen wie Knochen, Gefäße und innere Organe mit Hilfe eines Röntgen-Gerätes durchleuchtet, bildlich dargestellt und ausgewertet werden. Exkl.: Mammographie, Angiographiebefund" />
+      </concept>
+      <concept>
+        <code value="DG020111" />
+        <display value="Sonographiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung mittels Ultraschall, bei der organisches Gewebe bildlich dargestellt und ausgewertet werden. Exkl.: Echokardiographie, Inkl.: Doppler-, Duplexsonographie, Endosonographie" />
+      </concept>
+      <concept>
+        <code value="DG020112" />
+        <display value="SPECT-Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer nuklearmedizinischen Untersuchung, welche zum größten Teil im Rahmen der Tumordiagnostik eingesetzt wird. Die Stoffwechselvorgänge im Gewebe werden grafisch dargestellt und ausgewertet. Es handelt sich um eine Einzelphotonen-Emissionscomputertomographie. Exkl.: CT-Befund, PET-Befund, Szintigraphie" />
+      </concept>
+      <concept>
+        <code value="DG020113" />
+        <display value="Szintigraphiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer nuklearmedizinischen Untersuchung, mittels Gabe einer radioaktiven Substanz, bei welcher Entzündungen oder Tumore in Organen und Knochen bildlich dargestellt und ausgewertet werden. Exkl.: PET-Befund, SPECT-Befund" />
+      </concept>
+      <concept>
+        <code value="DG020114" />
+        <display value="Mammographiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer radiologischen Untersuchung bei der mittels Röntgenstrahlen das Brustgewebe durchleuchtet, bildlich dargestellt und ausgewertet wird. Exkl.: Röntgenbefund" />
+      </concept>
+      <concept>
+        <code value="DG020115" />
+        <display value="Checkliste bildgebende Diagnostik" />
+        <definition value="Die Dokumentation beinhaltet Angaben über Voraussetzungen, den Ablauf oder erforderliche bildgebende Diagnostiken. Erfolgte Durchführungen werden gekennzeichnet." />
+      </concept>
+      <concept>
+        <code value="DG020199" />
+        <display value="Sonstige Dokumentation bildgebende Diagnostik" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Kapillarmikroskopie" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="DG0601" />
+      <display value="Funktionsdiagnostiken" />
+      <concept>
+        <code value="DG060101" />
+        <display value="Anforderung Funktionsdiagnostik" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung oder Anmeldung von Diagnostiken ohne bildgebende Darstellung." />
+      </concept>
+      <concept>
+        <code value="DG060102" />
+        <display value="Audiometriebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse über die Messung der Funktionalität des Gehörs." />
+      </concept>
+      <concept>
+        <code value="DG060103" />
+        <display value="Befund evozierter Potentiale" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von neurophysiologischen Untersuchungen, bei der Veränderungen der elektrischen Aktivität von Nerven, Rückenmark oder Gehirn dargestellt und ausgewertet werden. z.B.: VEP, AEP, SEP" />
+      </concept>
+      <concept>
+        <code value="DG060104" />
+        <display value="Blutdruckprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von Messungen des arteriellen und venösen Drucks in den Blutgefäßen." />
+      </concept>
+      <concept>
+        <code value="DG060105" />
+        <display value="CTG-Ausdruck" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von Messungen der Herztöne des ungeborenen Kindes sowie die Wehentätigkeit der Mutter." />
+      </concept>
+      <concept>
+        <code value="DG060106" />
+        <display value="Dokumentationsbogen Feststellung Hirntod" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu den Voraussetzungen, den klinischen Symptomen und dem Irreversibillitätsnachweis zur Feststellung des Hirnfunktionsausfalls." />
+      </concept>
+      <concept>
+        <code value="DG060107" />
+        <display value="Dokumentationsbogen Herzschrittmacherkontrolle" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Nachsorgeuntersuchung nach dem Einsetzen eines Herzschrittmacherimplantats." />
+      </concept>
+      <concept>
+        <code value="DG060108" />
+        <display value="Dokumentationsbogen Lungenfunktionsprüfung" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Feststellung der Leistungsfähigkeit der Lunge. Inkl.: Bodyplethysmographie, Spirometrie" />
+      </concept>
+      <concept>
+        <code value="DG060109" />
+        <display value="EEG-Auswertung" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse sowie die visuelle Darstellung der Aufzeichnung und Messung der elektrischen Ströme des Gehirns." />
+      </concept>
+      <concept>
+        <code value="DG060110" />
+        <display value="EMG-Befund" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse sowie die visuelle Darstellung der Aufzeichnung und Messung der elektrischen Muskelaktivität." />
+      </concept>
+      <concept>
+        <code value="DG060111" />
+        <display value="EKG-Auswertung" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse sowie die visuelle Darstellung der Aufzeichnung und Messung der elektrischen Aktivität des Herzens. Exkl.: Ergometriebefund, Belastungs-EKG" />
+      </concept>
+      <concept>
+        <code value="DG060112" />
+        <display value="Manometriebefund" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse und die visuelle Darstellung einer physikalischen Druckmessung von Hohlorganen. Exkl.: Zystometrie, Rhinomanometrie" />
+      </concept>
+      <concept>
+        <code value="DG060113" />
+        <display value="Messungsprotokoll Augeninnendruck" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse der Messung des Augeninnendrucks (Tonometrie) mittels Applationstonometer." />
+      </concept>
+      <concept>
+        <code value="DG060114" />
+        <display value="Neurographiebefund" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse der Messung der Nervenleitgeschwindigkeit peripherer Nerven. Dazu zählen Nerven, die Muskeln versorgen sowie Nerven für Sinnesempfindungen." />
+      </concept>
+      <concept>
+        <code value="DG060115" />
+        <display value="Rhinometriebefund" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse der Darstellung des Nasenquerschnittes um Engstellen zu lokalisieren und zu messen." />
+      </concept>
+      <concept>
+        <code value="DG060116" />
+        <display value="Schlaflabordokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse und Auswertung des Schlafverhaltens." />
+      </concept>
+      <concept>
+        <code value="DG060117" />
+        <display value="Schluckuntersuchung" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse einer Prüfung des Schluckverhaltens." />
+      </concept>
+      <concept>
+        <code value="DG060118" />
+        <display value="Checkliste Funktionsdiagnostik" />
+        <definition value="Die Dokumentation beinhaltet Angaben über Voraussetzungen, den Ablauf oder erforderliche funktionelle Diagnostiken. Erfolgte Durchführungen werden gekennzeichnet." />
+      </concept>
+      <concept>
+        <code value="DG060119" />
+        <display value="Ergometriebefund" />
+        <definition value="Die Dokumentation beinhaltet die Messergebnisse mittels EKG, wo unter körperlicher Belastung die Leistungsfähigkeit des Herz - Kreislaufsystem getestet wird. Inkl.: Spiroergometrie Exkl.: EKG-Auswertung Inkl.: Belastungs-EKG" />
+      </concept>
+      <concept>
+        <code value="DG060120" />
+        <display value="Kipptischuntersuchung" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse eines medizinischen Verfahrens, dass zur Klärung von Synkopen dient, um die Veränderung von Blutdruck und Puls zu testen." />
+      </concept>
+      <concept>
+        <code value="DG060121" />
+        <display value="Augenuntersuchung" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse von diversen Untersuchungen des Auges. Exkl.: OCT-Befund, Messungsprotokoll Augeninnendruck" />
+      </concept>
+      <concept>
+        <code value="DG060122" />
+        <display value="ICD-Kontrolle" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Nachsorgeuntersuchung nach dem Einsetzen eines Defibrillators auf seine Funktion." />
+      </concept>
+      <concept>
+        <code value="DG060123" />
+        <display value="Zystometrie" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung, bei der Druck und Volumen der Harnblase gemessen wird." />
+      </concept>
+      <concept>
+        <code value="DG060124" />
+        <display value="Uroflowmetrie" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer urologischen Untersuchungsmethode, bei der eine Messung der Menge und Dauer des Harnflusses vorgenommen wird. Inkl.: Urodynamische Untersuchung" />
+      </concept>
+      <concept>
+        <code value="DG060199" />
+        <display value="Sonstige Dokumentation Funktionsdiagnostik" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: PH Metrie, CNG-Analyse" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="DG0602" />
+      <display value="Funktionstests" />
+      <concept>
+        <code value="DG060201" />
+        <display value="Schellong Test" />
+        <definition value="Die Dokumentation beinhaltet Messergebnisse von Herzfrequenz und Blutdruck nach dem Wechsel aus der liegenden Position in den Stand. Inkl.: Anforderung Schellong Test" />
+      </concept>
+      <concept>
+        <code value="DG060202" />
+        <display value="H2 Atemtest" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung der Atemgase zur Diagnostik von Magen-Darm Erkrankungen. Inkl.: Anforderung H2 Atemtest" />
+      </concept>
+      <concept>
+        <code value="DG060203" />
+        <display value="Allergietest" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse eines Verfahrens, mit dem man natürliche Abwehrreaktionen des Körpers nachweisen kann. Inkl.: Anforderung Allergietest" />
+      </concept>
+      <concept>
+        <code value="DG060204" />
+        <display value="Zahlenverbindungstest" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse eines Tests auf kognitive Fähigkeiten beim Verbinden von Zahlen in einer bestimmten Reihenfolge. Dabei werden Dauer und Richtigkeit ausgewertet. Inkl.: Trail Making Test, Anforderung Zahlenverbindungstest" />
+      </concept>
+      <concept>
+        <code value="DG060205" />
+        <display value="6-Minuten-Gehtest" />
+        <definition value="Die Dokumentation beinhaltet Messwerte der Herzfrequenz, des Blutdrucks und der Sauerstoffversorgung des Blutes vor und nach dem Zurücklegen einer Strecke. Inkl.: Gehstreckentest, Anforderung 6-Minuten-Gehtest" />
+      </concept>
+      <concept>
+        <code value="DG060209" />
+        <display value="Sonstige Funktionstests" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="DG060299" />
+        <display value="Sonstige Funktionstests" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Kopfimpulstest, Riechtest, Gehstreckentest" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="ED" />
+    <display value="Elektronische Dokumentation" />
+    <concept>
+      <code value="ED0101" />
+      <display value="Audiodokumentation" />
+      <concept>
+        <code value="ED010199" />
+        <display value="Sonstige Audiodokumentation" />
+        <definition value="Die Dokumentation beinhaltet ausschließlich Audiodokumentation." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="ED0201" />
+      <display value="Bilddokumentation" />
+      <concept>
+        <code value="ED020101" />
+        <display value="Fotodokumentation Operation" />
+        <definition value="Die Dokumentation beinhaltet die digitale direkte Fotodokumentation - Schwerpunkt: Operation" />
+      </concept>
+      <concept>
+        <code value="ED020102" />
+        <display value="Fotodokumentation Dermatologie" />
+        <definition value="Die Dokumentation beinhaltet die digitale direkte Fotodokumentation - Schwerpunkt: Dermatologie" />
+      </concept>
+      <concept>
+        <code value="ED020103" />
+        <display value="Fotodokumentation Diagnostik" />
+        <definition value="Die Dokumentation beinhaltet die digitale direkte Fotodokumentation - Schwerpunkt: Diagnostik" />
+      </concept>
+      <concept>
+        <code value="ED020104" />
+        <display value="Videodokumentation Operation" />
+        <definition value="Die Dokumentation beinhaltet die digitale direkte Videodokumentation - Schwerpunkt: Operation" />
+      </concept>
+      <concept>
+        <code value="ED020199" />
+        <display value="Foto-/Videodokumentation Sonstige" />
+        <definition value="Die Dokumentation beinhaltet die digitale direkte Foto- oder Videodokumentation, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Beispiel: Anforderung Fotolabor, Dermatologische Fotografie" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="ED1101" />
+      <display value="KIS" />
+      <concept>
+        <code value="ED110101" />
+        <display value="Behandlungspfad" />
+        <definition value="Die Dokumentation beinhaltet den im KIS definierten Behandlungsablauf. Elektronische Dokumentation. Ggf. informativer Ausdruck in Papierkrankenakte." />
+      </concept>
+      <concept>
+        <code value="ED110102" />
+        <display value="Notfalldatenmanagement (NFDM)" />
+        <definition value="Die Dokumentation beinhaltet für den Notfall eine Übersicht über Vorerkrankungen, chronische Erkrankungen, Dauermedikation oder Allergien. Inkl.: Kontaktdaten behandelnde Ärzte, Angehörige, Persönliche Erklärungen - wie Patientenverfügung, Vorsorgevollmacht. Detailinformationen: gematik (2021): https://fachportal.gematik.de/anwendungen/notfalldatenmanagement. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110103" />
+        <display value="Medikationsplan elektronisch (eMP)" />
+        <definition value="Der eMP enthält einen strukturierten Überblick darüber, welche Medikamente ein Versicherter aktuell einnimmt. Darüber hinaus enthält der eMP medikationsrelevante Informationen, die wichtig sind, um unerwünschte Wechselwirkungen zu vermeiden, bspw. zu Allergien. Exkl.: Medikamentenplan. Detailinformationen: gematik (2021): https://fachportal.gematik.de/anwendungen/elektronischer-medikationsplan. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110104" />
+        <display value="eArztbrief" />
+        <definition value="Die Dokumentation beinhaltet die Zusammenfassung einer ambulanten ärztlichen, psychotherapeutischen Behandlung. Exkl. Arztberichte der Unterklasse AD0101 Detailinformationen: KBV (2022): https://www.kbv.de/html/earztbrief.php. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110105" />
+        <display value="eImpfpass" />
+        <definition value="Die Dokumentation beinhaltet alle durchgeführten Impfungen. Detailinformationen: KBV (2022): https://mio.kbv.de/display/IM. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110106" />
+        <display value="eZahnärztliches Bonusheft" />
+        <definition value="Die Dokumentation beeinhaltet Informationen zu zahnärztlichen Kontrolluntersuchungen.  Detailinformationen: KBV (2021): https://mio.kbv.de/display/ZB. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110107" />
+        <display value="eArbeitsunfähigkeitsbescheinigung" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Arbeitsunfähigkeit.  Exkl.: Arbeitsunfähigkeitsbescheinigung (papierbasiert) Detailinformationen: KBV (2022): https://www.kbv.de/html/e-au.php. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110108" />
+        <display value="eRezept" />
+        <definition value="Die Dokumentation beinhaltet die ärztliche Verordnung von Arznei- oder Heilmitteln. Das elektronische Rezept wird seit Mitte 2021 stufenweise eingeführt. Exkl.: Rezept (KBV Muster 16) Detailinformationen: gematik (2021): https://fachportal.gematik.de/anwendungen/elektronisches-rezept. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110109" />
+        <display value="Pflegebericht" />
+        <definition value="Die Dokumentation beinhaltet die elektronische Berichterstattung zum pflegerischen Zustand während eines bestimmten Behandlungszeitraums,welche den Anforderungen der KBV und Gematik entspricht, in ausschließlich elektronischer Form. Exkl. Pflegebericht (papierbasiert)" />
+      </concept>
+      <concept>
+        <code value="ED110110" />
+        <display value="eDMP" />
+        <definition value="Die Dokumentation beeinhaltet den strukturierten Statusbericht der Behandlung chronisch Kranker (= Disease Management Program - DMP). Detailinformationen: KBV (2022): https://www.kbv.de/html/e-dmp.php. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110111" />
+        <display value="eMutterpass" />
+        <definition value="Die Dokumentation beinhaltet die Ergebnisse der Vorsorgeuntersuchungen während der Schwangerschaft und nach der Entbindung. Exkl.: Mutterpass (Kopie)  Detailinformationen: KBV (2021): https://mio.kbv.de/display/MP. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110112" />
+        <display value="KH-Entlassbrief" />
+        <definition value="Die Dokumentation beinhaltet Informationen zum Anlass der Behandlung, zu diagnostischen und therapeutischen Maßnahmen. Die Informationen umfassen weiterhin den klinischen Verlauf, die Medikation sowie Angaben zu nachstationären Maßnahmen. Exkl: Arztberichte der Unterklasse AD0101. Hinweis: Spezifikation ist in Planung. Detailinformationen: KBV (2021): https://mio.kbv.de/display/khe. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110113" />
+        <display value="U-Heft Untersuchungen" />
+        <definition value="Die Dokumentation beeinhaltet die Ergebnisse von Früherkennungsuntersuchungen bei Kindern. Es umfasst Informationen beginnend mit der Geburt bis zum Alter von etwa fünf Jahren. Inkl. MIO Perzentilkurven Detailinformationen: KBV (2021): https://mio.kbv.de/display/UH. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110114" />
+        <display value="U-Heft Teilnahmekarte" />
+        <definition value="Die Dokumentation beinhaltet das Datum der U-Untersuchung, an der teilgenommen wurde. Es entspricht einer Verlaufsdokumentation und wird als Gesamtdokumente in der ePA visualisiert. Detailinformationen: KBV (2021): https://mio.kbv.de/pages/viewpage.action?pageId=99746571#id-2.Teilnahmekarte-Teilnahmekarte. Zugegriffen: 28.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110115" />
+        <display value="U-Heft Elternnotiz" />
+        <definition value="Die Dokumentation beinhaltet narrative Notizen der Eltern zum Verhalten ihres Kindes. Detailinformationen: KBV (2021): https://mio.kbv.de/display/UH1X0X1/1.8+Elternnotiz. Zugegriffen: 28.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110116" />
+        <display value="Überleitungsbogen" />
+        <definition value="Die Dokumentation beeinhaltet pflege- und versorgungsrelevante Informationen über zu pflegende Personen. Exkl: Pflegeüberleitungsbogen (papierbasiert) Detailinformationen: KBV (2022): https://mio.kbv.de/display/ULB. Zugegriffen: 18.02.2022" />
+      </concept>
+      <concept>
+        <code value="ED110199" />
+        <display value="Sonstige Dokumentation KIS" />
+        <definition value="Die Dokumentation beinhaltet alle elektronischen Daten und Dokumententypen die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann, jedoch elektronisch direkt ausgetauscht wird." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="ED1901" />
+      <display value="Schriftverkehr elektronisch" />
+      <concept>
+        <code value="ED190101" />
+        <display value="E-Mail Befundauskunft" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per E-Mail - direkt elektronisch oder ausgedruckt in Papierkrankenakte. Schwerpunkt: Befundergebnisse" />
+      </concept>
+      <concept>
+        <code value="ED190102" />
+        <display value="E-Mail Juristische Beweissicherung" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per E-Mail - direkt elektronisch oder ausgedruckt in Papierkrankenakte. Schwerpunkt: Juristische Beweissicherung" />
+      </concept>
+      <concept>
+        <code value="ED190103" />
+        <display value="E-Mail Arztauskunft" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per E-Mail - direkt elektronisch oder ausgedruckt in Papierkrankenakte.  Schwerpunkt: Arztauskunft ohne Befundergebnisse" />
+      </concept>
+      <concept>
+        <code value="ED190104" />
+        <display value="E-Mail Sonstige" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per E-Mail - direkt elektronisch oder ausgedruckt in Papierkrankenakte - die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+      <concept>
+        <code value="ED190105" />
+        <display value="Fax Befundauskunft" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per Fax - direkt elektronisch oder ausgedruckt in Papierkrankenakte. Inhaltlicher Schwerpunkt: Befundergebnisse" />
+      </concept>
+      <concept>
+        <code value="ED190106" />
+        <display value="Fax Juristische Beweissicherung" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per Fax - direkt elektronisch oder ausgedruckt in Papierkrankenakte. Schwerpunkt: Juristische Beweissicherung" />
+      </concept>
+      <concept>
+        <code value="ED190107" />
+        <display value="Fax Arztauskunft" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per Fax - direkt elektronisch oder ausgedruckt in Papierkrankenakte. Schwerpunkt: Arztauskunft ohne Befundergebnisse" />
+      </concept>
+      <concept>
+        <code value="ED190108" />
+        <display value="Fax Sonstige" />
+        <definition value="Die Dokumentation beinhaltet den Informationsaustausch per Fax - direkt elektronisch oder ausgedruckt in Papierkrankenakte - die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+      <concept>
+        <code value="ED190199" />
+        <display value="Sonstiger elektronischer Schriftverkehr" />
+        <definition value="Die Dokumentation beinhaltet den rein elektronischen Schriftverkehr, der nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="LB" />
+    <display value="Labor" />
+    <concept>
+      <code value="LB0201" />
+      <display value="Blut" />
+      <concept>
+        <code value="LB020101" />
+        <display value="Blutgasanalyse" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse zur Gasverteilung im Blut." />
+      </concept>
+      <concept>
+        <code value="LB020102" />
+        <display value="Blutkulturenbefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer mikrobiologischen Untersuchung des Blutes, um Erreger nachzuweisen oder auszuschließen. Exkl.: Mikrobiologiebefund, Urinbefund, Virologiebefund" />
+      </concept>
+      <concept>
+        <code value="LB020103" />
+        <display value="Herstellungs- und Prüfprotokoll von Blut und Blutprodukten" />
+        <definition value="Die Dokumentation beinhaltet Angaben im Rahmen der Herstellung von Blut und Blutprodukten. Mindestinhalte sind: Datum, verantwortliche Person, Art des Blutes bzw. Blutproduktes" />
+      </concept>
+      <concept>
+        <code value="LB020104" />
+        <display value="Serologischer Befund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung, bei der das Blut auf Antigene und Antikörper getestet wird." />
+      </concept>
+      <concept>
+        <code value="LB020199" />
+        <display value="Sonstige Dokumentation Blut" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Aphareseprotokoll, Plasmaphereseprotokoll, Photophereseprotokoll" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="LB1201" />
+      <display value="Laborbefunde" />
+      <concept>
+        <code value="LB120101" />
+        <display value="Glukosetoleranztestprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse, wie gut der Körper eine festgelegte Menge Zucker verarbeiten kann." />
+      </concept>
+      <concept>
+        <code value="LB120102" />
+        <display value="Laborbefund extern" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von Untersuchungen verschiedenster Materialien durch ein Fremdlabor/Praxis. Inkl.: Kumulativbefund, Vorbefund Exkl.: Laborbefund intern, Mikrobiologiebefund, Serologischer Befund" />
+      </concept>
+      <concept>
+        <code value="LB120103" />
+        <display value="Laborbefund intern" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse von Untersuchungen verschiedenster Materialien durch ein hauseigenenes Labor. Inkl.: Kumulativbefund, Vorbefund, Exkl.: Laborbefund extern, Mikrobiologiebefund, Serologischer Befund" />
+      </concept>
+      <concept>
+        <code value="LB120104" />
+        <display value="Anforderung Labor" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung einer Diagnostik zur  Untersuchungen verschiedenster Materialien durch ein Labor auf standardisiertem KBV Formular (10A). Exkl.: Histologieanforderung, Zytologieanforderung, Molekularpathologieanforderung, Überweisungsschein Labor" />
+      </concept>
+      <concept>
+        <code value="LB120105" />
+        <display value="Überweisungsschein Labor" />
+        <definition value="Die Dokumentation beinhaltet den Auftrag zur Befundung verschiedenster Materialien durch ein Labor auf standardisiertem KBV Formular (10). Exkl.: Anforderung Labor, Histologieanforderung, Zytologieanforderung, Molekularpathologieanforderung" />
+      </concept>
+      <concept>
+        <code value="LB120199" />
+        <display value="Sonstiger Laborbefund" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="LB1301" />
+      <display value="Mikrobiologie" />
+      <concept>
+        <code value="LB130101" />
+        <display value="Mikrobiologiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse der Untersuchung von Proben auf Bakterien, Pilze oder Viren und dessen Empfindlichkeit gegenüber Antiinfektiva. Exkl.: Urinbefund, Virologiebefund, Blutkulturenbefund" />
+      </concept>
+      <concept>
+        <code value="LB130102" />
+        <display value="Urinbefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse der Urin-Untersuchung, um Erkrankungen der Harnorgane und Stoffwechselstörungen festzustellen. Exkl.: Mikrobiologiebefund, Laborbefund intern/extern" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="LB2201" />
+      <display value="Virologie" />
+      <concept>
+        <code value="LB220101" />
+        <display value="Befund über positive Infektionsmarker" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="LB220102" />
+        <display value="Virologiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse aus der Bestimmung von Viren in Untersuchungsmaterialien. Exkl.: Mikrobiologiebefund, Blutkulturenbefund" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="OP" />
+    <display value="Operation" />
+    <concept>
+      <code value="OP0101" />
+      <display value="Anästhesie" />
+      <concept>
+        <code value="OP010101" />
+        <display value="Anästhesieprotokoll intraoperativ" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Schmerzausschaltung und Bewusstseinslage während eines Eingriffs, Operation. Exkl.: Aufwachraumprotokoll, Präoperative Visite" />
+      </concept>
+      <concept>
+        <code value="OP010102" />
+        <display value="Aufwachraumprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Aufwachphase nach einem Eingriff, Operation." />
+      </concept>
+      <concept>
+        <code value="OP010103" />
+        <display value="Checkliste Anästhesie" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Voraussetzungen für die Durchführung einer Anästhesie." />
+      </concept>
+      <concept>
+        <code value="OP010199" />
+        <display value="Sonstige Anästhesiedokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Anästhesieausweis, Katheterprotokoll Anästhesie, PCEA Protokoll" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="OP1501" />
+      <display value="OP-Dokumente" />
+      <concept>
+        <code value="OP150101" />
+        <display value="Chargendokumentation" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über verwendete Medizinprodukte und Arzneimittel während eines Eingriffes/Untersuchung. Exkl.: OP-Zählprotokoll" />
+      </concept>
+      <concept>
+        <code value="OP150102" />
+        <display value="OP-Anmeldungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Anmeldung eines Patienten für einen operativen Eingriff." />
+      </concept>
+      <concept>
+        <code value="OP150103" />
+        <display value="OP-Bericht" />
+        <definition value="Die Dokumentation beinhaltet die  Zusammenfassung des Operationsverlaufes durch den Arzt." />
+      </concept>
+      <concept>
+        <code value="OP150104" />
+        <display value="OP-Bilddokumentation" />
+        <definition value="Die Dokumentation beinhaltet ausschließlich die bildlichen Darstellungen, die während eines operativen Eingriffes entstanden sind." />
+      </concept>
+      <concept>
+        <code value="OP150105" />
+        <display value="OP-Checkliste" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Voraussetzungen und den Ablauf eines operativen Eingriffes." />
+      </concept>
+      <concept>
+        <code value="OP150106" />
+        <display value="OP-Protokoll" />
+        <definition value="Die Dokumentation beinhaltet zusätzliche Angaben im Rahmen einer Operation. Inhalte sind u. a. OP-Team, Schnitt-Naht-Zeit, Materialverbrauch." />
+      </concept>
+      <concept>
+        <code value="OP150107" />
+        <display value="Postoperative Verordnung" />
+        <definition value="Die Dokumentation beinhaltet Anweisungen für den weiteren Behandlungsverlauf nach einem operativen Eingriff." />
+      </concept>
+      <concept>
+        <code value="OP150108" />
+        <display value="OP-Zählprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Vollzähligkeit des verwendeten Materials während einer Operation. Exkl.: Chargendokumentation" />
+      </concept>
+      <concept>
+        <code value="OP150109" />
+        <display value="Dokumentation ambulantes Operieren" />
+        <definition value="Die Dokumentation beinhaltet alle Formulare im Bereich des ambulanten Operierens, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+      <concept>
+        <code value="OP150199" />
+        <display value="Sonstige OP-Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Begleitschein für Explantate, OP Begleitzettel, OP Übergabeprotokoll, OP Vorbereitungsbogen, HLM Protokoll" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="OP2001" />
+      <display value="Transplantationsdokumente" />
+      <concept>
+        <code value="OP200101" />
+        <display value="Transplantationsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Nachweise über die Transplantation von Gewebe, Organen oder Körperteilen." />
+      </concept>
+      <concept>
+        <code value="OP200102" />
+        <display value="Spenderdokument" />
+        <definition value="Die Dokumentation beinhaltet alle relevanten Angaben zum Spender für eine Transplantation. Exkl.: Blutspendeprotokoll" />
+      </concept>
+      <concept>
+        <code value="OP200199" />
+        <display value="Sonstige Transplantationsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann.  Inkl.: Anmeldung zur Transplantation, Transplantationsbegleitschein, Checkliste Transplantation" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="PT" />
+    <display value="Pathologie" />
+    <concept>
+      <code value="PT0801" />
+      <display value="Histopathologie" />
+      <concept>
+        <code value="PT080101" />
+        <display value="Histologieanforderung" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung einer Untersuchung zur Bestimmung von Veränderungen anhand von Gewebeproben. Inkl.: Obduktionsantrag Exkl.: Laboranforderung, Zytologieanforderung, Molekularpathologieanforderung" />
+      </concept>
+      <concept>
+        <code value="PT080102" />
+        <display value="Histologiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Gewebeproben." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="PT1301" />
+      <display value="Molekularpathologie" />
+      <concept>
+        <code value="PT130101" />
+        <display value="Molekularpathologieanforderung" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung einer Untersuchung zur Bestimmung von Veränderungen der Erbinformation. Exkl.: Histologieanforderung, Anforderung Labor, Zytologieanforderung" />
+      </concept>
+      <concept>
+        <code value="PT130102" />
+        <display value="Molekularpathologiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung der Erbinformationen auf Veränderungen. Inkl.: Zytogenetikbefund" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="PT2601" />
+      <display value="Zytopathologie" />
+      <concept>
+        <code value="PT260101" />
+        <display value="Zytologieanforderung" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung einer Untersuchung zur Bestimmung von Veränderungen anhand von Zellproben. Exkl.:  Histologieanforderung, Laboranforderung, Molekularpathologieanforderung" />
+      </concept>
+      <concept>
+        <code value="PT260102" />
+        <display value="Zytologiebefund" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse einer Untersuchung zur Bestimmung von Veränderungen anhand von Zellproben." />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="SD" />
+    <display value="Spezielle Dokumentation" />
+    <concept>
+      <code value="SD0701" />
+      <display value="Geburtendokumente" />
+      <concept>
+        <code value="SD070101" />
+        <display value="Geburtenbericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Ablauf der Entbindung und unmittelbar danach, mit Angaben zur Mutter und zum Kind. Die Erfassung erfolgt nicht standardisiert als Freitext. Inkl.: Geburtenprotokoll" />
+      </concept>
+      <concept>
+        <code value="SD070102" />
+        <display value="Geburtenprotokoll" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="SD070103" />
+        <display value="Geburtenverlaufskurve" />
+        <definition value="Die Dokumentation beinhaltet Angaben über den Zeitraum der Entbindung. Vitalzeichen werden als Kurve dargestellt. Exkl.: Pflegekurve, Säuglingskurve" />
+      </concept>
+      <concept>
+        <code value="SD070104" />
+        <display value="Neugeborenenscreening" />
+        <definition value="Die Dokumentation beinhaltet Untersuchungen vom Neugeborenen. Dazu gehören neben Laboruntersuchungen von Stoffwechselerkrankungen auch Hörtest und Sonographie der Hüften. Inkl.: Apgar" />
+      </concept>
+      <concept>
+        <code value="SD070105" />
+        <display value="Partogramm" />
+        <definition value="Die Dokumentation beinhaltet die graphische Darstellung zur Geburtensituation und der Eröffnung des Muttermundes bei Entbindung." />
+      </concept>
+      <concept>
+        <code value="SD070106" />
+        <display value="Wiegekarte" />
+        <definition value="Die Dokumentation beinhaltet die Kontrolle des Geburts- und Verlaufsgewichtes im 1. Lebensjahr." />
+      </concept>
+      <concept>
+        <code value="SD070107" />
+        <display value="Neugeborenendokumentationsbogen" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="SD070108" />
+        <display value="Säuglingskurve" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Erfassung von Vitalzeichen, Trinkverhalten, Laborwerten und Pflegemaßnahmen des Säuglings/Neugeborenen. Vitalzeichen werden als Kurve dargestellt. Exkl.: Pflegekurve, Intensivkurve, Inkl.: Neugeborenendokumentationsbogen" />
+      </concept>
+      <concept>
+        <code value="SD070109" />
+        <display value="Geburtenbogen" />
+        <definition value="Die Dokumentation beinhaltet standardisierte Angaben, die im Rahmen einer Entbindung erhoben werden. Exkl.: Geburtenverlaufskurve, Geburtenbericht" />
+      </concept>
+      <concept>
+        <code value="SD070110" />
+        <display value="Perzentilkurve" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Verlauf von Gewicht, Länge und Kopfumfang. Exkl.: Messblatt" />
+      </concept>
+      <concept>
+        <code value="SD070111" />
+        <display value="Entnahme Nabelschnurblut" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="SD070112" />
+        <display value="Datenblatt für den Pädiater" />
+        <definition value="Die Dokumentation beinhaltet klinische sowie administrative Angaben des Neugeborenen wie Geburtenbuch Nr., Geburtsdauer, Geburtsgewicht, Apgar und Angaben zu Vater und Mutter. Die Daten werden auf einem standardisierten Formular erfasst. Exkl.: Geburtenbogen" />
+      </concept>
+      <concept>
+        <code value="SD070199" />
+        <display value="Sonstige Geburtendokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.:Dokumentationsbogen Schulterdystokie, Geburtsplanung,  Still- /Ernährungsprotokoll, Entnahme Nabelschnurblut" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SD0702" />
+      <display value="Geriatrische Dokumente" />
+      <concept>
+        <code value="SD070201" />
+        <display value="Barthel Index" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Ermittlung der eventuell benötigten Hilfestellung im Alltag. Die Auswertung erfolgt durch ein Punktesystem." />
+      </concept>
+      <concept>
+        <code value="SD070202" />
+        <display value="Dem Tect" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Untersuchung von kognitiven Fähigkeiten, zur Früherkennung von Demenz. Die Auswertung erfolgt durch ein Punktesystem." />
+      </concept>
+      <concept>
+        <code value="SD070203" />
+        <display value="ISAR Screening" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="SD070204" />
+        <display value="Sturzrisikoerfassungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Ermittlung der Sturzgefahr und Festlegung vorbeugender Maßnahmen. Die Auswertung erfolgt durch ein Punktesystem. Exkl.: Mobilitätstest nach Tinetti" />
+      </concept>
+      <concept>
+        <code value="SD070205" />
+        <display value="Geriatrische Depressionsskala" />
+        <definition value="Die Dokumentation beinhaltet Fragen, um Hinweise auf eine evtl. vorhandene Altersdepression zu ermitteln. Die Auswertung erfolgt durch ein Punktesystem. Exkl.: Dokumentation Depression" />
+      </concept>
+      <concept>
+        <code value="SD070206" />
+        <display value="Geriatrische Assessmentdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Erfassung von erhaltenen Funktionen sowie Problemen im Alter. Exkl.: Barthel-Index, Tinetti-Test, GDS, Dem Tect, Uhrentest" />
+      </concept>
+      <concept>
+        <code value="SD070207" />
+        <display value="Mobilitätstest nach Tinetti" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Messung des Sturzrisikos im Alter, nach festen Kriterien. Bewertet werden Gleichgewichtssinn und Gangbild. Die Auswertung erfolgt durch ein Punktesystem. Exkl.: Sturzrisikoerfassungsbogen" />
+      </concept>
+      <concept>
+        <code value="SD070208" />
+        <display value="Timed Up and Go Test" />
+        <definition value="Die Dokumentation beinhaltet die Erhebung und/oder die Beurteilung der Fortbeweglichkeit in einem bestimmten Zeitraum. Exkl.: Sturzrisikoerfassung, Mobilitätstest nach Tinetti" />
+      </concept>
+      <concept>
+        <code value="SD070299" />
+        <display value="Sonstige geriatrische Dokumente" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Geriatrisches Screening" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SD1101" />
+      <display value="Komplexbehandlungen" />
+      <concept>
+        <code value="SD110101" />
+        <display value="Geriatrische Komplexbehandlungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet eine ganzheitliche interdisziplinäre geriatrische Beurteilung mit Festlegung von Maßnahmen im Behandlungsverlauf." />
+      </concept>
+      <concept>
+        <code value="SD110102" />
+        <display value="Intensivmedizinische Komplexbehandlungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet alle Angaben zu intensivmedizinischen Scores (bspw. TISS10 und SAPS II)." />
+      </concept>
+      <concept>
+        <code value="SD110103" />
+        <display value="MRE/Nicht-MRE Komplexbehandlung" />
+        <definition value="Die Dokumentation beinhaltet Angaben über den Mehraufwand bei einer Infektion durch multiresistente Keime." />
+      </concept>
+      <concept>
+        <code value="SD110104" />
+        <display value="Neurologische Komplexbehandlungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben über  eine mindestens 24-stündige Behandlung auf einer Stroke Unit Station, unter Gewährleistung von ständiger Anwesenheit eines Neurologen, zur kontinuierlichen Betreuung und Überwachung." />
+      </concept>
+      <concept>
+        <code value="SD110105" />
+        <display value="Palliativmedizinische Komplexbehandlungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet standardisierte Angaben zu Symptom -und Schmerzlinderung bei geringer Lebenserwartung durch eine unheilbare Krankheit. Dies erfolgt unter Beteiligung unterschiedlicher ärztlicher und therapeutischer Fachbereiche. Inkl.: Palliativmedizinisches Basisassessment" />
+      </concept>
+      <concept>
+        <code value="SD110106" />
+        <display value="PKMS-Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Abbildung hochaufwendiger Pflegemaßnahmen in definierten Leistungsbereichen (Standardisierter Pflegekomplexmaßnahmenscore)." />
+      </concept>
+      <concept>
+        <code value="SD110107" />
+        <display value="Dokumentation COVID" />
+        <definition value="Die Dokumentation beinhaltet Angaben über den Mehraufwand bei einer Infektion durch ein COVID-Virus. Stehen für diagnostische und/oder therapeutische Maßnahmen im Rahmen der COVID-Behandlung spezifischere KDL-Kodes zur Verfügung, sind diese zu verwenden. Inkl.: Long COVID Dokumentation, Exkl.: Dokumentation Meldepflicht" />
+      </concept>
+      <concept>
+        <code value="SD110199" />
+        <display value="Sonstige Komplexbehandlungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Multimodale Komplexbehandlung bei Diabetes mellitus, Rheumatologische Komplexbehandlung, Parkinson Komplexbehandlung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SD1301" />
+      <display value="Maßregelvollzug" />
+      <concept>
+        <code value="SD130101" />
+        <display value="Vertrag Maßregelvollzug" />
+        <definition value="Die Dokumentation beinhaltet Verträge im Rahmen des Maßregelvollzuges. Inkl.: Darlehnsvertrag Exkl.: Behandlungsvertrag, Wahlleistungsvertrag, Heimvertrag" />
+      </concept>
+      <concept>
+        <code value="SD130102" />
+        <display value="Antrag Maßregelvollzug" />
+        <definition value="Die Dokumentation beinhaltet Anträge im Rahmen des Maßregelvollzuges. Exkl.: Antrag auf Rehabilitation, Antrag auf Betreuung, Antrag auf gesetzliche Unterbringung, Verlängerungsantrag, Antrag auf Psychotherapie, Antrag auf Pflegeeinstufung, Kostenübernahmeantrag, Antrag auf Leistungen der Pflegeversicherung" />
+      </concept>
+      <concept>
+        <code value="SD130103" />
+        <display value="Schriftverkehr Maßregelvollzug" />
+        <definition value="Die Dokumentation beinhaltet sämtliche Korrespondenzen im Rahmen des Maßregelvollzuges. Exkl.: Schriftverkehr Amtsgericht, Schriftverkehr MDK Arzt, Schriftverkehr Krankenkasse, Schriftverkehr Deutsche Rentenversicherung, Schriftverkehr MDK Kasse" />
+      </concept>
+      <concept>
+        <code value="SD130104" />
+        <display value="Einwilligung/Einverständniserklärung Maßregelvollzug" />
+        <definition value="Die Dokumentation beinhaltet Einwilligungen und Einverständniserklärungen im Rahmen des Maßregelvollzuges. Exkl.: Schweigepflichtentbindung, Datenschutzerklärung, Einverständniserklärung Abrechnung, Einverständniserklärung Behandlung" />
+      </concept>
+      <concept>
+        <code value="SD130199" />
+        <display value="Sonstiges Maßregelvollzugdokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SD1501" />
+      <display value="Onkologische Dokumente" />
+      <concept>
+        <code value="SD150101" />
+        <display value="Follow up-Bogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben im Rahmen der Nachsorge zur Erfassung der Verlaufskontrolle nach Abschluss der Behandlung." />
+      </concept>
+      <concept>
+        <code value="SD150102" />
+        <display value="Meldebogen Krebsregister" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Meldung von Krebserkrankungen an das Krebsregister." />
+      </concept>
+      <concept>
+        <code value="SD150103" />
+        <display value="Tumorkonferenzprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Ergebnisse des Zusammentreffens von verschiedenen Fachärzten, über die Beratung der weiteren Behandlung von Tumorerkrankungen." />
+      </concept>
+      <concept>
+        <code value="SD150104" />
+        <display value="Tumorlokalisationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Erfassung der Tumorposition - überwiegend manuelle Skizze." />
+      </concept>
+      <concept>
+        <code value="SD150199" />
+        <display value="Sonstiger onkologischer Dokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Checkliste für Tumorpatienten, Psychoonkologische Basisdokumentation, Tumorverlaufsblatt" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SD1601" />
+      <display value="Psychische Dokumente" />
+      <concept>
+        <code value="SD160101" />
+        <display value="Handschriftliches Patiententagebuch" />
+        <definition value="Die Dokumentation beinhaltet eine persönliche, schriftliche Schilderung von Erlebnissen zur Therapieunterstützung." />
+      </concept>
+      <concept>
+        <code value="SD160102" />
+        <display value="(Neuro-) Psychologischer Erhebungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Feststellung einer (neuro-)psychischen Erkrankung sowie deren Schweregrad. Die Auswertung erfolgt durch ein Punktesystem." />
+      </concept>
+      <concept>
+        <code value="SD160103" />
+        <display value="Psychologische Therapieanordnung" />
+        <definition value="Die Dokumentation beinhaltet eine therapeutische Anordnung durch den Arzt zur Behandlung einer psychischen Erkrankung. Inkl.: Therapiepass, Therapieplanung" />
+      </concept>
+      <concept>
+        <code value="SD160104" />
+        <display value="Psychologisches Therapiegesprächsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Gesprächsinhalte, die im Rahmen einer psychologischen/psychotherapeutischen Therapiesitzung aufgekommen sind." />
+      </concept>
+      <concept>
+        <code value="SD160105" />
+        <display value="Psychologischer Verlaufsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben über den Verlauf der psychologischen/psychotherapeutischen Behandlung, gekennzeichnet durch Einträge zu verschiedenen Zeitpunkten. Inkl.: Komplexbehandlungsbogen Psych, Exkl.: Spezialtherapeutische Verlaufsdokumentation, Dokumentation Verhaltensanalyse" />
+      </concept>
+      <concept>
+        <code value="SD160106" />
+        <display value="Spezialtherapeutische Verlaufsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Planung, Zielsetzung, Durchführung und freitextlichen Verlauf der spezialtherapeutischen Behandlungen einschließlich Zeitangaben und Therapieeinheiten. Inkl.: Musiktherapie, Kunsttherapie, Arbeitstherapie, Tanztherapie, Exkl.: Ergotherapie, Logopädie, Physiotherapie" />
+      </concept>
+      <concept>
+        <code value="SD160107" />
+        <display value="Therapieeinheiten/Ärzte/Psychologen/Spezialtherapeuten" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis zur Durchführung der psychiatrischen und psychologischen Behandlungen (z.B. Gesprächstherapie) einschließlich Zeitangaben und/oder spezialtherapeutischen Behandlungen (u.a. Musiktherapie)." />
+      </concept>
+      <concept>
+        <code value="SD160108" />
+        <display value="1:1 Betreuung/Einzelbetreuung/Psychiatrische Intensivbehandlung" />
+        <definition value="Die Dokumentation beinhaltet die Nachweise über die Indikationsstellung, ärztliche und pflegerische Durchführung bei der 1:1-Betreuung, Einzel-/Gruppenbetreuung und Merkmale der Intensivbehandlung (z.B. Sicherungsmaßnahmen). Hinweis: Ergänzende Tagesentgelte, Exkl.: Fixierungsprotokoll" />
+      </concept>
+      <concept>
+        <code value="SD160109" />
+        <display value="Checkliste für die Unterbringung psychisch Kranker" />
+        <definition value="Die Dokumentation beinhaltet die Prüfung der Einhaltung von Anforderungen im Rahmen PsychKG." />
+      </concept>
+      <concept>
+        <code value="SD160110" />
+        <display value="Dokumentation Verhaltensanalyse" />
+        <definition value="Die Dokumentation beinhaltet die Planung, Durchführung und Auswertung von Verhaltensanalysen im Rahmen psychologischer/psychotherapeutischer Behandlung." />
+      </concept>
+      <concept>
+        <code value="SD160111" />
+        <display value="Dokumentation Depression" />
+        <definition value="Die Dokumentation beinhaltet die diagnostischen Fragenstellungen, die Einschätzung des Schweregrades im Rahmen psychologischer/psychotherapeutischer Behandlung. Inkl.: BDI, Goldberg, Früherkennung, Exkl.: Dem Tect, Geriatrische Depressionsskala" />
+      </concept>
+      <concept>
+        <code value="SD160112" />
+        <display value="Dokumentation Stationsäquivalente Behandlung (StäB)" />
+        <definition value="Die Dokumentation beinhaltet Nachweise für die Anforderungen entsprechend der Vereinbarung nach § 115d Absatz 2 SGB V Stationsäquivalente psychiatrische Behandlung. Inkl.: Häusliche Situation, Häusliche Behandlungsbedingungen, Eltern-Kind-Behandlung, Darlegung beteiligter Berufsgruppen mit Qualifikation, fachärztliche Behandlungsanleitung inkl. Qualifikation, Spezialdokumentation Patientenkontakt. Exkl.: Dokumentation aus spezifischeren Dokumentenklassen - wie bspw. Entlassungsbericht, Konsilbericht, Aufnahmbefund, Anamnesebogen, Therapieplan, Verlaufsdokumentation, Visitenprotokoll, Teambesprechungsprotokoll, diagnostische/therapeutische (Fremd-)Leistungen" />
+      </concept>
+      <concept>
+        <code value="SD160199" />
+        <display value="Sonstige psychologische Dokumente" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Psychischer Untersuchungsbefund, Psychopathologischer Befund, Therapieplan Psy" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="SF" />
+    <display value="Studien/Forschung" />
+    <concept>
+      <code value="SF0601" />
+      <display value="Forschungsdokumente" />
+      <concept>
+        <code value="SF060101" />
+        <display value="Forschungsbericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu allen Forschungsvorhaben in einem Zeitraum, die in einer Einrichtung durchgeführt wurden." />
+      </concept>
+      <concept>
+        <code value="SF060199" />
+        <display value="Sonstige Forschungsdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="SF1901" />
+      <display value="Studiendokumente" />
+      <concept>
+        <code value="SF190101" />
+        <display value="CRF-Bogen" />
+        <definition value="Die Dokumentation beinhaltet Erhebungen für Klinische Studien. Diese sind inhaltlich unterschiedlich und abhängig von der Fragestellung der durchzuführenden Studie." />
+      </concept>
+      <concept>
+        <code value="SF190102" />
+        <display value="Einwilligung Studie" />
+        <definition value="Die Dokumentation beinhaltet die unterzeichnete Einwilligungserklärung zur Teilnahme an einer Studie." />
+      </concept>
+      <concept>
+        <code value="SF190103" />
+        <display value="Protokoll Ein- und Ausschlusskriterien" />
+        <definition value="Die Dokumentation beinhaltet präzise Kriterien, die eine Teilnahme an einer Studie ermöglichen oder ausschließen." />
+      </concept>
+      <concept>
+        <code value="SF190104" />
+        <display value="Prüfplan" />
+        <definition value="Die Dokumentation beinhaltet die Beschreibung und Festlegung der wichtigsten Merkmale des Forschungsvorhabens." />
+      </concept>
+      <concept>
+        <code value="SF190105" />
+        <display value="SOP-Bogen" />
+        <definition value="Die Dokumentation beinhaltet Arbeitsanweisungen zur Sicherstellung einheitlicher Arbeitsabläufe im Rahmen des Forschungsvorhabens." />
+      </concept>
+      <concept>
+        <code value="SF190106" />
+        <display value="Studienbericht" />
+        <definition value="Die Dokumentation beinhaltet die Veröffentlichung einer durchgeführten Studie." />
+      </concept>
+      <concept>
+        <code value="SF190199" />
+        <display value="Sonstige Studiendokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="TH" />
+    <display value="Therapie" />
+    <concept>
+      <code value="TH0201" />
+      <display value="Bestrahlungstherapien" />
+      <concept>
+        <code value="TH020101" />
+        <display value="Bestrahlungsplan" />
+        <definition value="Die Dokumentation beinhaltet die individuelle Planung einer Bestrahlungstherapie mit Angaben über Lokalisation, Zeitraum und Dosis." />
+      </concept>
+      <concept>
+        <code value="TH020102" />
+        <display value="Bestrahlungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über die Durchführung einer Bestrahlungstherapie und die Dosisleistung." />
+      </concept>
+      <concept>
+        <code value="TH020103" />
+        <display value="Bestrahlungsverordnung" />
+        <definition value="Die Dokumentation beinhaltet die Anweisung einer Bestrahlungstherapie zur Behandlung." />
+      </concept>
+      <concept>
+        <code value="TH020104" />
+        <display value="Radiojodtherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis der nuklearmedizinischen Therapie zur Behandlung von Schilddrüsenerkrankungen. Exkl.: Therapieprotokoll mit Radionukliden" />
+      </concept>
+      <concept>
+        <code value="TH020105" />
+        <display value="Therapieprotokoll mit Radionukliden" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis der nuklearmedizinischen Behandlung, bei der Patienten radioaktive Substanzen verabreicht bekommen. Exkl.: Radiojodtherapie" />
+      </concept>
+      <concept>
+        <code value="TH020199" />
+        <display value="Sonstiges Bestrahlungstherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Anmeldung zur Strahlentherapie, Verlaufsbericht Strahlentherapie" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="TH0601" />
+      <display value="Funktionstherapien" />
+      <concept>
+        <code value="TH060101" />
+        <display value="Ergotherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Planung, Zielsetzung und Durchführung der ergotherapeutischen Behandlung. Inkl.: Abschlussbericht, Exkl.: Anforderung Funktionstherapie" />
+      </concept>
+      <concept>
+        <code value="TH060102" />
+        <display value="Logopädieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Planung, Zielsetzung und Durchführung der logopädischen Behandlung. Inkl.: Abschlussbericht, Exkl.: Anforderung Funktionstherapie" />
+      </concept>
+      <concept>
+        <code value="TH060103" />
+        <display value="Physiotherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Planung, Zielsetzung und Durchführung der physiotherapeutischen Behandlung. Inkl.: Abschlussbericht, Exkl.: Anforderung Funktionstherapie" />
+      </concept>
+      <concept>
+        <code value="TH060104" />
+        <display value="Anforderung Funktionstherapie" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung bzw. Anmeldung einer therapeutischen Behandlung." />
+      </concept>
+      <concept>
+        <code value="TH060105" />
+        <display value="Elektrokonvulsionstherapie" />
+        <definition value="Die Dokumentation beinhaltet die fachärztliche Indikationsstellung, Durchführungs- und Überwachungsnachweise. Exkl.: Aufklärung (siehe Aufklärungsbogen Therapie)" />
+      </concept>
+      <concept>
+        <code value="TH060106" />
+        <display value="Transkranielle Magnetstimulation" />
+        <definition value="Die Dokumentation beinhaltet die fachärztliche Indikationsstellung, Durchführungs- und Überwachungsnachweise. Exkl.: Aufklärung" />
+      </concept>
+      <concept>
+        <code value="TH060199" />
+        <display value="Sonstiges Funktionstherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Fototherapie, Hypothermiebogen, Reittherapie. Exkl.: Spezialtherapeutische Verlaufsdokumentation" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="TH1301" />
+      <display value="Medikamentöse Therapien" />
+      <concept>
+        <code value="TH130101" />
+        <display value="Anforderung Medikation" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung von Arzneimitteln an eine dafür zuständige Ausgabestelle." />
+      </concept>
+      <concept>
+        <code value="TH130102" />
+        <display value="Apothekenbuch" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Medikament, verabreichte Menge, Chargennummer, Applikationsweg, Verabreichungsdatum, Empfänger. Inkl.: Auszüge aus einem Apothekenbuch" />
+      </concept>
+      <concept>
+        <code value="TH130103" />
+        <display value="Chemotherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über die verabreichte Dosis der Zytostatika und die Anzahl der Zyklen." />
+      </concept>
+      <concept>
+        <code value="TH130104" />
+        <display value="Hormontherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet den Nachweis über die verabreichte Dosis der Hormone und die Anzahl der Zyklen." />
+      </concept>
+      <concept>
+        <code value="TH130105" />
+        <display value="Medikamentenplan extern" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="TH130106" />
+        <display value="Medikamentenplan intern/extern (mit BTM)" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="TH130107" />
+        <display value="Medikamentenplan intern/extern" />
+        <definition value="Die Dokumentation beinhaltet eine Übersicht über verordnete Arzneimittel. Exkl.: Medikamentenplan elektronisch (eMP) = bundeseinheitlicher Medikationsplan" />
+      </concept>
+      <concept>
+        <code value="TH130108" />
+        <display value="Rezept" />
+        <definition value="Die Dokumentation beinhaltet die Verschreibung des Arztes auf einem standardisiertem Formular von Arznei- oder Heilmitteln. (Muster 16 KBV)" />
+      </concept>
+      <concept>
+        <code value="TH130109" />
+        <display value="Schmerztherapieprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Durchführung einer medikamentösen schmerzlindernden Therapie. Inkl.: Therapieplan Schmerztherapie" />
+      </concept>
+      <concept>
+        <code value="TH130110" />
+        <display value="Prämedikationsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Anordnung und Verabreichung von Medikamenten vor einer Maßnahme. Exkl.: Anästhesieaufklärungsbogen" />
+      </concept>
+      <concept>
+        <code value="TH130111" />
+        <display value="Lyse Dokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Durchführung einer medikamentösen Therapie zur Lösung von Blutgerinnseln. Inkl.: Checkliste Lysetherapie Exkl.: Dialyse" />
+      </concept>
+      <concept>
+        <code value="TH130199" />
+        <display value="Sonstiges Dokument medikamentöser Therapie" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Lieferschein Medikation" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="TH1601" />
+      <display value="Patientenschulungen" />
+      <concept>
+        <code value="TH160101" />
+        <display value="Protokoll Ernährungsberatung" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu empfohlenen Nahrungsmitteln aufgrund verschiedener Indikationen." />
+      </concept>
+      <concept>
+        <code value="TH160199" />
+        <display value="Sonstiges Protokoll Patientenschulung" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Anmeldung Patientenschulung, Exkl.: Diabetesberatung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="TH2001" />
+      <display value="Transfusionsdokumente" />
+      <concept>
+        <code value="TH200101" />
+        <display value="Anforderung Blutkonserven" />
+        <definition value="Die Dokumentation beinhaltet die Anforderung von benötigten Blutkonserven bei einer Blutbank." />
+      </concept>
+      <concept>
+        <code value="TH200102" />
+        <display value="Blutspendeprotokoll" />
+        <definition value="Die Dokumentation beinhaltet alle relevanten Angaben zur Durchführung der Blutabgabe und des Spenders." />
+      </concept>
+      <concept>
+        <code value="TH200103" />
+        <display value="Bluttransfusionsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet alle relevanten Angaben zur Übertragung von Blut oder Blutbestandteilen an den Empfänger." />
+      </concept>
+      <concept>
+        <code value="TH200104" />
+        <display value="Konservenbegleitschein" />
+        <definition value="Die Dokumentation beinhaltet alle relevanten Daten zu einer angeforderten Blutkonserve." />
+      </concept>
+      <concept>
+        <code value="TH200199" />
+        <display value="Sonstiges Transfusionsdokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Bericht über Transfusionsreaktion, Checkliste Transfusion, Konservenausgabeprotokoll" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="VL" />
+    <display value="Verlauf" />
+    <concept>
+      <code value="UB9999" />
+      <display value="Sonstige Dokumentation" />
+      <concept>
+        <code value="UB999996" />
+        <display value="Nachweise (Zusatz-) Entgelte" />
+        <definition value="Die Dokumentation beinhaltet die Nachweise (inkl. Dosis, Mengenangaben, Indikationsstellung) der durchgeführten diagnostischen, therapeutischen und/oder pflegerischen Maßnahmen von Entgelten, ZE oder ZP. Dieser KDL-Kode ist ausschließlich für die Anforderung von Unterlagen durch den MD zu verwenden." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL0101" />
+      <display value="Assessmentbögen" />
+      <concept>
+        <code value="VL010101" />
+        <display value="Dekubitusrisikoeinschätzung" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Einschätzung des Risikos ein Druckgeschwür zu entwickeln." />
+      </concept>
+      <concept>
+        <code value="VL010102" />
+        <display value="Mini Mental Status Test inkl. Uhrentest" />
+        <definition value="Die Dokumentation beinhaltet Testaufgaben zur Feststellung von Defiziten der Wahrnehmung, des Denkens sowie der kognitiven Fähigkeiten. Die Auswertung erfolgt über ein Punktesystem." />
+      </concept>
+      <concept>
+        <code value="VL010103" />
+        <display value="Schmerzerhebungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu Lokalisation, Stärke sowie Ursache von Schmerzen." />
+      </concept>
+      <concept>
+        <code value="VL010104" />
+        <display value="Ernährungsscreening" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Einschätzung des Ernährungszustands." />
+      </concept>
+      <concept>
+        <code value="VL010105" />
+        <display value="Aachener Aphasie Test" />
+        <definition value="Die Dokumentation beinhaltet Testaufgaben, für Erwachsene und Jugendliche ab dem 14. Lebensjahr, zur Diagnose und zum Verlauf einer erworbenen Sprachstörung bzw. zentralen Schädigung des Gehirns." />
+      </concept>
+      <concept>
+        <code value="VL010106" />
+        <display value="Glasgow Coma Scale" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Einschätzung einer Bewusstseins- und Hirnfunktionsstörung bei Erwachsenen nach Schädel-Hirn-Trauma." />
+      </concept>
+      <concept>
+        <code value="VL010107" />
+        <display value="NIH Stroke Scale" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Beurteilung eines akut aufgetretenen Schlaganfalls. Die Auswertung erfolgt mittels Punktesystem." />
+      </concept>
+      <concept>
+        <code value="VL010108" />
+        <display value="IPSS (Internationaler Prostata Symptom Score)" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Einschätzung des Harnverhalts. Die Auswertung erfolgt mittels Punktesystem." />
+      </concept>
+      <concept>
+        <code value="VL010199" />
+        <display value="Sonstiger Assessmentbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Atemskala, COPD Assessment, Delirium Screening, Finnegan Score, Hornheider Screening Instrument, Karnofsky Index, Wortfindungstest, Schreibprobe, Dubowitz Score" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL0401" />
+      <display value="Diabetesdokumente" />
+      <concept>
+        <code value="VL040101" />
+        <display value="Diabetiker Kurve" />
+        <definition value="Die Dokumentation beinhaltet Messungen zur Kontrolle des Blutzuckers über einen bestimmten Zeitraum." />
+      </concept>
+      <concept>
+        <code value="VL040102" />
+        <display value="Insulinplan" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Verabreichungsdauer und Verabreichungsart von Insulin." />
+      </concept>
+      <concept>
+        <code value="VL040199" />
+        <display value="Sonstige Diabetesdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Diabetes Verlaufsdokumentation, Diabetologische Empfehlungen, Diabetesberatung" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL0402" />
+      <display value="Dialysedokumente" />
+      <concept>
+        <code value="VL040201" />
+        <display value="Dialyseanforderung" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Anmeldung oder Anforderung eines Blutreinigungsverfahrens." />
+      </concept>
+      <concept>
+        <code value="VL040202" />
+        <display value="Dialyseprotokoll" />
+        <definition value="Die Dokumentation beinhaltet die Durchführung eines Blutreinigungsverfahrens." />
+      </concept>
+      <concept>
+        <code value="VL040299" />
+        <display value="Sonstige Dialysedokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Dialysebegleitschreiben, Dialysevisite" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL0403" />
+      <display value="Durchführungsnachweise" />
+      <concept>
+        <code value="VL040301" />
+        <display value="Ein- und Ausfuhrprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu Ein - und Ausfuhrmengen in einem bestimmten Zeitraum. Exkl.: Medikamentenplan, Sondenplan" />
+      </concept>
+      <concept>
+        <code value="VL040302" />
+        <display value="Fixierungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer einer freiheitsentziehenden Maßnahme. Inkl.: Fixierungsanordnung Exkl.: Antrag auf Fixierung" />
+      </concept>
+      <concept>
+        <code value="VL040303" />
+        <display value="Isolierungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer der Isolierungsmaßnahmen während der Behandlung." />
+      </concept>
+      <concept>
+        <code value="VL040304" />
+        <display value="Lagerungsplan" />
+        <definition value="Die Dokumentation beinhaltet Angaben über festgelegte Lagerungsintervalle. Inkl.: Dekubitusprophylaxe, Bewegungsplan" />
+      </concept>
+      <concept>
+        <code value="VL040305" />
+        <display value="Punktionsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum Verlauf einer Punktion sowie Nachweise von Biopsien und Checklisten. Inkl.: diagnostischer oder therapeutischer Punktion, Anmeldung zur Punktion" />
+      </concept>
+      <concept>
+        <code value="VL040306" />
+        <display value="Punktionsprotokoll therapeutisch" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="VL040307" />
+        <display value="Reanimationsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer der durchgeführten Wiederbelebungsmaßnahme." />
+      </concept>
+      <concept>
+        <code value="VL040308" />
+        <display value="Sondenplan" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer der zu verabreichenden Sondennahrung." />
+      </concept>
+      <concept>
+        <code value="VL040309" />
+        <display value="Behandlungsplan" />
+        <definition value="Die Dokumentation beinhaltet eine Übersicht von geplanten Maßnahmen zur Behandlung. Inkl.: KBV Muster 70 (Behandlungsplan für Maßnahmen zur künstlichen Befruchtung), Terminplan, Übersicht über Behandlungstermine" />
+      </concept>
+      <concept>
+        <code value="VL040310" />
+        <display value="Infektionsdokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer der Behandlung von Infektionskrankheiten und Erregern. Inkl.: MRSA/MRE Screening und Sanierung Exkl.: Nosokomialdokumentation" />
+      </concept>
+      <concept>
+        <code value="VL040311" />
+        <display value="Nosokomialdokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Art und Dauer der Behandlung von im Krankenhaus erworbenen Infektionskrankheiten und Erregern. Exkl.: Infektionsdokumentationsbogen" />
+      </concept>
+      <concept>
+        <code value="VL040312" />
+        <display value="Stomadokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur Erst-und Folgeversorgung eines künstlichen Ausganges." />
+      </concept>
+      <concept>
+        <code value="VL040313" />
+        <display value="Katheterdokument" />
+        <definition value="Die Dokumentation beinhaltet Angaben über die Sondierung, Entleerung oder Spülung eines Hohlorgans. Weitere Inhalte können auch die Anlage oder Entfernung eines Venenkatheters sein. Exkl.: Katheterdokumentation zur Schmerztherapie, Dialyse, Herzkatheter" />
+      </concept>
+      <concept>
+        <code value="VL040314" />
+        <display value="Kardioversion" />
+        <definition value="Die Dokumentation beinhaltet eine kurze Zusammenfassung des Procedere, welches elektronisch oder medikamentös durchgeführt werden kann. Dokumentiert wird in Freitext oder auf standardisiertem Formular. Weitere Inhalte können Angaben zu den Vitaldaten und zur Sedierung während der Durchführung sein." />
+      </concept>
+      <concept>
+        <code value="VL040399" />
+        <display value="Sonstiger Durchführungsnachweis" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Blasenspülprotokoll, Cardioversion, Inhalationsplan" />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL0901" />
+      <display value="Intensivmedizinische Dokumente" />
+      <concept>
+        <code value="VL090101" />
+        <display value="Beatmungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet standardisierte Angaben zur Art und Dauer von Beatmungsepisoden." />
+      </concept>
+      <concept>
+        <code value="VL090102" />
+        <display value="Intensivkurve" />
+        <definition value="Die Dokumentation beinhaltet Angaben über einen Zeitraum von 24 Stunden während einer intensivmedizinischen Versorgung. Vitalzeichen werden als Kurve dargestellt. Weitere Inhalte sind unter anderem: Medikamentenverabreichung, Pflegemaßnahmen, Beatmungssituation und Laborwerte. Inkl.: Stroke Unit Kurve, IMC Kurve Exkl.: Pflegekurve, Säuglingskurve" />
+      </concept>
+      <concept>
+        <code value="VL090103" />
+        <display value="Intensivpflegebericht" />
+        <definition value="Die Dokumentation beinhaltet Angaben des Allgemeinzustands und der durchgeführten Maßnahmen während der intensivmedizinischen Versorgung. Die Erfassung erfolgt nicht standardisiert als Freitext. Exkl.: Pflegebericht" />
+      </concept>
+      <concept>
+        <code value="VL090104" />
+        <display value="Monitoringausdruck" />
+        <definition value="Die Dokumentation beinhaltet Aufzeichnungen von Vitalzeichen und der Sauerstoffsättigung. Der Ausdruck wird elektronisch über einen Vitaldatenmonitor erstellt. Exkl.: Überwachungsprotokoll" />
+      </concept>
+      <concept>
+        <code value="VL090105" />
+        <display value="Intensivdokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur standardisierten Erfassung unter anderem von: Vitalzeichen, Medikamentenverabreichung, Pflegemaßnahmen, Beatmungssituation und Laborwerten." />
+      </concept>
+      <concept>
+        <code value="VL090199" />
+        <display value="Sonstiger Intensivdokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Dokumentation Therapiebegrenzung, Hämodynamische Verlaufsdokumentation, PICCO Protokoll." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL1601" />
+      <display value="Pflegedokumente" />
+      <concept>
+        <code value="VL160101" />
+        <display value="Auszug aus den medizinischen Daten" />
+        <definition value="Die Dokumentation beinhaltet Angaben über Diagnostik, Krankheits- und den Behandlungsverlauf eines ausgewählten Zeitraumes, chronologisch erfasst." />
+      </concept>
+      <concept>
+        <code value="VL160102" />
+        <display value="Ernährungsplan" />
+        <definition value="Die Dokumentation beinhaltet die Verordnung zur geplanten Ernährung." />
+      </concept>
+      <concept>
+        <code value="VL160103" />
+        <display value="Meldebogen Krebsregister" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="VL160104" />
+        <display value="Pflegeanamnesebogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum aktuellen Pflegezustand bei Aufnahme." />
+      </concept>
+      <concept>
+        <code value="VL160105" />
+        <display value="Pflegebericht" />
+        <definition value="Die Dokumentation beinhaltet eine freitextliche Berichterstattung zum pflegerischen Zustand während eines bestimmten Behandlungszeitraums." />
+      </concept>
+      <concept>
+        <code value="VL160106" />
+        <display value="Pflegekurve" />
+        <definition value="Die Dokumentation beinhaltet Angaben, über mehrere klinische Tage, zur Erfassung von Vitalzeichen, Medikamentengaben, Pflegemaßnahmen und Laborwerten. Vitalzeichen werden als Kurve dargestellt. Exkl.: Intensivkurve. Säuglingskurve" />
+      </concept>
+      <concept>
+        <code value="VL160107" />
+        <display value="Pflegeplanung" />
+        <definition value="Die Dokumentation beinhaltet einen Maßnahmenplan, der die strukturierte und zielgerichtete Vorgehensweise von  Pflegekräften bei der Versorgung beschreibt." />
+      </concept>
+      <concept>
+        <code value="VL160108" />
+        <display value="Pflegeüberleitungsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu sämtlichen pflegerelevanten Daten in Abhängigkeit von den Defiziten und Ressourcen. Sie dienen als Grundlage für die  weiterbehandelnde Einrichtung." />
+      </concept>
+      <concept>
+        <code value="VL160109" />
+        <display value="Sturzprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu einem Sturz und den daraus resultierenden Maßnahmen." />
+      </concept>
+      <concept>
+        <code value="VL160110" />
+        <display value="Überwachungsprotokoll" />
+        <definition value="Die Dokumentation beinhaltet Angaben zur engmaschigen, pflegerischen Überwachung über einen bestimmten Zeitraum. Exkl.: Monitoringausdruck" />
+      </concept>
+      <concept>
+        <code value="VL160111" />
+        <display value="Verlaufsdokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum chronologischen Verlauf des Gesundheitszustandes und der durchgeführten Maßnahmen." />
+      </concept>
+      <concept>
+        <code value="VL160112" />
+        <display value="Pflegevisite" />
+        <definition value="Die Dokumentation beinhaltet die Erfassung von Änderungen im Pflegeprozess und den daraus resultierenden Maßnahmen." />
+      </concept>
+      <concept>
+        <code value="VL160113" />
+        <display value="Fallbesprechung Bezugspflegekraft" />
+        <definition value="Die Dokumentation beinhaltet Angaben zum aktuellen Pflegezustand und Planung von weiteren Maßnahmen." />
+      </concept>
+      <concept>
+        <code value="VL160114" />
+        <display value="Pflegenachweis" />
+        <definition value="Die Dokumentation beinhaltet einen Nachweis von pflegerischen Leistungen. Exkl.: Pflegebericht" />
+      </concept>
+      <concept>
+        <code value="VL160199" />
+        <display value="Sonstiger Pflegedokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann." />
+      </concept>
+    </concept>
+    <concept>
+      <code value="VL2301" />
+      <display value="Wunddokumente" />
+      <concept>
+        <code value="VL230101" />
+        <display value="Wunddokumentationsbogen" />
+        <definition value="Die Dokumentation beinhaltet Angaben zu Hautdefekten, deren Lokalisation, Versorgung und Beschreibung. Inkl.: Wundkonsil" />
+      </concept>
+      <concept>
+        <code value="VL230102" />
+        <display value="Bewegungs- und Lagerungsplan" />
+        <definition value="n.a." />
+        <property>
+          <code value="status" />
+          <valueCode value="deprecated" />
+        </property>
+      </concept>
+      <concept>
+        <code value="VL230103" />
+        <display value="Fotodokumentation Wunden" />
+        <definition value="Die Dokumentation beinhaltet den fotografierten Hautdefekt. Hier sind nur gedruckte Fotografien zu klassifizieren. Exkl. Fotodokumentation Dermatologie" />
+      </concept>
+      <concept>
+        <code value="VL230199" />
+        <display value="Sonstige Wunddokumentation" />
+        <definition value="Die Dokumentation beinhaltet Angaben, die nicht in einer spezifischeren KDL dieser Unterklasse abgebildet werden kann. Inkl.: Anamnese Wunddokumentation, Aufnahme- und Kurzprotokoll Wundtherapie, Wundmanagement" />
+      </concept>
+    </concept>
+  </concept>
+  <concept>
+    <code value="UB" />
+    <display value="Sonstiges" />
+    <concept>
+      <code value="UB9999" />
+      <display value="Sonstige Dokumentation" />
+      <concept>
+        <code value="UB999997" />
+        <display value="Gesamtdokumentation stationäre Versorgung" />
+        <definition value="Die Dokumentation beinhaltet eine Sammlung verschiedener Dokumententypen im Rahmen der stationären Versorgung. Diese KDL ist nur in Einzelfällen zu verwenden. Beispiel: elektronischer Austausch der gesamten Patientenakte" />
+      </concept>
+      <concept>
+        <code value="UB999998" />
+        <display value="Gesamtdokumentation ambulante Versorgung" />
+        <definition value="Die Dokumentation beinhaltet eine Sammlung verschiedener Dokumententypen im Rahmen der ambulanten Versorgung. Diese KDL ist nur in Einzelfällen zu verwenden. Beispiel: elektronischer Austausch der gesamten Ambulanzakte" />
+      </concept>
+      <concept>
+        <code value="UB999999" />
+        <display value="Sonstige medizinische Dokumentation" />
+        <definition value="Die Dokumentation beinhaltet alle Dokumententypen, die nicht in eine spezifischeren KDL aller Unterklassen abgebildet werden können. Inkl.: Patientenetiketten, Visitenkarte, Registerblätter" />
+      </concept>
+    </concept>
+  </concept>
+</CodeSystem>

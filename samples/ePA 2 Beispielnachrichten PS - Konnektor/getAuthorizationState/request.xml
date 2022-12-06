@@ -1,0 +1,24 @@
+<s12:Envelope xmlns:s12="http://www.w3.org/2003/05/soap-envelope">
+	<s12:Header>
+		<wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing" s12:mustUnderstand="true">http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0/GetAuthorizationState</wsa:Action>
+		<wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing" s12:mustUnderstand="true">urn:uuid:670b7ECD-6B3A-4044-A419-01801EA52AFD</wsa:MessageID>
+		<wsa:To xmlns:wsa="http://www.w3.org/2005/08/addressing" s12:mustUnderstand="true">http://10.11.236.199:80/ws/PHRManagementService</wsa:To>
+		<wsa:ReplyTo xmlns:wsa="http://www.w3.org/2005/08/addressing" s12:mustUnderstand="true">
+			<wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+		</wsa:ReplyTo>
+	</s12:Header>
+	<s12:Body>
+		<phrm:GetAuthorizationState xmlns:phrm="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0">
+			<CCTX:Context xmlns:CCTX="http://ws.gematik.de/conn/ConnectorContext/v2.0">
+				<CONN:MandantId xmlns:CONN="http://ws.gematik.de/conn/ConnectorCommon/v5.0">M1</CONN:MandantId>
+				<CONN:ClientSystemId xmlns:CONN="http://ws.gematik.de/conn/ConnectorCommon/v5.0">CS1</CONN:ClientSystemId>
+				<CONN:WorkplaceId xmlns:CONN="http://ws.gematik.de/conn/ConnectorCommon/v5.0">WP1</CONN:WorkplaceId>
+			</CCTX:Context>
+			<phrm:RecordIdentifier>
+				<ns1:InsurantId xmlns:ns1="http://ws.gematik.de/fa/phr/v1.1" extension="X110525084" root="1.2.276.0.76.4.8"/>
+				<ns1:HomeCommunityId xmlns:ns1="http://ws.gematik.de/fa/phr/v1.1">urn:oid:1.1.4567334.1.3</ns1:HomeCommunityId>
+			</phrm:RecordIdentifier>
+			<phrm:UserAgent>PS_123/V1.1.0/gematik</phrm:UserAgent>
+		</phrm:GetAuthorizationState>
+	</s12:Body>
+</s12:Envelope>

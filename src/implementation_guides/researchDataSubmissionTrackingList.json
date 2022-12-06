@@ -1,0 +1,195 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$id": "http://gematik.de/forschungsdatenliste.schema.v1.0.1.json",
+	"title": "Research Data Submission Tracking List",
+	"description": "Detailed record of submitted and withdrawn (if applicable) pseudonymous documents for research purposes. ",
+	"version": "1.0.2",
+	"type": "object",
+	"properties": {
+		"schema-version":{
+			"description": "actual schema version for a researchDataTrackingList document instance.",
+			"type":"string",
+			"pattern": "\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}"
+		},
+		"insurantConsent": {
+			"description": "Information about user's consent referring $363 SGB V. A given consent enables the provision of speudonymous data for research purposes",
+			"type": "object",
+			"properties": {
+				"consentState": {
+					"description": "State of consent(given or withdrawn)",
+					"type": "string",
+					"enum": [
+						"given",
+						"withdrawn"
+					]
+				},
+				"consentValidFrom": {
+					"description": "date and time of last change of consent state. This timestamp is always UTC, formatted as YYYY-MM-DDThh:mm:ssZ",
+					"type": "string",
+					"format": "date-time"
+				}
+			},
+			"required": [
+				"consentState",
+				"consentValidFrom"
+			],
+			"additionalProperties": false
+		},
+		"dataSubmissionTracking": {
+			"description": "List of delivered / withdrawn structured documents (MIOs). For each instance of a MIO, one submissionEntry shall exist, i.e. one for each static folder and one for each instance of dynamic folders or each atomic-type document. An entry shall be established on first data submission",
+			"type": "array",
+			"items": {
+				"description": "submission entries, max. one for each MIO",
+				"$ref": "#/definitions/SubmissionEntryType"
+			}
+		}
+	},
+	"required": [
+		"insurantConsent",
+		"dataSubmissionTracking"
+	],
+	"additionalProperties": false,
+	"definitions": {
+		"SubmissionEntryType": {
+			"type": "object",
+			"properties": {
+				"documentTitle": {
+					"description": "human readable name of the covered MIO (folder.Title for uniform & mixed collections or document.Title for atomic documents)",
+					"type": "string",
+					"examples": [
+						"Zahnbonusheft",
+						"Kinderuntersuchungsheft"
+					]
+				},
+				"documentUniqueId": {
+					"description": "The unique identifier for this particular document (folder.UniqueId for uniform & mixed collections or document.UniqueId for atomic documents)",
+					"type": "string"
+				},
+				"pseudonymousDocumentId": {
+					"description": "A generated unique identifier for this particular document. This ID shall be used in submission for delivery or withdawal of documents towards teh research data center.",
+					"type": "string"
+				},
+				"submissions": {
+					"description": "Each entry in submissions represents a delivery or a withdrawal of a MIO for research purposes. ",
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"description": "submissions of a MIO, providing delivery state and sender",
+						"$ref": "#/definitions/SubmissionType"
+					}
+				}
+			},
+			"required": [
+				"documentTitle",
+				"documentUniqueId",
+				"pseudonymousDocumentId",
+				"submissions"
+			],
+			"additionalProperties": false
+		},
+		"SubmissionType": {
+			"type": "object",
+			"properties": {
+				"submissionState": {
+					"description": "state of a submission",
+					"enum": [
+						"withdrawn",
+						"delivered"
+					]
+				},
+				"submissionDateTime": {
+					"description": "date and time of last data submission. This timestamp is always UTC, formatted as YYYY-MM-DDThh:mm:ssZ",
+					"type": "string",
+					"format": "date-time"
+				},
+				"insurantId": {
+					"description": "identification of sender (KVNR of patient or representative)",
+					"type": "string"
+				},
+				"insurantName": {
+					"description": "Human readable name of sender (patient or representative)",
+					"type": "string",
+					"examples": [
+						"Erika Musterfrau",
+						"Max Mustermann"
+					]
+				}
+			},
+			"required": [
+				"submissionState",
+				"submissionDateTime",
+				"insurantId",
+				"insurantName"
+			],
+			"additionalProperties": false
+		}
+	},
+	"examples": [
+		{
+			"schema-version": "1.0.2",
+			"insurantConsent": {
+				"consentState": "given",
+				"consentValidFrom": "2022-02-01T00:00:00Z"
+			},
+			"dataSubmissionTracking": [
+				{
+					"documentTitle": "Impfpass",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-03-02T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						},
+						{
+							"submissionState": "withdrawn",
+							"submissionDateTime": "2022-02-20T20:00:00Z",
+							"insurantId": "kvnr-representative",
+							"insurantName": "Max Mustermann"
+						},
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				},
+				{
+					"documentTitle": "Zahnbonusheft",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				},
+				{
+					"documentTitle": "Mutterpass",
+					"documentUniqueId": "<folder.uniqueId>",
+					"pseudonymousDocumentId": "<a generated id>",
+					"submissions": [
+						{
+							"submissionState": "withdrawn",
+							"submissionDateTime": "2022-02-10T21:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						},
+						{
+							"submissionState": "delivered",
+							"submissionDateTime": "2022-02-10T20:00:00Z",
+							"insurantId": "kvnr-insurant",
+							"insurantName": "Martina Musterfrau"
+						}
+					]
+				}
+			]
+		}
+	]
+}

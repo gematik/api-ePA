@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="event-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2023-01-01"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/event-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.584"/>
+    </identifier>
+    <version value="1.1.1"/>
+    <name value="value-set-of-event-codes"/>
+    <title value="Value Set of Event Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Ereignisse, die zur Erstellung des Dokuments geführt haben"/>
+    <compose>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="icd10gm2022"/>
+            </extension>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Internationale statistische Klassifikation der Krankheiten und verwandter Gesundheitsprobleme (ICD), 10. Revision, German Modification ICD-10-GM Version 2022 BfArM, BMG"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.518" />
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="ops2022"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Operationen- und Prozedurenschlüssel nach §301 SGB V - OPS Internationale Klassifikation der Prozeduren in der Medizin Version 2022; BfArM, BMG"/>
+                </extension>            
+            <system value="urn:oid:1.2.276.0.76.5.519" />
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="codesystem-kdl-2022"/>
+            </extension>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="CodeSystem Klinische Dokumentenklassen-Liste (Version 2022)"/>
+            </extension>            
+            <system value="urn:oid:1.2.276.0.76.5.533" />
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="DICOM Anatomic Region"/>
+            </extension>
+            <system value="urn:oid:1.2.840.10008.6.1.2"/>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Signature Type Codes"/>
+            </extension>
+             <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="Include signature type codes from the value set 1.2.840.10065.1.12."/>
+            </extension>           
+            <system value="urn:oid:2.16.840.1.113883.4.642.4.64"/>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Acquisition Modality Codes"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                <valueString value="The codes below are taken from DICOM Part 16, Context Group 29 'Acquisition Modality' (Value Set 1.2.840.10008.6.1.19)."/>
+            </extension> 
+            <system value="urn:oid:1.2.840.10008.2.16.4"/>
+            <concept>
+                <code value="BDUS"/>
+                <display value="Ultrasound Bone Densitometry"/>
+            </concept>
+            <concept>
+                <code value="BMD"/>
+                <display value="Bone Mineral Densitometry"/>
+            </concept>
+            <concept>
+                <code value="CR"/>
+                <display value="Computed Radiography"/>
+            </concept>
+            <concept>
+                <code value="CT"/>
+                <display value="Computed Tomography"/>
+            </concept>
+            <concept>
+                <code value="DX"/>
+                <display value="Digital Radiography"/>
+            </concept>
+            <concept>
+                <code value="ES"/>
+                <display value="Endoscopy"/>
+            </concept>
+            <concept>
+                <code value="GM"/>
+                <display value="General Microscopy"/>
+            </concept>
+            <concept>
+                <code value="IO"/>
+                <display value="Intra-oral Radiography"/>
+            </concept>
+            <concept>
+                <code value="IVOCT"/>
+                <display value="Intravascular Optical Coherence Tomography"/>
+            </concept>
+            <concept>
+                <code value="IVUS"/>
+                <display value="Intravascular Ultrasound"/>
+            </concept>
+            <concept>
+                <code value="MG"/>
+                <display value="Mammography"/>
+            </concept>
+            <concept>
+                <code value="MR"/>
+                <display value="Magnetic Resonance"/>
+            </concept>
+            <concept>
+                <code value="NM"/>
+                <display value="Nuclear Medicine"/>
+            </concept>
+            <concept>
+                <code value="OCT"/>
+                <display value="Optical Coherence Tomography"/>
+            </concept>
+            <concept>
+                <code value="OP"/>
+                <display value="Ophthalmic Photography"/>
+            </concept>
+            <concept>
+                <code value="OPT"/>
+                <display value="Ophthalmic Tomography"/>
+            </concept>
+            <concept>
+                <code value="OPTENF"/>
+                <display value="Ophthalmic Tomography En Face"/>
+            </concept>
+            <concept>
+                <code value="PT"/>
+                <display value="Positron emission tomography"/>
+            </concept>
+            <concept>
+                <code value="PX"/>
+                <display value="Panoramic X-Ray"/>
+            </concept>
+            <concept>
+                <code value="RF"/>
+                <display value="Radiofluoroscopy"/>
+            </concept>
+            <concept>
+                <code value="RG"/>
+                <display value="Radiographic imaging"/>
+            </concept>
+            <concept>
+                <code value="SM"/>
+                <display value="Slide Microscopy"/>
+            </concept>
+            <concept>
+                <code value="US"/>
+                <display value="Ultrasound"/>
+            </concept>
+            <concept>
+                <code value="XA"/>
+                <display value="X-Ray Angiography"/>
+            </concept>
+            <concept>
+                <code value="XC"/>
+                <display value="External-camera Photography"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Fallkontext bei Dokumentenerstellung"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.16"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ambulanter Kontakt in beliebiger Einrichtung mit Teilnahme an der ambulanten Versorgung"/>
+                </extension>
+                <code value="E100"/>
+                <display value="ambulanter Kontakt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ambulant durchgeführte OP in beliebiger Einrichtung mit ambulant operativer Versorgung"/>
+                </extension>
+                <code value="E110"/>
+                <display value="ambulante OP"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Voll-, teil- oder nachstationäre Behandlung in einer Einrichtung mit Teilnahme an der stationären Versorgung"/>
+                </extension>
+                <code value="E200"/>
+                <display value="stationärer Aufenthalt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Aufnahme zur voll-, teil- oder nachstationären Behandlung in eine Einrichtung mit Teilnahme an der stationären Versorgung"/>
+                </extension>
+                <code value="E210"/>
+                <display value="stationäre Aufnahme"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Aufnahme in vollstationäre Krankenhausbehandlung; einschließlich vollstationäre Behandlung mit vorausgegangener vorstationärer Behandlung"/>
+                </extension>
+                <code value="E211"/>
+                <display value="Aufnahme vollstationär"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Aufnahme/Wiederaufnahme in teilstationäre Krankenhausbehandlung: Kontakt im Rahmen einer teilstationären Behandlung; einschließlich Tagesklinik"/>
+                </extension>
+                <code value="E212"/>
+                <display value="Aufnahme/Wiederaufnahme teilstationär"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Aufnahme zur stationären Entbindung"/>
+                </extension>
+                <code value="E213"/>
+                <display value="Aufnahme Entbindung stationär"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Aufnahme eines Neugeborenen bei stationärer Entbindung"/>
+                </extension>
+                <code value="E214"/>
+                <display value="Aufnahme eines Neugeborenen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Stationäre Aufnahme zur Organentnahme"/>
+                </extension>
+                <code value="E215"/>
+                <display value="Aufnahme des Spenders zur Organentnahme"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung nach voll-, teil- oder nachstationärer Behandlung aus einer Einrichtung mit Teilnahme an der stationären Versorgung"/>
+                </extension>
+                <code value="E230"/>
+                <display value="stationäre Entlassung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung aus stationärem Aufenthalt nach Hause: Routineentlassung (Behandlung regulär beendet); Behandlung gegen ärztlichen Rat beendet; Behandlung aus sonstigen Gründen beendet. Einschließlich Entlassung mit geplanter ambulanter Weiterbehandlung. Einschließlich Entlassung in organisierte häusliche Pflege"/>
+                </extension>
+                <code value="E231"/>
+                <display value="stationäre Entlassung nach Hause"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung aus stationärem Aufenthalt in eine Rehabilitationseinrichtung"/>
+                </extension>
+                <code value="E232"/>
+                <display value="stationäre Entlassung in eine Rehabilitationseinrichtung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung aus stationärem Aufenthalt in eine Pflegeeinrichtung oder ein Hospiz"/>
+                </extension>
+                <code value="E233"/>
+                <display value="stationäre Entlassung in eine Pflegeeinrichtung/Hospiz"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung aus stationärem Aufenthalt, nachstationäre Behandlung vorgesehen: Behandlung regulär oder gegen ärztlichen Rat beendet mit geplanter nachstationärer Behandlung"/>
+                </extension>
+                <code value="E234"/>
+                <display value="Entlassung zur nachstationären Behandlung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Patient während stationärem Aufenthalt verstorben"/>
+                </extension>
+                <code value="E235"/>
+                <display value="Patient während stationärem Aufenthalt verstorben"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Verlegung im Verlauf oder bei Abschluss eines stationären Aufenthaltes"/>
+                </extension>
+                <code value="E250"/>
+                <display value="stationäre Verlegung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Verlegung innerhalb einer stationären Einrichtung ('interne stationäre Verlegung')"/>
+                </extension>
+                <code value="E251"/>
+                <display value="Verlegung innerhalb eines Krankenhauses"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Verlegung in ein anderes Krankenhaus ('externe stationäre Verlegung')"/>
+                </extension>
+                <code value="E252"/>
+                <display value="Verlegung in ein anderes Krankenhaus"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Verlegung zur psychiatrischen Behandlung in eine andere Einrichtung"/>
+                </extension>
+                <code value="E253"/>
+                <display value="externe Verlegung in Psychiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Entlassung mit geplanter nachfolgender stationärer Wiederaufnahme in derselben Einrichtung, z.B. Unterbrechung gegen ärztlichen Rat"/>
+                </extension>
+                <code value="E270"/>
+                <display value="kurzzeitige Unterbrechung einer stationären Behandlung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Konsiliarische Mitbehandlung im Verlauf eines stationären Aufenthaltes oder im ambulanten Kontext, ohne Verlegung"/>
+                </extension>
+                <code value="E280"/>
+                <display value="Konsil"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Behandlung/ Monitoring im häuslichen Umfeld"/>
+                </extension>
+                <code value="E300"/>
+                <display value="Behandlung im häuslichen Umfeld"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Behandlung/ Monitoring über virtuellen Patientenkontakt z.B. telemedizinischer Patientenkontakt"/>
+                </extension>
+                <code value="E400"/>
+                <display value="Virtual Encounter"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Dokumenten-Warnhinweise"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.15"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Dokumente, die der Patient zu seinem Arzt oder in die Klinik mitgebracht hat und die dort eingescannt wurden. Die Dokumente können von Medizinern und anderen Leistungserbringern, von anderen Autoren wie z.B. Behörden/Krankenkassen/Schulen oder vom Patienten selbst erstellt worden sein."/>
+                </extension>
+                <code value="H1"/>
+                <display value="vom Patienten mitgebracht"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Der Hinweis gibt Auskunft darüber, ob das Dokument zum Zeitpunkt des Einstellens bereits mit dem Patienten besprochen wurde. Dies kann genutzt werden um zu verhindern, dass der Patient sensible Informationen, wie die Diagnose einer unheilbaren Krankheit, aus einem Dokument anstatt von seinem Arzt erfährt. Dabei liegt der Fokus auf der Frage, ob das Dokument noch mit dem Patienten besprochen werden muss und nicht wer es noch mit dem Patienten besprechen muss. Somit können auch einrichtungsübergreifende Szenarien unterstützt werden, z.B. wenn die Besprechung des Befundes nicht in der Hand des Erzeugers liegt. "/>
+                </extension>
+                <code value="H2"/>
+                <display value="noch nicht mit Patient besprochen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Der Hinweis zeigt an, dass es sich eventuell um veraltete Daten handelt. Dieses Kennzeichen wird üblicherweise nachträglich zu schon registrierten Dokumenten hinzugefügt. Im Gegensatz zum availabilityStatus 'Deprecated' ist es unklar ob das Dokument wirklich veraltet ist oder nicht. Daher handelt es sich hier nur um einen Hinweis für den Empfänger, der üblicherweise keine automatischen Auswirkungen auf Berechtigungen, Speicherfristen, etc. hat."/>
+                </extension>
+                <code value="H3"/>
+                <display value="eventuell veraltete Daten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Der Hinweis zeigt an, dass es sich um ein vorläufiges Dokument handelt. IHE XDS sieht hierfür keinen eigenen Wert im availabilityStatus Attribut vor, daher wird dieses Konzept ausschließlich über diesen eventCode kommuniziert."/>
+                </extension>
+                <code value="H4"/>
+                <display value="vorläufiges Dokument"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="IHE.FormatCode.cs"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.1.2.3"/>
+            <concept>
+                <code value="urn:ihe:iti:xdw:2011:eventCode:open"/>
+                <display value="Workflow offen"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:iti:xdw:2011:eventCode:closed"/>
+                <display value="Workflow abgeschlossen"/>
+            </concept>
+        </include>
+		<include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                  <valueString value="KBV_CS_SFHIR_KBV_DMP"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.223"/>
+            <concept>
+                <code value="00"/>
+                <display value="nicht gesetzt"/>
+            </concept>
+            <concept>
+                <code value="01"/>
+                <display value="DM2"/>
+            </concept>
+            <concept>
+                <code value="02"/>
+                <display value="BRK"/>
+            </concept>
+            <concept>
+                <code value="03"/>
+                <display value="KHK"/>
+            </concept>
+            <concept>
+                <code value="04"/>
+                <display value="DM1"/>
+            </concept>
+            <concept>
+                <code value="05"/>
+                <display value="Asthma"/>
+            </concept>
+            <concept>
+                <code value="06"/>
+                <display value="COPD"/>
+            </concept>
+            <concept>
+                <code value="07"/>
+                <display value="HI"/>
+            </concept>
+            <concept>
+                <code value="08"/>
+                <display value="Depression"/>
+            </concept>
+            <concept>
+                <code value="09"/>
+                <display value="Rueckenschmerz"/>
+            </concept>
+            <concept>
+                <code value="10"/>
+                <display value="Rheuma"/>
+            </concept>
+            <concept>
+                <code value="11"/>
+                <display value="Osteoporose"/>
+            </concept>
+        </include>        
+    </compose>
+</ValueSet>
