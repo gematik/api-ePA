@@ -1,3 +1,7 @@
+# Release branch_master_deprecated
+- branch 'master' discontinued
+- see branch ePA-2.5.2 an following for further epa updates
+
 # Release 2.5.2
 - no changes compared to previous update (see Tag 2.5.2-Pre1)
 

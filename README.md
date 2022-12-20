@@ -2,7 +2,10 @@
 
 <img src="images/gematik_logo.jpg" alt="gematik_logo" width="35%"/>
 
-
+## Bitte beachten
+Veröffentlichungen zu ePA-Releases erfolgen ab sofort in dedizierten Branches pro Release - der Branch 'master' wird nicht fortgeführt.</br>
+Die letzte Veröffentlichung im vorliegenden Branch 'master' ist **ePA-Release 2.5.2 (Tag=2.5.2)**. Diese Veröffentlichung ist inhaltlich identisch mit dem neuen Branch [ePA-2.5.2 (Tag= R2.5.2)](https://github.com/gematik/api-ePA/tree/R2.5.2)</br>
+Alle weiteren Veröffentlichungen erfolgen in den jeweiligen releasebezogenen Branches ('ePA-2.5.X' und folgende)
 ## Hinweis
 Dieses ist der Branch (master) für Veröffentlichungen im Kontext **EPA-2.5** !<br/>
 Für Veröffentlichungen zu EPA-2, EPA-2 Maintenance siehe Branch 'epa_2_maintenance'
