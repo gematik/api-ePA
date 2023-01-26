@@ -378,6 +378,10 @@
 				<display value="Arbeitsunfähigkeitsbescheinigung (gematik)"/>
 			</concept>
 			<concept>
+				<code value="urn:gematik:ig:Arbeitsunfaehigkeitsbescheinigung:v1.1"/>
+				<display value="Arbeitsunfähigkeitsbescheinigung (gematik) v1.1"/>
+			</concept>
+			<concept>
 				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
 					<valueBoolean value="true"/>
 				</extension>
@@ -387,6 +391,10 @@
 			<concept>
 				<code value="urn:gematik:ig:VerordnungsdatensatzMedikation:v1.0.2"/>
 				<display value="Verordnungsdatensatz Medikation (gematik)"/>
+			</concept>
+			<concept>
+				<code value="urn:gematik:ig:VerordnungsdatensatzMedikation:v1.1"/>
+				<display value="Verordnungsdatensatz Medikation (gematik) v1.1"/>
 			</concept>
 			<concept>
 				<code value="urn:gematik:ig:KinderuntersuchungsheftUntersuchungen:v1.0.0"/>
