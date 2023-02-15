@@ -1,0 +1,176 @@
+{
+	"name": "Medical Image",
+	"description": "Usage specification for registering medical images in the PHR (former requirement A_17540). The codes below are taken from DICOM Part 16, Context Group 29 'Acquisition Modality' (Value Set 1.2.840.10008.6.1.19).",
+	"igVersion": "1.1.0",
+	"guidelineDefinition": {
+		"url": "https://fachportal.gematik.de/"
+	},
+	"validFromDate": "2023-01-01",
+	"type": "atomic",
+	"elements": [
+		{
+			"name": "Medical Image",
+			"description": "This document is a medical image.",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "BIL",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Bilddaten",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Unter diesem Konzept werden alle Dokumente zusammengefasst, deren Ziel es ist, einen Sachverhalt optisch darzustellen. Beispiele sind Röntgen-, MRT-, CT-Aufnahmen oder Fotos von Wunden, Körperteilen oder ähnlichem. Bilder von Textdokumenten werden nach dem enthaltenen Text klassiert, Videodokumente unter Videodaten."
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.eventCodeList",
+					"value": [
+					   {
+						"code": "BDUS",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Ultrasound Bone Densitometry"
+					   },
+					   {
+						"code": "BMD",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Bone Mineral Densitometry"
+					   },
+					   {
+						"code": "CR",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Computed Radiography"
+					   },
+					   {
+						"code": "CT",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Computed Tomography"
+					   },
+					   {
+						"code": "DX",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Digital Radiography"
+					   },
+					   {
+						"code": "ES",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Endoscopy"
+					   },
+					   {
+						"code": "GM",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "General Microscopy"
+					   },
+					   {
+						"code": "IO",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Intra-oral Radiography"
+					   },
+					   {
+						"code": "IVOCT",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Intravascular Optical Coherence Tomography"
+					   },
+					   {
+						"code": "IVUS",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Intravascular Ultrasound"
+					   },
+					   {
+						"code": "MG",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Mammography"
+					   },
+					   {
+						"code": "MR",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Magnetic Resonance MR"
+					   },
+					   {
+						"code": "NM",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Nuclear Medicine"
+					   },
+					   {
+						"code": "OCT",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Optical Coherence Thomography"
+					   },
+					   {
+						"code": "OP",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Ophthalmic Photography"
+					   },
+					   {
+						"code": "OPT",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Ophthalmic Tomography"
+					   },
+					   {
+						"code": "OPTENF",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Ophthalmic Tomography En Face"
+					   },
+					   {
+						"code": "PT",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Positron Emission Tomography"
+					   },
+					   {
+						"code": "PX",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Panoramic X-Ray"
+					   },
+					   {
+						"code": "RF",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Radiofluoroscopy"
+					   },
+					   {
+						"code": "RG",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Radiographic Imaging"
+					   },
+					   {
+						"code": "SM",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Slide Microscopy"
+					   },
+					   {
+						"code": "US",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "Ultrasound"
+					   },
+					   {
+						"code": "XA",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "X-Ray Angiography"
+					   },
+					   {
+						"code": "XC",
+						"codeSystem": "1.2.840.10008.2.16.4",
+						"displayName": "External-camera Photography"
+					   }
+					]
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"image/jpeg",
+						"image/png",
+						"image/tiff",
+						"application/pdf"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			},
+			"implementationArtifact": true
+		}
+	]
+}

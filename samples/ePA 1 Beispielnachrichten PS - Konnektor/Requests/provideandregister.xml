@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:m0="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:m1="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:m2="http://ws.gematik.de/fa/phr/v1.1">
+  <soap:Header>
+    <m:ContextHeader xmlns:m="http://ws.gematik.de/conn/phrs/PHRService/v1.3">
+      <m0:Context>
+        <m1:MandantId>Mandant1</m1:MandantId>
+        <m1:ClientSystemId>ClientID1</m1:ClientSystemId>
+        <m1:WorkplaceId>CATS</m1:WorkplaceId>
+      </m0:Context>
+      <m:RecordIdentifier>
+        <m2:InsurantId root="1.2.276.0.76.4.8" extension="X110411319"/>
+        <m2:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</m2:HomeCommunityId>
+      </m:RecordIdentifier>
+    </m:ContextHeader>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">6e2fa9e2-18fb-4071-b796-a49c5fe9a303</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">http://10.11.218.161:80/fm/phrservice</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+    <xdr:homeCommunityBlock xmlns:xdr="urn:ihe:iti:xdr:2014">
+      <xdr:homeCommunityId>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</xdr:homeCommunityId>
+    </xdr:homeCommunityBlock>
+  </soap:Header>
+  <soap:Body>
+    <ProvideAndRegisterDocumentSetRequest xmlns="urn:ihe:iti:xds-b:2007" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0">
+      <lcm:SubmitObjectsRequest>
+        <rs:RequestSlotList>
+          <rim:Slot name="homeCommunityId">
+            <rim:ValueList>
+              <rim:Value>urn:oid:1.2.276.0.76.3.1.315.3.2.1.1</rim:Value>
+            </rim:ValueList>
+          </rim:Slot>
+        </rs:RequestSlotList>
+        <rim:RegistryObjectList>
+          <!-- SubmissionSet -->
+          <rim:RegistryPackage id="submissionset" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage" home="urn:oid:1.2.276.0.76.3.1.315.3.2.1.1">
+            <!-- SubmissionSet.submissionTime -->
+            <rim:Slot name="submissionTime">
+              <rim:ValueList>
+                <rim:Value>20201218172117</rim:Value>
+              </rim:ValueList>
+            </rim:Slot>
+            <!-- SubmissionSet.author -->
+            <rim:Classification classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d" classifiedObject="submissionset" id="author" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+              <rim:Slot name="authorRole">
+                <rim:ValueList>
+                  <rim:Value>11^^^&amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;ISO</rim:Value>
+                </rim:ValueList>
+              </rim:Slot>
+              <rim:Slot name="authorPerson">
+                <rim:ValueList>
+                  <rim:Value>^Blankenburg^Sigrid^^^Prof. Dr.^^^</rim:Value>
+                </rim:ValueList>
+              </rim:Slot>
+              <rim:Slot name="authorInstitution">
+                <rim:ValueList>
+                  <rim:Value>Praxis Prof. Dr. Sigrid BlankenburgNOT-VALID^^^^^&amp;1.2.276.0.76.4.188&amp;ISO^^^^1-SMC-B-Testkarte-883110000092397</rim:Value>
+                </rim:ValueList>
+              </rim:Slot>
+            </rim:Classification>
+            <!-- SubmissionSet.contentTypeCode -->
+            <rim:Classification classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" classifiedObject="submissionset" id="contentType" nodeRepresentation="8" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+              <rim:Slot name="codingScheme">
+                <rim:ValueList>
+                  <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.12</rim:Value>
+                </rim:ValueList>
+              </rim:Slot>
+              <rim:Name>
+                <rim:LocalizedString xml:lang="de-DE" value="Veranlassung durch Patient"/>
+              </rim:Name>
+            </rim:Classification>
+            <!-- SubmissionSet Classification of RegistryPackage -->
+            <rim:Classification classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" classifiedObject="submissionset" id="SubmissionSetClassification" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"/>
+            <!-- SubmissionSet.patientId -->
+            <rim:ExternalIdentifier id="patientId" identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="submissionset" value="X110411319^^^&amp;1.2.276.0.76.4.8&amp;ISO">
+              <rim:Name>
+                <rim:LocalizedString value="XDSSubmissionSet.patientId"/>
+              </rim:Name>
+            </rim:ExternalIdentifier>
+            <!-- SubmissionSet.uniqueId -->
+            <rim:ExternalIdentifier id="uniqueId" identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="submissionset" value="1.2.840.113556.1.8000.2554.61059.41626.53716.18425.37624.8313075.3174511">
+              <rim:Name>
+                <rim:LocalizedString value="XDSSubmissionSet.uniqueId"/>
+              </rim:Name>
+            </rim:ExternalIdentifier>
+          </rim:RegistryPackage><rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember" id="association-0" sourceObject="submissionset" targetObject="DocumentEntry-0">
+	<rim:Slot name="SubmissionSetStatus">
+		<rim:ValueList>
+			<rim:Value>Original</rim:Value>
+		</rim:ValueList>
+	</rim:Slot>
+</rim:Association><rim:ExtrinsicObject id="DocumentEntry-0" mimeType="application/xml" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" home="urn:oid:1.2.276.0.76.3.1.315.3.2.1.1">
+  <!-- DocumentEntry.creationTime -->
+  <rim:Slot name="creationTime">
+    <rim:ValueList>
+      <rim:Value>20191209124919</rim:Value>
+    </rim:ValueList>
+  </rim:Slot>
+  <!-- DocumentEntry.languageCode -->
+  <rim:Slot name="languageCode">
+    <rim:ValueList>
+      <rim:Value>de-DE</rim:Value>
+    </rim:ValueList>
+  </rim:Slot>
+  <rim:Slot name="URI">
+    <rim:ValueList>
+      <rim:Value>pssim_emp.xml</rim:Value>
+    </rim:ValueList>
+  </rim:Slot>
+  <!-- DocumentEntry.Title -->
+  <rim:Name>
+    <rim:LocalizedString xml:lang="de-DE" value="PsSim: Medikationsplan"/>
+  </rim:Name>
+  <!-- DocumentEntry.classCode -->
+  <rim:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="DocumentEntry-0" id="class-0" nodeRepresentation="PLA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.8</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Planungsdokument"/>
+    </rim:Name>
+  </rim:Classification>
+  <!-- DocumentEntry.confidentialityCode -->
+  <rim:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="DocumentEntry-0" id="confidentiality-0" nodeRepresentation="LEI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.2.276.0.76.5.491</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Dokument einer Leistungserbringerinstitution"/>
+    </rim:Name>
+  </rim:Classification>
+  <!-- DocumentEntry.formatCode -->
+  <rim:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="DocumentEntry-0" id="formatCode-0" nodeRepresentation="urn:gematik:ig:Medikationsplan:r3.1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.6</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Medikationsplan (gematik)"/>
+    </rim:Name>
+  </rim:Classification>
+  <!-- DocumentEntry.healthCareFacilityTypeCode -->
+  <rim:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="DocumentEntry-0" id="healthCare-0" nodeRepresentation="PRA" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.2</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Arztpraxis"/>
+    </rim:Name>
+  </rim:Classification>
+  <!-- DocumentEntry.authorPerson and DocumentEntry.authorRole -->
+  <rim:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="DocumentEntry-0" id="author-0" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="authorRole">
+      <rim:ValueList>
+        <rim:Value>11^^^&amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;ISO</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Slot name="authorPerson">
+      <rim:ValueList>
+        <rim:Value>^Müller-Holzscheit^Marcello-Bernhardino^^^Dr.^^^</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+  </rim:Classification>
+  <!-- DocumentEntry.practiceSettingCode -->
+  <rim:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="DocumentEntry-0" id="practiceSettingCode-0" nodeRepresentation="ALLG" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.4</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Allgemeinmedizin"/>
+    </rim:Name>
+  </rim:Classification>
+  <!-- DocumentEntry.typeCode -->
+  <rim:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="DocumentEntry-0" id="typeCode-0" nodeRepresentation="MEDI" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+    <rim:Slot name="codingScheme">
+      <rim:ValueList>
+        <rim:Value>1.3.6.1.4.1.19376.3.276.1.5.9</rim:Value>
+      </rim:ValueList>
+    </rim:Slot>
+    <rim:Name>
+      <rim:LocalizedString xml:lang="de-DE" value="Medikamentöse Therapien"/>
+    </rim:Name>
+  </rim:Classification>
+  <rim:ExternalIdentifier id="patientId-0" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="DocumentEntry-0" value="X110411319^^^&amp;1.2.276.0.76.4.8&amp;ISO">
+    <rim:Name>
+      <rim:LocalizedString value="XDSDocumentEntry.patientId"/>
+    </rim:Name>
+  </rim:ExternalIdentifier>
+  <rim:ExternalIdentifier id="uniqueId-0" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="DocumentEntry-0" value="1.2.840.113556.1.8000.2554.17930.51373.54354.20040.33122.16728266.12168687">
+    <rim:Name>
+      <rim:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+    </rim:Name>
+  </rim:ExternalIdentifier>
+</rim:ExtrinsicObject>
+        </rim:RegistryObjectList>
+      </lcm:SubmitObjectsRequest><Document id="DocumentEntry-0"><Include xmlns="http://www.w3.org/2004/08/xop/include" href="cid:Document0@PHRService.konlan"/></Document>
+    </ProvideAndRegisterDocumentSetRequest>
+  </soap:Body>
+</soap:Envelope>

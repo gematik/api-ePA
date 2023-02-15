@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="healthcare-facility-type-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/healthcare-facility-type-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.585"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="value-set-of-healthcare-facility-type-codes"/>
+    <title value="Value Set of Healthcare Facility Type Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Art der Einrichtung, in der das dokumentierte Ereignis stattgefunden hat."/>
+    <compose>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Einrichtungsarten der patientenbezogenen Gesundheitsversorgung"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.2"/>
+            <concept>
+                <code value="APD"/>
+                <display value="Ambulanter Pflegedienst"/>
+            </concept>
+            <concept>
+                <code value="APO"/>
+                <display value="Apotheke"/>
+            </concept>
+            <concept>
+                <code value="BER"/>
+                <display value="Ärztlicher Bereitschaftsdienst"/>
+            </concept>
+            <concept>
+                <code value="PRA"/>
+                <display value="Arztpraxis"/>
+            </concept>
+            <concept>
+                <code value="BAA"/>
+                <display value="Betriebsärztliche Abteilung"/>
+            </concept>
+            <concept>
+                <code value="BHR"/>
+                <display value="Gesundheitsbehörde"/>
+            </concept>
+            <concept>
+                <code value="HEB"/>
+                <display value="Hebamme/Geburtshaus"/>
+            </concept>
+            <concept>
+                <code value="HOS"/>
+                <display value="Hospiz"/>
+            </concept>
+            <concept>
+                <code value="KHS"/>
+                <display value="Krankenhaus"/>
+            </concept>
+            <concept>
+                <code value="MVZ"/>
+                <display value="Medizinisches Versorgungszentrum"/>
+            </concept>
+            <concept>
+                <code value="HAN"/>
+                <display value="Medizinisch-technisches Handwerk"/>
+            </concept>
+            <concept>
+                <code value="REH"/>
+                <display value="Medizinische Rehabilitation"/>
+            </concept>
+            <concept>
+                <code value="HEI"/>
+                <display value="Nicht-ärztliche Heilberufs-Praxis"/>
+            </concept>
+            <concept>
+                <code value="PFL"/>
+                <display value="Pflegeheim"/>
+            </concept>
+            <concept>
+                <code value="RTN"/>
+                <display value="Rettungsdienst"/>
+            </concept>
+            <concept>
+                <code value="SEL"/>
+                <display value="Selbsthilfe"/>
+            </concept>
+            <concept>
+                <code value="TMZ"/>
+                <display value="Telemedizinisches Zentrum"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Einrichtungsarten ausserhalb der patientenbezogenen Gesundheitsversorgung"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.3"/>
+            <concept>
+                <code value="BIL"/>
+                <display value="Bildungseinrichtung"/>
+            </concept>
+            <concept>
+                <code value="FOR"/>
+                <display value="Forschungseinrichtung"/>
+            </concept>
+            <concept>
+                <code value="GEN"/>
+                <display value="Gen-Analysedienste"/>
+            </concept>
+            <concept>
+                <code value="MDK"/>
+                <display value="Medizinischer Dienst der Krankenversicherung"/>
+            </concept>
+            <concept>
+                <code value="PAT"/>
+                <display value="Patient außerhalb der Betreuung"/>
+            </concept>
+            <concept>
+                <code value="SPE"/>
+                <display value="Spendedienste"/>
+            </concept>
+            <concept>
+                <code value="VER"/>
+                <display value="Versicherungsträger"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

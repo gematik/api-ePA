@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="specialty-med-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/specialty-med-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.466"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="value-set-of-specialty-med-codes"/>
+    <title value="Value Set of Specialty Med Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description
+            value="Value Set für Berechtigungskategorien auf Basis medizinischer Fachgebiete in der deutschen elektronischen Patientenakte (ePA)"/>
+    <compose>
+        <include>
+            <system value="urn:oid:1.2.276.0.76.5.511"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="practitioner"/>
+                <display value="Hausarzt/Hausärztin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="hospital"/>
+                <display value="Krankenhaus"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="laboratory"/>
+                <display value="Labor und Humangenetik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="physiotherapy"/>
+                <display value="Physiotherapeuten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="psychotherapy"/>
+                <display value="Psychotherapeuten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="dermatology"/>
+                <display value="Dermatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="gynaecology_urology"/>
+                <display value="Urologie/Gynäkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="dentistry_oms"/>
+                <display value="Zahnheilkunde und Mund-Kiefer-Gesichtschirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="other_medical"/>
+                <display value="Weitere Fachärzte/Fachärztinnen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Daten zu Befunden, Diagnosen, durchgeführten und geplanten Therapiemaßnahmen, Früherkennungsuntersuchungen, Behandlungsberichten und sonstige untersuchungs- und behandlungsbezogene medizinische Informationen"/>
+                </extension>
+                <code value="other_non_medical"/>
+                <display value="Weitere nicht-ärztliche Berufe"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

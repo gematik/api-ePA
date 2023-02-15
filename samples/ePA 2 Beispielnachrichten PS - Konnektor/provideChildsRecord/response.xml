@@ -1,0 +1,15 @@
+------=_Part_1293_906084138.1637858809454
+Content-Type: application/xop+xml; charset=utf-8; type="application/soap+xml"
+
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:To env:mustUnderstand="true">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+		<wsa:Action>urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-bResponse</wsa:Action>
+		<wsa:MessageID>urn:uuid:f63383ae-20f8-44ca-8cfd-8ab28af965dc</wsa:MessageID>
+		<wsa:RelatesTo>urn:uuid:4e27073b-5d41-4a7d-9a62-d994194158b1</wsa:RelatesTo>
+	</env:Header>
+	<env:Body>
+		<ns11:RegistryResponse xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns12="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns13="urn:ihe:iti:xds-b:2007" xmlns:ns14="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns7="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns8="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0" xmlns:ns9="http://ws.gematik.de/conn/phrs/PHRService/v2.0" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success"/>
+	</env:Body>
+</env:Envelope>
+------=_Part_1293_906084138.1637858809454--

@@ -1,0 +1,21 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:To env:mustUnderstand="true">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+		<wsa:Action>http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0/GetAuthorizationStateResponse</wsa:Action>
+		<wsa:MessageID>urn:uuid:ca45de47-d297-4766-af72-6029ece57724</wsa:MessageID>
+		<wsa:RelatesTo>urn:uuid:670b7ECD-6B3A-4044-A419-01801EA52AFD</wsa:RelatesTo>
+	</env:Header>
+	<env:Body>
+		<ns8:GetAuthorizationStateResponse xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns12="urn:ihe:iti:xds-b:2007" xmlns:ns13="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns14="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns7="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns8="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0" xmlns:ns9="http://ws.gematik.de/conn/phrs/PHRService/v2.0">
+			<ns2:Status>
+				<ns2:Result>OK</ns2:Result>
+			</ns2:Status>
+			<ns8:AuthorizationStatusList>
+				<ns8:AuthorizedApplication>
+					<ns8:ApplicationName>ePA</ns8:ApplicationName>
+					<ns8:ValidTo>2022-10-01</ns8:ValidTo>
+				</ns8:AuthorizedApplication>
+			</ns8:AuthorizationStatusList>
+		</ns8:GetAuthorizationStateResponse>
+	</env:Body>
+</env:Envelope>

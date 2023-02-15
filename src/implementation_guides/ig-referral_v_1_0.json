@@ -1,0 +1,85 @@
+{
+	"name": "Referral document",
+	"description": "Referral document (care) defined as a medical information object (MIO) by KBV.",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/ULB",
+		"version": "1.0"
+	},
+	"folderCardinality": {
+		"min": "1",
+		"max": "1",
+		"unique": true
+	},
+	"validFromDate": "2024-01-01",
+	"type": "atomic",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "eab",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "eArztbrief",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "Daten in elektronischen Briefen zwischen den an der Versorgung der Versicherten teilnehmenden Ärzten und Einrichtungen (elektronische Arztbriefe)"
+				}
+			]
+		}
+	},
+	"elements": [
+		{
+			"version": "1.0",
+			"name": "KBV_PR_MIO_ULB_Bundle",
+			"description": "This document is a referral document (care) applied at hospital discharge and contains medical information for nursing services.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_ULB_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "BRI",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Brief",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Alle Varianten von Arztbriefen wie Überweisungsbrief, Entlassbrief, etc. sowie weitere zusammenfassende Dokumente mit einer ärztlichen oder pflegerischen Bewertung der Fakten. Befundberichte werden über das Konzept 'BEF' (Befundbericht) abgedeckt."
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "PFLG",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Pflegedokumentation",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Alle Arten von Dokumenten, welche üblicherweise vom Pflegepersonal erstellt oder ausgefüllt werden, sofern sie nicht durch spezifischere Konzepte abgebildet werden (z.B. Wunddokumentation, Ergebnisse Funktionsdiagnostik, Intensivmedizinische Dokumente). Anforderungen von Therapien werden durch Therapiedokumentation abgebildet. Beispiele: Pflegebericht, Pflegekurve, Pflegeplan, Pflegeüberleitungsbogen, Sturzprotokoll, Überwachungsprotokoll, Pflegeanamnesebogen, Ernährungsplan, Dekubitusrisikoeinschätzung, Barthel-Index, Bradenskala, Diabetikerkurve"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:Pflegeueberleitungsbogen:v1.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "Pflegeüberleitungsbogen (gematik)"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			}
+		}
+	]
+}

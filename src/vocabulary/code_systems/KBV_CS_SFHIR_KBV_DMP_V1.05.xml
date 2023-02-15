@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:ns2="http://www.w3.org/1999/xhtml">
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DMP"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.5.223"/>
+    </identifier>
+    <version value="1.05"/>
+    <name value="KBV_CS_SFHIR_KBV_DMP"/>
+    <status value="active"/>
+    <date value="2021-07-01"/>
+    <publisher value="Kassenärztliche Bundesvereinigung"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="DMP-Kennzeichen: gibt an, in welchen DMPs ein Versicherter eingeschrieben ist (§ 267 Abs. 2 Satz 4 SGB V). Die Angabe ist auf der EGK vorhanden und auf der KVK Teil des Feldes: Statusergänzung."/>
+    <copyright value="Kassenärztliche Bundesvereinigung"/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="00"/>
+        <display value="nicht gesetzt"/>
+    </concept>
+    <concept>
+        <code value="01"/>
+        <display value="DM2"/>
+    </concept>
+    <concept>
+        <code value="02"/>
+        <display value="BRK"/>
+    </concept>
+    <concept>
+        <code value="03"/>
+        <display value="KHK"/>
+    </concept>
+    <concept>
+        <code value="04"/>
+        <display value="DM1"/>
+    </concept>
+    <concept>
+        <code value="05"/>
+        <display value="Asthma"/>
+    </concept>
+    <concept>
+        <code value="06"/>
+        <display value="COPD"/>
+    </concept>
+    <concept>
+        <code value="07"/>
+        <display value="HI"/>
+    </concept>
+    <concept>
+        <code value="08"/>
+        <display value="Depression"/>
+    </concept>
+    <concept>
+        <code value="09"/>
+        <display value="Rueckenschmerz"/>
+    </concept>
+    <concept>
+        <code value="10"/>
+        <display value="Rheuma"/>
+    </concept>
+    <concept>
+        <code value="11"/>
+        <display value="Osteoporose"/>
+    </concept>
+</CodeSystem>

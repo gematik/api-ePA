@@ -1,0 +1,45 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:To env:mustUnderstand="true">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+		<wsa:Action>urn:ihe:iti:2007:RegistryStoredQueryResponse</wsa:Action>
+		<wsa:MessageID>urn:uuid:926b8290-2d7b-456b-bc74-bab65c9535ed</wsa:MessageID>
+		<wsa:RelatesTo>urn:uuid:e41cd943-5c36-466e-bbce-afb455d6c75c</wsa:RelatesTo>
+	</env:Header>
+	<env:Body>
+		<ns14:AdhocQueryResponse xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns12="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns13="urn:ihe:iti:xds-b:2007" xmlns:ns14="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns7="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns8="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0" xmlns:ns9="http://ws.gematik.de/conn/phrs/PHRService/v2.0" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success" totalResultCount="1">
+			<ns10:RegistryObjectList>
+				<ns10:RegistryPackage home="urn:oid:1.2.276.0.76.3.1.315.3.2.1.1" id="urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved">
+					<ns10:Slot name="lastUpdateTime">
+						<ns10:ValueList>
+							<ns10:Value>20211125164648</ns10:Value>
+						</ns10:ValueList>
+					</ns10:Slot>
+					<ns10:Name>
+						<ns10:LocalizedString value="Kind Beispiel"/>
+					</ns10:Name>
+					<ns10:Classification classificationScheme="urn:uuid:1ba97051-7806-41a8-a48b-8fce7af683c5" classifiedObject="urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b" id="urn:uuid:1b0337db-d47e-4802-a3f5-cac0f1748d01" nodeRepresentation="childsrecord" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+						<ns10:Slot name="codingScheme">
+							<ns10:ValueList>
+								<ns10:Value>1.2.276.0.76.5.512</ns10:Value>
+							</ns10:ValueList>
+						</ns10:Slot>
+						<ns10:Name>
+							<ns10:LocalizedString value="Kinderuntersuchungsheft"/>
+						</ns10:Name>
+					</ns10:Classification>
+					<ns10:Classification classificationNode="urn:uuid:d9d542f3-6cc4-48b6-8870-ea235fbc94c2" classifiedObject="urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b" id="urn:uuid:afd998cf-b850-45ef-8822-9ddc5b98f6df" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"/>
+					<ns10:ExternalIdentifier id="urn:uuid:fcc64788-bc3f-45dd-9253-89b4caf2d3a4" identificationScheme="urn:uuid:75df8f67-9973-4fbe-a900-df66cefecc5a" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b" value="2.25.12422856271194565930">
+						<ns10:Name>
+							<ns10:LocalizedString value="XDSFolder.uniqueId"/>
+						</ns10:Name>
+					</ns10:ExternalIdentifier>
+					<ns10:ExternalIdentifier id="urn:uuid:e086c223-86a6-446e-bdcd-adcfe668234c" identificationScheme="urn:uuid:f64ffdf0-4b97-4e06-b79f-a52b38ec2f8a" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" registryObject="urn:uuid:66c84cc5-ec31-4e8f-a4e1-97bc4969eb3b" value="X110435031^^^&amp;1.2.276.0.76.4.8&amp;ISO">
+						<ns10:Name>
+							<ns10:LocalizedString value="XDSFolder.patientId"/>
+						</ns10:Name>
+					</ns10:ExternalIdentifier>
+				</ns10:RegistryPackage>
+			</ns10:RegistryObjectList>
+		</ns14:AdhocQueryResponse>
+	</env:Body>
+</env:Envelope>
