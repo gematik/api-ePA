@@ -1,3 +1,10 @@
+# Release R2.5.2-3
+- added ig for diga version 1.1, valid from 2023-07-01
+
+- set ig for diga 1.0 clientReadOnlyDate to 2023-07-01
+
+- added new formatCode for diga 1.1 to vs-format-code
+
 # Release R2.5.2-2
 - new IG für eAU V1.1 and Prescription V1.1, validFrom set to 01.07.23
 

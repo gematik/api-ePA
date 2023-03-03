@@ -9,7 +9,7 @@
 | Kontext| __ePA 2.5__|
 | Vorläuferrelease| __Release 2.5.1__ __*__|
 | Vorläuferbranch | [**master (Tag '2.5.1-5')**](https://github.com/gematik/api-ePA/tree/2.5.1-5)|
-| Folgebranch | noch nicht definiert |
+| Folgebranch | [__Release 2.6__](https://github.com/gematik/api-ePA/tree/ePA-2.6)|
 
 (*) ältere Veröffentlichungen erfolgten im Branch 'master'
 </br>

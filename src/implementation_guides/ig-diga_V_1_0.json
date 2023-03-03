@@ -1,7 +1,7 @@
 {
 	"name": "DiGA Toolkit",
 	"description": "DiGA Toolkit defined as a medical information object (MIO) by KBV.",
-	"igVersion": "1.0.1",
+	"igVersion": "1.1.0",
 	"guidelineDefinition": {
 		"url": "https://mio.kbv.de/display/DIGA1X0X0",
 		"version": "1.0"
@@ -12,6 +12,7 @@
 		"unique": false
 	},
 	"validFromDate": "2023-01-01",
+	"clientReadOnlyFromDate": "2023-07-01",
 	"type": "uniform",
 	"metadata": {
 		"name": "folder.codeList",

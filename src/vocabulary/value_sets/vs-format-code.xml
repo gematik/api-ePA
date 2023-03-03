@@ -14,7 +14,7 @@
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:1.2.276.0.76.11.461"/>
 	</identifier>
-	<version value="1.2.0"/>
+	<version value="1.3.0"/>
 	<name value="Value Set of Format Codes"/>
 	<title value="Value Set of Format Codes"/>
 	<status value="active"/>
@@ -443,7 +443,17 @@
 				<display value="Zahnbonusheft (gematik)"/>
 			</concept>
 			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+					<valueBoolean value="true"/>
+				</extension>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+					<valueString value="Es existiert eine neue Version für DiGA. Dieser Code soll ab Gültigkeit der neuen Version (1.1) nicht mehr verwendet werden (deprecated)."/>
+				</extension>
 				<code value="urn:gematik:ig:diga:v1.0"/>
+				<display value="DiGA (gematik)"/>
+			</concept>
+			<concept>
+				<code value="urn:gematik:ig:diga:v1.1"/>
 				<display value="DiGA (gematik)"/>
 			</concept>
 			<concept>
