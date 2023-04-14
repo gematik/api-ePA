@@ -5,6 +5,10 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
+			version: V1.8.0
+			===========
+			*** added UpdateAuthorizationPeriod
+			
 			version: V1.7.5
 			===========
 			*** removed OKDate from putForReplacementResponse
@@ -109,7 +113,7 @@
 
 	 	End of Version History
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:phrs="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" xmlns:phr="http://ws.gematik.de/fa/phr/v1.1" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:SAML="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tel="http://ws.gematik.de/tel/error/v2.0" targetNamespace="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.7.5">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:phrs="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" xmlns:phr="http://ws.gematik.de/fa/phr/v1.1" xmlns:phrext="http://ws.gematik.de/fa/phrext/v1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:SAML="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:tel="http://ws.gematik.de/tel/error/v2.0" targetNamespace="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.8.0">
 	<annotation>
 		<documentation xml:lang="de">
 			Copyright (c) 2021, gematik GmbH
@@ -179,6 +183,9 @@
 	</element>
 	<element name="DeleteAuthorizationKeyResponse"/>
 	<element name="ReplaceAuthorizationKey">
+		<annotation>
+			<documentation>deprecated</documentation>
+		</annotation>
 		<complexType>
 			<sequence>
 				<element name="AuthorizationKey" type="phrs:AuthorizationKeyType"/>
@@ -187,7 +194,22 @@
 			</sequence>
 		</complexType>
 	</element>
-	<element name="ReplaceAuthorizationKeyResponse"/>
+	<element name="ReplaceAuthorizationKeyResponse">
+		<annotation>
+			<documentation>deprecated</documentation>
+		</annotation>
+	</element>
+	<element name="UpdateAuthorizationPeriod">
+		<complexType>
+			<sequence>
+				<element name="RecordIdentifier" type="phr:RecordIdentifierType"/>
+				<element name="ActorId" type="string"/>
+				<element name="validTo" type="date"/>
+				<element name="DeviceID" type="phr:DeviceIdType"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="UpdateAuthorizationPeriodResponse"/>
 	<element name="CheckRecordExists">
 		<complexType>
 			<sequence>

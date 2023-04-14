@@ -4,7 +4,7 @@
 
 
 
-Dieser Branch gehört zu ePA-Release 2.5.2
+Dieser Branch gehört zu ePA-Release 2.6
 
 ## Allgemeines
 

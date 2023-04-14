@@ -5,6 +5,10 @@
 <!-- ===================================================================== -->
 <!-- Version History
 
+			version: V1.8
+			===========
+			*** Operation UpdateAuthorizationPeriod eingefügt
+
 			version: V1.7
 			===========
 			*** Operation GetAuthorizationState eingefügt
@@ -68,6 +72,12 @@
 	</message>
 	<message name="ReplaceAuthorizationKeyResponseMessage">
 		<part name="parameter" element="phrs:ReplaceAuthorizationKeyResponse"/>
+	</message>
+	<message name="UpdateAuthorizationPeriodRequestMessage">
+		<part name="parameter" element="phrs:UpdateAuthorizationPeriod"/>
+	</message>
+	<message name="UpdateAuthorizationPeriodResponseMessage">
+		<part name="parameter" element="phrs:UpdateAuthorizationPeriodResponse"/>
 	</message>
 	<message name="DeleteAuthorizationKeyRequestMessage">
 		<part name="parameter" element="phrs:DeleteAuthorizationKey"/>
@@ -192,8 +202,14 @@
 			<fault name="FaultMessage" message="phrs:FaultMessage"/>
 		</operation>
 		<operation name="ReplaceAuthorizationKey">
+			<documentation>deprecated</documentation>
 			<input message="phrs:ReplaceAuthorizationKeyRequestMessage"/>
 			<output message="phrs:ReplaceAuthorizationKeyResponseMessage"/>
+			<fault name="FaultMessage" message="phrs:FaultMessage"/>
+		</operation>
+		<operation name="UpdateAuthorizationPeriod">
+			<input message="phrs:UpdateAuthorizationPeriodRequestMessage"/>
+			<output message="phrs:UpdateAuthorizationPeriodResponseMessage"/>
 			<fault name="FaultMessage" message="phrs:FaultMessage"/>
 		</operation>
 		<operation name="GetAuditEvents">
@@ -350,7 +366,20 @@
 			</fault>
 		</operation>
 		<operation name="ReplaceAuthorizationKey">
+			<documentation>deprecated</documentation>
 			<soap12:operation soapAction="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.0#ReplaceAuthorizationKey" soapActionRequired="true"/>
+			<input>
+				<soap12:body use="literal"/>
+			</input>
+			<output>
+				<soap12:body use="literal"/>
+			</output>
+			<fault name="FaultMessage">
+				<soap12:fault name="FaultMessage" use="literal"/>
+			</fault>
+		</operation>
+		<operation name="UpdateAuthorizationPeriod">
+			<soap12:operation soapAction="http://ws.gematik.de/fd/phrs/AuthorizationService/v1.0#UpdateAuthorizationPeriod" soapActionRequired="true"/>
 			<input>
 				<soap12:body use="literal"/>
 			</input>
