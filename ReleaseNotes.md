@@ -1,3 +1,6 @@
+# Release R2.6.0-1
+- added notice for signature verification
+
 # Release R2.6.0
 - added operation UpdateAuthorizationPeriod (C_11291)
 
