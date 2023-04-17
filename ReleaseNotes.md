@@ -1,3 +1,6 @@
+# Release R2.5.2-4
+- added notice for signature verification
+
 # Release R2.5.2-3
 - added ig for diga version 1.1, valid from 2023-07-01
 
