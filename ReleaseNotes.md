@@ -1,3 +1,6 @@
+# Release R2.5.2-5
+- changed validFromDate in ig-referral.json to 2024-07-01
+
 # Release R2.5.2-4
 - added notice for signature verification
 
