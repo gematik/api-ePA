@@ -1,3 +1,8 @@
+# Release R2.6.0-3
+- changed FindObjectResponseDTO in testtreiber_fdv.yaml
+
+- changed display value for DiGA V1.1 in cs-format-code.xml
+
 # Release R2.6.0-2
 - changed validFromDate in ig-referral.json to 2024-07-01
 

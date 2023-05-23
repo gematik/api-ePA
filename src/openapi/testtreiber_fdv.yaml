@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.5.1
+  version: 2.6.0
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -89,6 +89,87 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/FindObjectsResponseDTO'
+              examples:
+                example-1:
+                  value:
+                    success: true
+                    statusMessage: string
+                    objectsMetadata:
+                      - submissionSetMetadata:
+                          author:
+                            identifier: '165746304'
+                            familyName: Weber
+                            givenName: Thilo
+                            otherName: string
+                            nameAffix: string
+                            title: Dr.
+                            authorInstitution:
+                              - name: string
+                                identifier: string
+                            authorRole:
+                              - string
+                            authorSpecialty:
+                              - string
+                            authorTelecommunication:
+                              - string
+                          comments: string
+                          contentTypeCode: string
+                          intendedRecipient:
+                            - string
+                          submissionTime: '2017-07-21T17:32:28Z'
+                          title: string
+                          uniqueId: string
+                        documentsMetadata:
+                          - author:
+                              - identifier: '165746304'
+                                familyName: Weber
+                                givenName: Thilo
+                                otherName: string
+                                nameAffix: string
+                                title: Dr.
+                                authorInstitution:
+                                  - name: string
+                                    identifier: string
+                                authorRole:
+                                  - string
+                                authorSpecialty:
+                                  - string
+                                authorTelecommunication:
+                                  - string
+                            availabilityStatus: string
+                            confidentialityCode:
+                              - string
+                            classCode: string
+                            comments: string
+                            creationTime: '2017-07-21T17:32:28Z'
+                            entryUUID: string
+                            eventCodeList:
+                              - string
+                            formatCode: string
+                            hash: string
+                            healthcareFacilityTypeCode: string
+                            languageCode: string
+                            legalAuthenticator: string
+                            mimeType: application/pdf
+                            practiceSettingCode: string
+                            referenceIdList:
+                              - string
+                            serviceStartTime: '2017-07-21T17:32:28Z'
+                            serviceStopTime: '2017-07-21T17:32:28Z'
+                            size: 0
+                            title: string
+                            typeCode: string
+                            uniqueId: string
+                            uri: string
+                        foldersMetadata:
+                          - comments: string
+                            codeList:
+                              - string
+                            lastUpdateTime: '2017-07-21T17:32:28Z'
+                            title: string
+                            uniqueId: string
+                            entryUUID: Folder-1
+                            availabilityStatus: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
   /retrieveDocuments:
     post:
       tags:
@@ -985,6 +1066,28 @@ components:
         - uniqueId
         - entryUUID
         - availabilityStatus
+    Association:
+      type: object
+      description: Association
+      x-examples: {}
+      title: Association
+      properties:
+        id:
+          type: string
+          description: Ergänzende Hinweise in Freitext
+          example: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
+        associationType:
+          type: string
+          description: Eindeutige Kennung des Ordner (von Client erzeugt)
+          example: HasMember
+        sourceObject:
+          type: string
+          description: 'Zeitstempel, an dem der Ordner das letzte mal geändert wurde; date-time notation as defined by RFC 3339, section 5.6'
+          example: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
+        targetObject:
+          type: string
+          description: Titel des Ornder
+          example: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
     QueryMetadata:
       type: object
       description: 'Metadaten Parameter für die Suche nach Dokumenten, Ordner, Submission Sets und Verknüpfungen'
@@ -1126,11 +1229,14 @@ components:
         XDSFolderEntryUUID:
           type: string
           description: Folder UUID
-    ObjectsMetadata:
+    RegistryObjectList:
       type: object
+      title: RegistryObjectList
       properties:
         submissionSetMetadata:
-          $ref: '#/components/schemas/SubmissionSetMetadata'
+          type: array
+          items:
+            $ref: '#/components/schemas/SubmissionSetMetadata'
         documentsMetadata:
           type: array
           items:
@@ -1139,6 +1245,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/FolderMetadata'
+        associations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Association'
     StoreDocumentRequestDTO:
       type: object
       properties:
@@ -1197,18 +1307,16 @@ components:
         - account
     FindObjectsResponseDTO:
       type: object
+      title: ''
       properties:
         success:
           type: boolean
         statusMessage:
           type: string
-        objectsMetadata:
-          type: array
-          items:
-            $ref: '#/components/schemas/ObjectsMetadata'
+        registryObjectLists:
+          $ref: '#/components/schemas/RegistryObjectList'
       required:
         - success
-      title: ''
     DirectoryEntry:
       type: object
       properties:
