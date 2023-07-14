@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+**** XACML policy for a NCPeH authorization ****
+
+Comply with the following rules in order to instantiate a valid policy:
+- Replace the contents of the elements and attributes with valid content as described by the cardinality, type rules and content description found in the comment in chosen elements.
+- Element/Attribute names are case-sensitive.
+- Elements must always appear in the order documented.
+
+-->
+
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.3"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:ncpeh:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+
+	<Description/><!-- 1..1 string The name and professional OID of the authorized ncpeh country with the following pattern: <name>:<professionOID>. The name shall be displayed at the insurant frontend. The certificate extension 'professionOID' shall be taken from the signer certificate C.HCI.ENC(cf. [gemSpec_PKI#Anhang A]). Please note that a colon can also appear in the name. -->
+
+	<Target>
+		
+		<Subjects><!-- 1..1 subject ncpeh requesting country represented via Telematik ID -->
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.188" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The telematik-ID of the ncpeh related country. -->
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:organization-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>				
+			</Subject>
+		</Subjects>
+
+		<Resources><!-- 1..1 record identifier represented via KVNR -->
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The KVNR of the healthcare record owner. -->
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>				
+
+		<Environments><!-- 1..1 end of validity (validity duration == 1h (60min))-->
+			<Environment>
+				<EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#dateTime"><!-- 1..1 dateTime The validity end date and time of the authorization in ISO 8601:2004 format UTC (YYYY-MM-DDThh:mm:ssZ).
+					The validity end shall always be set to creationTime (client's current dateTime at policy creation) + 1 hour --></AttributeValue>
+					<EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-dateTime" DataType="http://www.w3.org/2001/XMLSchema#dateTime" MustBePresent="true"/>
+				</EnvironmentMatch>
+			</Environment>
+		</Environments>
+		
+	</Target>
+
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:ncpeh:<telematik-id>:ncpeh-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Permit"/><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:ncpeh:<telematik-id>:ncpeh-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+			<Condition>
+				<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string"><!-- 1..1 string AccessCode (6 case-sensitive characters according to gemSpec_DM_ePA#A_23998-*)--></AttributeValue>
+						<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:soap-header-access-code" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+					</Apply>
+				</Apply>
+			</Condition>
+		</Rule>
+	</Policy>
+	
+</PolicySet>

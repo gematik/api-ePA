@@ -1,0 +1,87 @@
+{
+	"name": "DiGA Toolkit",
+	"description": "DiGA Toolkit defined as a medical information object (MIO) by KBV.",
+	"igVersion": "1.0.0",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/DIGA1X1X0",
+		"version": "1.1"
+	},
+	"folderCardinality": {
+		"min": "0",
+		"max": "n",
+		"unique": false
+	},
+	"validFromDate": "2023-07-01",
+	"type": "uniform",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "diga",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "DiGA",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "Daten des Versicherten aus digitalen Gesundheitsanwendungen des Versicherten nach § 33a."
+				}
+			]
+		}
+	},
+	"elements": [
+		{
+			"version": "1.1",
+			"name": "KBV_PR_MIO_DIGA_Bundle",
+			"description": "This document is of FHIR resource type KBV_PR_MIO_DIGA_Bundle.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.typeCode",
+					"value": {
+						"code": "PATD",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.9",
+						"displayName": "Patienteneigene Dokumente",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Dokumente, welche der Patient zu seinem Kontakt in der Gesundheitseinrichtung mitbringt, die aber nicht in unmittelbarem Zusammenhang mit dem aktuellen Kontakt stehen müssen. Sowie Dokumente, in denen das mitgebrachte Patienteneigentum festgehalten wird.  Beispiele: Ausweise, Vorsorgevollmacht, Patientenverfügung, Wertgegenständeverwaltung, Notfalldatensatz, Patiententagebuch"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "DUR",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Durchführungsprotokoll",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Maschinell oder von Menschen erstellte Protokolle durchgeführter Anamnese, Diagnostik oder Therapie, z.B. Anamnesebogen, OP-Berichte, Medikamentenverabreichungen; hierzu zählen auch ausgefüllte Checklisten die das prozesskonforme Vorgehen während einer Untersuchung oder OP dokumentieren. Die Protokolle können auch Handlungsanweisungen bzw. Empfehlungen beinhalten, z.B. Visitenprotokoll, Konsilbericht. Dazu gehören auch Messdaten (oft auch als Quelldaten oder Rohdaten bezeichnet) ohne menschliche Bewertung wie Temperaturkurven, Blutdruck-Messungen, Blutzuckerkurven, unbefundete EKGs, Herz-Tonaufnahmen, Bestrahlungsprotokoll, Dosiswerte, etc. mit Ausnahme von Bilddaten und Videodaten. Der Begriff 'Patientenkurve' wird in einigen Fällen für eine Sammlung von Temperatur-, Blutdruck- und weiteren pflegerischen Beobachtungen verwendet und sollte dann auch über das Konzept DUR ('Durchführungsprotokoll') abgedeckt werden. Da der Begriff 'Patientenkurve' auch für andere Dokumente (bzw. Dokumentenkombinationen) verwendet wird, sollte vor einer solchen Abbildung eine Analyse der so bezeichneten Dokumente durchgeführt und das entsprechende Konzept verwendet werden. Dokumente die mit diesem Konzept bezeichnet werden können maschinenlesbar sein, müssen es jedoch nicht (z.B. sowohl EKG-Kurve wie auch eingescanntes EKG sind abgedeckt). Ursprungs- und Zwischenformate (wie z.B. Diktat eines Arztbriefes) werden mit dem inhaltlich sinnvollen classCode gekennzeichnet (Brief in diesem Beispiel)."
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:diga:v1.1",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "DiGA (gematik) v1.1"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml",
+						"application/pdf"]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			},
+			"maxDocumentHistory" : 10
+		}
+	]
+}

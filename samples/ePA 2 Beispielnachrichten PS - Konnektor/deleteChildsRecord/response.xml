@@ -1,0 +1,11 @@
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<env:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:To env:mustUnderstand="true">http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+		<wsa:Action>urn:ihe:iti:2010:DeleteDocumentSetResponse</wsa:Action>
+		<wsa:MessageID>urn:uuid:5838e20b-0381-4284-b75f-b8b7d35a7e9b</wsa:MessageID>
+		<wsa:RelatesTo>urn:uuid:f1a1ad43-24dc-40db-87b1-2f503b8dc252</wsa:RelatesTo>
+	</env:Header>
+	<env:Body>
+		<ns11:RegistryResponse xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns12="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns13="urn:ihe:iti:xds-b:2007" xmlns:ns14="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns7="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns8="http://ws.gematik.de/conn/phrs/PHRManagementService/v2.0" xmlns:ns9="http://ws.gematik.de/conn/phrs/PHRService/v2.0" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success"/>
+	</env:Body>
+</env:Envelope>

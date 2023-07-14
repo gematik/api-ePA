@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="confidentiality-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/confidentiality-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.582"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="value-set-of-confidentiality-codes"/>
+    <title value="Value Set of Confidentiality Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Vertraulichkeitskennzeichnung des Dokuments für ePA 1.0 und ePA 2.0"/>
+    <compose>
+        <include>
+            <!-- Die folgenden Codes müssen während der Migrationsphase von ePA 1.0 zu ePA 2.0 durch ein ePA-Aktensystem unterstützt werden, da ePA 1.0 Primärsysteme oder ePA-Frontends des Versicherten diese Codes weiterhin verwenden. -->
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="epa-vertraulichkeit"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.491"/>
+            <concept>
+                <code value="LEI"/>
+                <display value="Dokument einer Leistungserbringerinstitution"/>
+            </concept>
+            <concept>
+                <code value="KTR"/>
+                <display value="Dokument eines Kostenträgers"/>
+            </concept>
+            <concept>
+                <code value="PAT"/>
+                <display value="Dokument eines Versicherten"/>
+            </concept>
+            <concept>
+                <code value="LEÄ"/>
+                <display value="Leistungserbringeräquivalentes Dokument eines Versicherten oder Kostenträgers"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Confidentiality"/>
+            </extension>
+            <system value="urn:oid:2.16.840.1.113883.5.25"/>
+            <concept>
+                <code value="N"/>
+                <display value="normal"/>
+            </concept>
+            <concept>
+                <code value="R"/>
+                <display value="restricted"/>
+            </concept>
+            <concept>
+                <code value="V"/>
+                <display value="very restricted"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Betroffeneneinschätzung der Vertraulichkeitsstufe"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.10"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Aus Sicht der Betroffenen sind die Daten so sensibel, dass sie für praktisch niemanden außer ihr selbst sichtbar sein sollten."/>
+                </extension>
+                <code value="PV"/>
+                <display value="gesperrt"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Aus Sicht der Betroffenen sind die Daten sensibel genug, dass für sie besondere Zugriffsregelungen gelten sollen, die den Kreis der Zugriffsberechtigten signifikant einschränken."/>
+                </extension>
+                <code value="PR"/>
+                <display value="erhöhte Vertraulichkeit"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString
+                            value="Aus Sicht der Betroffenen sind die Daten nicht sensibler als andere Gesundheitsdaten und können daher nach den gleichen Regeln benutzt werden"/>
+                </extension>
+                <code value="PN"/>
+                <display value="übliche Vertraulichkeit"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

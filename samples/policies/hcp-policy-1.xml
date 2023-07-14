@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" PolicySetId="urn:gematik:policy:2.0:G995030566:lei:1-2c47sd-e518" Version="2.0.3">
+	<Description>Arztpraxis Dr. Thilo Weber:1.2.276.0.76.4.50</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.188" extension="1-2c47sd-e518" xmlns="urn:hl7-org:v3"/>
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:organization-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="G995030566" xmlns="urn:hl7-org:v3"/>
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Environments>
+			<Environment>
+				<EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:date-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2021-05-10</AttributeValue>
+					<EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-date" DataType="http://www.w3.org/2001/XMLSchema#date" MustBePresent="true"/>
+				</EnvironmentMatch>
+			</Environment>
+		</Environments>
+	</Target>	
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides" PolicyId="urn:gematik:policy:2.0:G995030566:lei:1-2c47sd-e518:lei-permission">
+		<Target/>
+		<Rule Effect="Permit" RuleId="urn:gematik:rule:2.0:G995030566:lei:1-2c47sd-e518:lei-permission">
+			<Target>
+				<Resources>
+					<Resource>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="practitioner" codeSystem="1.2.276.0.76.5.511"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+					<Resource>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="hospital" codeSystem="1.2.276.0.76.5.511"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+					<Resource>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="laboratory" codeSystem="1.2.276.0.76.5.511"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+					<Resource>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="childsrecord" codeSystem="1.2.276.0.76.5.512"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:document-entry:related-folder:code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+						<ResourceMatch MatchId="urn:hl7-org:v3:function:CV-equal">
+							<AttributeValue DataType="urn:hl7-org:v3#CV">
+								<CodedValue xmlns="urn:hl7-org:v3" code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal"/>
+							</AttributeValue>
+							<ResourceAttributeDesignator AttributeId="urn:ihe:iti:appc:2016:confidentiality-code" DataType="urn:hl7-org:v3#CV" MustBePresent="true"/>
+						</ResourceMatch>
+					</Resource>
+				</Resources>
+			</Target>
+		</Rule>
+	</Policy>
+</PolicySet>

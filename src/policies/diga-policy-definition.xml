@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+
+**** XACML policy for a diga authorization ****
+
+Comply with the following rules in order to instantiate a valid policy:
+- Replace the contents of the elements and attributes with valid content as described by the cardinality, type rules and content description found in the comment in chosen elements.
+- Element/Attribute names are case-sensitive.
+- Elements must always appear in the order documented.
+
+-->
+
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" Version="2.0.3"><!-- attribute 'PolicySetId': The policy set id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:diga:<telematik-id>'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+
+	<Description/><!-- 1..1 string The name and professional OID of the diga with the following pattern: <name>:<professionOID>. The name shall be displayed at the insurant frontend. The certificate extension 'professionOID' shall be taken from the signer certificate C.HCI.ENC(cf. [gemSpec_PKI#Anhang A]). Please note that a colon can also appear in the name. -->
+
+	<Target>
+		
+		<Subjects><!-- 1..1 subject diga represented via Telematik ID -->
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.188" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The telematik-ID of the diga. -->
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:organization-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>				
+			</Subject>
+		</Subjects>
+
+		<Resources><!-- 1..1 record identifier represented via KVNR -->
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" xmlns="urn:hl7-org:v3"/><!-- attribute 'extension': The KVNR of the healthcare record owner. -->
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>				
+		
+	</Target>
+
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides"><!-- attribute 'PolicyId': The policy id must comply with the pattern 'urn:gematik:policy:2.0:<record-id>:diga:<telematik-id>:diga-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+		<Target/>
+		<Rule Effect="Deny"/><!-- attribute 'RuleId': The rule id must comply with the pattern 'urn:gematik:rule:2.0:<record-id>:diga:<telematik-id>:diga-permission'. Replace <record-id> (i.e. KVNR of the healthcare record owner) and <telematik-id> with valid values. -->
+	</Policy>
+	
+</PolicySet>

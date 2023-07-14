@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Example policy for a countryspecific NCPeH Telematik-ID
+
+	- document creation time is assuemd to 2023-07-01T14:00:00Z, leading to a final validity time of 2023-07-01T15:00:00Z
+	- telematik-id 0-883110000000001 (example)
+	- insurant's kvnr is G995030566 (example)
+	- accessCode is 123456 (example)
+
+	This policy grants access to the document repository in case
+	AccessCode (from SOAP-HEader of document operation)
+	current time
+	telematik-id (from authentication assertion)
+	kvnr (OwnerKVNR)
+	all match the stated conditions
+
+	The accesslimitation to folder 'nfd' for NCPeH originated operations is implicit part 
+	of the general folder access rules/conditions. 
+-->
+
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides" PolicySetId="urn:gematik:policy:2.0:G995030566:ncpeh:0-883110000000001" Version="2.0.3">
+	<Description>NCPeH_FR:1.2.276.0.76.4.292</Description>
+	<Target>
+		<Subjects>
+			<Subject>
+				<SubjectMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.188" extension="0-883110000000001" xmlns="urn:hl7-org:v3"/>
+					</AttributeValue>
+					<SubjectAttributeDesignator AttributeId="urn:gematik:subject:organization-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</SubjectMatch>
+			</Subject>
+		</Subjects>
+		<Resources>
+			<Resource>
+				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
+					<AttributeValue DataType="urn:hl7-org:v3#II">
+						<InstanceIdentifier root="1.2.276.0.76.4.8" extension="G995030566" xmlns="urn:hl7-org:v3"/>
+					</AttributeValue>
+					<ResourceAttributeDesignator AttributeId="urn:ihe:iti:ser:2016:patient-id" DataType="urn:hl7-org:v3#II" MustBePresent="true"/>
+				</ResourceMatch>
+			</Resource>
+		</Resources>
+		<Environments>
+			<Environment>
+				<EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than-or-equal">
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-01T15:00:00Z</AttributeValue>
+					<EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-dateTime" DataType="http://www.w3.org/2001/XMLSchema#dateTime" MustBePresent="true"/>
+				</EnvironmentMatch>
+			</Environment>
+		</Environments>
+	</Target>
+	<Policy RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:deny-overrides" PolicyId="urn:gematik:policy:2.0:G995030566:ncpeh:0-883110000000001:ncpeh-permission">
+		<Target/>
+		<Rule Effect="Permit" RuleId="urn:gematik:policy:2.0:G995030566:ncpeh:0-883110000000001:ncpeh-permission">
+			<Condition>
+				<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+					<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+						<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">123456</AttributeValue>
+						<SubjectAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:subject:soap-header-access-code" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+					</Apply>
+				</Apply>
+			</Condition>
+		</Rule>
+	</Policy>
+</PolicySet>

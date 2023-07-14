@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="practice-setting-codes-phr-system"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-03-31"/>
+        </valuePeriod>
+    </extension>
+    <url value="https://gematik.de/fhir/ValueSet/practice-setting-codes-phr-system"/>
+    <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:1.2.276.0.76.11.586"/>
+    </identifier>
+    <version value="1.0.0"/>
+    <name value="value-set-of-practice-setting-codes"/>
+    <title value="Value Set of Practice Setting Codes"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="gematik GmbH"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.gematik.de"/>
+        </telecom>
+    </contact>
+    <description value="Art der Fachrichtung der erstellenden Einrichtung, in der das dokumentiere Ereignis stattgefunden hat."/>
+    <compose>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Ärztliche Fachrichtungen"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.4"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Allgemeinmedizin beinhaltet die Grundversorgung eines Patienten bei körperlichen und/oder seelischen Gesundheitsstörungen. Weiterhin gehören die Aspekte der Prävention und Rehabilitation in den Versorgungsbereich der Allgemeinmedizin. Nutzungshinweis: Dazu zählen auch hausärztlich tätige Praxen von Praktischen Ärzten."/>
+                </extension>
+                <code value="ALLG"/>
+                <display value="Allgemeinmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Anästhesiologie umfasst neben den Anästhesieverfahren selbst die Aufrechterhaltung der Vitalfunktionen eines Patienten während eines Eingriffs."/>
+                </extension>
+                <code value="ANAE"/>
+                <display value="Anästhesiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Arbeitsmedizin ist ein präventivmedizinisches Fachgebiet und umfasst einerseits die Wechselbeziehungen zwischen Arbeits- und Lebenswelten, andererseits auch die Gesundheit und Krankheiten. Der wesentliche Aspekt ist hierbei der Erhalt und die Förderung der physischen und psychischen Gesundheit und Leistungsfähigkeit des arbeitenden Menschen. Nutzungshinweis: Das Konzept umfasst auch die Musikermedizin, auch wenn Patienten aus diesem Bereich nicht notwendigerweise professionelle Musiker sind."/>
+                </extension>
+                <code value="ARBE"/>
+                <display value="Arbeitsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Augenheilkunde umfasst die Diagnose und Behandlung aller Erkrankungen bzw. Funktionsstörungen des Sehorgans, seiner Anhangsorgane sowie des Sehsinnes."/>
+                </extension>
+                <code value="AUGE"/>
+                <display value="Augenheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Chirurgie umfasst alle operativen Therapien von Krankheiten sowie von Verletzungen. Teilgebiete der Chirurgie etablierten sich als 'Spezialdisziplin'. Nutzungshinweis: Teilgebiete für die keine eigenen Konzepte aufgeführt sind, z.B. die Handchirurgie, können mit diesem Konzept abgedeckt werden."/>
+                </extension>
+                <code value="CHIR"/>
+                <display value="Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Allgemeinchirurgie war früher der Oberbergriff für die gesamte Chirurgie. Bedingt durch die Spezialisierungen in der Chirurgie entwickelte sich die Allgemeinchirurgie als 'Auffangbecken', in welchem alle Eingriffe durchgeführt werden, die nicht durch eine Spezialisierung abgedeckt werden."/>
+                </extension>
+                <code value="ALCH"/>
+                <display value="Allgemeinchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Gefäßchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die Behandlung der Blutgefäße bei Verschlusserkrankungen oder auch Aneurysmen."/>
+                </extension>
+                <code value="GFCH"/>
+                <display value="Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Herzchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die Therapie von Erkrankungen sowie von Verletzungen des Herzens und der herznahen Gefäße."/>
+                </extension>
+                <code value="HZCH"/>
+                <display value="Herzchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Kinderchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die operative und konservative Therapie von Erkrankungen, Verletzungen, Fehlbildungen im Kindesalter inkl. der Pränatalchirurgie."/>
+                </extension>
+                <code value="KDCH"/>
+                <display value="Kinderchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Orthopädie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die Erkrankungen und Fehlbildungen des Stütz- und Bewegungsapparates. Nutzungshinweis: Falls die Wirbelsäulenchirurgie organisatorisch als Teil der Orthopädie (und nicht als Teil der Neurochirurgie) geführt wird, deckt dieses Konzept auch die Wirbelsäulenchirurgie ab."/>
+                </extension>
+                <code value="ORTH"/>
+                <display value="Orthopädie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Plastische Chirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst formverändernde oder wiederherstellende Eingriffe am menschlichen Körper."/>
+                </extension>
+                <code value="PLCH"/>
+                <display value="Plastische und Ästhetische Chirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Thoraxchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst diagnostische und therapeutische Eingriffe an den Organen des Brustkorbs ausgenommen dem Herzen. D.h. es umfasst die Versorgung von Erkrankungen und Verletzungen der Lunge, der Pleura, des Bronchialsystems, des Mediastinums und der Thoraxwand."/>
+                </extension>
+                <code value="THCH"/>
+                <display value="Thoraxchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Unfallchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die Versorgung von Verletzungen sowie die Behandlung von Mehrfachverletzten einschließlich des entsprechenden Traumamanagements."/>
+                </extension>
+                <code value="UNFC"/>
+                <display value="Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Viszeralchirurgie ist eine Spezialisierung des Fachgebietes Chirurgie. Das Fachgebiet umfasst die Eingriffe an den Organen des Bauchraumes sowie die operative Behandlung der Schilddrüse und der Nebenschilddrüse."/>
+                </extension>
+                <code value="VICH"/>
+                <display value="Viszeralchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value=">Die Frauenheilkunde beinhaltet die Diagnose und Therapie der Erkrankungen des weiblichen Sexual- und Fortpflanzungstraktes. Die Fachrichtung der Geburtshilfe befasst sich mit der Überwachung von Schwangerschaften sowie der Vorbereitung, Durchführung und Nachbehandlung von Geburten."/>
+                </extension>
+                <code value="FRAU"/>
+                <display value="Frauenheilkunde und Geburtshilfe"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die gynäkologische Endokrinologie befasst sich mit der Diagnostik und Therapie von Hormonstörungen. Die Reproduktionsmedizin befasst sich mit Fragen bei unerfülltem Kinderwunsch."/>
+                </extension>
+                <code value="GEND"/>
+                <display value="Gynäkologische Endokrinologie und Reproduktionsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die gynäkologische Onkologie befasst sich mit Vorsorge, Diagnostik, Therapie und Nachsorge von Krebserkrankungen bei der Brust bzw. des weiblichen Genitals."/>
+                </extension>
+                <code value="GONK"/>
+                <display value="Gynäkologische Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Perinatalmedizin befasst sich mit den Erkrankungen und Gefährdungen von Mutter und Kind im perinatalen Zeitraum, dies ist der Zeitraum zwischen der 24. Schwangerschaftswoche und dem 7. Tag nach der Geburt."/>
+                </extension>
+                <code value="PERI"/>
+                <display value="Perinatalmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Geriatrie beschäftigt sich mit der Versorgung von akuten und chronischen Erkrankungen sowie der Rehabilitation und Prävention alter Patienten."/>
+                </extension>
+                <code value="GERI"/>
+                <display value="Geriatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Gebiet der Hals-Nasen-Ohrenkunde befasst sich mit Erkrankungen, Verletzungen, Fehlbildungen sowie Funktionsstörungen im Kopf-, Halsbereich, insbesondere der Ohren, der oberen und unteren Luftwege sowie der Speiseröhre."/>
+                </extension>
+                <code value="HNOH"/>
+                <display value="Hals-Nasen-Ohrenheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet Sprach-, Stimm- und kindliche Hörstörungen umfasst die Diagnostik, Therapie und Forschung in den Bereichen Stimmstörungen, kindliche Hörstörungen, Wahrnehmungsstörungen, Störungen der Sprech- und Sprachentwicklung, erworbenen Sprech- und Sprachstörungen (z.B. Aphasien) und Schluckstörungen."/>
+                </extension>
+                <code value="HRST"/>
+                <display value="Sprach-, Stimm- und kindliche Hörstörungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept umfasst sowohl die Dermatologie, wie auch die Phlebologie und die Venerologie. Das Gebiet der Dermatologie befasst sich mit Diagnose und Therapie von Erkrankungen der Haut. Das Gebiet der Phlebologie umfasst die Erkennung und Behandlung von Gefäßerkrankungen. Die Venerologie beinhaltet die Diagnose und Therapie der sexuell übertragbaren Erkrankungen."/>
+                </extension>
+                <code value="HAUT"/>
+                <display value="Haut- und Geschlechtskrankheiten"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept ist obsolet; stattdessen kann das Konzept PATH (Pathologie) verwendet werden."/>
+                </extension>
+                <code value="HIST"/>
+                <display value="Histologie / Zytologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Humangenetik beschäftigt sich mit dem Erbgut des Menschen. Zum Themenumfeld in der Humangenetik gehören insbesondere die Aufklärung, Erkennung und Behandlung genetisch bedingter Erkrankungen, einschließlich der genetischen Beratungen von Patienten, Angehörigen und behandelnden Ärzten. Nutzungshinweis: Falls die Pädiatrische Genetik organisatorisch als Teil der Humangenetik (und nicht als Teil der Pädiatrie) geführt wird, deckt dieses Konzept auch die Pädiatrische Genetik ab."/>
+                </extension>
+                <code value="HUMA"/>
+                <display value="Humangenetik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Hygiene beschäftigt sich mit krankmachenden Einwirkungen auf den Organismus und versucht diese durch verschiedene Maßnahmen (Aufklärung, Reinigung, Desinfektion, Sterilisation, Grenzwerte) auszuschalten. Die Umweltmedizin beschäftigt sich mit Fragestellungen, die hinsichtlich Prävention, Diagnose und Therapie von Erkrankungen mit Umweltfaktoren in Verbindung gebracht werden."/>
+                </extension>
+                <code value="HYGI"/>
+                <display value="Hygiene und Umweltmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value=">Das Gebiet der Inneren Medizin befasst sich mit der Prävention, Diagnostik, nicht-operativen Therapie und der Rehabilitation bei Erkrankungen sämtlicher Organsysteme des Körpers. Die Innere Medizin beinhaltet mehrere Teilgebiete, die sich im Rahmen von Spezialisierungen entwickelten. Nutzungshinweis: Teilgebiete, für die keine eigenen Konzepte aufgeführt sind wie z.B. die klinische Immunologie, außerhalb der Rheumatologie, können mit diesem Konzept abgedeckt werden. Dazu zählen auch hausärztlich tätige Arztpraxen für Innere Medizin."/>
+                </extension>
+                <code value="INNE"/>
+                <display value="Innere Medizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Angiologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Gebiet beschäftigt sich mit der Funktion und den Erkrankungen der Arterien, Venen und Lymphgefäße, insbesondere mit Diagnose und Therapie der verschiedenen Gefäßerkrankungen."/>
+                </extension>
+                <code value="ANGI"/>
+                <display value="Angiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Endokrinologie und Diabetologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Die Endokrinologie beschäftigt sich mit der der Funktion sowie den (krankhaften) Störungen der hormonproduzierenden Organe. Dazu zählt auch die Diabetologie."/>
+                </extension>
+                <code value="ENDO"/>
+                <display value="Endokrinologie und Diabetologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value=">Die Gastroenterologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Gebiet beschäftigt sich mit den Erkrankungen des Magen-Darm-Traktes, der Leber und der zum Verdauungstrakt gehörenden Hormondrüsen wie der Bauchspeicheldrüse. Nutzungshinweis: Das Konzept umfasst auch die Hepatologie."/>
+                </extension>
+                <code value="GAST"/>
+                <display value="Gastroenterologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Hämatologie und internistische Onkologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Dieses medizinische Teilgebiet beschäftigt sich mit gut- und bösartigen Erkrankungen des Blutes, der Lymphknoten und des lymphatischen Systems sowie bösartigen soliden Tumoren."/>
+                </extension>
+                <code value="HAEM"/>
+                <display value="Hämatologie und internistische Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Kardiologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Gebiet befasst sich mit Diagnose und Therapie von Herz-Kreislauf-Erkrankungen."/>
+                </extension>
+                <code value="KARD"/>
+                <display value="Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Nephrologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Gebiet beschäftigt mit Diagnostik und Therapie von Erkrankungen der Nieren."/>
+                </extension>
+                <code value="NEPH"/>
+                <display value="Nephrologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Pneumologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Gebiet beschäftigt sich mit der &#160;Prophylaxe, Diagnose und nicht-operativen Therapie von Erkrankungen der Lunge, der Bronchien und der Pleura."/>
+                </extension>
+                <code value="PNEU"/>
+                <display value="Pneumologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Rheumatologie ist eine Spezialisierung des Fachgebietes Innere Medizin. Das Konzept umfasst auch die Fachrichtung 'orthopädische Rheumatologie'. Das Gebiet beschäftigt sich mit Diagnose und Therapie der rheumatischen Erkrankungen, d.h. Erkrankungen im Bereich der Gelenke, Gelenkkapseln, Sehnen, Knochen, Muskeln und des Bindegewebes, die nicht durch eine akute Verletzung oder einen Tumor hervorgerufen werden."/>
+                </extension>
+                <code value="RHEU"/>
+                <display value="Rheumatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Intensivmedizin beschäftigt sich mit der Diagnostik und Therapie lebensbedrohlicher Zustände sowie Krankheiten, die derartige Zustände beinhalten. Nutzungshinweis: Falls eine Intermediate Care Unit organisatorisch als Teil der Intensivmedizin (und nicht als Teil der jeweiligen Fachabteilung) geführt wird, deckt dieses Konzept auch die Intermediate Care Unit ab."/>
+                </extension>
+                <code value="INTM"/>
+                <display value="Intensivmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Interdisziplinäre Zusammenarbeit bezeichnet die Kooperationen verschiedener ärztlichen Fachrichtungen, die in einem gemeinsamen organisatorischen Rahmen an klinischen und wissenschaftlichen Fragestellungen arbeiten. Wenn möglich sollten die untergeordneten Fachrichtungen verwendet werden."/>
+                </extension>
+                <code value="INTZ"/>
+                <display value="Interdisziplinäre Zusammenarbeit"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Gebiet der Onkologie beschäftigt sich mit der Prävention, der Diagnostik, der Therapie und der Nachsorge von Krebserkrankungen. Hierbei ist oftmals eine fächerübergreifende ('interdisziplinäre') Zusammenarbeit erforderlich, woraus sich interdisziplinäre Behandlungszentren entwickelten."/>
+                </extension>
+                <code value="INTO"/>
+                <display value="Interdisziplinäre Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Schmerzmedizin beschäftigt sich mit der Diagnostik und Therapie des chronischen Schmerzes."/>
+                </extension>
+                <code value="INTS"/>
+                <display value="Interdisziplinäre Schmerzmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Transplantationsmedizin befasst sich mit der Übertragung von Zellen, Geweben, Organen oder Organsystemen von einem Organismus auf einen anderen Organismus. Die gesetzlichen Rahmenbedingungen der Transplantationsmedizin sind in Deutschland im Transplantationsgesetz geregelt, woraus sich die Bildung interdisziplinärer Einrichtungen zur Übertragung von Spenderorganen ableitet. Solche Transplantationszentren übernehmen in Ergänzung zu den jeweiligen spezialisierten klinischen Fachgebieten (z.B. Viszeralchirurgie, Herzchirurgie, Nephrologie) insbesondere Aufgaben im Bereich der Indikationsstellung, Vorbereitung, Dokumentation und Nachsorge bei Organtransplantationen und Lebend-Organspenden, sowie beim Wartelistenmanagement und bei erforderlicher psychischer Betreuung der Patienten im Krankenhaus vor und nach der Organübertragung. Sofern Dokumente in solchen oder vergleichbaren Transplantationsmedizinischen Einrichtungen erstellt werden und nicht einer spezifischeren, an Transplantationen beteiligten Fachrichtung zuzuordnen sind, können sie mit diesem Konzept codiert werden. Dokumente aus der Transplantationsimmunologie sollen mit dem Konzept TRAN (Transfusionsmedizin) codiert werden."/>
+                </extension>
+                <code value="TRPL"/>
+                <display value="Transplantationsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Fachrichtung 'seltene Erkrankungen' ist die Disziplin, die sich mit der Diagnostik und Behandlung von seltenen Erkrankungen (z.B. laut EU Prävalenz 1:2000 Erkrankungen) beschäftigt."/>
+                </extension>
+                <code value="SELT"/>
+                <display value="seltene Erkrankungen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Kinder- und Jugendmedizin beschäftigt sich mit Prävention, Diagnose und Therapie von Erkrankungen des kindlichen und des jugendlichen Organismus sowie den Entwicklungsstörungen und Fehlbildungen bei einem Kind. Nutzungshinweis: Falls die Pädiatrische Genetik organisatorisch als Teil der Pädiatrie (und nicht als Teil der Humangenetik) geführt wird, deckt dieses Konzept auch die Pädiatrische Genetik ab."/>
+                </extension>
+                <code value="KIJU"/>
+                <display value="Kinder- und Jugendmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Kinder-Hämatologie und -Onkologie ist eine Spezialisierung des Fachgebietes der Kinder- und Jugendmedizin. Das Gebiet beschäftigt mit der Diagnose und Therapie von Blut- und Tumorerkrankungen bei Kindern und Jugendlichen."/>
+                </extension>
+                <code value="KONK"/>
+                <display value="Kinder-Hämatologie und -Onkologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Kinderkardiologie ist eine Spezialisierung des Fachgebietes der Kinder- und Jugendmedizin. Das Gebiet beschäftigt sich mit dem frühestmöglichen Erkennen und Behandeln von kindlichen angeborenen Herzfehlern."/>
+                </extension>
+                <code value="KKAR"/>
+                <display value="Kinder-Kardiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Neonatologie ist eine Spezialisierung des Fachgebietes der Kinder- und Jugendmedizin. Das Gebiet beschäftigt sich mit Diagnose und Therapie der Erkrankungen von Neugeborenen."/>
+                </extension>
+                <code value="NNAT"/>
+                <display value="Neonatologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Neuropädiatrie ist eine Spezialisierung des Fachgebietes der Kinder- und Jugendmedizin. Das Gebiet beschäftigt sich mit der Prävention, Diagnose und Therapie von Nervenkrankheiten von Kindern."/>
+                </extension>
+                <code value="NPAE"/>
+                <display value="Neuropädiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Kinder- und Jugendpsychiatrie und -psychotherapie beinhaltet Diagnostik, die nichtoperative Therapie sowie Prävention und Rehabilitation von psychischen, psychosomatischen, entwicklungsbedingten und neurologischen Erkrankungen oder Störungen im Kindes- und Jugendalter, ebenso psychische und soziale Verhaltensauffälligkeiten bei Kindern und Jugendlichen."/>
+                </extension>
+                <code value="KPSY"/>
+                <display value="Kinder- und Jugendpsychiatrie und -psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Laboratoriumsmedizin beschäftigt sich mit der Untersuchung von Körperflüssigkeiten und -ausscheidungen zum Zwecke der Diagnostik bzw. Verlaufs- und Therapiekontrolle. Durch dieses Konzept werden auch die Konzepte 'Immunologisches Labor' und 'Zellmarkerlabor' abgedeckt."/>
+                </extension>
+                <code value="LABO"/>
+                <display value="Laboratoriumsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Mikrobiologie beschäftigt sich mit der Erforschung von Mikroorganismen, ihrem Stoffwechsel und ihrer Wirkung auf andere Organismen. Die Virologie ist die Lehre von den Viren. Die Infektionsepidemiologie beschäftigt sich mit der Epidemiologie von übertragbaren Erkrankungen. In diesen drei Fachgebieten wird mittels der Labordiagnostik die Ursache von durch Mikroorganismen, Viren und anderen übertragbaren Stoffen ausgelöste Erkrankungen gesucht."/>
+                </extension>
+                <code value="MIKR"/>
+                <display value="Mikrobiologie, Virologie und Infektionsepidemiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Mund-, Kiefer- und Gesichtschirurgie umfasst die Prävention, Diagnostik, Therapie und Nachsorge von Erkrankungen, Verletzungen oder Fehlbildungen im Bereich des Kiefers, des Gesichtes, der Zähne und des Mund- und Rachenraumes bis hin zum Halsbereich."/>
+                </extension>
+                <code value="MKGC"/>
+                <display value="Mund-Kiefer-Gesichtschirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Naturheilverfahren umfassen Maßnahmen, die sich keiner technologischen Hilfsmittel bedienen und die Selbstheilungskräfte des Körpers stärken wollen."/>
+                </extension>
+                <code value="NATU"/>
+                <display value="Naturheilverfahren und alternative Heilmethoden"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Notfallmedizin befasst sich mit der Diagnostik und Therapie von akut eingetretenen, unter Umständen lebensbedrohlichen Gesundheitsstörungen. Das Gebiet hat die zwei Spezialisierungen 'präklinische Rettungsmedizin' und 'Katastrophenmedizin'."/>
+                </extension>
+                <code value="NOTF"/>
+                <display value="Notfallmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Neurochirurgie befasst sich mit der operativen Behandlung von Fehlbildungen, Erkrankungen oder Verletzungen des peripheren oder zentralen Nervensystems. Falls die Wirbelsäulenchirurgie organisatorisch als Teil der Neurochirurgie (und nicht als Teil der Orthopädie) geführt wird, deckt dieses Konzept auch die Wirbelsäulenchirurgie ab. Das Fachgebiet der Neurochirurgie befasst sich mit der operativen Behandlung von Fehlbildungen, Erkrankungen oder Verletzungen des peripheren oder zentralen Nervensystems. Nutzungshinweis: Falls die Wirbelsäulenchirurgie organisatorisch als Teil der Neurochirurgie (und nicht als Teil der Orthopädie) geführt wird, deckt dieses Konzept auch die Wirbelsäulenchirurgie ab."/>
+                </extension>
+                <code value="NRCH"/>
+                <display value="Neurochirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Neurologie umfasst die Prophylaxe, Diagnose und (nicht-operative) Therapie von Erkrankungen des zentralen, peripheren und vegetativen Nervensystems."/>
+                </extension>
+                <code value="NEUR"/>
+                <display value="Neurologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value=">Das Fachgebiet der Nuklearmedizin beschäftigt sich mit der Anwendung radioaktiver Substanzen in Diagnostik und Therapie."/>
+                </extension>
+                <code value="NUKL"/>
+                <display value="Nuklearmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet des Öffentlichen Gesundheitswesens befasst sich mit der Aufrechterhaltung der Gesundheit der Bevölkerung sowie der Prophylaxe, Diagnose und Therapie von Erkrankungen."/>
+                </extension>
+                <code value="GESU"/>
+                <display value="Öffentliches Gesundheitswesen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Palliativmedizin beschäftigt sich mit der Sicherstellung der bestmöglichen Lebensqualität von Patienten, die unter einer unheilbaren Krankheit im fortgeschrittenen Stadium leiden und nur noch eine begrenzte Lebenszeit haben."/>
+                </extension>
+                <code value="PALL"/>
+                <display value="Palliativmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Pathologie beschäftigt sich mit der Erforschung von abnormen und/oder krankhaften Vorgängen und Zuständen von Lebewesen sowie der diesen Zuständen zugrundeliegenden Ursachen. Das Konzept deckt auch die Histologie und die Zytologie ab. Die Histologie (Gewebelehre) befasst sich mit dem Aufbau von biologischen Geweben. Im diagnostischen Kontext bezeichnet sie die morphologische Untersuchung von Zellen und Geweben. Unter Zytologie versteht man im Allgemeinen die Lehre vom Aufbau der Zelle und ihren Funktionen, im medizinischen Umfeld wird mit diesem Begriff die Zytodiagnostik an einzelnen Zellen bezeichnet. Auch folgende diagnostische Disziplinen und Labore sind mit diesem Konzept abzubilden: Molekularpathologisches Labor, Immunhistologisches Labor, Pathologielabor, Histologie-Labor, Zytologie-Labor."/>
+                </extension>
+                <code value="PATH"/>
+                <display value="Pathologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Neuropathologie beschäftigt sich mit den Krankheitserscheinungen und/oder den Veränderungen des neuronalen Gewebes."/>
+                </extension>
+                <code value="NPAT"/>
+                <display value="Neuropathologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Gebiet der Pharmakologie beschäftigt sich mit den Wechselwirkungen zwischen (Wirk-) Stoffen und Lebewesen."/>
+                </extension>
+                <code value="PHAR"/>
+                <display value="Pharmakologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Gebiet der Toxikologie umfasst die Lehre der Giftstoffe. Dies beinhaltet insbesondere auch die Diagnose und Therapie von Vergiftungen. Dabei ist die Toxikologie ein interdisziplinäres Fachgebiet, in dem neben Ärzten auch Chemiker und Biochemiker als Toxikologen arbeiten. Nutzungshinweis: Falls die forensische Toxikologie organisatorisch als Teil der Toxikologie (und nicht als Teil der Rechtsmedizin) geführt wird, deckt dieses Konzept auch die forensische Toxikologie ab."/>
+                </extension>
+                <code value="TOXI"/>
+                <display value="Toxikologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Gebiet der Physikalischen und Rehabilitativen Medizin beschäftigt sich mit 'der sekundären Prävention, der interdisziplinären Diagnostik, Behandlung und Rehabilitation von körperlichen Beeinträchtigungen mittels konservativen, physikalischen, manuellen und naturheilkundlichen Verfahren'. (Facharzt Weiterbildungsordnung)"/>
+                </extension>
+                <code value="REHA"/>
+                <display value="Physikalische und Rehabilitative Medizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Psychiatrie beschäftigt sich mit Prävention, Diagnostik und Therapie psychischer Erkrankungen. Mit Psychotherapie bezeichnet man die Tätigkeit, welche zur Erkennung und Therapie von geistig-seelisch bedingten, dysfunktionalen Zuständen eines Patienten durchgeführt wird."/>
+                </extension>
+                <code value="PSYC"/>
+                <display value="Psychiatrie und Psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Forensischen Psychiatrie stellt eine Spezialisierung innerhalb der Psychiatrie dar. Das Gebiet befasst sich mit der Begutachtung und der Therapie (ggfs. inkl. Unterbringung) von psychisch kranken Straftätern sowie mit Patienten, welche unter Drogeneinfluss ein strafrechtlich relevantes Delikt begingen."/>
+                </extension>
+                <code value="FPSY"/>
+                <display value="Forensische Psychiatrie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Psychosomatischen Medizin und Psychotherapie beschäftigt sich mit der Prävention, der Erkennung, der psychotherapeutischen Behandlung sowie der Rehabilitation von Erkrankungen, deren Ursachen psychosozialer und psychosomatischer Natur sind."/>
+                </extension>
+                <code value="PSYM"/>
+                <display value="Psychosomatische Medizin und Psychotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Radiologie umfasst alle Bereiche der Bildgebung zu diagnostischen und therapeutischen Zwecken."/>
+                </extension>
+                <code value="RADI"/>
+                <display value="Radiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Kinderradiologie stellt eine Spezialisierung der Radiologie dar. Das Gebiet beschäftigt mit der radiologischen Bildgebung beim Kind und beim Jugendlichen."/>
+                </extension>
+                <code value="KRAD"/>
+                <display value="Kinderradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Neuroradiologie stellt eine Spezialisierung der Radiologie dar. Das Gebiet beschäftigt sich mit der Sichtbarmachung von neurologischen Strukturen durch bildgebende Verfahren."/>
+                </extension>
+                <code value="NRAD"/>
+                <display value="Neuroradiologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Rechtsmedizin beschäftigt sich mit juristischen Aspekten der Medizin, insbesondere mit der Anwendung medizinischer Kenntnisse zur Beurteilung und Klärung von Rechtsfragen sowie der Vermittlung rechtlicher und ethischer Kenntnisse an die Ärzteschaft. Nutzungshinweis: Falls die forensische Toxikologie organisatorisch als Teil der Rechtsmedizin (und nicht als Teil der Toxikologie) geführt wird, deckt dieses Konzept auch die forensische Toxikologie ab."/>
+                </extension>
+                <code value="RECH"/>
+                <display value="Rechtsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Schlafmedizin beschäftigt sich mit Diagnostik und Therapie von Schlafstörungen."/>
+                </extension>
+                <code value="SCHL"/>
+                <display value="Schlafmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Sportmedizin beschäftigt sich mit der Prävention, Diagnostik, Therapie und Rehabilitation mit sportlicher Betätigung assoziierten Erkrankungen."/>
+                </extension>
+                <code value="SPOR"/>
+                <display value="Sport- und Bewegungsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Strahlentherapie beschäftigt sich mit der Anwendung von ionisierender Strahlung bei Menschen und Tieren, um Krankheiten zu heilen oder deren Fortschreiten zu verzögern."/>
+                </extension>
+                <code value="STRA"/>
+                <display value="Strahlentherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Transfusionsmedizin beschäftigt sich mit allen Fragen zu Bluttransfusionen im weitesten Sinne. Insbesondere gehören dazu die Auswahl und medizinische Betreuung von Blutspendern sowie die Unterhaltung von Blutbanken und die damit verbundene Bereitstellung von Blutkonserven für die medizinischen Fachgebiete. Das Konzept umfasst auch die Transplantationsimmunologie."/>
+                </extension>
+                <code value="TRAN"/>
+                <display value="Transfusionsmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Tropenmedizin beschäftigt sich mit der Epidemiologie, Prävention, Diagnostik und Therapie/Bekämpfung von Tropenerkrankungen. Das Fachgebiet der Reisemedizin beschäftigt sich mit allen Fragen, welche bei der Erforschung und Bekämpfung von Erkrankungen, die im Rahmen von Reisen entstehen können, auftreten. Insbesondere die Prävention vor diesen Erkrankungen gehört zu der Reisemedizin."/>
+                </extension>
+                <code value="TROP"/>
+                <display value="Tropen-/Reisemedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Urologie beschäftigt sich mit der Prävention, Diagnose und Therapie von Erkrankungen der Niere, der ableitenden Harnwege und der männlichen Geschlechtsorgane."/>
+                </extension>
+                <code value="UROL"/>
+                <display value="Urologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Zahnmedizin ist die Kurzform für das Fachgebiet der Zahn-, Mund- und Kieferheilkunde. Das Fachgebiet beinhaltet die Prävention, Diagnostik und Therapie von Erkrankungen im Zahn-, Mund- und Kieferbereich."/>
+                </extension>
+                <code value="MZKH"/>
+                <display value="Zahnmedizin"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Oralchirurgie stellt eine Spezialisierung innerhalb der Zahnmedizin dar. Das Gebiet beinhaltet die operative Versorgung sämtlicher Erkrankungen, Verletzungen oder Fehlstellungen im Bereich der Mundhöhle, des Zahnapparates, des Zahnhalteapparates und des Zahnfleischs."/>
+                </extension>
+                <code value="ORAL"/>
+                <display value="Oralchirurgie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Kieferorthopädie stellt eine Spezialisierung innerhalb der Zahnmedizin dar. Das Gebiet beinhaltet die Prophylaxe, Diagnostik und Therapie von Fehlstellungen der Kiefer und der Zähne."/>
+                </extension>
+                <code value="KIEF"/>
+                <display value="Kieferorthopädie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet Parodontologie&#160; stellt eine Weiterbildung innerhalb der Zahnmedizin im Kammergebiet Westfalen-Lippe dar. Das Fachgebiet beinhaltet die Prävention, die Diagnostik, die Therapie und Nachsorge von Erkrankungen parodontaler und periimplantärer Gewebe und Strukturen."/>
+                </extension>
+                <code value="PARO"/>
+                <display value="Parodontologie"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Zahnärztliche Fachrichtungen"/>
+            </extension>
+            <system value="urn:oid:1.2.276.0.76.5.494"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet Allgemeine Zahnheilkunde stellt eine Weiterbildung innerhalb der Zahnmedizin im Kammergebiet Brandenburg dar. Es beinhaltet die Erkennung, Verhütung und Behandlung von Erkrankungen und Erscheinungsformen des orofacialen Systems."/>
+                </extension>
+                <code value="MZAH"/>
+                <display value="Allgemeine Zahnheilkunde"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-deprecated">
+                    <valueBoolean value="true"/>
+                </extension>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet Öffentliches Gesundheitswesen stellt eine Weiterbildung innerhalb der Zahnmedizin dar. Das Gebiet beinhaltet die Bewertung des Gesundheitszustandes der Bevölkerung, Organisation und Durchführung gruppenprophylaktischer Maßnahmen, Maßnahmen der Gesundheitsförderung, der Gesundheitserziehung und der präventiven Zahngesundheitspflege bei unterschiedlichen Alters- und Bevölkerungsgruppen."/>
+                </extension>
+                <code value="ZGES"/>
+                <display value="Öffentliches Gesundheitswesen"/>
+            </concept>
+        </include>
+        <include>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-systemName">
+                <valueString value="Nicht-ärztliche Fachrichtungen"/>
+            </extension>
+            <system value="urn:oid:1.3.6.1.4.1.19376.3.276.1.5.5"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Ergotherapie unterstützt und begleitet Menschen jeden Alters, die in ihrer Handlungsfähigkeit eingeschränkt oder von Einschränkung bedroht sind. Ziel ist, sie bei der Durchführung für sie bedeutungsvoller Betätigungen in den Bereichen Selbstversorgung, Produktivität und Freizeit in ihrer persönlichen Umwelt zu stärken. Hierbei dienen spezifische Aktivitäten, Umweltanpassung und Beratung dazu, dem Menschen Handlungsfähigkeit im Alltag, gesellschaftliche Teilhabe und eine Verbesserung seiner Lebensqualität zu ermöglichen. (Definition vom 'Deutschen Verband der Ergotherapeuten e.V.') Typischerweise werden Dokumente, die von Angehörigen der folgenden Berufsgruppen erstellt werden, mit diesem Code versehen: Ergotherapeutin/ Ergotherapeut"/>
+                </extension>
+                <code value="ERG"/>
+                <display value="Ergotherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Fachgebiet der Ernährung und Diätetik deckt die Tätigkeiten folgender Berufe ab: Diätassistentin/ Diätassistent, Diätköchin/ Diätkoch, Ernährungsberaterin/ Ernährungsberater, Oekotrophologin/ Oekotrophologe, Diabetesassistentin/ Diabetesassistent, Diabetesberaterin/ Diabetesberater"/>
+                </extension>
+                <code value="ERN"/>
+                <display value="Ernährung und Diätetik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept der Forschung deckt die Tätigkeiten folgender Berufe ab: Clinical Trial Manager, Fachwissenschaftler/-innen in der Medizin, Klinischer Monitor, Studienassistentin/ Studienassistent, Study Nurse"/>
+                </extension>
+                <code value="FOR"/>
+                <display value="Forschung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Pflege umfasst die eigenverantwortliche Versorgung und Betreuung, allein oder in Kooperation mit anderen Berufsangehörigen, von Menschen aller Altersgruppen, von Familien oder Lebensgemeinschaften, sowie von Gruppen und sozialen Gemeinschaften, ob krank oder gesund, in allen Lebenssituationen (Settings). Pflege schließt die Förderung der Gesundheit, Verhütung von Krankheiten und die Versorgung und Betreuung kranker, behinderter und sterbender Menschen ein. Weitere Schlüsselaufgaben der Pflege sind Wahrnehmung der Interessen und Bedürfnisse (Advocacy), Förderung einer sicheren Umgebung, Forschung, Mitwirkung in der Gestaltung der Gesundheitspolitik sowie im Management des Gesundheitswesens und in der Bildung. (Definition der Pflege vom 'International Council of Nurses ICN' übersetzt vom Deutschen Berufsverband für Pflegeberufe) Das Konzept deckt die Tätigkeiten folgender Berufe ab: Pflegeassistent / Alltagsbetreuer (m/w), Servicehelfer im Sozial- und Gesundheitswesen (m/w), Wundexperte (m/w), Stomatherapeutin/ Stomatherapeut, Heilerziehungspflegerin/ Heilerziehungspfleger, Gesundheits- und Krankenpflegehelferin/ Gesundheits- und Krankenpflegehelfer, Gesundheits- und Krankenpflegerin/ Gesundheits- und Krankenpfleger, Gesundheits- und Pflegeassistentin/ Gesundheits- und Pflegeassistent, Gesundheits- und Pflegeberaterin/ Gesundheits- und Pflegeberater, Pflegesachverständige/ Pflegesachverständiger"/>
+                </extension>
+                <code value="PFL"/>
+                <display value="Pflege und Betreuung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Altenpfleger und Altenpflegehelfer pflegen und versorgen gesunde, kranke und pflegebedürftige alte Menschen. Neben den sozial-pflegerischen Aufgaben (z.B. Hilfe bei der Körperpflege und beim Essen) kommen den Altenpflegern und Altenpflegehelfern auch medizinisch-pflegerische Aufgaben zu (z.B. Unterstützung bei therapeutischen Maßnahmen der Rehabilitation oder das Ausführen ärztlicher Verordnungen wie das Wechseln von Verbänden, das Verabreichen von Medikamenten). (Definition der Gesundheitsberichterstattung des Bundes) Typischerweise werden Dokumente, die von Angehörigen der folgenden Berufsgruppen erstellt werden, mit diesem Code versehen: Altenpflegerin/ Altenpfleger"/>
+                </extension>
+                <code value="ALT"/>
+                <display value="Altenpflege"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value=">Die Tätigkeitsfelder der Gesundheits- und Kinderkrankenpflege umfassen: Die Gestaltung eines Entwicklungsfördernden Umfeldes, Beratung über entsprechende Maßnahmen und Gesundheitsaufklärung, Entlastung der pflegenden Angehörigen, physische und psychische Betreuung, Entwicklung von Krankheitskonzepten, Unterstützung bei der Teilnahme am gesellschaftlichen Leben und Gutachtertätigkeit. (Definition vom Berufsverband Kinderkrankenpflege Deutschland e.V.) Typischerweise werden Dokumente, die von Angehörigen der folgenden Berufsgruppen erstellt werden, mit diesem Code versehen: Gesundheits- und Kinderkrankenpflegerin/ Gesundheits- und Kinderkrankenpfleger"/>
+                </extension>
+                <code value="KIN"/>
+                <display value="Kinderpflege"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Dieses Konzept kann zur Kennzeichnung der Herkunft von Dokumenten verwendet werden, die der Patient selbstständig erstellt und eingestellt hat. Zum Beispiel über ein Patientenportal oder eine Smartphone-App. Daten die vom Patienten über eine solche Lösung stellvertretend für einen Heilberufler eingestellt werden (z.B. gescannter Arztbrief, DICOMDVD) sollten nicht dieses Konzept, sondern das Konzept, welches für den Heilberufler vorgesehen ist, verwenden."/>
+                </extension>
+                <code value="PAT"/>
+                <display value="Patient außerhalb der Betreuung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept der Pharmazeutik deckt die Tätigkeiten folgender Berufe ab: Pharmakantin/ Pharmakant, Pharmakovigilantin/ Pharmakovigilant, Pharmazeutisch-kaufmännische Angestellte/ Pharmazeutisch-kaufmännischer Angestellter, Pharmazeutisch-technische Assistentin/ Pharmazeutisch-technischer Assistent, Apothekerin/Apotheker"/>
+                </extension>
+                <code value="PHZ"/>
+                <display value="Pharmazeutik"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Podologie ist die (nicht-ärztliche) Fuß-Heilkunde und wird von Podologen/Podologinnen praktiziert."/>
+                </extension>
+                <code value="POD"/>
+                <display value="Podologie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Prävention deckt die Tätigkeiten von Wellnessberatern und -beraterinnen ab; auch die Tätigkeiten von Fitnesstrainern und -trainerinnen außerhalb der medizinischen Rehabilitation oder der Sportmedizin sind durch dieses Konzept abgedeckt. Typischerweise werden Dokumente, die von Angehörigen der folgenden Berufsgruppen erstellt werden, mit diesem Code versehen: Fitnessberaterin/ Fitnessberater, Fitnessmanagerin/ Fitnessmanager, Fitnesstrainerin/ Fitnesstrainer, Wellnessberaterin/ Wellnessberater, Wellnesstrainerin/ Wellnesstrainer"/>
+                </extension>
+                <code value="PRV"/>
+                <display value="Prävention"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept deckt die Tätigkeiten folgender Berufe ab: Sozialarbeiterin / Sozialarbeiter, Sozialmedizinische Fachangestellte, Sozialpädagogin/ Sozialpädagoge, Sozialtherapeutin/ Sozialtherapeut, Compliance Coach, Adherence Coach. Wenn die Tätigkeit des Sozialdienstes eines Krankenhauses eindeutig einem ärztlichen Fachgebiet zugeordnet werden kann, sollte dieses bevorzugt verwendet werden."/>
+                </extension>
+                <code value="SOZ"/>
+                <display value="Sozialwesen"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Sprachtherapie deckt die Tätigkeiten folgender Berufe ab: Logopädin/ Logopäde, Medizinische Sprachheilpädagogin/ Medizinischer Sprachheilpädagoge, Staatlich anerkannte Sprachtherapeutin/ Staatlich anerkannter Sprachtherapeut"/>
+                </extension>
+                <code value="SPR"/>
+                <display value="Sprachtherapie"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Die Versorgungskoordination deckt die Tätigkeiten von Case Managern/Case Managerinnen ab."/>
+                </extension>
+                <code value="VKO"/>
+                <display value="Versorgungskoordination"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Das Konzept deckt die Tätigkeiten folgender Berufe ab: Medizincontrollerin/ Medizincontroller, Sekretärin im Gesundheitswesen/ Sekretär im Gesundheitswesen, Sozialversicherungsfachangestellte/ Sozialversicherungsfachangestellter, Verwaltungsangestellte in medizinischen Pflegeeinrichtungen/ Verwaltungsangestellter in medizinischen Pflegeeinrichtungen. Wenn diese Tätigkeiten eindeutig einem ärztlichen Fachgebiet zugeordnet werden können, sollte dieses bevorzugt verwendet werden."/>
+                </extension>
+                <code value="VER"/>
+                <display value="Verwaltung"/>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="Psychotherapie bezeichnet allgemein die 'gezielte professionelle Behandlung seelischer (psychischer) Störungen oder psychisch bedingter körperlicher Störungen mit psychologischen Mitteln'."/>
+                </extension>
+                <code value="PST"/>
+                <display value="Psychotherapie"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

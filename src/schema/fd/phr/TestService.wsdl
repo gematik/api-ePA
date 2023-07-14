@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rmd="urn:ihe:iti:rmd:2017" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:query="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ihe="urn:ihe:iti:xds-b:2007" xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:access="http://ws.gematik.de/fd/phr/I_Document_Management/v1.0" name="DocumentManagementService" targetNamespace="urn:ihe:iti:xds-b:2007">
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import schemaLocation="TestService.xsd" namespace="http://ws.gematik.de/fd/phr/I_Document_Management/v1.0"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="RetrieveDocumentSet_Message">
+		<wsdl:part name="headerPart" element="access:AccessHeader"/>
+		<wsdl:part name="body" element="access:RetrieveDocumentSetRequest"/>
+	</wsdl:message>
+	<wsdl:message name="RetrieveDocumentSetResponse_Message">
+		<wsdl:part name="body" element="access:RetrieveDocumentSetResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="I_Document_Management_PortType">
+		<wsdl:operation name="RespondingGateway_CrossGatewayRetrieve">
+			<wsdl:input message="ihe:RetrieveDocumentSet_Message" wsaw:Action="urn:ihe:iti:2007:CrossGatewayRetrieve"/>
+			<wsdl:output message="ihe:RetrieveDocumentSetResponse_Message" wsaw:Action="urn:ihe:iti:2007:CrossGatewayRetrieveResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="I_Document_Management_Binding_Soap12" type="ihe:I_Document_Management_PortType">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsaw:UsingAddressing wsdl:required="true"/>
+		<wsdl:operation name="RespondingGateway_CrossGatewayRetrieve">
+			<soap12:operation soapAction="urn:iti:2007:CrossGatewayRetrieve" soapActionRequired="false"/>
+			<wsdl:input>
+				<soap12:header message="ihe:RetrieveDocumentSet_Message" part="headerPart" use="literal"/>
+				<soap12:body parts="body" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DocumentManagementService">
+		<wsdl:port name="I_Document_Management" binding="ihe:I_Document_Management_Binding_Soap12">
+			<soap12:address location="http://servicelocation/I_Document_Management"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing"/>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:cc2dc71e-c703-4555-8188-47414310e315</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+    <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">acb52e0c-cb57-4462-bc6d-3256565b30c4</RelatesTo>
+  </soap:Header>
+  <soap:Body>
+    <ns4:ActivateAccountResponse xmlns:ns12="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns11="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns10="urn:hl7-org:v3" xmlns:ns9="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns7="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns6="http://ws.gematik.de/tel/error/v2.0" xmlns:ns5="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRManagementService/v1.3" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+      <ns2:Status>
+        <ns2:Result>OK</ns2:Result>
+      </ns2:Status>
+    </ns4:ActivateAccountResponse>
+  </soap:Body>
+</soap:Envelope>
+<!--ActivateAccount_ExecTime=15,440225-->

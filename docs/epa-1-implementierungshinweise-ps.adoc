@@ -1,0 +1,84 @@
+:imagesdir: ../images
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+ifdef::env-github[]
+:imagesdir: https://github.com/gematik/epa-resources/raw/master/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc: macro
+:toclevels: 3
+:toc-title: Inhaltsverzeichnis
+image:gematik_logo.jpg[width=35%] 
+
+toc::[]
+
+= Usecases
+
+== Kann ein Leistungserbringer Dokumente fremder Leistungserbringer in die ePA einstellen?
+
+Wenn beispielsweise ein Patient Befund-Dokumente von einer Facharztpraxis ins Krankenhaus mitbringt, werden diese in die Primärakte des KIS gescannt/importiert. Es ist möglich, diese Dokumente vom KIS in die ePA zu stellen. Das Krankenhaus ist in diesem Fall nicht der Ersteller der Dokumente, daher unterscheidet IHE den Document.Author von dem SubmissionSet.Author. Ersterer kann ein “fremder” Arzt sein, letzterer ist die hochladende Instanz. Theoretisch könnte die Facharztpraxis die gleichen Dokumente ebenfalls hochladen. Falls Doubletten von Akteuren erkannt werden, können Sie diese löschen. Eine automatisierte Doublettenerkennung gibt es nicht.
+
+== Wie soll das PS mit der HomeCommunityID umgehen, die es über getHomeCommunityId vom Aktensystem erhält?
+
+Der PS-Nutzer kann nichts mit der HCID anfangen, ebensowenig mit dem Namen des Aktensystems. Es handelt sich um eine rein technische Information, die in vielen Operationsaufrufen mitgegeben werden muss, um das richtige Aktensystem für einen Versicherten zu identifizieren. Es ist also keine Auflösung der HCID zum Aktensystemnamen erforderlich und keine Anzeige der HCID an der GUI des PS. KoPS fordert für die Prüfung im Bestätigungsverfahren einen Nachweis darüber zu liefern, dass die HomeCommunityID persistent im PS gespeichert wurde. Dieser Nachweis kann z.B. mittels Screenshot eines Datenbankauszuges, eines Protokolls, einer Anzeige in der GUI oder eines Datenblattes erfolgen. Keineswegs wird durch KoPS erzwungen, die HCID dem Nutzer aktiv anzuzeigen, etwa über einen Dialog. 
+
+== Gibt es XML-Stylesheets für die Darstellung von Notfalldaten, DPE und den eMP aus der ePA?
+
+Von der gematik werden keine entsprechenden Stylesheets zur Verfügung gestellt. 
+
+= Berechtigungen
+
+== GetAuthorizationList() fragt die gesamte Liste aller Berechtigungen einer Institution ab. Wäre es nicht praktischer, eine  Berechtigungen zielgerichtet zu einem einzelnen Patienten abfragen zu können? 
+
+GetAuthorizationList() sollte aus Performance-Gründen für alle Beteiligten nicht öfter als einmal täglich abgefragt werden. Das Ergebnis sollte im PS persistiert werden, damit tagesaktuell bekannt ist, ob eine Zugriffsberechtigung für einen Patienten vorliegt. Eine minütliche Aktualisierung der lokalen AuthorizationList ist nicht erforderlich.
+
+== Warum erhält man mit GetAuthorizationList keine Details zur erhaltenen Berechtigung?
+
+Die in der LEI adhoc erhaltene Berechtigungen sind dem PS bekannt und können persistiert werden. Daher müssen sie nicht über die Schnittstelle propagiert werden. Die vom Versicherten am FdV vergenebenen Berechtigungen soll die LEI nicht automatisch ermitteln können, um keinen Hinweis darauf zu geben, welche Berechtigungen der Versicherte am FdV nicht erteilen möchte.
+
+== Wie sorgt man dafür, dass der Versicherte am Kartenterminal sieht, für wen er adhoc eine Zugriffsberechtigung erteilt?
+
+Der OrganisationName in der Selbstauskunft soll so konfiguriert werden, dass dern Versicherten am KT eine lesbare und für ihn verständliche Anzeige erhält. Es soll z.B. also nicht die Telematik-ID als OrganisationName verwendet werden.
+
+== Wie errechnet sich die Berechtigungsdauer "18 Monate"?
+
+In ePA 1 gilt als die maximale Berechtigungsdauer 18 Monate. Wie ist diese Anforderung in ePA 1 umgesetzt (zum Hintergrund: In ePA 2 gibt es im Gegensatz dazu auch eine unbegrenzte Berechtigungsdauer.) Das ePA 1 Aktensystem prüft die vom Primärsystem eingestellte Berechtigung darauf, ob der letzte Berechtigungstag maximal heute + 540 Tage (18 x 30 Tage) entspricht. Das Primärsystem sollte also nicht versuchen, die Berechtigung auf einen längeren Wert als heute + 540 Tage einzustellen, da die Berechtigungs-Anforderung ansonsten abgelehnt wird.  
+
+= Aus dem IHE-Umfeld
+
+== Wie soll die Selbstauskunft z.B. im Bezug auf die Metadaten practiceSettingCode, languageCode konfiguriert sein? Sind die Werte als Angaben zur Praxis gedacht oder für jeden Arzt Individuell?
+
+Zu unterscheiden sind die Praxis und der oder die Ärzte. Der Unterschied ist in den IHE-Metadaten abgebildet. Für die Semantik der angesprochenen Werte beachten Sie bitte im Detail die Erläuterungen in https://wiki.hl7.de/index.php?title=IG:Value_Sets_für_XDS
+
+==  Die UniqueID von Submission Set und documentEntry  und (in ePA 2: Folder) werden mit einer "globally unique" OID vergeben. Wie bildet das PS eine solche "globally unique" OID?
+
+Zu jedem SubmissionSet muss z.B. zum rim:ExternalIdentifier "XDSSubmissionSet.uniqueId" eine "globally unique" OID vergeben werden, s. IHE_ITI_TF_Vol3 4.2.3.3.12.  (Bei anderen IDs kann auch eine UUID verwendet werden). Zur Erstellung dieser ID gibt es zwei Möglichkeiten:
+1) Eine UUID in eine OID umwandeln (Empfehlung)
+2) Einen eigenen Root-Zweig aus einem OID-Verzeichnis verwenden und erweitern
+
+== Wann ist mit XDSTooManyResults zu rechnen?
+
+Wie realistisch ist der Fall, dass eine Abfrage wie GetAll() den Fehler XDSTooManyResults wirft? Ab 100, 1000, 10000 oder noch mehr Einträgen? Eine sichere Vorhersage kann man nicht treffen, da die gematik keine weiteren Regelungen dazu in der Spezifikation trifft. Es ist allerdings davon auszugehen, dass XDSTooManyResults eher bei vierstelligen wenn nicht fünfstelligen Antwortzahlen der Server gesendet wird. Gerade in den “Anfangszeiten” der ePA, wo noch keine so großen Datenmengen zu verwaltet werden, wird der Fehlercode wohl sehr selten zu beobachten sein. Die Suche sollte dann eingeschränkt werden. 
+
+= Spezialthemen
+
+== Wie ist damit umzugehen, dass in den Dateien  PHRManagementService.wsdl  und  PHRService.wsdl für die WS-Adressierung ein veraltetes w3c Protokol verwendet wird? 
+
+Die WS-Adressierung ist inzwischen vom w3c als veraltet erklärt worden:
+https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/ Eine Aktualisierung des WS-Adressierungs ist dennoch nicht vorgesehen, weil die Konnektorschnittstelle betroffen wäre, sowie analog die Dokumentenverwaltungsschnittstelle inkl. IHE-Operationen (DocumentManagementService.wsdl). Daher muss für die Entwicklung auf ältere Bibliotheken zurück gegriffen werden.
+
+== Wie liest das Primärsystem die Telematik-ID aus der SMC-B?
+
+Die Telematik-ID der Leistungserbringerinstitution muss in vielen Nachrichten angegeben werden. Nach dem Auslesen aus der SMC-B sollte das Primärsystem die Telematik-ID in der Selbstauskunft speichern. Die Telematik-ID ist von den Kartenherausgebern der SM-B festgelegt und immer im Attribut "registrationNumber" im Admission-Element der Extension der SMC-B-Zertifikate (C.HCI.AUT, C.HCI.ENC,C.HCI.OSIG) eingetragen. Wenn nicht explizit vom Antragsteller eine neue Telematik-ID angefordert wird, wird bei Ausgabe von Folge- und Ersatzkarten die bisherige Telematik-ID wieder verwendet. Eine generelle Vorgehensweise kann die gematik hierfür nicht geben, da die Personalisierung der SMC-B sektoral unterschiedlich ist (siehe gemSpec_PKI, Anhang A).
+Zum Auslesen der Zertifikate kann die Operation ReadCardCertificate gemäß [_gemSpec_Kon#4.1.9.5.2_] verwendet werden. Die Telematik-ID ist in allen Zertifikaten in der Admissionstruktur als "registrationNumber" im ASN.1-Format gespeichert. Je nach gewählter Programmiersprache und verwendeter PKI-Bibliothek ist das Lesen dieser Information durch die PKI-API direkt möglich oder es muss eine eigene Funktion dafür erstellt werden. In der Bouncy Castle Library werden hierfür Funktionen bereitgestellt. Nähere Informationen für Java finden sich unter https://bouncycastle.org/docs/docs1.5on/org/bouncycastle/asn1/isismtt/x509/package-summary.html, für C# unter https://bouncycastle.org/csharp/index.html und https://github.com/bcgit/bc-csharp.
+
+== Wie soll das einstellende Primärsystem mit der UseVerificationTime bei der Signaturerstellung umgehen?
+
+Bei VerifyDocument kann ein benutzerdefinierter Zeitpunkt übergeben werden (Aufrufparameter UseVerificationTime), muss aber nicht. Wenn kein UseVerificationTime übergeben wird, wird bei der Signaturprüfung der in die Signatur eingebettete Signaturzeitpunkt herangezogen. (Wenn die Signatur mit dem Konnektor erstellt wurde, ist immer ein eingebetteter Signaturzeitpunkt vorhanden.) Wenn kein benutzerdefinierter Zeitpunkt und kein eingebetteter Zeitpunkt vorhanden sind, verwendet der Konnektor seine aktuelle Systemzeit bei der Signaturprüfung.

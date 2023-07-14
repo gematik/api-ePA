@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:access="http://ws.gematik.de/fd/phr/I_Document_Management/v1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.gematik.de/fd/phr/I_Document_Management/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+	<xs:annotation>
+		<xs:documentation xml:lang="de">
+			Copyright (c) 2023, gematik - Gesellschaft für
+			Telematikanwendungen der Gesundheitskarte mbH. Alle Rechte
+			vorbehalten.
+			Description: extension for NCPeH
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="AccessHeader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AccessCode" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+							transmission in SOAP-header to give the authorization of insurant, done by FdV
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RetrieveDocumentSetRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="InputParameter" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RetrieveDocumentSetResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OutputParameter" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

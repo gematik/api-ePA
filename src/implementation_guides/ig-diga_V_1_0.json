@@ -1,0 +1,74 @@
+{
+	"name": "DiGA Toolkit",
+	"description": "DiGA Toolkit defined as a medical information object (MIO) by KBV.",
+	"igVersion": "1.1.0",
+	"guidelineDefinition": {
+		"url": "https://mio.kbv.de/display/DIGA1X0X0",
+		"version": "1.0"
+	},
+	"folderCardinality": {
+		"min": "0",
+		"max": "n",
+		"unique": false
+	},
+	"validFromDate": "2023-01-01",
+	"clientReadOnlyFromDate": "2023-07-01",
+	"type": "uniform",
+	"metadata": {
+		"name": "folder.codeList",
+		"value": {
+			"code": "diga",
+			"codeSystem": "1.2.276.0.76.5.512",
+			"displayName": "DiGA",
+			"desc": [
+				{
+					"language": "de-DE",
+					"#text": "Daten des Versicherten aus digitalen Gesundheitsanwendungen des Versicherten nach § 33a."
+				}
+			]
+		}
+	},
+	"elements": [
+		{
+			"version": "1.0",
+			"name": "KBV_PR_MIO_DIGA_Bundle",
+			"description": "This document is of FHIR resource type KBV_PR_MIO_DIGA_Bundle.",
+			"canonicalUrl": "https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Bundle",
+			"metadata": [
+				{
+					"name": "documentEntry.classCode",
+					"value": {
+						"code": "VER",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.8",
+						"displayName": "Verordnung",
+						"desc": [
+							{
+								"language": "de-DE",
+								"#text": "Verordnungen für Krankenhausbehandlung, Arzneimittel bzw. Heil- und Hilfsmittel, sowie Überweisungen an andere Ärzte"
+							}
+						]
+					}
+				},
+				{
+					"name": "documentEntry.formatCode",
+					"value": {
+						"code": "urn:gematik:ig:diga:v1.0",
+						"codeSystem": "1.3.6.1.4.1.19376.3.276.1.5.6",
+						"displayName": "DiGA (gematik)"
+					}
+				},
+				{
+					"name": "documentEntry.mimeType",
+					"value": [
+						"application/fhir+xml"
+					]
+				}
+			],
+			"documentCardinality": {
+				"min": "0",
+				"max": "n"
+			},
+			"maxDocumentHistory" : 10
+		}
+	]
+}

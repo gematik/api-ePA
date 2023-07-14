@@ -1,0 +1,76 @@
+:imagesdir: ../images
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+ifdef::env-github[]
+:imagesdir: https://github.com/gematik/epa-resources/raw/master/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc: macro
+:toclevels: 3
+:toc-title: Inhaltsverzeichnis
+image:gematik_logo.jpg[width=35%] 
+
+toc::[]
+
+== Verwendung der Aufzeichnungsliste 
+
+Auf oberster Ebene enthält die Liste (researchDataSubmissionTrackingList.json) zwei Elemente:
+
+1. den Status der Einwilligung § 363 Absatz 2 SGB V (insurantConsent)
+2. Liste der Freigaben / Widerrufe (dataSubmissionTracking)
+
+
+== insurantConsent
+Hier wird vermerkt, ob die Einwilligung gemäß §363 Absatz 2 SGB erteilt ('given') oder entzogen ('withdrawn') wurde und wann die letzte Änderung des Status erfolgte (siehe auch A_21878). Bei einem Wechsel des FdV oder bei Datenfreigabe durch einen Vertreter kann dieser hinterlegte Zustand ausgewertet werden, beispielsweise um die Auswahl der Dokumente für die Freigabe zu Forschungszwecken zu ermöglichen.
+
+== dataSubmissionTracking
+Dieses Array erfasst die Freigaben und Widerrufe aller zum Zweck der Forschung bereitgestellten Dokumente. Pro struktieriertem Dokument (Instanz eines MIOs) existiert dazu genau ein Eintrag (submissionEntryType), der bei der ersten Freigabe des strukturierten Dokuments erstellt wird. Innerhalb des Eintrags erfolgt dann die Aufzeichnung der Informationen zu den Freigaben und Widerrufen.
+
+Ein Dokument in diesem Sinne ist dabei immer ein vollständiges MIO. Das gilt speziell für die Sammlungstypen _mixed_ und _unique_. Für jeden statischen Ordner (Impfpass, Zahnbonusheft) existiert maximal ein Eintrag submissionEntry des Typs submissionEntryType im Array, für dynamische Ordner (Mutterpass, U-Heft) kann pro Instanz ein Eintrag im Array vorliegen. 
+
+MIOs, die auf einem _atomic_-Typ aufbauen und in der Akte durch jeweils ein einzelnes XDS Dokument vollständig repräsentiert sind, erhalten auch jeweils einen eigenen Eintrag 
+
+=== SubmissionEntryType
+==== documentTitle, documentUniqueId, pseudonymousDocumentId:
+Jeder Eintrag submissionEntry für ein MIO erfasst den lesbaren Dokumententitel (documentTitle) und die Referenz des MIOs im Aktensystem (documentUniqueId). Diese Referenz ist bei _atomic_-Typen die document.UniqueId und bei Sammlunstypen _mixed_ und _uniform_ die folder.UniqueId.
+
+Für jeden Eintrag submissionEntry für ein MIO wird bei der ersten Erstellung auch eine Referenz für das pseudonymisierte Dokument erzeugt (pseudonymousDocumentId). Diese Referenz wird für Freigaben und Widerrufe in den Aufrufen der Schnittstelle des Forschungsdatenzentrums genutzt (P-Document-Id) 
+
+Bei jeder Freigabe des referenzierten Dokuments (documentUniqueId) werden immer alle zu diesem Zeitpunkt zu einem Dokument gehörenden Teildokumente (XDS Documents mit Status approved) pseudonymisiert und mit einem HTTP POST unter Beistellung der pseudonymousDocumentId an das Forschungsdatenzentrum über dessen Schnittstelle versendet.
+Bei einer Freigabe mehrerer Dokumente (MIOs) ist dieser Vorgang jeweils zu wiederholen.
+
+Bei einer erneuten Freigabe eines zuvor schon einmal freigebenen Dokuments nach einer erfolgten Änderung an diesem Dokument wird der Freigabevorgang in gleicher Weise wiederholt.
+
+Ein Widerruf umfasst immer implizit den WIderruf aller zuvor freigegebenen Versionen eines Dokuments. Mit einem HTTP DELETE und unter Beistellung der pseudonymousDocumentId an das Forschungsdatenzentrum über dessen Schnittstelle wird der Widerruf versendet und vollständig alle zu diesem Dokument jemals übermittelten Dokumententeile gegenüber dem Forschungsdatenzentrum widerrufen.
+
+
+==== submissions:
+Dieses Element erfasst die Freigaben und Widerrufe für das assozierte MIO. ALs Status muss 'delivered' und 'withdrawn' für Freigabe und Widerruf verwendet werden. 
+
+Für jede Freigabe und für jeden Widerruf wird ein zusätzlicher Eintrag des Typs submissionType erzeugt. Aufeinanderfolgende Freigaben und Widerrufe können aufgrund der Aufzeichnung des Zeitstempels zur Nachvollziehbarkeit vergangener Aktivitäten verwendet werden.
+
+Einträge, die älter als 3 Jahre sind, können zur Kürzung der Liste entfernt werden. Ist der jüngste Eintrag kein Eintrag mit Status 'delivered', so muss der jünste Eintrag in der Liste verbleiben, ungeachtet seines Alters. Dieses ermöglicht den Widerruf gegenüber dem Forschungsdatenzentrum.
+
+Der jüngste Eintrag repräsentiert immer den aktuellen Freigabestatus für das MIO. 
+
+
+== Hinweise
+=== Erneute Freigabe
+Eine erneute Freigabe soll nur nach Änderung des Dokuments erfolgen. Zur Festellung einer Änderung kann der Zeistempel der jüngsten submission verwendet werden, wenn diese den Status 'delivered' hat.
+Zeigt die jüngste submission den Status 'withdrawn' oder existiert kein submission Eintrag, kann ebenfalls eine Freigabe erfolgen. 
+
+=== Erzeugung pseudonymousDocumentID
+Dieser Identifier wird für die erste Freigabe eines Dokument erzeugt und wird bei allen aufeinanderfolgenden, weiteren Freigaben verwendet. Nach einem Widerruf des Dokuments soll auch dieser Identifier gelöscht werden, bzw. bei einer erneuten Freigabe muss dann ein neuer Identifier erzeugt werden.
+
+=== Kein Löschen der Aufzeichnungsliste
+Die Aufzeichnungsliste soll nicht aus der Akte gelöscht werden. Dieses ist implizit dadurch gegeben, dass ein FdV diese Funktion nicht umsetzt. Einem Nutzer ist die Möglichkeit des Löschens dieses Dokument ('reguläres' Löschen von Dokumenten durch einen Nutzer) nicht gegeben, da Inhalte des gesonderten Ordners im Aktensystem, in welchem auch die Aufzeichnungsliste abgelegt ist, für einen Nutzer nicht sichtbar sind.
+Nach eigenem Ermessen können Aktensysteme darüber hinaus das Löschen der Aufzeichnungsliste technisch verhindern.
+
+

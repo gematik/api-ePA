@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:m0="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:m1="http://ws.gematik.de/conn/ConnectorContext/v2.0">
+  <SOAP-ENV:Body>
+    <m:ReadCardCertificate xmlns:m="http://ws.gematik.de/conn/CertificateService/v6.0">
+      <m0:CardHandle>4da0a984-8124-475f-ab29-c4b78d4710b1</m0:CardHandle>
+      <m1:Context>
+        <m0:MandantId>Mandant1</m0:MandantId>
+        <m0:ClientSystemId>ClientID1</m0:ClientSystemId>
+        <m0:WorkplaceId>CATS</m0:WorkplaceId>
+      </m1:Context>
+      <m:CertRefList>
+        <m:CertRef>C.SIG</m:CertRef>
+      </m:CertRefList>
+    </m:ReadCardCertificate>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
