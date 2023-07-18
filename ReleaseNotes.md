@@ -1,3 +1,6 @@
+# Release R2.6.0-4
+- update testtreiber_fdv.yaml to version 2.7.0 according to ANFEPA-2281 and agreement in ePA-Weekly meeting 2023-07-12
+
 # Release R2.6.0-3
 - changed FindObjectResponseDTO in testtreiber_fdv.yaml
 

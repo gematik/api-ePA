@@ -2,10 +2,10 @@
 
 |Dieser Branch|ePA-2.6|
 |:----|:----|
-| Bezeichnung  | __Release 2.6__ </br> __(ePA_2.5_Maintenance_23.1)__   |
+| Bezeichnung  | __Release 2.6.0__ </br> __(ePA_2.5_Maintenance_23.1)__   |
 | Status aktuell | __Freigegeben (released)__      |
 | Releasedatum    | __14.04.2023__    |
-| Spezifikationen| [Fachportal gematik: ePA 2.6: Release 2.6.0 zur elektronischen Patientenakte (ePA)](https://fachportal.gematik.de/schnelleinstieg/downloadcenter/releases#c7516)|
+| Spezifikationen| [Fachportal gematik: ePA 2.6: Release 2.6.0 zur elektronischen Patientenakte (ePA)](https://fachportal.gematik.de/schnelleinstieg/downloadcenter/releases#c7516)</br>(inklusive Ergänzungen 2.6.0-1 und 2.6.0-2) |
 | Kontext| __ePA 2.5__|
 | Vorläuferrelease| __Release 2.5.2__|
 | Vorläuferbranch | [**ePA-2.5.2**](https://github.com/gematik/api-ePA/tree/ePA-2.5.2)|
