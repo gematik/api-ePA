@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.6.0
+  version: 2.7.1
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -82,6 +82,66 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FindObjectsRequestDTO'
+            examples:
+              example-1:
+                value:
+                  account:
+                    account: stringstri
+                    insurantId: stringstri
+                    pkcs12: ''
+                    passwordPrivateKey: string
+                    passwordKeyStore: string
+                    pin: 0
+                    can: string
+                    token: string
+                  queryMetadata:
+                    XDSSubmissionSetEntryUUID:
+                      - string
+                    XDSSubmissionSetUniqueId:
+                      - string
+                    XDSSubmissionSetSubmissionTimeFrom: '2017-07-21T17:32:28Z'
+                    XDSSubmissionSetSubmissionTimeTo: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryEntryUUID:
+                      - string
+                    XDSDocumentEntryUniqueId:
+                      - string
+                    XDSDocumentEntryClassCode:
+                      - string
+                    XDSDocumentEntryPracticeSettingCode:
+                      - string
+                    XDSDocumentEntryCreationTimeFrom: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryCreationTimeTo: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryServiceStartTimeFrom: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryServiceStartTimeTo: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryServiceStopTimeFrom: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryServiceStopTimeTo: '2017-07-21T17:32:28Z'
+                    XDSDocumentEntryHealthcareFacilityTypeCode:
+                      - string
+                    XDSDocumentEntryEventCodeList:
+                      - string
+                    XDSDocumentEntryConfidentialityCode:
+                      - string
+                    XDSDocumentEntryAuthorPerson:
+                      - string
+                    XDSDocumentEntryFormatCode:
+                      - string
+                    XDSDocumentEntryTypeCode:
+                      - string
+                    XDSDocumentEntryTitle:
+                      - string
+                    XDSDocumentEntryAuthorInstitution:
+                      - string
+                    XDSDocumentEntryStatus: string
+                    XDSFolderUniqueId: string
+                    XDSFolderStatus: string
+                    XDSFolderCodeList:
+                      - string
+                    XDSFolderLastUpdateTimeFrom: '2017-07-21T17:32:28Z'
+                    XDSFolderLastUpdateTimeTo: '2017-07-21T17:32:28Z'
+                    XDSFolderEntryUUID: string
+                  query: FindDocuments
+                  returnType: LeafClass
+        description: ''
       responses:
         default:
           description: default response
@@ -94,9 +154,9 @@ paths:
                   value:
                     success: true
                     statusMessage: string
-                    objectsMetadata:
-                      - submissionSetMetadata:
-                          author:
+                    registryObjectLists:
+                      submissionSetMetadata:
+                        - author:
                             identifier: '165746304'
                             familyName: Weber
                             givenName: Thilo
@@ -114,62 +174,65 @@ paths:
                               - string
                           comments: string
                           contentTypeCode: string
-                          intendedRecipient:
-                            - string
                           submissionTime: '2017-07-21T17:32:28Z'
+                          entryUUID: string
+                          uniqueId: string
+                      documentsMetadata:
+                        - author:
+                            - identifier: '165746304'
+                              familyName: Weber
+                              givenName: Thilo
+                              otherName: string
+                              nameAffix: string
+                              title: Dr.
+                              authorInstitution:
+                                - name: string
+                                  identifier: string
+                              authorRole:
+                                - string
+                              authorSpecialty:
+                                - string
+                              authorTelecommunication:
+                                - string
+                          availabilityStatus: string
+                          confidentialityCode:
+                            - string
+                          classCode: string
+                          comments: string
+                          creationTime: '2017-07-21T17:32:28Z'
+                          entryUUID: string
+                          eventCodeList:
+                            - string
+                          formatCode: string
+                          hash: string
+                          healthcareFacilityTypeCode: string
+                          languageCode: string
+                          legalAuthenticator: string
+                          mimeType: application/pdf
+                          practiceSettingCode: string
+                          referenceIdList:
+                            - string
+                          serviceStartTime: '2017-07-21T17:32:28Z'
+                          serviceStopTime: '2017-07-21T17:32:28Z'
+                          size: 0
+                          title: string
+                          typeCode: string
+                          uniqueId: string
+                          uri: string
+                      foldersMetadata:
+                        - comments: string
+                          codeList:
+                            - string
+                          lastUpdateTime: '2017-07-21T17:32:28Z'
                           title: string
                           uniqueId: string
-                        documentsMetadata:
-                          - author:
-                              - identifier: '165746304'
-                                familyName: Weber
-                                givenName: Thilo
-                                otherName: string
-                                nameAffix: string
-                                title: Dr.
-                                authorInstitution:
-                                  - name: string
-                                    identifier: string
-                                authorRole:
-                                  - string
-                                authorSpecialty:
-                                  - string
-                                authorTelecommunication:
-                                  - string
-                            availabilityStatus: string
-                            confidentialityCode:
-                              - string
-                            classCode: string
-                            comments: string
-                            creationTime: '2017-07-21T17:32:28Z'
-                            entryUUID: string
-                            eventCodeList:
-                              - string
-                            formatCode: string
-                            hash: string
-                            healthcareFacilityTypeCode: string
-                            languageCode: string
-                            legalAuthenticator: string
-                            mimeType: application/pdf
-                            practiceSettingCode: string
-                            referenceIdList:
-                              - string
-                            serviceStartTime: '2017-07-21T17:32:28Z'
-                            serviceStopTime: '2017-07-21T17:32:28Z'
-                            size: 0
-                            title: string
-                            typeCode: string
-                            uniqueId: string
-                            uri: string
-                        foldersMetadata:
-                          - comments: string
-                            codeList:
-                              - string
-                            lastUpdateTime: '2017-07-21T17:32:28Z'
-                            title: string
-                            uniqueId: string
-                            entryUUID: Folder-1
-                            availabilityStatus: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
+                          entryUUID: Folder-1
+                          availabilityStatus: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
+                      associations:
+                        - id: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
+                          associationType: HasMember
+                          sourceObject: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
+                          targetObject: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
   /retrieveDocuments:
     post:
       tags:
@@ -888,6 +951,29 @@ components:
     SubmissionSetMetadata:
       type: object
       description: Inhalte für Metadaten für ein SubmissionSet
+      x-examples:
+        example-1:
+          author:
+            identifier: '165746304'
+            familyName: Weber
+            givenName: Thilo
+            otherName: string
+            nameAffix: string
+            title: Dr.
+            authorInstitution:
+              - name: string
+                identifier: string
+            authorRole:
+              - string
+            authorSpecialty:
+              - string
+            authorTelecommunication:
+              - string
+          comments: string
+          contentTypeCode: string
+          submissionTime: '2017-07-21T17:32:28Z'
+          entryUUID: string
+          uniqueId: string
       properties:
         author:
           $ref: '#/components/schemas/Author'
@@ -896,22 +982,18 @@ components:
           description: Ergänzende Hinweise zum Submission Set in Freitext
         contentTypeCode:
           type: string
-        intendedRecipient:
-          type: array
-          items:
-            type: string
-            description: Vorgesehener Adressat des Submission Set
         submissionTime:
           type: string
           format: date-time
           description: 'date-time notation as defined by RFC 3339, section 5.6'
           example: '2017-07-21T17:32:28Z'
-        title:
+        entryUUID:
           type: string
-          description: Titel des Submission Sets
+          description: 'Eindeutige Kennung des Submission Sets, intern'
         uniqueId:
           type: string
-          description: Eindeutige Kennung des Submission Sets
+          description: 'Eindeutige Kennung des Submission Sets, extern'
+      title: ''
     DocumentWithMetadata:
       type: object
       properties:
@@ -1031,6 +1113,49 @@ components:
         uri:
           type: string
           description: Dateiname
+      x-examples:
+        example-1:
+          author:
+            - identifier: '165746304'
+              familyName: Weber
+              givenName: Thilo
+              otherName: string
+              nameAffix: string
+              title: Dr.
+              authorInstitution:
+                - name: string
+                  identifier: string
+              authorRole:
+                - string
+              authorSpecialty:
+                - string
+              authorTelecommunication:
+                - string
+          availabilityStatus: string
+          confidentialityCode:
+            - string
+          classCode: string
+          comments: string
+          creationTime: '2017-07-21T17:32:28Z'
+          entryUUID: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
+          eventCodeList:
+            - string
+          formatCode: string
+          hash: string
+          healthcareFacilityTypeCode: string
+          languageCode: string
+          legalAuthenticator: string
+          mimeType: application/pdf
+          practiceSettingCode: string
+          referenceIdList:
+            - string
+          serviceStartTime: '2017-07-21T17:32:28Z'
+          serviceStopTime: '2017-07-21T17:32:28Z'
+          size: 0
+          title: string
+          typeCode: string
+          uniqueId: string
+          uri: string
     FolderReference:
       type: object
       description: Metadaten um einem bestehenden Ordner zu referenzieren
@@ -1108,24 +1233,34 @@ components:
     Association:
       type: object
       description: Association
-      x-examples: {}
+      x-examples:
+        example-1:
+          id: string
+          associationType: HasMember
+          sourceObject: string
+          targetObject: string
+        example-2:
+          id: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
+          associationType: 'urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember'
+          sourceObject: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
+          targetObject: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
       title: Association
       properties:
         id:
           type: string
-          description: Ergänzende Hinweise in Freitext
+          description: Eindeutige Kennung der Assoziation in der Registry
           example: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
         associationType:
           type: string
-          description: Eindeutige Kennung des Ordner (von Client erzeugt)
+          description: 'Association Type aus IHE_ITI_TF_Vol3.pdf, Tabelle 4.2.2-1. Angabe mit und ohne den urn:* Prefix valide. Siehe Beispiele '
           example: HasMember
         sourceObject:
           type: string
-          description: 'Zeitstempel, an dem der Ordner das letzte mal geändert wurde; date-time notation as defined by RFC 3339, section 5.6'
+          description: Eindeutige Kennung des Quell-Objekts der Assoziation
           example: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
         targetObject:
           type: string
-          description: Titel des Ornder
+          description: Eindeutige Kennung des Ziel-Objekts der Assoziation
           example: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
     QueryMetadata:
       type: object
@@ -1268,9 +1403,9 @@ components:
         XDSFolderEntryUUID:
           type: string
           description: Folder UUID
-    RegistryObjectList:
+    RegistryObjectLists:
       type: object
-      title: RegistryObjectList
+      title: RegistryObjectLists
       properties:
         submissionSetMetadata:
           type: array
@@ -1288,6 +1423,86 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Association'
+      x-examples:
+        example-1:
+          submissionSetMetadata:
+            - author:
+                identifier: '165746304'
+                familyName: Weber
+                givenName: Thilo
+                otherName: string
+                nameAffix: string
+                title: Dr.
+                authorInstitution:
+                  - name: string
+                    identifier: string
+                authorRole:
+                  - string
+                authorSpecialty:
+                  - string
+                authorTelecommunication:
+                  - string
+              comments: string
+              contentTypeCode: string
+              submissionTime: '2017-07-21T17:32:28Z'
+              entryUUID: string
+              uniqueId: string
+          documentsMetadata:
+            - author:
+                - identifier: '165746304'
+                  familyName: Weber
+                  givenName: Thilo
+                  otherName: string
+                  nameAffix: string
+                  title: Dr.
+                  authorInstitution:
+                    - name: string
+                      identifier: string
+                  authorRole:
+                    - string
+                  authorSpecialty:
+                    - string
+                  authorTelecommunication:
+                    - string
+              availabilityStatus: string
+              confidentialityCode:
+                - string
+              classCode: string
+              comments: string
+              creationTime: '2017-07-21T17:32:28Z'
+              entryUUID: string
+              eventCodeList:
+                - string
+              formatCode: string
+              hash: string
+              healthcareFacilityTypeCode: string
+              languageCode: string
+              legalAuthenticator: string
+              mimeType: application/pdf
+              practiceSettingCode: string
+              referenceIdList:
+                - string
+              serviceStartTime: '2017-07-21T17:32:28Z'
+              serviceStopTime: '2017-07-21T17:32:28Z'
+              size: 0
+              title: string
+              typeCode: string
+              uniqueId: string
+              uri: string
+          foldersMetadata:
+            - comments: string
+              codeList:
+                - string
+              lastUpdateTime: '2017-07-21T17:32:28Z'
+              title: string
+              uniqueId: string
+              entryUUID: Folder-1
+              availabilityStatus: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
+          associations:
+            - id: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
+              associationType: HasMember
+              sourceObject: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
+              targetObject: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
     StoreDocumentRequestDTO:
       type: object
       properties:
@@ -1353,9 +1568,92 @@ components:
         statusMessage:
           type: string
         registryObjectLists:
-          $ref: '#/components/schemas/RegistryObjectList'
+          $ref: '#/components/schemas/RegistryObjectLists'
       required:
         - success
+      x-examples:
+        example-1:
+          success: true
+          statusMessage: string
+          registryObjectLists:
+            submissionSetMetadata:
+              - author:
+                  identifier: '165746304'
+                  familyName: Weber
+                  givenName: Thilo
+                  otherName: string
+                  nameAffix: string
+                  title: Dr.
+                  authorInstitution:
+                    - name: string
+                      identifier: string
+                  authorRole:
+                    - string
+                  authorSpecialty:
+                    - string
+                  authorTelecommunication:
+                    - string
+                comments: string
+                contentTypeCode: string
+                submissionTime: '2017-07-21T17:32:28Z'
+                entryUUID: string
+                uniqueId: string
+            documentsMetadata:
+              - author:
+                  - identifier: '165746304'
+                    familyName: Weber
+                    givenName: Thilo
+                    otherName: string
+                    nameAffix: string
+                    title: Dr.
+                    authorInstitution:
+                      - name: string
+                        identifier: string
+                    authorRole:
+                      - string
+                    authorSpecialty:
+                      - string
+                    authorTelecommunication:
+                      - string
+                availabilityStatus: string
+                confidentialityCode:
+                  - string
+                classCode: string
+                comments: string
+                creationTime: '2017-07-21T17:32:28Z'
+                entryUUID: string
+                eventCodeList:
+                  - string
+                formatCode: string
+                hash: string
+                healthcareFacilityTypeCode: string
+                languageCode: string
+                legalAuthenticator: string
+                mimeType: application/pdf
+                practiceSettingCode: string
+                referenceIdList:
+                  - string
+                serviceStartTime: '2017-07-21T17:32:28Z'
+                serviceStopTime: '2017-07-21T17:32:28Z'
+                size: 0
+                title: string
+                typeCode: string
+                uniqueId: string
+                uri: string
+            foldersMetadata:
+              - comments: string
+                codeList:
+                  - string
+                lastUpdateTime: '2017-07-21T17:32:28Z'
+                title: string
+                uniqueId: string
+                entryUUID: Folder-1
+                availabilityStatus: 'urn:oasis:names:tc:ebxml-regrep:StatusType:Approved, Approved'
+            associations:
+              - id: 'urn:uuid:7804b22f-7400-4fd7-a4de-d6a5cdd8352d'
+                associationType: HasMember
+                sourceObject: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
+                targetObject: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
     DirectoryEntry:
       type: object
       properties:
