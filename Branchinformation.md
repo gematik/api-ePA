@@ -3,7 +3,7 @@
 ## Branch information
 
 |This branch|ePA-2.6|
-|:----|----|
+|:----|:----|
 | Designation  | __Release 2.6.0__ </br> __(ePA_2.5_Maintenance_23.1)__ |
 | Current status | __Freigegeben (released)__ |
 | Release date   | __14.04.2023__ |

@@ -1,6 +1,9 @@
 <img align="right" width="250" height="47" src="images/Gematik_Logo_Flag_With_Background.png"/> <br/>    
  
 # Release Notes api-epa/epa-2.6
+## Release R2.6.0-6
+### editorial
+- correction of a link in README
 ## Release R2.6.0-5
 
 - update testtreiber_fdv.yaml to version 2.7.1
