@@ -74,7 +74,7 @@ The following pages provide additional information and resources related to ePA
 
 
 ## Release Notes
-See `ReleaseNotes.md` for all information regarding the (newest) releases.
+See [ReleaseNotes](./ReleaseNotes.md) for all information regarding the (newest) releases.
 
 ## License
  
