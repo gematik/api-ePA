@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Testtreiber ePA-Frontend des Versicherten
   description: REST Schnittstelle einer Test-App fuer das ePA-Modul FdV
-  version: 2.7.0
+  version: 2.7.1
   contact:
     name: gematik GmbH
     email: software-development@gematik.de
@@ -155,7 +155,7 @@ paths:
                     success: true
                     statusMessage: string
                     registryObjectLists:
-                      submissionSetMetadata:
+                      submissionSetsMetadata:
                         - author:
                             identifier: '165746304'
                             familyName: Weber
@@ -1367,26 +1367,9 @@ components:
     RegistryObjectLists:
       type: object
       title: RegistryObjectLists
-      properties:
-        submissionSetMetadata:
-          type: array
-          items:
-            $ref: '#/components/schemas/SubmissionSetMetadata'
-        documentsMetadata:
-          type: array
-          items:
-            $ref: '#/components/schemas/DocumentMetadata'
-        foldersMetadata:
-          type: array
-          items:
-            $ref: '#/components/schemas/FolderMetadata'
-        associations:
-          type: array
-          items:
-            $ref: '#/components/schemas/Association'
       x-examples:
         example-1:
-          submissionSetMetadata:
+          submissionSetsMetadata:
             - author:
                 identifier: '165746304'
                 familyName: Weber
@@ -1464,6 +1447,23 @@ components:
               associationType: HasMember
               sourceObject: 'urn:uuid:32ec5972-a5a3-4dab-8322-e46c56656d70'
               targetObject: 'urn:uuid:3277f905-6550-4160-bd3b-c8e4fdc70611'
+      properties:
+        submissionSetsMetadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubmissionSetMetadata'
+        documentsMetadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentMetadata'
+        foldersMetadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/FolderMetadata'
+        associations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Association'
     StoreDocumentRequestDTO:
       type: object
       properties:

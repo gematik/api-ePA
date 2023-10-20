@@ -1,22 +1,26 @@
-## Branchinformation
+<img align="right" width="250" height="47" src="images/Gematik_Logo_Flag_With_Background.png"/> <br/>    
 
-|Dieser Branch|ePA-2.6|
-|:----|:----|
-| Bezeichnung  | __Release 2.6.0__ </br> __(ePA_2.5_Maintenance_23.1)__   |
-| Status aktuell | __Freigegeben (released)__      |
-| Releasedatum    | __14.04.2023__    |
-| Spezifikationen| [Fachportal gematik: ePA 2.6: Release 2.6.0 zur elektronischen Patientenakte (ePA)](https://fachportal.gematik.de/schnelleinstieg/downloadcenter/releases#c7516)</br>(inklusive Ergänzungen 2.6.0-1 und 2.6.0-2) |
-| Kontext| __ePA 2.5__|
-| Vorläuferrelease| __Release 2.5.2__|
-| Vorläuferbranch | [**ePA-2.5.2**](https://github.com/gematik/api-ePA/tree/ePA-2.5.2)|
-| Folgebranch | noch nicht definiert |
+## Branch information
 
+|This branch|ePA-2.6|
+|:----|----|
+| Designation  | __Release 2.6.0__ </br> __(ePA_2.5_Maintenance_23.1)__ |
+| Current status | __Freigegeben (released)__ |
+| Release date   | __14.04.2023__ |
+| Specifications| [Fachportal gematik: ePA 2.6: Release 2.6.0 zur elektronischen Patientenakte (ePA)](https://fachportal.gematik.de/schnelleinstieg/downloadcenter/releases#c7516)</br>(inklusive Ergänzungen 2.6.0-1 und 2.6.0-2)|
+| Context| __ePA 2.5__ |
+| Previous release| __Release 2.5.2__ |
+| Previous branch | [**ePA-2.5.2**](https://github.com/gematik/api-ePA/tree/ePA-2.5.2)|
+| Follow-up | not yet defined |
 
 </br>
 </br>
 
-## Allgemeine Information zu Branches
-Die Veröffentlichungen zu ePA 2.5 erfolgten bisher ausschließlich auf dem Branch 'master'.
-Zukünftig wird für den Kontext eines 'ePA-Releases' - also Artefakte auf GitHub und die dazugehörigen Spezifikationen auf dem gematik Fachportal - jeweils ein eigener Branch erstellt. Die Informationen dazu sind oben dargestellt.</br> 
-Erreicht ein Branch den Status 'Freigegeben (released)', werden normativ relevante Änderungen nur noch in Ausnahmefällen vorgenommen. Reguläre Anpassungen der ePA erfolgen in einem weiteren Branch, bzw. einem folgenden 'ePA-Release'.</br>
-Ein Branch gibt immer den aktuellen Stand wieder. Zwischenversionen sind über die Tags des Branches abrufbar (Tagname = x.y.z für Stände vor der Releaseveröffentlichung, Tagname = Rx.y.z für den Release und ggf. darauf folgende Veröffentlichungen)
+## About releases and associated branches
+Each normative release has its own branch within this repository.
+For related specification documents follow the link 'Specifications' above.
+The status of a release branch can either be 'pre-released' or 'released'. The content is subject to changes in state 'pre-released'. In 'released' state only minor and non-normative changes like editorial corrections, adding examples or additional information may apply.
+
+Each update to the branch is tagged. Tagnames x.y.z(-n) denote updates in pre-released phase and tagnames Rx.y.z(-n) those after release with x.y.z equalimg te ePA version and (-n) the sequence of updates, starting with -0 with an increment by 1 for each follow-up.
+
+Normative changes to a released version will be covered by a follow-up version in a separate branch (see 'Follow-up' above). The ancestor of the current release is 'Previous release' (published in 'Previous branch')
