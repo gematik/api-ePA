@@ -2,6 +2,13 @@
 
 # Release Notes api-epa/epa-2.6
 
+## Release R2.6.0-8
+### changes
+- added DiGAs to document Berechtigungskonzept 
+
+### editorial 
+- correction of links in README
+
 ## Release R2.6.0-7
 ### editorial
 - smaller tweaks and correction of structure diagram links in README
