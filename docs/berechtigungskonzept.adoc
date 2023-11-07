@@ -15,9 +15,9 @@ endif::[]
 :toc: macro
 :toclevels: 3
 :toc-title: Inhaltsverzeichnis
-image:gematik_logo.jpg[width=35%] 
+image:Gematik_Logo_Flag_With_Background.png[width=35%] 
 
-= ePA-Berechtigungskonzept
+== ePA-Berechtigungskonzept
 
 toc::[]
 
@@ -32,7 +32,7 @@ In ePA 2.0 wird die Durchsetzung von Berechtigungen in der Dokumentenverwaltung 
 
 Die Berechtigungsmatrix (oder auch Zugriffsunterbindungsregel-Matrix) basiert auf den Vorgaben, die der Gesetzgeber insbesondere in § 341 und § 352 SGB V zur Umsetzung der ePA gemacht hat. Aus diesem Grund stellt die Matrix die maximalen Rechte dar, die auch der Versicherte nicht überschreiten darf, indem er Leistungserbringern bspw. weitergehende Rechte über Policies (s.u.) einzuräumen versucht. Die Berechtigungsmatrix listet in ihren Spalten die verschiedenen Nutzer auf, die auf die Dokumentenverwaltung zugreifen. Einerseits den Versicherten und dessen Vertreter ("Ver"), Kostenträger ("KTR"), sowie die unterschiedlichen Arten von Leistungserbringerinstitutionen (LEIs) wie Pflege, Hebammen oder Ärzte.
 
-image:zugriffsunterbindungsregeln.png[width=90%] 
+image:Zugriffsunterbindungsregeln.png[width=95%]  
 
 Die Zeilen der Matrix beziehen sich auf Berechtigungskategorien, auf die unterschiedlichen Nutzern qua Gesetz unterschiedliche Rechte eingeräumt werden. Der Versicherte kann berechtigte Nutzer über Policies dabei weiter einschränken. Die Zuordnung in Kategorien erlaubt es dem Versicherten später, einem Dritten gezielt Zugriff auf bestimmte fachliche Dokumentenkategorien gewähren zu können bzw. zu untersagen. Grundsätzlich lassen sich zwei Gruppen von Kategorien hier unterscheiden: 
 
@@ -68,6 +68,8 @@ Die Granularität einer Policy lässt sich über eine kategorienbasierte und dok
 Die kategorienbasierte Autorisierung schränkt den Zugang Dritter über berufsgruppenspezifische Vorgaben gemäß der oben vorgestellten Berechtigungsmatrix ein. Jede Einstellung eines Dokuments wird vom Aktensystem bzw. von der Komponente ePA-Dokumentenverwaltung mit einer automatischen Zuordnung zu einem statischen Ordner, welcher die Dokumentenkategorie repräsentiert, erweitert. Diese statischen Ordner sind initial bei jedem Aktenkonto eines Versicherten existent. Die serverseitige Zuordnung in diese Ordner erfolgt anhand der XDS-Metadaten in Kombination mit der Nutzergruppe des Einstellers, welche aus der Authentication Assertion erkennbar ist (die Nutzergruppe ist dem Signaturzertifikat zu entnehmen).
 
 Das Anlegen von Ordnern durch ePA-Clients ist derzeit nicht erlaubt, um eine zweifelsfreie Freigabe auf Grundlage der Dokumentenkategorien zu gewährleisten. Es gibt zwei Ausnahmen bei den medizinischen Informationsobjekten (MIOs), welche ebenso einer Dokumentenkategorie unterliegen und jeweils einem Ordner zugeordnet werden müssen. Diese sind der Mutterpass sowie das Kinderuntersuchungsheft. Beispielsweise können bei mehreren Schwangerschaften auch mehrere Ordner der Kategorie Mutterpass in der Akte eines Versicherten existieren. Eine zweifelsfreie Zuordnung in der ePA-Dokumentenverwaltung wäre daher nicht gegeben, sodass hier ePA-Clients die Ordner zeitgleich mit der Dokumentenregistrierung anlegen müssen. Eine vorherige Abfrage der Ordner mit den speziellen Folder Codes ist allerdings zu empfehlen.
+
+Eine weitere Ausnahme bilden DiGAs. Auch hier können in der Kategorie "diga" mehrere Ordner vorhanden sein. Jeder DiGA-Anbieter ist jeweils genau einem dieser Ordner zugeordnet. Die Anlage des Ordners erfolgt hier durch die Dokumentenverwaltung des Aktensystems für jede Policy, die einen DiGA-Anbieter berechtigt.
 
 Weiterhin kann die Auswahl einer Dokumentenkategorie durch den Versicherten oder seinen Vertreter durch eine sensiblere Vertraulichkeit eingeschränkt werden. Einstellende Akteure können einem Dokument eine der drei Vertraulichkeitsstufen "streng vertraulich", "vertraulich" oder "normal" zuordnen. Eingestellte Dokumente mit der Vertraulichkeitsstufe "streng vertraulich" sind zunächst nicht über potentiell vorhandene Autorisierungen für Dritte zugänglich. Wenn eine Autorisierung und damit eine Freigabe dieses sensiblen Dokuments erwünscht ist, muss dieses Dokument über eine dokumentenspezifische Autorisierung in Form einer sogenannten Allowlist autorisiert werden.
 
@@ -107,6 +109,8 @@ IHE XDS betrachtet keine Unterordner. Eine Freigabe auf die Dokumentenkategorie 
 === Dynamische Ordner
 
 Die Multiplizität der dynamischen Ordner wird vom Leistungserbringer fachlich vorgegeben. Daher legen Leistungserbringer Ordner an, löschen sie und pflegen die Merkmale der Ordner, also Namen der Kinder oder Kennzeichen der Schwangerschaft wie den Entbindungstermin. Der Primärsystem-Client ordnet mittels Assoziationen Dokumente in die jeweiligen Ordner ein. Dynamische Ordner dürfen auf der Allowlist oder der Denylist eines Policy Document aufgeführt sein (A_21647).
+
+Dynamische Ordner zu den einzelnen DiGAs werden von der Dokumentenverwaltung des Aktensystems erstellt und verwaltet. Dokumente einer spezifischen DiGA werden dem assozierten Ordner anhand der Telematik-ID des einstellenden DiGA-Anbieters automatisch zugeordnet.
 
 === Statische Ordner
 
@@ -152,7 +156,7 @@ FindFolders ist die beste Strategie. Ausschließlich in der folgenden Konstellat
 
 Die Akteure stellen Dokumente nur in die Ihnen durch die Berechtigungsmatrix zugeordneten Ordner ein. Schreibrechte liegen für Versicherte und Vertreter immer vor, für Leistungserbringer und Kostenträger nur im Falle einer für sie vorliegenden Policy. Das Ausmaß der Schreibrechte für Leistungserbringerinstitutionen oder Kostenträger wird durch die Berechtigungsmatrix (A_19303) geregelt, nicht aber durch die Policy. Leistungserbringer stellen Dokumente des Versicherten mit einer Vertraulichkeitsstufe (Confidentiality Code) ein, die mit dem Versicherten abgesprochen wurde. Strukturierte Dokumente, auf die Versicherte kein Schreibrecht haben, dürfen Versicherte auch nicht mit den Metadaten-Vorgaben für Leistungserbringer über ihr ePA-FdV registrieren. Ein solcher Registrierungs-Request wird vom ePA-Aktensystem mit dem Fehler *Access_Denied* abgewiesen. Unstrukturierte Dokumente, vom Versicherten registrierte Dokumente werden vom ePA-Aktensystem in den Ordner patientdoc abgelegt.
 
-Anhand der Identität des Einstellenden wird überprüft, ob überhaupt eine Policy für ihn vorliegt und nur im positen Fall die Verarbeitung fortgesetzt. Auswertungsregeln, die sich aus A_14761 ableiten haben immer den Vorrang gegenüber anderen Auswertungsregeln (vgl. Berechtigungsmatrix in A_19388). Mit Vorrang muss die Zuordnung zu Kategorien (und Ordnern) aufgrund der in A_14761 aufgeführten technischen Vorgaben in den https://github.com/gematik/api-ePA/tree/master/src/implementation_guides[Implementation Guides] der API-ePA erfolgen. 
+Anhand der Identität des Einstellenden wird überprüft, ob überhaupt eine Policy für ihn vorliegt und nur im positiven Fall die Verarbeitung fortgesetzt. Auswertungsregeln, die sich aus A_14761 ableiten haben immer den Vorrang gegenüber anderen Auswertungsregeln (vgl. Berechtigungsmatrix in A_19388). Mit Vorrang muss die Zuordnung zu Kategorien (und Ordnern) aufgrund der in A_14761 aufgeführten technischen Vorgaben in den https://github.com/gematik/api-ePA/tree/master/src/implementation_guides[Implementation Guides] der API-ePA erfolgen. 
 
 * Dabei wird bei strukturierten Datentypen festgestellt, welcher Kategorie ein strukturiertes Dokument angehört. Daraufhin kann geprüft werden, ob ein Schreibrecht für diese Kategorie vorliegt. Falls die Zugriffsunterbindungsregeln dem nicht widersprechen wird geprüft, ob die Regeln zum Einstellen in den Ordnern erfüllt sind. (Ausnahme: A_20736, s.o.)
 * Bei unstrukturierten Daten gibt es keine implementation_guides, die greifen können. Stattdessen werden anhand A_19388 die Dokumente den Ordnern zugeordnet und geprüft, ob ein Schreibrecht gemäß Zugriffsunterbindungsregel auf die Kategorien vorliegt, die zum Ordner gehören. 
@@ -183,7 +187,7 @@ Um Sammlungen löschen zu können, erstellen berechtigte Clients Lösch-Requests
 * Durch das ePA-FdV können Sammlungen immer nur komplett gelöscht werden. Eine Ausnahme bildet die Elternotiz der Sammlung Kinderuntersuchungsheft, die auch durch den Versicherten gelöscht werden kann. Trotz der Anforderung A_20581-01 ist das Löschen in diesem Sonderfall erlaubt, da es sich um ein Dokument des Versicherten im Ordner patientdoc handelt. 
 * Leistungserbringer können über ihre Primärsysteme auch einzelne Einträge/Dokumente einer Sammlung löschen.
 * Sammlungen in statischen Ordnern können nur durch das Löschen aller Einträge (Dokumente) der Sammlung gelöscht werden. Das Löschen von statischen Ordnern ist nicht möglich.
-* Sammlungen in dynamischen Ordnern (Mutterpass, Kinderuntersuchungsheft) können ausschließlich durch das Löschen des dynamischen Ordners (mothersrecord, childsrecord) gelöscht werden. Dabei muss das Aktensystem im Falle der Elternnotiz automatisch sowohl die Assoziation zum Ordner childsrecord als auch zum Ordner patientdoc löschen. 
+* Sammlungen in dynamischen Ordnern (Mutterpass, Kinderuntersuchungsheft, DiGAs) können ausschließlich durch das Löschen des dynamischen Ordners aus der zugehörigen Kategorie (mothersrecord, childsrecord, diga) gelöscht werden. Dabei muss das Aktensystem im Falle der Elternnotiz automatisch sowohl die Assoziation zum Ordner childsrecord als auch zum Ordner patientdoc löschen. 
 * Beim Löschen eines dynamischen Ordners der Kategorie mothersrecord müssen durch das Aktensystem auch alle Hebammendokumente in diesem Ordner gelöscht werden. Andererseits können Hebammendokumente, da sie nicht zur Sammlung Mutterpass gehören auch separat über einen Client (Primärsystem, FdV) gelöscht werden.
 * Löschungen von Assoziationen sind clientseitig nicht möglich. Sie müssen vom Aktensystem beim Löschen von Sammlungen automatisch erfolgen.
 * Dokumente im Status "deprecated" sind nicht seperat löschbar. Die Historie eines Dokumentes wird zusammen mit dem "approved" Dokument gelöscht.
