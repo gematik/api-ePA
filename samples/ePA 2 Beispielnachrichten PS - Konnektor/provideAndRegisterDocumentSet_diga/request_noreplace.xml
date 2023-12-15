@@ -1,0 +1,206 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header>
+		<Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b</Action>
+		<MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:38b0f232-f3e8-455f-a6f8-20cd0feb200f</MessageID>
+		<To xmlns="http://www.w3.org/2005/08/addressing">http://10.11.216.146:80/fm/phrservice/v2</To>
+		<ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+			<Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+		</ReplyTo>
+		<homeCommunityBlock xmlns="urn:ihe:iti:xdr:2014">
+			<homeCommunityId>urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1</homeCommunityId>
+		</homeCommunityBlock>
+		<ns5:ContextHeader xmlns:ns17="urn:ihe:iti:rmd:2017" xmlns:ns16="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns15="urn:hl7-org:v3" xmlns:ns14="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns13="http://ws.gematik.de/tel/error/v2.0" xmlns:ns12="http://www.w3.org/2000/09/xmldsig#" xmlns:ns11="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns10="urn:ihe:iti:xds-b:2007" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v2.0" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+			<ns3:Context>
+				<ns2:MandantId>MANDANT_ARZTPRAXIS</ns2:MandantId>
+				<ns2:ClientSystemId>Clientsystem_ePA</ns2:ClientSystemId>
+				<ns2:WorkplaceId>Workplace_ePA</ns2:WorkplaceId>
+				<ns2:UserId>User1</ns2:UserId>
+			</ns3:Context>
+			<ns5:RecordIdentifier>
+				<ns4:InsurantId root="1.2.276.0.76.4.8" extension="X110474970"/>
+				<ns4:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1</ns4:HomeCommunityId>
+			</ns5:RecordIdentifier>
+		</ns5:ContextHeader>
+	</soap:Header>
+	<soap:Body>
+		<ns9:ProvideAndRegisterDocumentSetRequest xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRService/v2.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns9="urn:ihe:iti:xds-b:2007" xmlns:ns10="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns11="http://www.w3.org/2000/09/xmldsig#" xmlns:ns12="http://ws.gematik.de/tel/error/v2.0" xmlns:ns13="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns14="urn:hl7-org:v3" xmlns:ns15="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns16="urn:ihe:iti:rmd:2017">
+			<ns8:SubmitObjectsRequest>
+				<ns6:RequestSlotList>
+					<ns5:Slot name="homeCommunityId">
+						<ns5:ValueList>
+							<ns5:Value>urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1</ns5:Value>
+						</ns5:ValueList>
+					</ns5:Slot>
+				</ns6:RequestSlotList>
+				<ns5:RegistryObjectList>
+					<ns5:RegistryPackage objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage" id="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" home="urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1">
+						<ns5:Slot name="submissionTime">
+							<ns5:ValueList>
+								<ns5:Value>20231123112344</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Classification classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d" classifiedObject="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="10545663-5dd7-4db1-9eaa-819196dac5cd">
+							<ns5:Slot name="authorPerson">
+								<ns5:ValueList>
+									<ns5:Value>9-SMC-B-Testkarte-883110000119267^DIGA-Hersteller^Sina Gr..fin ..zTEST-ONLY^^^Prof. Dr.^^^&amp;1.2.276.0.76.4.282&amp;ISO</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Slot name="authorRole">
+								<ns5:ValueList>
+									<ns5:Value>12^^^&amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;ISO</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Slot name="authorInstitution">
+								<ns5:ValueList>
+									<ns5:Value>diga^^^^^&amp;1.2.276.0.76.4.188&amp;ISO^^^^9-SMC-B-Testkarte-883110000119267</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+						</ns5:Classification>
+						<ns5:Classification classifiedObject="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="555a756f-5860-4d9d-b647-7240837ed85b"/>
+						<ns5:ExternalIdentifier registryObject="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446" value="X110474970^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="75552069-a8c3-431f-b413-1eb779ab5f7f">
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="XDSSubmissionSet.patientId"/>
+							</ns5:Name>
+						</ns5:ExternalIdentifier>
+						<ns5:ExternalIdentifier registryObject="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8" value="2.25.86151078649960315369" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="ad77b530-e6a5-4abb-9c06-3a7583d5ad4d">
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="XDSSubmissionSet.uniqueId"/>
+							</ns5:Name>
+						</ns5:ExternalIdentifier>
+					</ns5:RegistryPackage>
+					<ns5:ExtrinsicObject mimeType="application/pdf" isOpaque="false" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" id="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" home="urn:oid:1.2.276.0.76.3.1.466.2.1.6.90.1">
+						<ns5:Slot name="creationTime">
+							<ns5:ValueList>
+								<ns5:Value>20230609115053</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Slot name="languageCode">
+							<ns5:ValueList>
+								<ns5:Value>de-DE</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Slot name="URI">
+							<ns5:ValueList>
+								<ns5:Value>notizen.pdf</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Slot name="serviceStartTime">
+							<ns5:ValueList>
+								<ns5:Value>20210301082855</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Slot name="serviceStopTime">
+							<ns5:ValueList>
+								<ns5:Value>20210301083855</ns5:Value>
+							</ns5:ValueList>
+						</ns5:Slot>
+						<ns5:Name>
+							<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="DigaDocPdf"/>
+						</ns5:Name>
+						<ns5:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="DUR" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="a27ca4e7-e9e1-4b8f-9902-e604ec2b9e77">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="Durchf..hrungsprotokoll"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="N" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="0bb19e24-f8e5-49b7-9a1d-610851eedbb6">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>2.16.840.1.113883.5.25</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="normal"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="H1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="52c83b53-5d88-4efe-86f2-262bff6a32ba">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.15</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="vom Patienten mitgebracht"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="urn:gematik:ig:diga:v1.1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="1c9b41a4-8940-40d0-bf67-d4257a30f2ad">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.6</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="DiGA (gematik) v1.1"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="f5f4a969-6552-4f2e-a50e-d071b7180846">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.3</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="Patient au..erhalb der Betreuung"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="4d95aa06-2848-4aa8-a9a2-51ec5be0b8f5">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.5</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="Patient au..erhalb der Betreuung"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" nodeRepresentation="PATD" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="60a98200-8f73-43c4-8e69-f8e94ab4195c">
+							<ns5:Slot name="codingScheme">
+								<ns5:ValueList>
+									<ns5:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="Patienteneigene Dokumente"/>
+							</ns5:Name>
+						</ns5:Classification>
+						<ns5:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="67b4eded-5d44-4904-bc29-361468279b09">
+							<ns5:Slot name="authorPerson">
+								<ns5:ValueList>
+									<ns5:Value>9-SMC-B-Testkarte-883110000119267^DIGA-Hersteller^Sina Gr..fin ..zTEST-ONLY^^^Prof. Dr.^^^&amp;1.2.276.0.76.4.282&amp;ISO</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Slot name="authorRole">
+								<ns5:ValueList>
+									<ns5:Value>12^^^&amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;ISO</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+							<ns5:Slot name="authorInstitution">
+								<ns5:ValueList>
+									<ns5:Value>diga^^^^^&amp;1.2.276.0.76.4.188&amp;ISO^^^^9-SMC-B-Testkarte-883110000119267</ns5:Value>
+								</ns5:ValueList>
+							</ns5:Slot>
+						</ns5:Classification>
+						<ns5:ExternalIdentifier registryObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X110474970^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="5fff2086-c984-45ac-88fa-a255e45ddf1d">
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="XDSDocumentEntry.patientId"/>
+							</ns5:Name>
+						</ns5:ExternalIdentifier>
+						<ns5:ExternalIdentifier registryObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="2.25.160922221051382816658" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="163d2091-a531-4e33-8664-40ff62e410fb">
+							<ns5:Name>
+								<ns5:LocalizedString xml:lang="de-DE" charset="UTF-8" value="XDSDocumentEntry.uniqueId"/>
+							</ns5:Name>
+						</ns5:ExternalIdentifier>
+					</ns5:ExtrinsicObject>
+					<ns5:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember" sourceObject="0b703eb1-2884-4f29-8c8f-6f8f3fea467b" targetObject="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368" id="e1078714-8540-47f1-8881-de21e051f734"/>
+				</ns5:RegistryObjectList>
+			</ns8:SubmitObjectsRequest>
+			<ns9:Document id="urn:uuid:fefd2e4d-f1b5-496f-a0ce-acb8a210d368">
+				<xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:5eeafcfb-567d-4de5-ba11-fb5f5378e21e-1@urn%3Aihe%3Aiti%3Axds-b%3A2007"/>
+			</ns9:Document>
+		</ns9:ProvideAndRegisterDocumentSetRequest>
+	</soap:Body>
+</soap:Envelope>
