@@ -25,7 +25,7 @@ The provided content comprises normative and supplementary resources and include
 
 The current branch accompanies a particular release of specification documents of ePA version 2.6 (a set of normative specification documents for components, producttypes and vendortypes) published on [Fachportal Gematik](https://fachportal.gematik.de/) (see [Branchinformation.md](./Branchinformation.md)  for specific version information and links).
 
-The content in /src is normative in context of requirements defined by those specification docuemnts and is essential for product approvals. Any other content is for information. Normative content here and the documents together form a single product release of the Electronic Personal Health Record system for an approval process.
+The content in /src is normative in context of requirements defined by those specification documents and is essential for product approvals. Any other content is for information. Normative content here and the documents together form a single product release of the Electronic Personal Health Record system for an approval process.
 
 The affected and covered producttypes are **epa-Aktensystem** and **epa-Frontend des Versicherten**.
 
