@@ -29,7 +29,7 @@ The content in /src is normative in context of requirements defined by those spe
 
 The affected and covered producttypes are **epa-Aktensystem** and **epa-Frontend des Versicherten**.
 
-ePA-Resources for produkttypes **Konnektor** "("Fachmodul ePA") and **KTR-Consumer** ("Fachmodul ePA im KTR-Consumer") are also in scope of a particular ePA release version. As these resources are integrated parts of the named producttypes, release cycles follow the roadmap of those producttypes. See [Fachportal Gematik](https://fachportal.gematik.de/) and repository [api-telematik](https://github.com/gematik/api-telematik), path /conn/phr ("Fachmodul ePA") and /consumer ("Fachmodul ePA im KTR-Consumer") for resources and additional information.
+ePA-Resources for producttypes **Konnektor** ("Fachmodul ePA") and **KTR-Consumer** ("Fachmodul ePA im KTR-Consumer") are also in scope of a particular ePA release version. As these resources are integrated parts of the named producttypes, release cycles follow the roadmap of those producttypes. See [Fachportal Gematik](https://fachportal.gematik.de/) and repository [api-telematik](https://github.com/gematik/api-telematik), path /conn/phr ("Fachmodul ePA") and /consumer ("Fachmodul ePA im KTR-Consumer") for resources and additional information.
 
 
 ## Structure
